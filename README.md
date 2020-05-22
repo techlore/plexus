@@ -7,7 +7,7 @@ This project aims to crowdsource data from countless custom ROM users so we can 
 
 ## How To Contribute
 
-This is just quickly thrown together so we can start collecting data. It's by no means perfect, and I know not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are non-F-Droid applications as well as any compability issues you have with the applications. Make sure to mention the OS you're running, the version, if notifications work, any specific features, etc. I'll manually input these somehow in the near future. This will be much more official and easier to do soon. 
+This is just quickly thrown together so we can start collecting data. It's by no means perfect, and I know not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are non-F-Droid applications as well as any compability issues you have with the applications. Specify how well something works! If it works 100% as expected, specificy this. Make sure to mention the OS you're running, the version, if notifications work, any specific features, etc. I'll manually input these somehow in the near future. This will be much more official and easier to do soon. 
 
 ## Explanation
 Google Play Services are an integral part of most Android devices that enable users to be able to utilize their Google account on their phone, as well as enable Google-specific features for applications who rely on them. 
