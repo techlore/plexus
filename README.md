@@ -5,9 +5,9 @@ A common concern expressed by users wanting to move to a de-googled Android ROM 
 Plexus crowdsources data from custom Android ROM users to display what apps do/don't work without Google Play Services. 
 
 ## Explanation
-Google Play Services are an integral part of most Android devices that enable users to be able to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them. 
+Google Play Services are an integral part of most Android devices that enable users to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them. 
 
-When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they all work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. 
+When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they  work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. 
 
 ## Navigating Plexus
 Currently, Plexus is just a standard CSV spreadsheet in this repo. You'll find it in the main directory. You can search for the app you are interested in with the find function in your web browser. 
