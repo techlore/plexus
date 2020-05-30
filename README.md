@@ -2,14 +2,26 @@
 
 A common concern expressed by users wanting to move to a de-googled Android ROM is: *Will my apps work without Google Play Services?*
 
-This project aims to crowdsource data from countless custom ROM users so we can figure out what apps do/don't work without Google Play Services. Eventually I would like this to be an app you can download from F-Droid, and it'll conveniently let you rate all apps on your phone. But, currently this project will start here as a simple repo.  
-
-
-## How To Contribute
-
-This is just quickly thrown together so we can start collecting data. It's by no means perfect, and I know not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are non-F-Droid applications as well as any compability issues you have with the applications. Specify how well something works! If it works 100% as expected, specificy this. Make sure to mention the OS you're running, the version, if notifications work, any specific features, etc. I'll manually input these somehow in the near future. This will be much more official and easier to do soon. 
+Plexus crowdsources data from custom Android ROM users to display what apps do/don't work without Google Play Services. 
 
 ## Explanation
-Google Play Services are an integral part of most Android devices that enable users to be able to utilize their Google account on their phone, as well as enable Google-specific features for applications who rely on them. 
+Google Play Services are an integral part of most Android devices that enable users to be able to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them. 
 
-When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their applications in hopes that they all work. Why hope when we can guarantee what will/won't work?
+When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they all work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. 
+
+## Navigating Plexus
+Currently, Plexus is just a standard CSV spreadsheet in this repo. You'll find it in the main directory. You can search for the app you are interested in with the find function in your web browser. 
+
+## How To Add Your Applications & Contribute
+This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
+1. App Name
+2. Month Last Tested
+3. Year Last Tested
+4. Any issues with the application. Explain your problems, or just say none if the app works perfectly. 
+
+If it works 100% as expected, specificy this. I'll be manually updating the spreadsheet myself until we get a more automated process. 
+
+## Future Plans & Goals
+* A website will need to happen at some point in order to allow a better format and expandability of listing data. 
+* Having support for "recommended alternatives" will one day happen once we have a more centralized method of accessing information, perhaps in the form of a website and/or mobile app
+* Eventually, this should be an app you can download from F-Droid, and it'll conveniently scan and let you report all apps from your phone. Automating most of the process and putting Plexus in a single place. 
