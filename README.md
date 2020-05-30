@@ -12,6 +12,12 @@ When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced
 ## Navigating Plexus
 Currently, Plexus is just a standard CSV spreadsheet in this repo. You'll find it in the main directory. You can search for the app you are interested in with the find function in your web browser. 
 
+## What Do The Ratings Mean?
+1. Unusable. Mostly apps that fail to open
+2. Acceptable but with missing or broken functionality
+3. Almost everything works with minimal caveats 
+4. Perfect or like-perfect experience
+
 ## How To Add Your Applications & Contribute
 This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
 1. App Name
