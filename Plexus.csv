@@ -1,39 +1,55 @@
 Application,Month,Year,Rating (1-4),Notes
-Signal,May ,2020,4,Offers APK from website designed for use without Google Play Services. 
-Garmin Connect,May ,2020,3,Maps do not show within the application
-Spotify,May ,2020,4,No reported issues
-Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work
-Netflix,April ,2020,1,Unusable
-Deezer,May ,2020,3,"Cannot sign up from the application, but can login from the application"
-Disney+,May ,2020,3,"Cannot sign up from the application, but can login from the application"
-Firefox,May ,2020,4,No reported issues
-Secure PDF Viewer,May ,2020,4,No reported issues
-ING Banking,May ,2020,4,No reported issues
-Spaceship Voyager,May ,2020,4,No reported issues
-Steam,May ,2020,4,No reported issues
-BOM Weather,May ,2020,4,No reported issues
+Alto's Adventure,May,2020,4,No reported issues
+Ankidroid,May,2020,4,No reported issues
+aTimeLogger,May,2020,4,No reported issues
 Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect"
-Discord,May ,2020,3,No notifications
-Freedom,May ,2020,1,Unusable
-Firefox Focus,May ,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history
-Letterboxd,May ,2020,4,No reported issues
-Nova Launcher,May ,2020,4,No reported issues
-Goodreads,May ,2020,4,No reported issues
-MEGA,May ,2020,4,No reported issues
-Clockify,May ,2020,4,No reported issues
-PayPal,May ,2020,4,No reported issues
-Dropbox,May ,2020,4,No reported issues
-Windscribe,May ,2020,4,No reported issues
-Patreon,April ,2020,2,No notifications & unable to apply text to videos within lens. Some performance issues
-Slack,May ,2020,3,No notifications
-Todoist,May ,2020,3,"Google Play Services Warning, but no effect"
-YouTube,May ,2020,1,Unusable
-Subway Surfers,May ,2020,1,Unusable
-NAB Mobile Banking,May ,2020,4,No reported issues
-BTS WORLD,May ,2020,3,No notifications or in-app purchases
-Whatsapp,May ,2020,4,No reported issues
-Duolingo,May ,2020,4,No reported issues
+BOM Weather,May ,2020,4,No reported issues
 Brave,May ,2020,3,No notifications
-ProtonVPN,May ,2020,4,No reported issues
+BTS WORLD,May ,2020,3,No notifications or in-app purchases
+CamScanner,May,2020,4,No reported issues
+Clockify,May ,2020,4,No reported issues
+ColorNote,May,2020,4,No reported issues
+Deezer,May ,2020,3,"Cannot sign up from the application, but can login from the application"
+Discord,May ,2020,3,No notifications
+Disney+,May ,2020,3,"Cannot sign up from the application, but can login from the application"
+Dropbox,May ,2020,4,No reported issues
+Duolingo,May ,2020,4,No reported issues
+Firefox,May ,2020,4,No reported issues
+Firefox Focus,May ,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history
+Freedom,May ,2020,1,Unusable
+Garmin Connect,May ,2020,3,Maps do not show within the application
+Goodreads,May ,2020,4,No reported issues
+Google Keyboard (Gboard),May,2020,4,No reported issues
+Habit,May,2020,4,No reported issues
+ING Banking,May ,2020,4,No reported issues
+Letterboxd,May ,2020,4,No reported issues
+Listen Audiobook Player,May,2020,4,No reported issues
+MEGA,May ,2020,4,No reported issues
+Moon+ Reader Pro,May,2020,4,No reported issues
+MX Player,May,2020,4,No reported issues
+NAB Mobile Banking,May ,2020,4,No reported issues
+Netflix,May,2020,4,No reported issues
+Nova Launcher,May ,2020,4,No reported issues
+Onenote,May,2020,4,No reported issues
+Opera Mini,May,2020,4,No reported issues
+Patreon,April ,2020,2,No notifications & unable to apply text to videos within lens. Some performance issues
+PayPal,May ,2020,4,No reported issues
 ProtonMail,May ,2020,3,No notifications
+ProtonVPN,May ,2020,4,No reported issues
+Secure PDF Viewer,May ,2020,4,No reported issues
+Signal,May ,2020,4,Offers APK from website designed for use without Google Play Services. 
+Slack,May ,2020,3,No notifications
+Spaceship Voyager,May ,2020,4,No reported issues
+Spotify,May ,2020,4,No reported issues
+Steam,May ,2020,4,No reported issues
+Subway Surfers,May ,2020,1,Unusable
+Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work
+Todoist,May ,2020,3,"Google Play Services Warning, but no effect"
+Trello,May,2020,4,No reported issues
 Tricount,May,2020,3,"Google Play Services Warning, but no effect"
+Truecaller,May,2020,4,No reported issues
+Tutanota,May,2020,4,No reported issues
+Whatsapp,May ,2020,4,No reported issues
+Windscribe,May ,2020,4,No reported issues
+Xoxo Docs,May,2020,4,No reported issues
+YouTube,May ,2020,1,Unusable
