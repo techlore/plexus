@@ -29,14 +29,20 @@ Fasthub,June,2020,4,No reported issues
 Firefox,May ,2020,4,No reported issues
 Firefox Focus,May ,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history
 Freedom,May ,2020,1,Unusable
+Gameloft Classics,June,2020,4,(Game)No reported issues
 Garmin Connect,May ,2020,3,Maps do not show within the application
+Github,June,2020,4,No reported issues
+Gmail,June,2020,1,unusable
 Goodreads,May ,2020,4,No reported issues
 Google Camera,June,2020,3,"Working, but need spoofed API & Image preview won't work without Google Photos installed"
 Google Cardboard,June,2020,3,Purchases will not work
+Google Japanese Input,June,2020,4,(Keyboard)No reported issues
 Google Keep Notes,June,2020,1,Unusable
 Google Keyboard (Gboard),May,2020,4,No reported issues
 Google Maps,June,2020,1,Unusable
 Google Photos,June,2020,1,Unusable
+Google Primer,June,2020,1,Unusable
+Google Translate,June,2020,4,No reported issues
 GoPro,June,2020,3,"Google Play Services Warning, but no effect"
 Groupme ,June,2020,3,No Notifications
 Habit,May,2020,4,No reported issues
@@ -44,13 +50,17 @@ HandyTicket Deutschland,April,2020,3,No notifications
 ING Banking,May ,2020,4,No reported issues
 Instagram,June,2020,4,No reported issues
 Kasa ,June,2020,1,Unusable
+Khan Academy,June,2020,4,(Education)No reported issues
 Komoot ,March,2020,4,No reported issues
 Lastpass ,June,2020,1,Unusable
 Letterboxd,May ,2020,4,No reported issues
-Lichness ,June,2020,4,No reported issues
+Lichess ,June,2020,4,No reported issues
 Listen Audiobook Player,May,2020,4,No reported issues
 Lyft,June,2020,1,Unusable
+Maxim Taxi,June,2020,1,(Ride hailing app)Unusable
+Medium,June,2020,3,"Google Play Services Warning, Cannot login with google/gmail, works fine with facebook etc"
 MEGA,May ,2020,4,No reported issues
+Mental Math Master,2020,3,(Game)No Google Play Games Sync
 Microsoft Outlook,June,2020,4,No reported issues
 Moon+ Reader Pro,May,2020,4,No reported issues
 MVG Fahrinfo,March,2020,3,Maps do not show within the application
@@ -75,40 +85,45 @@ Popcorn Time,June,2020,3,"Buggy, Cashes Occasionally"
 Prime Video,June,2020,4,No reported issues
 ProtonMail,May ,2020,3,No notifications
 ProtonVPN,May ,2020,4,No reported issues
+PUBG Mobile,June,2020,4,(Game)No reported issues
 Qantas,March,2020,4,No reported issues
 Reddit,May,2020,3,No notifications
 Ring,June,2020,3,"Google Play Services Warning, but no effect"
 Rippl,June,2020,4,No reported issues
 Robinhood,June,2020,3,"Google Play Services Warning, but no effect"
+Samsung Gallery,June,2020,4,No reported issues
 Secure PDF Viewer,May ,2020,4,No reported issues
 Signal,May ,2020,4,Offers APK from website designed for use without Google Play Services. 
 Simplisafe ,June,2020,3,"Google Play Services Warning, but no effect"
 SKED,June,2020,3,"Google Play Services Warning, but no effect"
 Slack,May ,2020,3,No notifications
+Slide for Reddit,June,2020,4,No reported issues
 Snapchat,January,2020,1,Unusable
 Snapseed,June,2020,4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect"
+Soul Knight,June,2020,3,(Game)No IAP
+Soundcloud,June,2020,3,"(Music & Audio)Google Play Services Warning, Cannot login with google/gmail"
 Spaceship Voyager,May ,2020,4,No reported issues
-Spotify,May ,2020,4,No reported issues
-Squore ,June,2020,4,No reported issues
+Spotify,May,2020,4,No reported issues
+Squore,June,2020,4,No reported issues
 Starbucks,June,2020,3,"Google Play Services Warning, but no effect"
 Steam,May ,2020,3,No Notifications
 Stride,June,2020,3,"Google Play Services Warning, but no effect"
-Subway Surfers,May ,2020,1,Unusable
+Subway Surfers,May,2020,1,Unusable
 Synology Drive,June,2020,4,No reported issues
 Synology Memories,June,2020,4,No reported issues
 Tello,June,2020,4,No reported issues
-Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work
-Todoist,May ,2020,3,"Google Play Services Warning, but no effect"
+Tesla,May,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work
+Todoist,May,2020,3,"Google Play Services Warning, but no effect"
 Trello,May,2020,4,No reported issues
 Tricount,May,2020,3,"Google Play Services Warning, but no effect"
 Truecaller,May,2020,4,No reported issues
 TTS Util,June,2020,4,No reported issues
 Tutanota,May,2020,4,No reported issues
 Uber,June,2020,1,Unusable
-Whatsapp,May ,2020,3,No notifications unless the app is running in the background
-Windscribe,May ,2020,4,No reported issues
+Whatsapp,May,2020,3,No notifications unless the app is running in the background
+Windscribe,May,2020,4,No reported issues
 Xoxo Docs,May,2020,4,No reported issues
 Yi Home,June,2020,4,No reported issues
-YouTube,May ,2020,1,Unusable
+YouTube,May,2020,1,Unusable
 Zoom,January,2020,4,No reported issues
