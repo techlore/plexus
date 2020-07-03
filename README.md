@@ -19,13 +19,19 @@ Currently, Plexus is just a standard CSV spreadsheet in this repo. You'll find i
 4. Perfect or like-perfect experience
 
 ## How To Add Your Applications & Contribute
-This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github. Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
+This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github. 
+
+### Method 1 (Recommended)
+Start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible. 
+
+### Method 2 (Non-Github Method)
+Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
 1. App Name
 2. Month Last Tested
 3. Year Last Tested
 4. Any issues with the application. Explain your problems, or just say none if the app works perfectly. 
 
-If it works 100% as expected, specificy this. I'll be manually updating the spreadsheet myself until we get a more automated process. 
+I will then update the spreadsheet myself. 
 
 ## Future Plans & Goals
 * A website will need to happen at some point in order to allow a better format and expandability of listing data. 
