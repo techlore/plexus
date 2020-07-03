@@ -1,4 +1,5 @@
 # Plexus
+<img src="https://techlore.tech/plexus.png" width="200" height="200">
 
 A common concern expressed by users wanting to move to a de-googled Android ROM is: *Will my apps work without Google Play Services?*
 
