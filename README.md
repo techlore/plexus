@@ -39,3 +39,5 @@ I will then update the spreadsheet myself.
 * A website to allow better formatting of application data. 
 * Support for "recommended alternatives" similar to alternativeto.net
 * An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
+
+![](https://i.creativecommons.org/p/zero/1.0/88x31.png) This project is licensed under the terms of the CC0 V1 License. 
