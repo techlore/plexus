@@ -26,6 +26,10 @@ This is quickly thrown together so we can start collecting data. It's by no mean
 
 ### Method 1 (Recommended)
 Start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible. 
+1. App Name
+2. Month Last Tested
+3. Year Last Tested
+4. Any issues with the application. Explain your problems, or just say "No reported issues" if the app works perfectly.
 
 ### Method 2 (Non-Github Method)
 Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
