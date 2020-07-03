@@ -34,6 +34,8 @@ Email me at support@techlore.tech with all your apps you use on your phone that 
 I will then update the spreadsheet myself. 
 
 ## Future Plans & Goals
-* A website will need to happen at some point in order to allow a better format and expandability of listing data. 
-* Having support for "recommended alternatives" will one day happen once we have a more centralized method of accessing information, perhaps in the form of a website and/or mobile app
-* Eventually, this should be an app you can download from F-Droid, and it'll conveniently scan and let you report all apps from your phone. Automating most of the process and putting Plexus in a single place. 
+* Support for application version numbers.
+* Support for MicroG compatablity scoring.
+* A website to allow better formatting of application data. 
+* Support for "recommended alternatives" similar to alternativeto.net
+* An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
