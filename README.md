@@ -24,14 +24,21 @@ Currently, Plexus is just a standard CSV spreadsheet in this repo. You can searc
 ## How To Add Your Applications & Contribute
 This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github. 
 
-### Method 1 (Recommended)
+### Testing Standards
+
+* Test only Google Play Store applications (Regardless of where they came from)
+* Kindly disable netguard and other blockers
+* No Google Play Services or alternatives 
+* Pay extra attention to notifications as most will not work and this should be reported in the spreadsheet
+
+### Contribute Method 1 (Recommended)
 Start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible. 
 1. App Name
 2. Month Last Tested
 3. Year Last Tested
 4. Any issues with the application. Explain your problems, or just say "No reported issues" if the app works perfectly.
 
-### Method 2 (Non-Github Method)
+### Contribute Method 2 (Non-Github Method)
 Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
 1. App Name
 2. Month Last Tested
