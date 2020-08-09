@@ -8,7 +8,7 @@ Plexus crowdsources data from custom Android ROM users to display what apps do/d
 ## Explanation
 Google Play Services are an integral part of most Android devices that enable users to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them. 
 
-When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. 
+When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. Plexus supports ROMs with simply no Google Play Services, as well as ROMs with MicroG, an open source variation of Google Play Services.
 
 ## Navigating Plexus
 Currently, Plexus is just a standard CSV spreadsheet in this repo.
@@ -28,28 +28,35 @@ This is quickly thrown together so we can start collecting data. It's by no mean
 
 * Test only Google Play Store applications (Regardless of where they came from)
 * Kindly disable netguard and other blockers
-* No Google Play Services or alternatives 
-* Pay extra attention to notifications as most will not work and this should be reported in the spreadsheet
+* No Google Play Services
+* Pay extra attention to notifications as some will not properly work
+* If you're testing from MicroG, only input data in the last two columns, and utilize two "X"s for the standard sections.
+* If you're testing from a fully de-googled ROM (no MicroG, input data in the standard sections and mark the MicroG sections as "X"s
 
 ### Contribute Method 1 (Recommended)
 Start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible. 
 1. App Name
 2. Month Last Tested
 3. Year Last Tested
-4. Any issues with the application. Explain your problems, or just say "No reported issues" if the app works perfectly.
+4. App score. Please refer to the rating section of the readme to help figure out what score a service is. We may change your score if it doesn't match our rating method. Label "X" if you're testing with MicroG.
+5. Any issues with the application. Explain your problems, or just say "No reported issues" if the app works perfectly. Label "X" if you're testing with MicroG.
+6. MicroG App Score. This is ONLY for users testing apps on MicroG, otherwise just label this column as "X". Please refer to the rating section of the readme to help figure out what score a service is. We may change your score if it doesn't match our rating method.
+7. MicroG issues. Explain your problems, or just say "No reported issues" if the app works perfectly. If you're not on MicroG, lable the column as "X".
 
 ### Contribute Method 2 (Non-Github Method)
 Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
 1. App Name
 2. Month Last Tested
 3. Year Last Tested
-4. Any issues with the application. Explain your problems, or just say none if the app works perfectly. 
+4. App Score. Label "X" if you're testing with MicroG.
+5. Any issues with the application. Explain your problems, or just say none if the app works perfectly. Label "X" if you're testing with MicroG.
+6. MicroG App Score. Label "X" if you're not using MicroG
+7. MicroG issues. Label "X" if you're not using MicroG
 
 I will then update the spreadsheet myself. 
 
 ## Future Plans & Goals
 * Support for application version numbers.
-* Support for MicroG compatablity scoring.
 * A website to allow better formatting of application data. 
 * Support for "recommended alternatives" similar to alternativeto.net
 * An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
