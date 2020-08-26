@@ -50,7 +50,7 @@ const Application = ({ pageContext: { node } }) => {
   return (
     <Layout>
       <Container>
-        <div className="mt-8">
+        <div className="my-8">
           <div className="flex justify-between items-center">
             <div>
               <h2 className="text-4xl font-semibold">{node.Application}</h2>
