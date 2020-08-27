@@ -16,6 +16,7 @@ Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect",X,X
 BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,May ,2020,3,No notifications,4,No reported issues
 BTS WORLD,May ,2020,3,No notifications or in-app purchases,X,X
+Cabify,March,2019,X,X,4,No reported issues
 Caf,August,2020,X,X,4,No reported issues
 Calculator++,May,2020,4,No reported issues,4,No reported issues
 Calm,June,2020,4,No reported issues,4,No reported issues
@@ -47,8 +48,10 @@ Fast Scanner,July,2020,4,No reported issues,4,No reported issues
 Firefox,May ,2020,4,No reported issues,4,No reported issues
 Firefox Focus,May ,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history,X,X
 Fire Emblem Heroes,August,2020,1,Unusable due to Google SafetyNet errors,3,No in-app purchases but no other issues with Google SafetyNet disabled in MicroG
+FlixBus,August,2020,X,X,4,No reported issues
 Fossil Hybrid App,July,2020,4,No reported issues,4,No reported issues
 Freedom,May ,2020,1,Unusable,X,X
+FX,August,2020,X,X,4,No reported issues
 Garmin Connect,May ,2020,3,Maps do not show within the application,X,X
 Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
 Github,July,2020,4,No reported issues,4,No reported issues
@@ -66,6 +69,7 @@ HandyTicket Deutschland,April,2020,3,No notifications,X,X
 "Headspace: meditation & sleep",July,2020,2,No premium or free trial,X,X
 Helm Email,August,2020,4,No reported issues,X,X
 Home [Hue lights...],June,2020,4,No reported issues,4,No reported issues
+Imgur,August,2020,X,X,4,No reported issues
 ING Banking,May ,2020,4,No reported issues,4,No reported issues
 "Insight timer: meditation, sleep, music",July,2020,1,"The google play services installed on this device is not authentic error",X,X
 Instagram,June,2020,4,No reported issues,4,No reported issues
@@ -126,6 +130,7 @@ Robinhood,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Secure PDF Viewer,May,2020,4,No reported issues,4,No reported issues
 SEEK,July,2020,4,No reported issues,4,No reported issues
 "Serenity: Guided Meditation & Mindfulness",July,2020,2,"Premium and free trial aren't available",X,X
+Shazam,August,2020,X,X,4,No reported issues
 Signal,May,2020,4,Offers APK from website designed for use without Google Play Services,4,No reported issues
 "Simple habit: meditation, sleep",July,2020,2,No premium or free trial,X,X
 Simplisafe ,June,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -151,6 +156,7 @@ The Guardian,July,2020,4,No reported issues,4,No reported issues
 Threema,August,2020,3,No push notifications & uses regular polling instead,X,X
 Tinder,August,2020,1,"Doesn't keep state, unusable",X,X
 Todoist,May ,2020,3,"Google Play Services Warning, but no effect",X,X
+TooGoodToGo,August,2020,X,X,4,No reported issues
 Trello,May,2020,4,No reported issues,4,No reported issues
 TRIBe Mietroller,August,2020,4,No reported issues but never gave location access,X,X
 Tricount,May,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -158,9 +164,14 @@ Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 Tutanota,May,2020,4,No reported issues,4,No reported issues
 Uber,June,2020,1,Unusable,X,X
+Uber Eats,January,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
 WeChat,May,2020,4,No reported issues,X,X
+Wifi Analyzer,August,2020,X,X,4,No reported issues
 Whatsapp,May,2020,3,No notifications unless the app is running in the background,X,X
+WhatsApp,August,2020,X,X,4,No reported issues
+WhhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
+Wire,August,2020,X,X,4,No reported issues
 Windscribe,May,2020,4,No reported issues,4,No reported issues
 Xodo Docs,May,2020,4,No reported issues,4,No reported issues
 Yi Home,June,2020,4,No reported issues,4,No reported issues
