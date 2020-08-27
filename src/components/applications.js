@@ -49,12 +49,22 @@ const Applications = () => {
         </div>
         <div className="mt-2 mb-8 py-3">
           <ul className="mt-3 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {search &&
-              data.allPlexusCsv.edges
-                .filter(({ node }) =>
-                  node.Application.toLowerCase().includes(search.toLowerCase())
-                )
-                .map(({ node }) => (
+            {search
+              ? data.allPlexusCsv.edges
+                  .filter(({ node }) =>
+                    node.Application.toLowerCase().includes(
+                      search.toLowerCase()
+                    )
+                  )
+                  .map(({ node }) => (
+                    <li
+                      className="col-span-1 flex shadow-sm rounded-md"
+                      key={node.id}
+                    >
+                      <ApplicationCard app={node} />
+                    </li>
+                  ))
+              : data.allPlexusCsv.edges.map(({ node }) => (
                   <li
                     className="col-span-1 flex shadow-sm rounded-md"
                     key={node.id}
