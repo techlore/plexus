@@ -40,8 +40,8 @@ Start a pull request with your apps to submit. Ensure you're maintaining the pro
 3. Year Last Tested
 4. App score. Please refer to the rating section of the readme to help figure out what score a service is. We may change your score if it doesn't match our rating method. Label "X" if you're testing with MicroG.
 5. Any issues with the application. Explain your problems, or just say "No reported issues" if the app works perfectly. Label "X" if you're testing with MicroG.
-6. MicroG App Score. This is ONLY for users testing apps on MicroG. Please refer to the rating section of the readme to help figure out what score a service is. We may change your score if it doesn't match our rating method. Label "X" if you're NOT testing with MicroG.
-7. MicroG issues. Explain your problems, or just say "No reported issues" if the app works perfectly. Label "X" if you're NOT testing with MicroG.
+6. MicroG App Score. This is ONLY for users testing apps on MicroG. Please refer to the rating section of the readme to help figure out what score a service is. We may change your score if it doesn't match our rating method. Label "X" if you're not testing with MicroG.
+7. MicroG issues. Explain your problems, or just say "No reported issues" if the app works perfectly. Label "X" if you're not testing with MicroG.
 
 ### Contribute Method 2 (Non-Github Method)
 Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
@@ -50,8 +50,8 @@ Email me at support@techlore.tech with all your apps you use on your phone that 
 3. Year Last Tested
 4. App Score. Label "X" if you're testing with MicroG.
 5. Any issues with the application. Explain your problems, or just say none if the app works perfectly. Label "X" if you're testing with MicroG.
-6. MicroG App Score. Label "X" if you're NOT testing with MicroG.
-7. MicroG issues. Label "X" if you're NOT testing with MicroG.
+6. MicroG App Score. Label "X" if you're not testing with MicroG.
+7. MicroG issues. Label "X" if you're not testing with MicroG.
 
 I will then update the spreadsheet myself. 
 
