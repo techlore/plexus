@@ -26,9 +26,7 @@ const Applications = () => {
   `);
 
   const [search, setSearch] = useState("");
-  const [displayedApps, setDisplayedApps] = useState(
-    data.allPlexusCsv.edges.length
-  );
+  const [displayedApps] = useState(data.allPlexusCsv.edges.length);
 
   const getAppList = () => {
     const apps = data.allPlexusCsv.edges.filter(({ node }) =>
