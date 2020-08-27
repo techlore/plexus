@@ -31,6 +31,7 @@ const Applications = () => {
   };
 
   const [search, setSearch] = useState("");
+  const [placeholder] = useState(getRandomApp());
 
   return (
     <div className="mt-8">
@@ -48,7 +49,7 @@ const Applications = () => {
             value={search}
             id="application"
             className="form-input p-3 block w-full sm:text-md sm:leading-5 rounded-md shadow-sm outline-none border border-gray-400 focus:border-purple-300"
-            placeholder={getRandomApp()}
+            placeholder={placeholder}
             aria-describedby="application-optional"
           />
         </div>
