@@ -24,6 +24,7 @@ Clockify,May ,2020,4,No reported issues,4,No reported issues
 Coinbase,June,2020,4,No reported issues,4,No reported issues
 ColorNote,May,2020,4,No reported issues,4,No reported issues
 Curiosity Stream,August,2020,4,Popup says GPS is required but everything works,X,X
+DB Navigator,August,2020,2,Google Play Services warning, maps do not show,X,X
 Deezer,May ,2020,3,"Cannot sign up from the application, but can login from the application",X,X
 Discord,May ,2020,3,No notifications,3,No notifications
 Disney+,May ,2020,3,"Cannot sign up from the application, but can login from the application",X,X
@@ -134,6 +135,7 @@ Synology Memories,June,2020,4,No reported issues,4,No reported issues
 Tello,June,2020,4,No reported issues,4,No reported issues
 Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work,X,X
 The Guardian,July,2020,4,No reported issues,4,No reported issues
+Threema,August,2020,3,No push notifications, uses regular polling instead,X,X
 Todoist,May ,2020,3,"Google Play Services Warning, but no effect",X,X
 Trello,May,2020,4,No reported issues,4,No reported issues
 Tricount,May,2020,3,"Google Play Services Warning, but no effect",X,X
