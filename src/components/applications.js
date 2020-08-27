@@ -26,18 +26,26 @@ const Applications = () => {
   `);
 
   const [search, setSearch] = useState("");
+  const [displayedApps, setDisplayedApps] = useState(
+    data.allPlexusCsv.edges.length
+  );
 
   return (
     <div className="mt-8">
       <Container>
         <Ratings />
         <div className="mt-8">
-          <label
-            htmlFor="application"
-            className="text-lg leading-6 font-medium text-gray-900 py-2"
-          >
-            Enter an <span className="font-semibold">App</span>
-          </label>
+          <div className="flex justify-between items-center">
+            <label
+              htmlFor="application"
+              className="text-lg leading-6 font-medium text-gray-900 py-2"
+            >
+              Enter an <span className="font-semibold">App</span>
+            </label>
+            <div className="font-semibold text-gray-700">
+              (&Sigma; {displayedApps})
+            </div>
+          </div>
           <input
             onChange={(e) => setSearch(e.target.value)}
             value={search}
