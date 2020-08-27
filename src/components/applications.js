@@ -35,7 +35,7 @@ const Applications = () => {
             for="application"
             className="text-lg leading-6 font-medium text-gray-900 py-2"
           >
-            Enter an App name
+            Enter an <span className="font-semibold">App</span>
           </label>
           <input
             onChange={(e) => setSearch(e.target.value)}
