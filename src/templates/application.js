@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Container from "../components/container";
+import SEO from "../components/seo";
 
 const Application = ({ pageContext: { node } }) => {
   const getRatingBg = (rating) => {
@@ -49,6 +50,7 @@ const Application = ({ pageContext: { node } }) => {
 
   return (
     <Layout>
+      <SEO title={node.Application} />
       <Container>
         <div className="my-8">
           <div className="flex justify-between items-center">
