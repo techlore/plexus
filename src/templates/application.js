@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
+import Ratings from "../components/ratings";
 import { getRatingBg, getRatingText } from "../util/applicationUtils";
 
 const Application = ({ pageContext: { node } }) => {
@@ -20,6 +21,7 @@ const Application = ({ pageContext: { node } }) => {
             </div>
             <Link to="/">Go Back</Link>
           </div>
+          <Ratings />
           <div className="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
             <div className="bg-white rounded-lg shadow-lg">
               <div
