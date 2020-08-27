@@ -49,9 +49,9 @@ const Applications = () => {
             >
               Search
             </label>
-            <div className="font-semibold text-gray-700">
-              (enter <span className="font-black text-brand">*</span> for all{" "}
-              {displayedApps} entries)
+            <div className="font-medium text-gray-700">
+              (enter <span className="font-bold text-brand">*</span> for all{" "}
+              <span className="font-bold">{displayedApps}</span> entries)
             </div>
           </div>
           <input
