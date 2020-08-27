@@ -12,6 +12,7 @@ Apple Music,July,2020,4,No reported issues,4,No reported issues
 aTimeLogger,May,2020,4,No reported issues,4,No reported issues
 Audible,June,2020,4,No reported issues,4,No reported issues
 Authy,August,2020,3,"Google Play Services Warning, No notifications",X,X
+Bitpanda,August,2020,1,Requires SafetyNet API,X,X
 Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect",X,X
 BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,May ,2020,3,No notifications,4,No reported issues
@@ -39,6 +40,7 @@ Dropbox,May ,2020,4,No reported issues,4,No reported issues
 DUAL,August,2020,X,X,3,No in-app purchases
 Duolingo,May ,2020,4,No reported issues,4,No reported issues
 eBay Kleinanzeigen,March,2020,3,No notifications,X,X
+Electron Cash,August,2020,4,No reported issues,X,X
 "English - Russian dictionary",July,2020,3,No text to speech,X,X
 Expo,August,2020,4,No reported issues,X,X
 Facebook Messenger,June,2020,3,No notifications unless the app is running in the background,X,X
@@ -51,6 +53,7 @@ Fossil Hybrid App,July,2020,4,No reported issues,4,No reported issues
 Freedom,May ,2020,1,Unusable,X,X
 Garmin Connect,May ,2020,3,Maps do not show within the application,X,X
 Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
+Geometry Dash,August,2020,4,No reported issues,X,X
 Github,July,2020,4,No reported issues,4,No reported issues
 Goodreads,May ,2020,4,No reported issues,4,No reported issues
 Google Camera,June,2020,3,"Working, but need spoofed API & Image preview won't work without Google Photos installed",4,No reported issues
@@ -82,6 +85,7 @@ Listen Audiobook Player,May,2020,4,No reported issues,4,No reported issues
 Loop Habit Tracker,May,2020,4,No reported issues,4,No reported issues
 Lyft,June,2020,1,Unusable,X,X
 MeBank,July,2020,1,Crashes on login,1,Crashes on login
+Mein ELBA-App,August,2020,1,Unusable,X,X
 Mein Vodafone,August,2020,1,No reported issues,X,X
 MEGA,May ,2020,4,No reported issues,4,No reported issues
 Microsoft Outlook,June,2020,4,No reported issues,4,No reported issues
@@ -113,6 +117,7 @@ PIA VPN,June,2020,4,No reported issues,4,No reported issues
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
 Pocket Tanks,June,2020,4,No reported issues,4,No reported issues
 Popcorn Time,June,2020,3,"Buggy, Crashes Occasionally",X,X
+Poweramp,August,2020,4,No reported issues,X,X
 Prime Video,June,2020,4,No reported issues,4,No reported issues
 ProtonMail,May,2020,3,No notifications,X,X
 ProtonVPN,May,2020,4,No reported issues,4,No reported issues
@@ -143,6 +148,7 @@ Starbucks,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Steam,May ,2020,3,No Notifications,X,X
 Stride,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Subway Surfers,May,2020,1,Unusable,4,No reported issues
+Super Hexagon,August,2020,4,No reported issues,X,X
 Synology Drive,June,2020,4,No reported issues,4,No reported issues
 Synology Memories,June,2020,4,No reported issues,4,No reported issues
 Tello,June,2020,4,No reported issues,4,No reported issues
