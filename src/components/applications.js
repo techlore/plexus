@@ -24,6 +24,12 @@ const Applications = () => {
     }
   `);
 
+  const getRandomApp = () => {
+    const nodes = data.allPlexusCsv.edges;
+    const { node } = nodes[Math.floor(Math.random() * nodes.length)];
+    return node.Application;
+  };
+
   const [search, setSearch] = useState("");
 
   return (
@@ -42,7 +48,7 @@ const Applications = () => {
             value={search}
             id="application"
             className="form-input p-3 block w-full sm:text-md sm:leading-5 rounded-md shadow-sm outline-none border border-gray-400 focus:border-purple-300"
-            placeholder="YouTube"
+            placeholder={getRandomApp()}
             aria-describedby="application-optional"
           />
         </div>
