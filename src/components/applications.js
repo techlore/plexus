@@ -32,7 +32,7 @@ const Applications = () => {
         <Ratings />
         <div className="mt-8">
           <label
-            for="application"
+            htmlFor="application"
             className="text-lg leading-6 font-medium text-gray-900 py-2"
           >
             Enter an <span className="font-semibold">App</span>
