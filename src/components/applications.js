@@ -30,6 +30,15 @@ const Applications = () => {
     data.allPlexusCsv.edges.length
   );
 
+  const getAppList = () => {
+    const apps = data.allPlexusCsv.edges.filter(({ node }) =>
+      node.Application.toLowerCase().includes(
+        search !== "*" ? search.toLowerCase() : ""
+      )
+    );
+    return apps;
+  };
+
   return (
     <div className="mt-8">
       <Container>
@@ -38,12 +47,13 @@ const Applications = () => {
           <div className="flex justify-between items-center">
             <label
               htmlFor="application"
-              className="text-lg leading-6 font-medium text-gray-900 py-2"
+              className="text-lg leading-6 font-semibold text-gray-900 py-2"
             >
-              Enter an <span className="font-semibold">App</span>
+              Search
             </label>
             <div className="font-semibold text-gray-700">
-              (&Sigma; {displayedApps})
+              (enter <span className="font-black text-brand">*</span> for all{" "}
+              {displayedApps} entries)
             </div>
           </div>
           <input
@@ -57,29 +67,15 @@ const Applications = () => {
         </div>
         <div className="mt-2 mb-8 py-3">
           <ul className="mt-3 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {search
-              ? data.allPlexusCsv.edges
-                  .filter(({ node }) =>
-                    node.Application.toLowerCase().includes(
-                      search.toLowerCase()
-                    )
-                  )
-                  .map(({ node }) => (
-                    <li
-                      className="col-span-1 flex shadow-sm rounded-md"
-                      key={node.id}
-                    >
-                      <ApplicationCard app={node} />
-                    </li>
-                  ))
-              : data.allPlexusCsv.edges.map(({ node }) => (
-                  <li
-                    className="col-span-1 flex shadow-sm rounded-md"
-                    key={node.id}
-                  >
-                    <ApplicationCard app={node} />
-                  </li>
-                ))}
+            {search &&
+              getAppList().map(({ node }) => (
+                <li
+                  className="col-span-1 flex shadow-sm rounded-md"
+                  key={node.id}
+                >
+                  <ApplicationCard app={node} />
+                </li>
+              ))}
           </ul>
         </div>
       </Container>
