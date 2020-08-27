@@ -45,7 +45,7 @@ const Ratings = () => {
                     rating.key
                   )}`}
                 >
-                  <div className="flex justify-center items-center h-6 w-6 text-white">
+                  <div className="flex font-bold justify-center items-center h-6 w-6 text-white">
                     <div>{rating.key}</div>
                   </div>
                 </div>
