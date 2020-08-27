@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Container from "./container";
 import ApplicationCard from "./applicationCard";
+import Ratings from "./Ratings";
 
 const Applications = () => {
   const data = useStaticQuery(graphql`
@@ -28,7 +29,14 @@ const Applications = () => {
   return (
     <div className="mt-8">
       <Container>
-        <div>
+        <Ratings />
+        <div className="mt-8">
+          <label
+            for="application"
+            className="text-lg leading-6 font-medium text-gray-900 py-2"
+          >
+            Enter an App name
+          </label>
           <input
             onChange={(e) => setSearch(e.target.value)}
             value={search}
