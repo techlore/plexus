@@ -29,6 +29,7 @@ const Application = ({ pageContext: { node } }) => {
                   node.Rating__1_4_
                 )}`}
               >
+                <div className="text-white font-semibold p-4">de-Googled</div>
                 <div className="text-white font-semibold p-4"></div>
                 <div className="p-4">
                   <div class="flex justify-center items-center p-1 h-8 w-8 bg-white text-xs leading-4 font-medium rounded-full">
