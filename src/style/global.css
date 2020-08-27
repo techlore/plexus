@@ -6,3 +6,8 @@
 @tailwind utilities;
 
 @import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+.font-alt {
+  font-family: "Krona One", sans-serif;
+}
