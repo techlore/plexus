@@ -3,51 +3,9 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
+import { getRatingBg, getRatingText } from "../util/applicationUtils";
 
 const Application = ({ pageContext: { node } }) => {
-  const getRatingBg = (rating) => {
-    let ratingClass = "bg-gray-600";
-
-    switch (rating) {
-      case "1":
-        ratingClass = "bg-red-600";
-        break;
-      case "2":
-        ratingClass = "bg-orange-600";
-        break;
-      case "3":
-        ratingClass = "bg-blue-600";
-        break;
-      case "4":
-        ratingClass = "bg-green-600";
-        break;
-      default:
-        ratingClass = "bg-gray-600";
-    }
-    return ratingClass;
-  };
-  const getRatingText = (rating) => {
-    let ratingClass = "text-gray-600";
-
-    switch (rating) {
-      case "1":
-        ratingClass = "text-red-600";
-        break;
-      case "2":
-        ratingClass = "text-orange-600";
-        break;
-      case "3":
-        ratingClass = "text-blue-600";
-        break;
-      case "4":
-        ratingClass = "text-green-600";
-        break;
-      default:
-        ratingClass = "text-gray-600";
-    }
-    return ratingClass;
-  };
-
   return (
     <Layout>
       <SEO title={node.Application} />
@@ -95,7 +53,9 @@ const Application = ({ pageContext: { node } }) => {
                   node.MicroG_Rating__1_4_
                 )}`}
               >
-                <div className="text-white font-semibold p-4">MicroG</div>
+                <div className="text-white font-semibold p-4">
+                  &mu; (microG)
+                </div>
                 <div className="p-4">
                   <div class="flex justify-center items-center p-1 h-8 w-8 bg-white text-xs leading-4 font-medium rounded-full">
                     <div

@@ -15,6 +15,7 @@ const Applications = () => {
             Month
             Year
             Rating__1_4_
+            MicroG_Rating__1_4_
             fields {
               slug
             }

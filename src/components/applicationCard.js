@@ -1,40 +1,21 @@
 import React from "react";
 import { Link } from "gatsby";
+import { getRatingBg } from "../util/applicationUtils";
 
 const ApplicationCard = ({ app }) => {
-  let ratingClass = "bg-gray-600";
-
-  switch (app.Rating__1_4_) {
-    case "1":
-      ratingClass = "bg-red-600";
-      break;
-    case "2":
-      ratingClass = "bg-orange-600";
-      // code block
-      break;
-    case "3":
-      ratingClass = "bg-blue-600";
-      // code block
-      break;
-    case "4":
-      ratingClass = "bg-green-600";
-      // code block
-      break;
-    default:
-      ratingClass = "bg-gray-600";
-  }
-
-  const applicationsDir = "applications/";
-  const getUrl = (slug) => applicationsDir + slug;
+  const APPLICATIONS_DIR = "applications/";
+  const getUrl = (slug) => APPLICATIONS_DIR + slug;
 
   return (
     <>
       <div
-        className={`flex-shrink-0 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium rounded-l-md ${ratingClass}`}
+        className={`flex-shrink-0 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium rounded-l-md ${getRatingBg(
+          app.Rating__1_4_
+        )}`}
       >
         {app.Rating__1_4_}
       </div>
-      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white truncate">
         <div className="flex-1 px-4 py-2 text-sm leading-5 truncate">
           <Link
             className="truncate text-gray-900 font-medium hover:text-gray-600 transition ease-in-out duration-150"
@@ -46,6 +27,13 @@ const ApplicationCard = ({ app }) => {
             {app.Year} {app.Month}
           </p>
         </div>
+      </div>
+      <div
+        className={`flex-shrink-0 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium rounded-r-md ${getRatingBg(
+          app.MicroG_Rating__1_4_
+        )}`}
+      >
+        &mu;{app.MicroG_Rating__1_4_}
       </div>
     </>
   );
