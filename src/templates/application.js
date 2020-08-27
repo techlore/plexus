@@ -63,7 +63,7 @@ const Application = ({ pageContext: { node } }) => {
             <Link to="/">Go Back</Link>
           </div>
           <div className="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
-            <div className="bg-white rounded-lg ">
+            <div className="bg-white rounded-lg shadow-lg">
               <div
                 className={`flex justify-between items-center rounded-t-lg ${getRatingBg(
                   node.Rating__1_4_
@@ -89,7 +89,7 @@ const Application = ({ pageContext: { node } }) => {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg ">
+            <div className="bg-white rounded-lg shadow-lg">
               <div
                 className={`flex justify-between items-center rounded-t-lg ${getRatingBg(
                   node.MicroG_Rating__1_4_
