@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Container from "./container";
 import ApplicationCard from "./applicationCard";
-import Ratings from "./Ratings";
+import Ratings from "./ratings";
 
 const Applications = () => {
   const data = useStaticQuery(graphql`
