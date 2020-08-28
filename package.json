@@ -1,0 +1,47 @@
+{
+  "name": "plexus",
+  "private": true,
+  "description": "Remove the fear of Android app compatibility on de-Googled devices.",
+  "version": "0.1.0",
+  "author": "Tom Konidas <tomkonidas@protonmail.ch>",
+  "dependencies": {
+    "gatsby": "^2.24.50",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-manifest": "^2.4.24",
+    "gatsby-plugin-offline": "^3.2.24",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.28",
+    "gatsby-plugin-slug-field": "^0.2.0",
+    "gatsby-source-filesystem": "^2.3.25",
+    "gatsby-transformer-csv": "^2.3.10",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.0",
+    "tailwindcss": "^1.7.5"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techlore-official/plexus"
+  },
+  "bugs": {
+    "url": "https://github.com/techlore-official/plexus/issues"
+  }
+}
