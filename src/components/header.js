@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => (
           <h1 className="flex items-center">
             <img className="h-6 w-auto sm:h-10" src={Logo} alt="Plexus" />
             <Link
-              className="font-mono text-3xl md:text-5xl text-white ml-2"
+              className="font-mono font-bold text-3xl md:text-5xl text-white ml-2"
               to="/"
             >
               {siteTitle}
