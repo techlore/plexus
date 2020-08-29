@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Applications from "../components/applications";
 import SEO from "../components/seo";
 import Container from "../components/container";
+import CrowdSource from "../components/crowdSource";
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
         </h2>
       </div>
     </Container>
+    <CrowdSource />
     <Applications />
   </Layout>
 );
