@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Container from "./container";
 import Logo from "../images/plexus-icon.png";
-import Techlore from "../images/techlore.png";
+import Techlore from "../images/techlore.inline.svg";
 import React from "react";
 
 const Header = ({ siteTitle }) => (
@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
           className="text-gray-100 hover:text-gray-200"
           rel="noopener noreferrer"
         >
-          <img className="h-10 md:h-12 w-auto" src={Techlore} alt="Techlore" />
+          <Techlore className="w-auto h-10" />
         </a>
       </div>
     </Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import Techlore from "../images/techlore.png";
+import Techlore from "../images/techlore.inline.svg";
 
 const Footer = ({ siteTitle }) => (
   <footer className="bg-brand">
@@ -10,7 +10,7 @@ const Footer = ({ siteTitle }) => (
           className="text-gray-100 hover:text-gray-200"
           rel="noopener noreferrer"
         >
-          <img className="h-6 w-auto" src={Techlore} alt="Techlore" />
+          <Techlore className="w-auto h-6" />
         </a>
         <a
           href="https://github.com/techlore-official/plexus"
