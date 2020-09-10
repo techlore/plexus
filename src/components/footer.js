@@ -1,12 +1,20 @@
 import React from "react";
+import Techlore from "../images/techlore.png";
 
 const Footer = ({ siteTitle }) => (
   <footer className="bg-brand">
     <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
       <div className="flex justify-center md:order-2">
         <a
+          href="https://techlore.tech"
+          className="text-gray-100 hover:text-gray-200"
+          rel="noopener noreferrer"
+        >
+          <img className="h-6 w-auto" src={Techlore} alt="Techlore" />
+        </a>
+        <a
           href="https://github.com/techlore-official/plexus"
-          className="ml-6 text-gray-100 hover:text-gray-200"
+          className="ml-3 md:ml-5 text-gray-100 hover:text-gray-200"
           rel="noopener noreferrer"
         >
           <span className="sr-only">GitHub</span>
