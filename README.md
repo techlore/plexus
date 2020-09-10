@@ -2,6 +2,8 @@
 
 <img src="https://techlore.tech/plexus.png" width="200" height="200">
 
+[Plexus Website](https://plexus.techlore.tech/)
+
 A common concern expressed by users wanting to move to a de-googled Android ROM is: _Will my apps work without Google Play Services?_
 
 Plexus crowdsources data from custom Android ROM users to display what apps do/don't work without Google Play Services.
@@ -14,7 +16,9 @@ When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced
 
 ## Navigating Plexus
 
-Currently, Plexus is just a standard CSV spreadsheet [in this repo](./src/data/Plexus.csv).
+To view app data, visit the [Plexus Website](https://plexus.techlore.tech/)
+
+To view the CSV spreadsheet (and contribute) view it here [in this repo](./src/data/Plexus.csv).
 
 **NOTE: Plexus is only for applications directly or indirectly from the Google Play Store. Please do not submit applications from F-Droid as they are all expected to work.**
 
@@ -65,10 +69,10 @@ Email me at support@techlore.tech with all your apps you use on your phone that 
 I will then update the spreadsheet myself.
 
 ## Future Plans & Goals
-
-- Support for application version numbers.
-- A website to allow better formatting of application data.
+- An ability for users to request an app to be reviewed
+- Support for application package names & version numbers
 - Support for "recommended alternatives" similar to alternativeto.net
+- More thorough data showing what OS & ROM was used for testing
 - An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
 
 ![](https://i.creativecommons.org/p/zero/1.0/88x31.png) This project is licensed under the terms of the CC0 V1 License.
