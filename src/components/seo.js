@@ -49,7 +49,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://plexus.netlify.app/og-plexus.jpg`,
+          content: `https://plexus.techlore.tech/og-plexus.jpg`,
         },
         {
           property: `og:type`,
@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://plexus.netlify.app/og-plexus.jpg`,
+          content: `https://plexus.techlore.tech/og-plexus.jpg`,
         },
       ].concat(meta)}
     />
