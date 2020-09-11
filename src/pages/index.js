@@ -7,7 +7,7 @@ import CrowdSource from "../components/crowdSource";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Crowdsourced de-Googled Android apps status ratings" />
     <Container>
       <div className="flex">
         <h2 className="my-12 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none">
