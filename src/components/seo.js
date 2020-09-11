@@ -48,6 +48,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `image`,
           property: `og:image`,
           content: `https://plexus.techlore.tech/og-plexus.jpg`,
         },
