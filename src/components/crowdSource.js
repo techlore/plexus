@@ -5,7 +5,7 @@ const CrowdSource = () => {
   return (
     <Container>
       <h4 className="text-lg">
-        Plexus is a crowd-sourced project that relies on the community. You can
+        Plexus is a crowdsourced project that relies on the community. You can
         contribute{" "}
         <a
           className="text-brand font-semibold hover:text-brand-dark"
