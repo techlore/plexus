@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
-import Ratings from "../components/ratings";
+import SearchCircle from "../images/search.inline.svg";
 import { getRatingBg, getRatingText } from "../util/applicationUtils";
 
 const Application = ({ pageContext: { node } }) => {
@@ -12,16 +12,19 @@ const Application = ({ pageContext: { node } }) => {
       <SEO title={node.Application} />
       <Container>
         <div className="my-8">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-start">
             <div>
               <h2 className="text-4xl font-semibold">{node.Application}</h2>
               <p className="text-gray-500">
                 {node.Year} {node.Month}
               </p>
             </div>
-            <Link to="/">Go Back</Link>
+            <Link to="/">
+              <div className="font-semibold text-3xl text-brand hover:text-brand-dark flex items-center">
+                <SearchCircle className="h-8 w-auto" /> Back to search
+              </div>
+            </Link>
           </div>
-          <Ratings />
           <div className="mt-4 grid gap-6 grid-cols-1 md:grid-cols-2">
             <div className="bg-white rounded-lg shadow-lg">
               <div

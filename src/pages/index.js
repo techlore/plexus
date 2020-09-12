@@ -9,8 +9,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Crowdsourced de-Googled Android apps status ratings" />
     <Container>
-      <div className="flex">
-        <h2 className="my-12 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none">
+      <div className="my-12 flex flex-col sm:flex-row">
+        <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none">
           Remove the fear of Android app compatibility <br />
           <span className="text-5xl">
             on <span className="text-brand">de-Googled</span> devices.

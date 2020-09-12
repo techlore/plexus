@@ -12,6 +12,9 @@ const ratings = [
 const Ratings = () => {
   return (
     <div>
+      <h3 className="mb-6 self-center text-3xl font-bold">
+        What Do The Ratings Mean?
+      </h3>
       <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {ratings.map((rating) => (
           <div
