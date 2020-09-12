@@ -14,13 +14,15 @@ const Application = ({ pageContext: { node } }) => {
         <div className="my-8">
           <div className="flex justify-between items-start">
             <div>
-              <h2 className="text-4xl font-semibold">{node.Application}</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+                {node.Application}
+              </h2>
               <p className="text-gray-500">
                 {node.Year} {node.Month}
               </p>
             </div>
             <Link to="/">
-              <div className="font-semibold text-3xl text-brand hover:text-brand-dark flex items-center">
+              <div className="font-semibold text-2xl md:text-3xl lg:text-4xl text-brand hover:text-brand-dark flex items-center">
                 <SearchCircle className="h-8 w-auto" /> Back to search
               </div>
             </Link>
