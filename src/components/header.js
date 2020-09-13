@@ -32,6 +32,7 @@ const Header = ({ siteTitle }) => (
             href="https://app.element.io/#/room/#plexus:matrix.org"
             className="text-gray-100 hover:text-gray-200"
             rel="noopener noreferrer"
+            target="_blank"
           >
             <img className="h-10 w-auto" src={Matrix} alt="Matrix.org" />
           </a>

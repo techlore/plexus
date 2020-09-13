@@ -17,14 +17,16 @@ const Footer = ({ siteTitle }) => (
           href="https://app.element.io/#/room/#plexus:matrix.org"
           className="ml-3 md:ml-5 text-gray-100 hover:text-gray-200"
           rel="noopener noreferrer"
+          target="_blank"
         >
-          <span className="sr-only">GitHub</span>
+          <span className="sr-only">Matrix</span>
           <img className="h-6 w-auto" src={Matrix} alt="Matrix.org" />
         </a>
         <a
           href="https://github.com/techlore-official/plexus"
           className="ml-3 md:ml-5 text-gray-100 hover:text-gray-200"
           rel="noopener noreferrer"
+          target="_blank"
         >
           <span className="sr-only">GitHub</span>
           <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
