@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import Container from "./container";
 import Logo from "../images/plexus-icon.png";
+import Matrix from "../images/matrix.png";
 import Techlore from "../images/techlore.inline.svg";
 import InformationCircle from "../images/info.inline.svg";
 import React from "react";
@@ -27,6 +28,13 @@ const Header = ({ siteTitle }) => (
               <InformationCircle className="w-auto h-10" />
             </div>
           </Link>
+          <a
+            href="https://app.element.io/#/room/#plexus:matrix.org"
+            className="text-gray-100 hover:text-gray-200"
+            rel="noopener noreferrer"
+          >
+            <img className="h-10 w-auto" src={Matrix} alt="Matrix.org" />
+          </a>
           <a
             href="https://techlore.tech"
             className="text-gray-100 hover:text-gray-200"
