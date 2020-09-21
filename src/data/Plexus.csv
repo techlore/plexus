@@ -7,6 +7,7 @@ AccuBattery,September,2020,4,No reported issues,X,X
 Actual Budget,August,2020,4,No reported issues,X,X
 ADAC Autodatenbank,August,2020,X,X,4,No reported issues
 ADT Smart Services,June,2020,3,No notifications and Google Play Services Warning (But no effect),X,X
+Advanced Download Manager,September,2020,3,No in-app purchases,3,No in-app purchases
 Air NZ,June,2020,3,Requires disabling notification class,X,X
 Akinator,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Alto's Adventure,May,2020,4,No reported issues,4,No reported issues
@@ -19,6 +20,8 @@ ASN Bankieren,September,2020,X,X,4,No reported issues
 aTimeLogger,May,2020,4,No reported issues,4,No reported issues
 Audible,June,2020,4,No reported issues,4,No reported issues
 Authy,August,2020,3,"Google Play Services Warning, No notifications",X,X
+AutomaTag,September,2020,3,No in-app purchases,3,No in-app purchases
+AutoTagger,September,2020,3,No in-app purchases,3,No in-app purchases
 Ballz,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 Bandcamp,September,2020,3,No notifications,4,No reported issues
 Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
@@ -28,7 +31,7 @@ BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,May ,2020,3,No notifications,4,No reported issues
 BTS WORLD,May ,2020,3,No notifications or in-app purchases,X,X
 Button Mapper by flar2,September,2020,4,No reported issues,X,X
-Cabify,March,2019,X,X,4,No reported issues
+Cabify,September,2020,1,Unusable,4,No reported issues
 Caf,August,2020,X,X,4,No reported issues
 Cake Wallet,September,2020,4,No reported issues,X,X
 Calculator++,May,2020,4,No reported issues,4,No reported issues
@@ -68,6 +71,8 @@ Electron Cash,August,2020,4,No reported issues,X,X
 "English - Russian dictionary",July,2020,3,No text to speech,X,X
 EteSync,September,2020,X,X,4,No reported issues
 Expo,August,2020,4,No reported issues,X,X
+Facebook,September,2020,4,No reported issues,4,No reported issues
+Facebook Lite,September,2020,4,No reported issues,4,No reported issues
 Facebook Messenger,June,2020,3,No notifications unless the app is running in the background,X,X
 Fasthub,June,2020,4,No reported issues,4,No reported issues
 Fast Scanner,July,2020,4,No reported issues,4,No reported issues
@@ -85,12 +90,15 @@ Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
 Geometry Dash,August,2020,4,No reported issues,X,X
 Github,July,2020,4,No reported issues,4,No reported issues
 Goodreads,May ,2020,4,No reported issues,4,No reported issues
+Google,September,2020,3,"Google Play Services Warning, some functions missing",3,"Google Play Services Warning, some functions missing"
 Google Camera,June,2020,3,"Working, but need spoofed API & Image preview won't work without Google Photos installed",4,No reported issues
 Google Cardboard,June,2020,3,Purchases will not work,X,X
+Google Classroom,August,2020,X,X,2,Cannot login into Google account
+Google Hangouts,August,2020,X,X,4,No reported issues
 Google Keep Notes,June,2020,1,Unusable,X,X
 Google Keyboard (Gboard),May,2020,4,No reported issues,4,No reported issues
-Google Maps,June,2020,1,Unusable,4,No reported issues
-Google Photos,June,2020,1,Unusable,X,X
+Google Maps,September,2020,3,"Google Play Services Warning, but no effect",3,"Google Play Services Warning, but no effect"
+Google Photos,September,2020,3,"Google Play Services Warning, but no effect",X,X
 GoPro,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Graphing Calc (GeoGebra),August,2020,4,No reported issues,X,X
 Groupme,June,2020,3,No Notifications,X,X
@@ -160,7 +168,11 @@ Oculus,September,2020,4,No reported issues,X,X
 OfficeSuite Pro,September,2020,X,X,4,"Manually installed, unupgradeable"
 OKCupid,August,2020,1,Can't even login,X,X
 Onenote,May,2020,4,No reported issues,4,No reported issues
+Opera,September,2020,4,No reported issues,4,No reported issues
+Opera beta,September,2020,4,No reported issues,4,No reported issues
 Opera Mini,May,2020,4,No reported issues,4,No reported issues
+Opera Mini beta,September,2020,4,No reported issues,4,No reported issues
+Opera Touch,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 OTG View,June,2020,4,No reported issues,4,No reported issues
 PAKO,June,2020,3,"Google Play Services Warning, but no effect",X,X
 PAKO 2,January,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -170,6 +182,7 @@ PayMyPark,March,2020,4,No reported issues,4,No reported issues
 PayPal,May ,2020,4,No reported issues,4,No reported issues
 PIA VPN,June,2020,4,No reported issues,4,No reported issues
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
+Pinterest,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Pleco,August,2020,4,No reported issues,X,X
 Pocket,August,2020,4,No reported issues,X,X
 Pocket Tanks,June,2020,4,No reported issues,4,No reported issues
@@ -191,6 +204,7 @@ Rippl,June,2020,4,No reported issues,4,No reported issues
 Robinhood,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Roblox,August,2020,1,When you log in it requires you to have Google Play Services and app crashes,X,X
 Secure PDF Viewer,May,2020,4,No reported issues,4,No reported issues
+Sentinel Free Decentralized VPN,September,2020,4,No reported issues,4,No reported issues
 SEEK,July,2020,4,No reported issues,4,No reported issues
 "Serenity: Guided Meditation & Mindfulness",July,2020,2,"Premium and free trial aren't available",X,X
 Shazam,August,2020,X,X,4,No reported issues
@@ -205,6 +219,8 @@ Snapchat,January,2020,1,Unusable,1,Unusable-Although Huawei Store version may wo
 Snapseed,June,2020,4,No reported issues,4,No reported issues
 SoFi,September,2020,1,"SoFi won't work unless you enable Google Play services",4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect",X,X
+SoundCloud,September,2020,3,Cannot login with Google account,4,No reported issues
+SoundCloud Pulse,September,2020,3,Cannot login with Google account,4,No reported issues
 Spaceship Voyager,May,2020,4,No reported issues,4,No reported issues
 Sparkasse (KontoApp),August,2020,3,Everything except Notifications (Its a webview with some weird extras nobody uses),X,X
 Spotify,May ,2020,4,No reported issues,4,No reported issues
@@ -242,10 +258,10 @@ TTS Util,June,2020,4,No reported issues,4,No reported issues
 Tutanota,May,2020,4,No reported issues,4,No reported issues
 Twitter,September,2020,X,Notifications not working,3,No notifications
 Uber,June,2020,1,Unusable,4,No reported issues
-Uber Eats,January,2020,X,X,4,No reported issues
+Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 VR-Banking,August,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
-Waze,September,2020,X,X,4,No reported issues
+Waze,September,2020,4,No reported issues,4,No reported issues
 WeChat,May,2020,4,No reported issues,X,X
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 WhatsApp,August,2020,3,No notifications unless the app is running in the background,4,No reported issues
@@ -256,6 +272,7 @@ Xodo Docs,May,2020,4,No reported issues,4,No reported issues
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
 YouTube,May,2020,1,Unusable,4,No reported issues
-YouTube Kids,September,2020,1,Unusable,X,X
+YouTube Kids,September,2020,1,Unusable,4,No reported issues
+YouTube Music,September,2020,1,Unusable,4,No reported issues
 Zoom,January,2020,4,No reported issues,4,No reported issues
 Zulip,September,2020,3,Notifications not working,X,X
