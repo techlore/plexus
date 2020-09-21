@@ -97,7 +97,7 @@ Google Classroom,August,2020,X,X,2,Cannot login into Google account
 Google Hangouts,August,2020,X,X,4,No reported issues
 Google Keep Notes,June,2020,1,Unusable,X,X
 Google Keyboard (Gboard),May,2020,4,No reported issues,4,No reported issues
-Google Maps,September,2020,3,"Google Play Services Warning, but no effect",3,"Google Play Services Warning, but no effect"
+Google Maps,September,2020,3,Cannot add Google account,4,No reported issues
 Google Photos,September,2020,3,"Google Play Services Warning, but no effect",X,X
 GoPro,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Graphing Calc (GeoGebra),August,2020,4,No reported issues,X,X
@@ -263,7 +263,7 @@ Uber,June,2020,1,Unusable,4,No reported issues
 Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 VR-Banking,August,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
-Waze,September,2020,4,No reported issues (Likely wrong),2,Maps don't load
+Waze,September,2020,1,Unusable-maps don't load,1,Unusable-maps don't load
 WeChat,May,2020,4,No reported issues,X,X
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 WhatsApp,August,2020,3,No notifications unless the app is running in the background,4,No reported issues
