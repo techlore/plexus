@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
             </div>
           </Link>
           <a
-            href="https://app.element.io/#/room/#plexus:matrix.org"
+            href="https://matrix.to/#/#plexus:matrix.org"
             className="text-gray-100 hover:text-gray-200"
             rel="noopener noreferrer"
             target="_blank"
