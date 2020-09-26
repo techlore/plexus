@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "author": "Tom Konidas <tomkonidas@protonmail.ch>",
   "dependencies": {
-    "gatsby": "^2.24.62",
+    "gatsby": "^2.24.65",
     "gatsby-image": "^2.4.19",
-    "gatsby-plugin-manifest": "^2.4.30",
+    "gatsby-plugin-manifest": "^2.4.31",
     "gatsby-plugin-offline": "^3.2.28",
     "gatsby-plugin-postcss": "^2.3.12",
     "gatsby-plugin-react-helmet": "^3.3.11",
