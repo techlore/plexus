@@ -1,8 +1,6 @@
-# Plexus
+# [Plexus](https://plexus.techlore.tech/)
 
 <img src="https://techlore.tech/plexus.png" width="200" height="200">
-
-[Plexus Website](https://plexus.techlore.tech/)
 
 A common concern expressed by users wanting to move to a de-googled Android ROM is: _Will my apps work without Google Play Services?_
 
