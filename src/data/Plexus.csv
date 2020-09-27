@@ -12,7 +12,7 @@ Air NZ,June,2020,3,Requires disabling notification class,X,X
 Akinator,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Alto's Adventure,May,2020,4,No reported issues,4,No reported issues
 Amazon Kindle,June,2020,4,No reported issues,4,No reported issues
-Amazon Shopping,June,2020,4,No reported issues,4,No reported issues
+Amazon Shopping,September,2020,4,No reported issues,4,No reported issues
 Ankidroid,May,2020,4,No reported issues,4,No reported issues
 Anydesk,August,2020,4,No reported issues,X,X
 Apple Music,July,2020,4,No reported issues,4,No reported issues
@@ -110,6 +110,7 @@ HERE WeGo City Navigation,September,2020,4,Requires network permission access,X,
 Home [Hue lights...],June,2020,4,No reported issues,4,No reported issues
 iFunny,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Imgur,August,2020,X,X,4,No reported issues
+Informed Delivery,September,2020,X,X,4,No reported issues
 ING Banking,May ,2020,4,No reported issues,4,No reported issues
 "Insight timer: meditation, sleep, music",July,2020,1,"The google play services installed on this device is not authentic error",X,X
 Instagram,June,2020,4,No reported issues,4,No reported issues
@@ -198,7 +199,7 @@ ProtonVPN,May,2020,4,No reported issues,4,No reported issues
 Psych! Outwit Your Friends,July,2020,1,Does not load,X,X
 PureGym,August,2020,X,X,4,No reported issues
 Qantas,March,2020,4,No reported issues,4,No reported issues
-Reddit,May,2020,3,No notifications,X,X
+Reddit,September,2020,3,No notifications,3,No notifications
 Revolut,August,2020,3,No notifications,2,Refuses Authentication
 Ring,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Rippl,June,2020,4,No reported issues,4,No reported issues
@@ -263,6 +264,7 @@ Uber,June,2020,1,Unusable,4,No reported issues
 Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 VR-Banking,August,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
+Walmart,September,2020,X,X,4,No reported issues
 Waze,September,2020,1,Unusable-maps don't load,1,Unusable-maps don't load
 WeChat,May,2020,4,No reported issues,X,X
 Wifi Analyzer,August,2020,X,X,4,No reported issues
