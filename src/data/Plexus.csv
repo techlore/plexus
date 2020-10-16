@@ -282,7 +282,7 @@ Threema,October,2020,3,No push notifications & uses regular polling instead,4,No
 TickTick,August,2020,3,Occasional missed notifications,X,X
 Tile,September,2020,2,"Google Play Services Warning, also missing maps previews",2,Missing map previews
 Tinder,August,2020,1,"Doesn't keep state, unusable",X,X
-Todoist,May ,2020,3,"Google Play Services Warning, but no effect",X,X
+Todoist,May ,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 Tomorrow,August,2020,3,No notifications & IBAN-Scanner not working,X,X
 TooGoodToGo,September,2020,1,"Unable to choose location, map not working",4,No reported issues
 Total Launcher,August,2020,X,X,3,Cannot purchase extra features
