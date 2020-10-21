@@ -16,9 +16,13 @@ When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced
 
 ## Navigating Plexus
 
-To view app data, visit the [Plexus Website](https://plexus.techlore.tech/)
+* To view app data, visit the [Plexus Website](https://plexus.techlore.tech/)
 
-To view the CSV spreadsheet (and contribute) view it here [in this repo](./src/data/Plexus.csv).
+* To view the CSV spreadsheet (and contribute) view it here [in this repo](./src/data/Plexus.csv).
+
+* To make or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv) 
+
+* To join our Matrix room, [go here.](https://matrix.to/#/#plexus:matrix.org)
 
 **NOTE: Plexus is only for applications directly or indirectly from the Google Play Store. Please do not submit applications from F-Droid as they are all expected to work.**
 
@@ -68,8 +72,15 @@ Email me at support@techlore.tech with all your apps you use on your phone that 
 
 I will then update the spreadsheet myself.
 
+## Application Requests
+
+If you're unable to find an application within Plexus and don't have the means of testing them yourself, you can submit an App Request where other testers can test apps on your behalf. This is purely on a voluteer basis. There will be methods of incentivizing volunteers down the road. 
+
+To submit an application request, do one of the following:
+1. Submit a PR with your app(s) [in the repo.](./src/data/requests.csv) 
+2. Email me at support@techlore.tech with same data points found in the repo (Name/Alias, App Name(s),MicroG (Yes/No), Urgent (Yes/No)
+
 ## Future Plans & Goals
-- An ability for users to request an app to be reviewed
 - Support for application package names & version numbers
 - Support for "recommended alternatives" similar to alternativeto.net
 - More thorough data showing what OS & ROM was used for testing
