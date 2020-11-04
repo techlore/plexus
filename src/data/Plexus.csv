@@ -40,6 +40,7 @@ Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect",X,X
 BlueDriver,September,2020,4,No reported issues,X,X
 BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,May ,2020,3,No notifications,4,No reported issues
+Brooks Brothers,November,2020,X,X,1,Won't open beyond logo
 BTS WORLD,May ,2020,3,No notifications or in-app purchases,X,X
 Button Mapper by flar2,September,2020,4,No reported issues,X,X
 Cabify,September,2020,1,Unusable,4,No reported issues
@@ -51,6 +52,7 @@ Calm,June,2020,4,No reported issues,4,No reported issues
 Cambio Carsharing,August,2020,4,No reported issues,X,X
 Camera Adversaria,September,2020,4,No reported issues,X,X
 CamScanner,May,2020,4,No reported issues,4,No reported issues
+Capital One,November,2020,X,X,4,No reported issues
 Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
 Chargepoint,October,2020,X,X,4,No reported issues
 Chase,October,2020,X,X,1,Doesn't allow login
@@ -88,6 +90,7 @@ eBay Kleinanzeigen,March,2020,3,No notifications,X,X
 Electron Cash,August,2020,4,No reported issues,X,X
 English - Russian dictionary,July,2020,3,No text to speech,X,X
 EteSync,September,2020,X,X,4,No reported issues
+Excel,November,2020,X,X,4,No reported issues
 Expo,August,2020,4,No reported issues,X,X
 ExpressVPN,October,2020,X,X,4,No reported issues
 Facebook,September,2020,4,No reported issues,4,No reported issues
@@ -95,6 +98,7 @@ Facebook Lite,September,2020,4,No reported issues,4,No reported issues
 Facebook Messenger,October,2020,3,No notifications unless the app is running in the background,4,No reported issues
 Fast Scanner,July,2020,4,No reported issues,4,No reported issues
 Fasthub,June,2020,4,No reported issues,4,No reported issues
+Fetch Rewards,November,2020,X,X,4,No reported issues
 Final Surge,October,2020,X,X,4,No reported issues
 Fire Emblem Heroes,August,2020,1,Unusable due to Google SafetyNet errors,3,No in-app purchases but no other issues with Google SafetyNet disabled in MicroG
 Firefox,May ,2020,4,No reported issues,4,No reported issues
@@ -144,6 +148,8 @@ Itsme,September,2020,1,Unable to finish identification,X,X
 Jango Radio,July,2020,1,Unusable,X,X
 Japanese,July,2020,4,No reported issues,4,No reported issues
 Japanese Dictionary Takoboto,September,2020,4,No reported issues,X,X
+Jitsi Meet,November,2020,,X,X,4,No reported issues
+Jumbo,November,2020,X,X,4,No reported issues
 Kaloricke Tabulky,September,2020,X,X,4,No reported issues
 Kasa,June,2020,1,Unusable,X,X
 Keepass2Android,August,2020,4,No reported issues,4,No reported issues
@@ -189,6 +195,7 @@ MyEdenred,September,2020,4,No reported issues,X,X
 MyFitnessPal,April,2020,3,No bar code reading,X,X
 Mynexuzhealth,September,2020,1,Not working without Google Play Services,X,X
 My Optus,July,2020,4,No reported issues,4,No reported issues
+My Spectrum,November,2020,X,X,4,No reported issues
 MySudo,October,2020,1,Unusable,1,Unusable
 N26,August,2020,X,X,2,Impossible to confirm money transfer (Slideout popup doesn't show up)
 NAB Mobile Banking,May ,2020,4,No reported issues,4,No reported issues
@@ -206,6 +213,7 @@ OBB Scotty,August,2020,X,X,4,No reported issues
 Oculus,September,2020,4,No reported issues,X,X
 OfficeSuite Pro,September,2020,X,X,4,"Manually installed, unupgradeable"
 OKCupid,August,2020,1,Can't even login,X,X
+OneDrive,November,2020,X,X,4,No reported issues
 Onenote,May,2020,4,No reported issues,4,No reported issues
 Opera,September,2020,4,No reported issues,4,No reported issues
 Opera beta,September,2020,4,No reported issues,4,No reported issues
@@ -233,6 +241,7 @@ Pocket,August,2020,4,No reported issues,X,X
 Pocket Casts,September,2020,X,X,4,No reported issues
 PocketGuard,October,2020,X,X,4,No reported issues
 Pocket Tanks,June,2020,4,No reported issues,4,No reported issues
+Podbean,November,2020,X,X,4,No reported issues
 Podcast Addict,August,2020,X,X,4,No reported issues
 Popcorn Time,June,2020,3,"Buggy, Crashes Occasionally",X,X
 Poweramp,August,2020,4,No reported issues,X,X
@@ -276,12 +285,15 @@ SoundCloud,September,2020,3,Cannot login with Google account,4,No reported issue
 SoundCloud Pulse,September,2020,3,Cannot login with Google account,4,No reported issues
 Spaceship Voyager,May,2020,4,No reported issues,4,No reported issues
 Sparkasse (KontoApp),August,2020,3,Everything except Notifications (Its a webview with some weird extras nobody uses),X,X
+Spectrum TV,November,2020,X,X,4,No reported issues
 Spotify,September,2020,4,No reported issues,4,No reported issues
 Squore ,June,2020,4,No reported issues,4,No reported issues
 STACK,September,2020,4,No reported issues,X,X
 Starbucks,June,2020,3,"Google Play Services Warning, but no effect",X,X
+Stetson Authentication,November,2020,X,X,1,QR code won't scan
 Starling,August,2020,X,X,4,No reported issues
 Steam,August,2020,3,No Notifications,4,No reported issues
+Stetson University,November,2020,X,X,4,No reported issues
 Stride,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Subway Surfers,May,2020,1,Unusable,4,No reported issues
 Success Wiz,October,2020,X,X,4,No reported issues
@@ -321,12 +333,14 @@ VR-Banking,August,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
 Walmart,September,2020,X,X,4,No reported issues
 Waze,September,2020,1,Unusable-maps don't load,1,Unusable-maps don't load
-WeChat,May,2020,4,No reported issues,X,X
 WhatsApp,August,2020,3,No notifications unless the app is running in the background,4,No reported issues
 WhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
+WeChat,May,2020,4,No reported issues,X,X
+Wells Fargo,November,2020,X,X,4,No reported issues
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 Windscribe,May,2020,4,No reported issues,4,No reported issues
 Wire,August,2020,X,X,4,No reported issues
+Workday,November,2020,X,X,4,No reported issues
 Xodo Docs,May,2020,4,No reported issues,4,No reported issues
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
