@@ -37,7 +37,7 @@ Bank of America,October,2020,X,X,4,No reported issues
 Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
 Bitmoji,September,2020,4,No reported issues,X,X
 Bitpanda,August,2020,1,Requires SafetyNet API,X,X
-Bitwarden,October,2020,X,X,4,No reported issues
+Bitwarden,November,2020,X,X,4,No reported issues
 BlackPlayer,September,2020,4,No reported issues,X,X
 Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect",X,X
 BlueDriver,September,2020,4,No reported issues,X,X
@@ -58,7 +58,7 @@ CamScanner,May,2020,4,No reported issues,4,No reported issues
 Capital One,November,2020,X,X,4,No reported issues
 Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
 Chargepoint,October,2020,X,X,4,No reported issues
-Chase,October,2020,X,X,1,Doesn't allow login
+Chase,November,2020,X,X,1,Doesn't allow login
 Cisco JABBER,September,2020,X,X,4,No reported issues
 Cisco WEBEX,September,2020,X,X,4,No reported issues
 Citymapper,August,2020,X,X,3,Map preview sometimes buggy
@@ -101,6 +101,7 @@ ExpressVPN,October,2020,X,X,4,No reported issues
 Facebook,September,2020,4,No reported issues,4,No reported issues
 Facebook Lite,September,2020,4,No reported issues,4,No reported issues
 Facebook Messenger,October,2020,3,No notifications unless the app is running in the background,4,No reported issues
+FastMail,November,2020,X,X,4,No reported issues
 Fast Scanner,July,2020,4,No reported issues,4,No reported issues
 Fasthub,June,2020,4,No reported issues,4,No reported issues
 Fetch Rewards,November,2020,X,X,4,No reported issues
@@ -238,12 +239,13 @@ Patreon,April ,2020,2,No notifications & unable to apply text to within lens. So
 Payconiq by Bancontact,September,2020,1,Not working without Google Play Services,X,X
 PayMyPark,March,2020,4,No reported issues,4,No reported issues
 PayPal,May,2020,4,No reported issues,4,No reported issues
+pCloud,November,2020,X,X,4,No reported issues
 Personal Capital,October,2020,X,X,4,No reported issues
 PESU,October,2020,X,X,4,No reported issues
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
 PIA VPN,June,2020,4,No reported issues,4,No reported issues
 Pinterest,September,2020,3,"Google Play Services Warning, but no effect",X,X
-Pleco,August,2020,4,No reported issues,X,X
+Pleco,November,2020,4,No reported issues,4,No reported issues
 Pocket,August,2020,4,No reported issues,X,X
 Pocket Casts,September,2020,X,X,4,No reported issues
 PocketGuard,October,2020,X,X,4,No reported issues
@@ -261,12 +263,13 @@ Qantas,March,2020,4,No reported issues,4,No reported issues
 Railcard,October,2020,X,X,4,No reported issues
 Recycle!,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Reddit,September,2020,3,No notifications,3,No notifications
+Renpho,November,2020,X,X,4,No reported issues
 Revolut,August,2020,3,No notifications,2,Refuses Authentication
 Ring,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Rippl,June,2020,4,No reported issues,4,No reported issues
 Robinhood,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Roblox,August,2020,1,When you log in it requires you to have Google Play Services and app crashes,X,X
-Schwab Mobile,October,2020,X,X,4,No reported issues
+Schwab Mobile,November,2020,X,X,3,Biometrics login doesn't work well: re-authentication with User ID and Password on every restart of app is needed.
 Secure PDF Viewer,May,2020,4,No reported issues,4,No reported issues
 SecureW2 JoinNow,October,2020,3,"Google Play Services warning, but no effect",X,X
 SEEK,July,2020,4,No reported issues,4,No reported issues
@@ -280,7 +283,7 @@ Simple ToDo,October,2020,X,X,4,No reported issues
 Simplisafe ,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SKED,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SketchBook,September,2020,4,No reported issues,X,X
-Skype,August,2020,X,X,4,No reported issues
+Skype,November,2020,X,X,4,No reported issues
 Slack,May,2020,3,No notifications,X,X
 Snapchat,January,2020,1,Unusable,1,Unusable-Although Huawei Store version works
 Snapseed,June,2020,4,No reported issues,4,No reported issues
@@ -338,6 +341,7 @@ Venmo,September,2020,3,App freezes occasionally when scrolling through your paym
 Vivaldi,September,2020,3,"Google Play Services Warning, but no effect",X,X
 VR-Banking,August,2020,X,X,4,No reported issues
 Waking Up,August,2020,X,X,4,No reported issues
+Wall Street Journal,November,2020,X,X,4,No reported issues
 Walmart,September,2020,X,X,4,No reported issues
 Waze,September,2020,1,Unusable-maps don't load,1,Unusable-maps don't load
 WeChat,May,2020,4,No reported issues,X,X
@@ -349,6 +353,7 @@ Windscribe,May,2020,4,No reported issues,4,No reported issues
 Wire,August,2020,X,X,4,No reported issues
 Workday,November,2020,X,X,4,No reported issues
 Xodo Docs,May,2020,4,No reported issues,4,No reported issues
+Yahoo Finance,November,2020,X,X,4,No reported issues
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
 YNAB,September,2020,4,No reported issues,X,X
