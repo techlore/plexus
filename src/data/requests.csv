@@ -1,6 +1,12 @@
-Name/Alias,Application,MicroG,Urgent,Other Notes
-Example,Application Name,Yes or No,Yes or No, Extra Details
-innir,ARD Audiothek,No,No,X
-innir,Dlf Audiothek,No,No,X
-innir,Dlf - Die Nachrichten,No,No,X
-innir,HVV - Navigation & Fahrkarten für Hamburg,No,No,X
+Application,MicroG,Urgent,Other Notes
+Application Name,Yes or No,Yes or No, Extra Details
+ARD Audiothek,No,No,X
+Dlf Audiothek,No,No,X
+Dlf - Die Nachrichten,No,No,X
+HVV - Navigation & Fahrkarten für Hamburg,No,No,X
+ÖBB,No,No,X
+SuedtirolMobil,No,No,X
+DroidCam,No,No,X
+ArubaPEC,No,No,X
+VVT Tickets,No,No,X
+Uni Innsbruck,No,No,X
