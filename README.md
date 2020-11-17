@@ -2,25 +2,23 @@
 
 <img src="https://techlore.tech/plexus.png" width="200" height="200">
 
-[Plexus Website](https://plexus.techlore.tech/)
+***Remove the fear of Android app compatibility on de-Googled devices.***
 
-A common concern expressed by users wanting to move to a de-googled Android ROM is: _Will my apps work without Google Play Services?_
-
-Plexus crowdsources data from custom Android ROM users to display what apps do/don't work without Google Play Services.
+![](https://i.creativecommons.org/p/zero/1.0/88x31.png) This project is licensed under the CC0 V1 License.
 
 ## Explanation
 
 Google Play Services are an integral part of most Android devices that enable users to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them.
 
-When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. Plexus supports ROMs with no Google Play Services e.g: [(GrapheneOS)](https://grapheneos.org/), as well as ROMs with [microG](https://microg.org/), an open source alternative of Google Play Services, e.g: [(CalyxOS)](https://calyxos.org/). 
+When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. Plexus supports ROMs with no Google Play Services e.g: [(GrapheneOS)](https://grapheneos.org/), as well as ROMs with [microG](https://microg.org/), an open source alternative of Google Play Services, e.g: [(CalyxOS)](https://calyxos.org/). 
 
 ## Navigating Plexus
 
 * To view app data, visit the [Plexus Website](https://plexus.techlore.tech/)
 
-* To view the CSV spreadsheet (and contribute) view it here [in this repo](./src/data/Plexus.csv).
+* To view the CSV spreadsheet (and contribute) view it [here](./src/data/Plexus.csv).
 
-* To make or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv) 
+* To create or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv) 
 
 * To join our Matrix room, [go here.](https://matrix.to/#/#plexus:matrix.org)
 
@@ -33,18 +31,16 @@ When users move to a de-googled ROM like GrapheneOS or LineageOS, they are faced
 3. Almost everything works with minimal caveats
 4. Perfect or like-perfect experience
 
-## How To Add Your Applications & Contribute
-
-This is quickly thrown together so we can start collecting data. It's by no means perfect, and I am aware not everyone uses Github.
+## How To Contribute Your Applications
 
 ### Testing Standards
 
-- Test only Google Play Store applications (Regardless of where they came from, including the Aurora Store front end)
+- Test only Google Play Store applications (Regardless of where they came from, including the Aurora Store)
 - Kindly disable Netguard and other blockers
 - No Google Play Services
 - Pay extra attention to notifications as some will not properly work
 - If you're testing from MicroG, only input data in the last two columns, and utilize two "X"s for the standard sections.
-- If you're testing from a fully de-googled ROM (no MicroG, input data in the standard sections and mark the MicroG sections as "X"s
+- If you're testing from a fully de-googled ROM without MicroG, input data in the standard sections and mark the MicroG sections as "X"s
 
 ### Contribute Method 1 (Recommended)
 
@@ -60,7 +56,7 @@ Start a pull request with your apps to submit. Ensure you're maintaining the pro
 
 ### Contribute Method 2 (Non-Github Method)
 
-Email me at support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
+Email support@techlore.tech with all your apps you use on your phone that are from the Google Play Store (Directly or Indirectly) with the following information:
 
 1. App Name
 2. Month Last Tested
@@ -78,12 +74,10 @@ If you're unable to find an application within Plexus and don't have the means o
 
 To submit an application request, do one of the following:
 1. Submit a PR with your app(s) [in the repo.](./src/data/requests.csv) 
-2. Email me at support@techlore.tech with same data points found in the repo (Name/Alias, App Name(s),MicroG (Yes/No), Urgent (Yes/No)
+2. Email support@techlore.tech with the following information: Name/Alias, App Name(s),MicroG (Yes/No), Urgent (Yes/No)
 
 ## Future Plans & Goals
 - Support for application package names & version numbers
 - Support for "recommended alternatives" similar to alternativeto.net
 - More thorough data showing what OS & ROM was used for testing
 - An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
-
-![](https://i.creativecommons.org/p/zero/1.0/88x31.png) This project is licensed under the terms of the CC0 V1 License.
