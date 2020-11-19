@@ -406,7 +406,7 @@ Waking Up,August,2020,X,X,4,No reported issues
 Wall Street Journal,November,2020,X,X,4,No reported issues
 Walmart,September,2020,X,X,4,No reported issues
 Waze,September,2020,1,"Unusable-maps don't load",1,"Unusable-maps don't load"
-Wear OS by Google,November,2020,"Unusable without Google Play Services",X,X
+Wear OS by Google,November,2020,1,"Unusable without Google Play Services",X,X
 WeChat,May,2020,4,No reported issues,X,X
 Wells Fargo,November,2020,X,X,4,No reported issues
 WhatsApp,August,2020,3,No notifications unless the app is running in the background,4,No reported issues
