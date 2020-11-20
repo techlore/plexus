@@ -33,7 +33,7 @@ Argenta,September,2020,3,Payconiq by Bancontact not working,X,X
 ASN Bankieren,September,2020,X,X,4,No reported issues
 aTimeLogger,May,2020,4,No reported issues,4,No reported issues
 Audible,June,2020,4,No reported issues,4,No reported issues
-AusPost,November,2020,3,No notifications,X,X
+AusPost,November,2020,3,No notifications,4,No reported issues
 Authy,October,2020,3,"Google Play Services Warning, No notifications",4,No reported issues
 AutomaTag,September,2020,3,No in-app purchases,3,No in-app purchases
 AutoTagger,September,2020,3,No in-app purchases,3,No in-app purchases
@@ -44,7 +44,7 @@ Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
 Battle of Polytopia,November,2020,X,X,1,Unknown Source error: Uninstall Polytopia and get the official version from the Google Play Store
 BBC News,November,2020,X,X,4,No reported issues
 Beats,November,2020,4,No reported issues,X,X
-Beem It,November,2020,3,"Google Play Services warning, no notifications",X,X
+Beem It,November,2020,3,"Google Play Services warning, no notifications",4,No reported issues
 Best Buy,November,2020,4,No reported issues,4,No reported issues
 BirdNET,November,2020,4,No reported issues,4,No reported issues
 Bitmoji,September,2020,4,No reported issues,X,X
@@ -108,6 +108,7 @@ Dropbox,May ,2020,4,No reported issues,4,No reported issues
 DUAL,August,2020,X,X,3,No in-app purchases
 Duo Mobile,November,2020,3,Error message - Duo Push and Duo Restore don't work,3,Error message no issues
 Duolingo,May,2020,4,No reported issues,4,No reported issues
+Droidcam,November,2020,4,No reported issues,4,No reported issues
 EasyBudget,October,2020,X,X,4,No reported issues
 EasyJet,August,2020,X,X,4,No reported issues
 eBay Kleinanzeigen,March,2020,3,No notifications,4,No reported issues
@@ -405,11 +406,11 @@ Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 Tutanota,May,2020,4,No reported issues,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
-Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),X,X
+Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
 Uber,June,2020,1,Unusable,4,No reported issues
 Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 UPS,November,2020,X,X,4,No reported issues
-Up Banking,November,2020,1,Cannot log in,X,X
+Up Banking,November,2020,1,Cannot log in,4,No reported issues
 v2rayNG,November,2020,4,No reported issues,X,X
 Venmo,September,2020,3,App freezes occasionally when scrolling through your payment feed. No Notifications,4,No reported issues
 Vivaldi,September,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -426,7 +427,7 @@ WhatsApp,August,2020,3,No notifications unless the app is running in the backgro
 WhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 Windscribe,May,2020,4,No reported issues,4,No reported issues
-Wire,August,2020,X,X,4,No reported issues
+Wire,November,2020,4,No reported issues,4,No reported issues
 Wolt: Food delivery,November,2020,1,Can login and see orders history only,X,X
 Workday,November,2020,X,X,4,No reported issues
 Xodo Docs,May,2020,4,No reported issues,4,No reported issues
