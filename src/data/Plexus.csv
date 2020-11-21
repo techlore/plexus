@@ -1,3 +1,5 @@
+Angry Birds AR: Isle of Pigs,November,X,X,4,No reported issues
+Angry Birds 2,November,X,X,4,No reported issues
 Application,Month,Year,Rating (1-4),Notes,MicroG Rating (1-4),MicroG Notes
 1&1 Control-Center,October,2020,3,No notifications,X,X
 2dehands,September,2020,3,"Google Play Services warning, map not working",X,X
@@ -86,8 +88,12 @@ Comdirect (Kontoansicht),August,2020,3,Everything fine except transaction notifi
 Comdirect photoTAN,August,2020,4,No reported issues,X,X
 Commbank,November,2020,X,X,3,Tap/NFC Payments don't work
 Consorsbank SecurePlus,August,2020,4,No reported issues,X,X
+Cookie 1,November,X,X,4,No reported issues
+Cookie 2,November,X,X,4,No reported issues
 Creative Cloud,September,2020,X,X,4,No reported issues
+Crossy Road,November,X,X,4,No reported issues
 Cronometer,November,2020,4,No reported issues,X,X
+Crunchyroll,November,X,X,4,No reported issues
 CSFD.cz,September,2020,X,X,4,No reported issues
 Curiosity Stream,August,2020,4,Popup says GPS is required but everything works,X,X
 DAB SecurePlus,August,2020,X,X,4,No reported issues
@@ -162,6 +168,7 @@ Google Maps,September,2020,2,Cannot add Google account,0,Cannot open if logged i
 Google Messages,November,2020,4,No reported issues,X,X
 Google News,November,2020,1,"Unusable, app won't open",X,X
 Google Pay,November,2020,1,"Unusable",X,X
+Google Play Services for AR,November,X,X,4,No reported issues
 Google PDF Viewer,November,2020,4,No reported issues,X,X
 Google Phone,November,2020,4,No reported issues,X,X
 Google Photos,September,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -256,6 +263,9 @@ MySudo,October,2020,1,Unusable,1,Unusable
 myStop Mobile,November,2020,3,No map,4,No reported issues
 N26,August,2020,X,X,2,Impossible to confirm money transfer (Slideout popup doesn't show up)
 NAB Mobile Banking,May ,2020,4,No reported issues,4,No reported issues
+Naruto Blazing,November,X,X,4,No reported issues
+Naruto X Boruto Ninja Tribes,X,X,4,No reported issues
+Naruto X Boruto Ninja Voltage,November,X,X,4,No reported issues
 Nationwide (UK Bank),September,2020,4,No reported issues,X,X
 Natwest (UK Bank),October,2020,1,Hangs on login after emailing natwest it's intentional,X,X
 NBC News,November,2020,X,X,4,No reported issues
@@ -263,6 +273,7 @@ Nebula,November,2020,1,Crashes after login,X,X
 Nerd Wallet,November,2020,X,X,4,No reported issues
 Netflix,May,2020,4,No reported issues,4,No reported issues
 Newegg,November,2020,X,X,4,No reported issues
+News Break,November,X,X,4,No reported issues
 Nextbike,August,2020,2,No notifications & map not displayed (Google Maps),X,X
 Nextory,September,2020,4,No reported issues,X,X
 NINA,September,2020,X,X,1,Throws error message device could not be registered then terminates
@@ -274,9 +285,9 @@ OBB Scotty,August,2020,X,X,4,No reported issues
 Oculus,September,2020,4,No reported issues,X,X
 OfficeSuite Pro,September,2020,X,X,4,"Manually installed, unupgradeable"
 OKCupid,August,2020,1,Can't even login,X,X
-Olímpica Stereo,November,2020,X,X,4,No reported issues
+Olimpica Stereo,November,2020,X,X,4,No reported issues
 Omega Digi Bible,November,2020,3,Will not work in second phone user account,3,Will not work in second phone user account
-OneDrive,November,2020,X,X,4,No reported issues
+OneDrive,November,2020,X,X,1,Crashes on startup
 Onenote,May,2020,4,No reported issues,4,No reported issues
 Opera,September,2020,4,No reported issues,4,No reported issues
 Opera beta,September,2020,4,No reported issues,4,No reported issues
@@ -299,7 +310,7 @@ Personal Capital,October,2020,X,X,4,No reported issues
 PESU,October,2020,X,X,4,No reported issues
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
 PIA VPN,June,2020,4,No reported issues,4,No reported issues
-Pinterest,September,2020,3,"Google Play Services Warning, but no effect",X,X
+Pinterest,September,2020,3,"Google Play Services Warning, but no effect",1,Doesn’t load
 Pleco,November,2020,4,No reported issues,4,No reported issues
 Pocket,August,2020,4,No reported issues,X,X
 Pocket Casts,November,2020,3,No notifications,4,No reported issues
@@ -323,7 +334,7 @@ Qobuz,November,2020,4,No reported issues,X,X
 Radio Uno Oficial,November,2020,X,X,4,No reported issues
 Railcard,October,2020,X,X,4,No reported issues
 Real Racing 3,November,2020,4,No reported issues,4,No reported issues
-realtor.com,November,2020,X,X,2,Map won’t load
+realtor.com,November,2020,X,X,3,Map won’t load
 Recycle!,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Reddit,September,2020,3,No notifications,3,No notifications
 Renpho,November,2020,X,X,4,No reported issues
@@ -351,12 +362,13 @@ SKED,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SketchBook,September,2020,4,No reported issues,X,X
 Skype,November,2020,X,X,4,No reported issues
 Slack,May,2020,3,No notifications,X,X
-SmartNews,November,2020,4,No reported issues,X,X
+SmartNews,November,2020,4,No reported issues,4,No reported issues
 Snapchat,January,2020,1,Unusable,1,Unusable-Although Huawei Store version works
 Snapseed,June,2020,4,No reported issues,4,No reported issues
 SNCB/NMBS,September,2020,3,"Google Play Services Warning, map not working",X,X
 SoFi,September,2020,1,"SoFi won't work unless you enable Google Play services",4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect",X,X
+SonicDash,November,X,X,4,No reported issues
 Sonos,September,2020,4,No reported issues,X,X
 SoundCloud,September,2020,3,Cannot login with Google account,4,No reported issues
 SoundCloud Pulse,September,2020,3,Cannot login with Google account,4,No reported issues
@@ -379,11 +391,14 @@ Surfshark,September,2020,X,X,4,No reported issues
 Sygic GPS Navigation & Offline Maps,November,2020,4,No reported issues,X,X
 Synology Drive,June,2020,4,No reported issues,4,No reported issues
 Synology Memories,June,2020,4,No reported issues,4,No reported issues
+Tab Mobile,November,X,X,4,No reported issues
 Tangerine Mobile Banking,September,2020,4,No reported issues,X,X
 Taobao Lite,November,2020,4,No reported issues,X,X
 Tapatalk,November,2020,4,No reported issues,X,X
 Teams,September,2020,X,X,3,No notifications
 Tello,June,2020,4,No reported issues,4,No reported issues
+TempleRun,November,X,X,4,No reported issues
+TempleRun2,November,X,X,4,No reported issues
 Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work,4,No reported issues
 The Guardian,July,2020,4,No reported issues,4,No reported issues
 Threema,October,2020,3,No push notifications & uses regular polling instead,4,No reported issues
