@@ -81,7 +81,7 @@ Chase,November,2020,X,X,1,Doesn't allow login
 Cisco JABBER,September,2020,X,X,4,No reported issues
 Cisco WEBEX,September,2020,X,X,4,No reported issues
 Citymapper,August,2020,X,X,3,Map preview sometimes buggy
-Clash of Clans,June,2020,3,"Some missing notifications, no in-app purchases",X,X
+Clash of Clans,June,2020,3,"Some missing notifications, no in-app purchases",4,No reported issues
 Clockify,May ,2020,4,No reported issues,4,No reported issues
 CNN,November,2020,X,X,4,No reported issues
 Coinbase,June,2020,4,No reported issues,4,No reported issues
@@ -205,7 +205,7 @@ ING Banking,May ,2020,4,No reported issues,4,No reported issues
 Instagram,June,2020,4,No reported issues,4,No reported issues
 iSaveMoney,October,2020,X,X,4,No reported issues
 Itsme,September,2020,1,Unable to finish identification,X,X
-Jango Radio,July,2020,1,Unusable,X,X
+Jango Radio,July,2020,1,Unusable,4,No reported issues
 Japanese,July,2020,4,No reported issues,4,No reported issues
 Japanese Dictionary Takoboto,September,2020,4,No reported issues,X,X
 Jetpack Joyride,November,2020,X,X,4,No reported issues
@@ -443,6 +443,7 @@ Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",3,"Add 
 UPS,November,2020,X,X,4,No reported issues
 Up Banking,November,2020,1,Cannot log in,4,No reported issues
 v2rayNG,November,2020,4,No reported issues,X,X
+Vanguard,November,2020,X,X,4,No reported issues
 Venmo,September,2020,3,App freezes occasionally when scrolling through your payment feed. No Notifications,4,No reported issues
 Vivaldi,September,2020,3,"Google Play Services Warning, but no effect",X,X
 VR-Banking,August,2020,X,X,4,No reported issues
