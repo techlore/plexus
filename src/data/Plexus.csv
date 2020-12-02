@@ -57,7 +57,7 @@ Bitmoji,September,2020,4,No reported issues,3,Can't load from keyboard
 Bitpanda,August,2020,1,Requires SafetyNet API,X,X
 Bitwarden,November,2020,4,No reported issues,4,No reported issues
 BlackPlayer,September,2020,4,No reported issues,X,X
-Blockfolio,May ,2020,3,"Google Play Services Warning, but no effect",X,X
+Blockfolio,December,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 BlueDriver,September,2020,4,No reported issues,X,X
 BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,May ,2020,3,No notifications,4,No reported issues
@@ -281,7 +281,7 @@ Naruto Blazing,November,2020,X,X,4,No reported issues
 Naruto X Boruto Ninja Tribes,November,2020,X,X,4,No reported issues
 Naruto X Boruto Ninja Voltage,November,2020,X,X,4,No reported issues
 Nationwide (UK Bank),September,2020,4,No reported issues,X,X
-Natwest (UK Bank),October,2020,1,Hangs on login after emailing natwest it's intentional,X,X
+Natwest (UK Bank),December,2020,1,Hangs on login after emailing natwest it's intentional,4,No reported issues
 NBC News,November,2020,X,X,4,No reported issues
 Nebula,November,2020,1,Crashes after login,X,X
 Nerd Wallet,November,2020,X,X,4,No reported issues
@@ -354,7 +354,7 @@ realtor.com,November,2020,X,X,3,Map won’t load
 Recycle!,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Reddit,September,2020,3,No notifications,3,No notifications
 Renpho,November,2020,X,X,4,No reported issues
-Revolut,August,2020,3,No notifications,2,Refuses Authentication
+Revolut,December,2020,3,No notifications,3,If you have issues loading or just updated force stop then lauch
 rif is fun,November,2020,4,No reported issues,4,No reported issues
 Ring,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Rippl,June,2020,4,No reported issues,4,No reported issues
