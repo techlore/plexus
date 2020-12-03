@@ -13,6 +13,7 @@ ADAC Autodatenbank,August,2020,X,X,4,No reported issues
 ADT Smart Services,June,2020,3,No notifications and Google Play Services Warning (But no effect),X,X
 Advanced Download Manager,September,2020,3,No in-app purchases,3,No in-app purchases
 Afterpay,November,2020,X,X,4,No reported issues
+Aggregator,December,2020,4,No reported issues,X,X
 Air NZ,June,2020,3,Requires disabling notification class,X,X
 Airbnb,November,2020,2,"Can't login, no mapview",X,X
 AirMessage,November,2020,4,No reported issues,X,X
@@ -24,7 +25,7 @@ ALDI TALK,December,2020,X,X,4,No reported issues
 Alipay,November,2020,2,No reponse when pressing pay button,X,X
 Alto's Adventure,May,2020,4,No reported issues,4,No reported issues
 Amazon Kindle,June,2020,4,No reported issues,4,No reported issues
-Amazon Shopping,September,2020,4,No reported issues,4,No reported issues
+Amazon Shopping,December,2020,3,No notifications,4,No reported issues
 Among Us,November,2020,4,No reported issues,4,No reported issues
 Ampler,September,2020,4,No reported issues,X,X
 Angry Birds AR: Isle of Pigs,November,2020,X,X,4,No reported issues
@@ -235,7 +236,7 @@ Letterboxd,May ,2020,4,No reported issues,4,No reported issues
 Lichness ,June,2020,4,No reported issues,4,No reported issues
 Lieferando,August,2020,X,X,4,No reported issues
 Lime,August,2020,X,X,4,No reported issues
-LinkedIn,November,2020,4,No reported issues,4,No reported issues
+LinkedIn,December,2020,3,No notifications,4,No reported issues
 Listen Audiobook Player,May,2020,4,No reported issues,4,No reported issues
 LOCUS Free,September,2020,X,X,4,No reported issues
 Loop Habit Tracker,May,2020,4,No reported issues,4,No reported issues
@@ -279,6 +280,7 @@ Mynexuzhealth,September,2020,1,Not working without Google Play Services,X,X
 My Boy,November,2020,4,No reported issues,X,X
 My Optus,July,2020,4,No reported issues,4,No reported issues
 My Spectrum,November,2020,X,X,4,No reported issues
+My Vodafone Italia,December,2020,3,No notifications,X,X
 MySudo,October,2020,1,Unusable,1,Unusable
 myStop Mobile,November,2020,3,No map,4,No reported issues
 N26,August,2020,X,X,2,Impossible to confirm money transfer (Slideout popup doesn't show up)
@@ -292,13 +294,13 @@ NBC News,November,2020,X,X,4,No reported issues
 Nebula,November,2020,1,Crashes after login,X,X
 Nerd Wallet,November,2020,X,X,4,No reported issues
 netcup SCP,December,2020,X,X,4,No reported issues
-Netflix,May,2020,4,No reported issues,4,No reported issues
+Netflix,December,2020,4,No reported issues,4,No reported issues
 Newegg,November,2020,X,X,4,No reported issues
 News Break,November,2020,X,X,4,No reported issues
 Nextbike,August,2020,2,No notifications & map not displayed (Google Maps),X,X
 Nextory,September,2020,4,No reported issues,X,X
 NINA,September,2020,X,X,1,Throws error message device could not be registered then terminates
-NordVPN,September,2020,X,X,4,No reported issues
+NordVPN,December,2020,4,No reported issues,4,No reported issues
 Notion,July,2020,4,No reported issues,4,No reported issues
 Nova Launcher,May ,2020,4,No reported issues,4,No reported issues
 NZ COVID Tracer,June,2020,4,No reported issues,4,No reported issues
@@ -341,6 +343,7 @@ Pocket Tanks,June,2020,4,No reported issues,4,No reported issues
 Podbean,November,2020,X,X,4,No reported issues
 Podcast Addict,August,2020,X,X,4,No reported issues
 Popcorn Time,June,2020,3,"Buggy, Crashes Occasionally",X,X
+Postepay,December,2020,3,No notifications can still authorize payments by searching the request in the notifications section inside the app,X,X
 Poweramp,August,2020,4,No reported issues,X,X
 Prank Master 3D,September,2020,1,Unusable,X,X
 Prime Video,June,2020,4,No reported issues,4,No reported issues
@@ -375,7 +378,7 @@ Sentinel Free Decentralized VPN,September,2020,4,No reported issues,4,No reporte
 Serenity: Guided Meditation & Mindfulness,July,2020,2,Premium and free trial aren't available,X,X
 Service NSW,September,2020,1,Receive generic error when trying to log in,X,X
 Sharedr,November,2020,3,For some intents sharing does not work correctly,X,X
-Shazam,August,2020,4,No reported issues,4,No reported issues
+Shazam,December,2020,4,No reported issues,4,No reported issues
 Shortcut Run,November,2020,X,X,4,No reported issues
 Signal,September,2020,4,Offers APK from website designed for use without Google Play Services,4,No reported issues
 Simple ToDo,October,2020,X,X,4,No reported issues
@@ -473,7 +476,7 @@ Waze,November,2020,1,"Unusable-maps don't load",1,"Unusable-maps don't load"
 Wear OS by Google,November,2020,1,"Unusable without Google Play Services",X,X
 WeChat,May,2020,4,No reported issues,X,X
 Wells Fargo,November,2020,X,X,4,No reported issues
-WhatsApp,November,2020,4,No reported issues,4,No reported issues
+WhatsApp,December,2020,4,No reported issues,4,No reported issues
 WhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 Windscribe,May,2020,4,No reported issues,4,No reported issues
@@ -487,7 +490,7 @@ Yi Home,June,2020,4,No reported issues,4,No reported issues
 YNAB,September,2020,4,No reported issues,X,X
 YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Kids,September,2020,1,Unusable,4,No reported issues
-YouTube Music,September,2020,1,Unusable,4,No reported issues
+YouTube Music,December,2020,2,Device files only,4,No reported issues
 Zepp,October,2020,4,No reported issues,X,X
 Zip - zip.co,November,2020,X,X,4,No reported issues
 Zoom,January,2020,4,No reported issues,4,No reported issues
