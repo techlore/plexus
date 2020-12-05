@@ -383,7 +383,7 @@ Service NSW,September,2020,1,Receive generic error when trying to log in,X,X
 Sharedr,November,2020,3,For some intents sharing does not work correctly,X,X
 Shazam,December,2020,4,No reported issues,4,No reported issues
 Shortcut Run,November,2020,X,X,4,No reported issues
-Signal,September,2020,4,Offers APK from website designed for use without Google Play Services,4,No reported issues
+Signal,September,2020,3,Unable to use location services,4,No reported issues
 Simple ToDo,October,2020,X,X,4,No reported issues
 "Simple habit: meditation, sleep",July,2020,2,No premium or free trial,X,X
 Simplisafe ,June,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -458,6 +458,7 @@ Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 TuneIn Radio,November,2020,X,X,4,No reported issues
 Tutanota,May,2020,4,No reported issues,4,No reported issues
+Twitch,December,2020,3,No notifications,X,X
 Twitter,November,2020,3,Notifications not working,3,No notifications
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
 Uber,June,2020,1,Unusable,2,"Add Payment screen not working, map tiles not visible"
