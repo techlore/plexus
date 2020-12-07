@@ -98,7 +98,7 @@ Consorsbank SecurePlus,August,2020,4,No reported issues,X,X
 Cookie 1,November,2020,X,X,4,No reported issues
 Cookie 2,November,2020,X,X,4,No reported issues
 Creative Cloud,September,2020,X,X,4,No reported issues
-Crossy Road,November,2020,X,X,4,No reported issues
+Crossy Road,December,2020,4,No reported issues,4,No reported issues
 Cronometer,November,2020,4,No reported issues,X,X
 Crunchyroll,November,2020,X,X,4,No reported issues
 CSFD.cz,September,2020,X,X,4,No reported issues
@@ -170,7 +170,7 @@ Google Cardboard,June,2020,3,Purchases will not work,X,X
 Google Chat,October,2020,1,Unusable,1,Unusable
 Google Classroom,August,2020,X,X,2,Cannot login into Google account
 Google Contacts,November,2020,3,Can't sync Google account data,X,X
-Google Earth,November,2020,X,X,4,No reported issues
+Google Earth,December,2020,4,No reported issues,4,No reported issues
 Google Fi,November,2020,1,Unusable,X,X
 Google Gallery Go,December,2020,X,X,4,No reported issues
 Google Hangouts,August,2020,X,X,4,No reported issues
@@ -213,7 +213,7 @@ Imgur,November,2020,2,Sign-in not working,4,No reported issues
 Immuni,December,2020,1,"Google Play Services isn't ready error",X,X
 Informed Delivery,September,2020,X,X,4,No reported issues
 ING Banking,May ,2020,4,No reported issues,4,No reported issues
-Inshorts,December,2020,X,X,3,Signing in using some 3rd party accounts (Google & Twitter) does not work
+Inshorts,December,2020,2,Sign-in does not work,3,Signing in using some 3rd party accounts (Google & Twitter) does not work
 "Insight timer: meditation, sleep, music",July,2020,1,The google play services installed on this device is not authentic error,X,X
 Instagram,June,2020,4,No reported issues,4,No reported issues
 iSaveMoney,October,2020,X,X,4,No reported issues
@@ -233,7 +233,7 @@ Khan Academy,October,2020,4,No reported issues,4,No reported issues
 Komoot,March,2020,4,No reported issues,4,No reported issues
 Kraken Pro,December,2020,4,No reported issues,X,X
 Lastpass,June,2020,1,Unusable,X,X
-Lawnchair 2,December,2020,X,X,4,No reported issues
+Lawnchair 2,December,2020,4,No reported issues,4,No reported issues
 Let's Meditate: Sleep & Guided meditation,July,2020,1,Unusable,X,X
 Letterboxd,May ,2020,4,No reported issues,4,No reported issues
 Lichness ,June,2020,4,No reported issues,4,No reported issues
@@ -333,7 +333,7 @@ Patreon,April ,2020,2,No notifications & unable to apply text to within lens. So
 Payconiq by Bancontact,September,2020,1,Not working without Google Play Services,X,X
 PayMyPark,March,2020,4,No reported issues,4,No reported issues
 PayPal,May,2020,4,No reported issues,4,No reported issues
-pCloud,November,2020,X,X,4,No reported issues
+pCloud,December,2020,4,No reported issues,4,No reported issues
 Personal Capital,October,2020,X,X,4,No reported issues
 PESU,October,2020,X,X,4,No reported issues
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
@@ -385,7 +385,7 @@ Sharedr,November,2020,3,For some intents sharing does not work correctly,X,X
 Shazam,December,2020,4,No reported issues,4,No reported issues
 Shortcut Run,November,2020,X,X,4,No reported issues
 Signal,September,2020,3,Unable to use location services,4,No reported issues
-Simple ToDo,October,2020,X,X,4,No reported issues
+Simple ToDo,December,2020,4,No reported issues,4,No reported issues
 "Simple habit: meditation, sleep",July,2020,2,No premium or free trial,X,X
 Simplisafe ,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SKED,June,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -433,8 +433,8 @@ Teams,November,2020,3,"Google Play Services warning, No notifications",3,No noti
 Telegram,December,2020,X,X,4,No reported issues
 Telegram X,December,2020,X,X,4,No reported issues
 Tello,June,2020,4,No reported issues,4,No reported issues
-TempleRun,November,2020,X,X,4,No reported issues
-TempleRun2,November,2020,X,X,4,No reported issues
+TempleRun,November,2020,1,"Random screens appearing, not playable at all",4,No reported issues
+TempleRun2,November,2020,1,App stuck at first screen,4,No reported issues
 Tesla,May ,2020,2,Maps do not show within the application. Maps/location-based features like Summon do not work,4,No reported issues
 The Guardian,July,2020,4,No reported issues,4,No reported issues
 Threema,October,2020,3,No push notifications & uses regular polling instead,4,No reported issues
@@ -470,7 +470,7 @@ v2rayNG,November,2020,4,No reported issues,X,X
 Vanguard,November,2020,X,X,4,No reported issues
 Venmo,September,2020,3,App freezes occasionally when scrolling through your payment feed. No Notifications,4,No reported issues
 Vivaldi,September,2020,3,"Google Play Services Warning, but no effect",X,X
-VLC,December,2020,X,X,4,No reported issues
+VLC,December,2020,4,No reported issues,4,No reported issues
 VR-Banking,August,2020,X,X,4,No reported issues
 Wahoo ELEMNT,November,2020,2,Gets to pairing screen-unable to test past this without device,2,Gets to pairing screen-unable to test past this without device
 Waking Up,August,2020,X,X,4,No reported issues
@@ -489,7 +489,7 @@ Wire,November,2020,4,No reported issues,4,No reported issues
 Wolt: Food delivery,November,2020,1,Can login and see orders history only,X,X
 Workday,November,2020,X,X,4,No reported issues
 Xodo Docs,May,2020,4,No reported issues,4,No reported issues
-Yahoo Finance,November,2020,X,X,4,No reported issues
+Yahoo Finance,December,2020,4,No reported issues,4,No reported issues
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
 YNAB,September,2020,4,No reported issues,X,X
