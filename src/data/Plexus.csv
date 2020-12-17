@@ -288,7 +288,7 @@ My Spectrum,November,2020,X,X,4,No reported issues
 My Vodafone Italia,December,2020,3,No notifications,X,X
 MySudo,October,2020,1,Unusable,1,Unusable
 myStop Mobile,November,2020,3,No map,4,No reported issues
-N26,August,2020,X,X,2,Impossible to confirm money transfer (Slideout popup doesn't show up)
+N26,December,2020,2,"Confirming money transfer requires workaround (need to select 'scheduled transfer' with frequency 'once')",2,"Confirming money transfer requires workaround (need to select 'scheduled transfer' with frequency 'once')"
 NAB Mobile Banking,May ,2020,4,No reported issues,4,No reported issues
 Naruto Blazing,November,2020,X,X,4,No reported issues
 Naruto X Boruto Ninja Tribes,November,2020,X,X,4,No reported issues
@@ -469,6 +469,7 @@ Uber,June,2020,1,Unusable,2,"Add Payment screen not working, map tiles not visib
 Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",3,"Add Payment screen not working, map tiles not visible"
 UPS,November,2020,X,X,4,No reported issues
 Up Banking,November,2020,1,Cannot log in,4,No reported issues
+USAA,December,2020,4,No reported issues,X,X
 v2rayNG,November,2020,4,No reported issues,X,X
 Vanguard,November,2020,X,X,4,No reported issues
 Venmo,September,2020,3,App freezes occasionally when scrolling through your payment feed. No Notifications,4,No reported issues
