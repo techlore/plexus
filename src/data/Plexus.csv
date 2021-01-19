@@ -139,6 +139,7 @@ Electron Cash,August,2020,4,No reported issues,X,X
 English - Russian dictionary,July,2020,3,No text to speech,X,X
 EteSync,November,2020,4,No reported issues,4,No reported issues
 Excel,November,2020,X,X,4,No reported issues
+Expo,August,2020,4,No reported issues,X,X
 Exodus: Crypto Wallet,November,2020,X,X,4,No reported issues
 Expo,August,2020,4,No reported issues,X,X
 ExpressVPN,October,2020,X,X,4,No reported issues
@@ -175,6 +176,7 @@ Google Cardboard,June,2020,3,Purchases will not work,X,X
 Google Chat,October,2020,1,Unusable,1,Unusable
 Google Classroom,August,2020,X,X,2,Cannot login into Google account
 Google Contacts,November,2020,3,Can't sync Google account data,X,X
+Google Drive, January,2021,X,X,4,Can't use Backups menu (will crash)
 Google Earth,December,2020,4,No reported issues,4,No reported issues
 Google Fi,November,2020,1,Unusable,X,X
 Google Gallery Go,December,2020,X,X,4,No reported issues
@@ -184,6 +186,7 @@ Google Keep Notes,June,2020,1,Unusable,X,X
 Google Keyboard (Gboard),November,2020,4,No reported issues,4,No reported issues
 Google Lens,November,2020,1,"Won't operate without Google app, which doesn't open without Google Play Services",4,No reported issues
 Google Maps,November,2020,2,Cannot add Google account,2,"Cannot open if logged in, works if not logged in"
+Google Meet,January,2021,X,X,1,Unusable 
 Google Messages,November,2020,4,No reported issues,X,X
 Google News,November,2020,1,"Unusable, app won't open",4,No reported issues
 Google,November,2020,1,"Unusable, App won't open",3,"Google Play Services Warning, some functions missing"
@@ -268,10 +271,13 @@ Memedroid Pro,August,2020,X,X,4,No reported issues
 Menulog,November,2020,X,X,1,Doesn't open stores or place orders
 Mercado Libre,October,2020,1,Unusable,1,Unusable
 Merriam-Webster,November,2020,4,No reported issues,x,x
+Microsoft Excel,November,2020,X,X,4,No reported issues
 Microsoft News,November,2020,2,Several freezes and crashes,4,No reported issues
+Microsoft Office,January,2021,X,X,4,No reported issues
 Microsoft Outlook,June,2020,4,No reported issues,4,No reported issues
+Microsoft PowerPoint,January,2021,X,X,4,No reported issues
 Microsoft Teams,August,2020,4,No reported issues,4,No reported issues
-Microsoft Word,August,2020,4,No reported issues,X,X
+Microsoft Word,January,2021,4,No reported issues,4,No reported issues
 Migrate - custom ROM migration tool [4.0 GPE],November,2020,4,No reported issues,X,X
 Mi Movistar Argentina,October,2020,3,"Google Play Services Warning,but no effect",4,No reported issues
 MiXplorer,October,2020,4,No reported issues,4,No reported issues
