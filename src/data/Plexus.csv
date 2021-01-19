@@ -7,6 +7,7 @@ Application,Month,Year,Rating (1-4),Notes,MicroG Rating (1-4),MicroG Notes
 432 Player,September,2020,X,X,4,No reported issues
 4411,September,2020,2,"Google Play Services warning, several broken functions",X,X
 6ix9ine Runner,September,2020,1,Unusable,X,X
+7zipper,December,2020,X,X,4,No reported issues
 A+ Gallery,January,2021,4,"Works without issues.",X,X
 ABC Listen,July,2020,4,No reported issues,4,No reported issues
 ABN AMRO,January,2021,X,X,4,No reported issues
@@ -71,6 +72,7 @@ Bitwarden,November,2020,4,No reported issues,4,No reported issues
 BlackPlayer,September,2020,4,No reported issues,X,X
 Blockfolio,December,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 BlueDriver,September,2020,4,No reported issues,X,X
+Bolt,December,2020,X,X,4,No reported issues
 BOM Weather,May ,2020,4,No reported issues,4,No reported issues
 Brave,January,2021,3,No notifications,4,No reported issues
 British Gas,January,2021,4,"Works without issues.",X,X
@@ -188,6 +190,7 @@ Garmin Connect,May,2020,3,Maps do not show within the application,X,X
 Geekbench 5,September,2020,4,No reported issues,4,No reported issues
 Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
 Geometry Dash,August,2020,4,No reported issues,X,X
+GiffGaff,,December,2020,4,No reported issues - though requires an installed browser,X,X
 Ginventory,December,2020,4,No reported issues,X,X
 Github,July,2020,4,No reported issues,4,No reported issues
 GLS mBank,October,2020,X,X,4,No reported issues
@@ -279,6 +282,7 @@ Lieferando,August,2020,X,X,4,No reported issues
 Lime,August,2020,X,X,4,No reported issues
 LinkedIn,December,2020,3,No notifications,4,No reported issues
 Listen Audiobook Player,May,2020,4,No reported issues,4,No reported issues
+Lloyds Bank,December,2020,4,No reported issues,X,X
 LOCUS Free,September,2020,X,X,4,No reported issues
 Loop Habit Tracker,May,2020,4,No reported issues,4,No reported issues
 Lowe’s,November,2020,X,X,4,No reported issues
@@ -353,6 +357,7 @@ Nextbike,August,2020,2,No notifications & map not displayed (Google Maps),X,X
 Nextory,September,2020,4,No reported issues,X,X
 NHS Covid-19,December,2020,X,X,4,No reported Issues
 NINA,September,2020,X,X,1,Throws error message device could not be registered then terminates
+Nine,December,2020,X,X,4,No reported issues
 NordVPN,December,2020,4,No reported issues,4,No reported issues
 Notion,July,2020,4,No reported issues,4,No reported issues
 Nova Launcher,May ,2020,4,No reported issues,4,No reported issues
@@ -434,6 +439,7 @@ Roblox,November,2020,1,When you log in it requires you to have Google Play Servi
 Roon Remote,November,2020,1,Unusable,X,X
 Rumble,January,2021,3,"Repeated Google Play Services warning. No notifications. All else works.",X,X
 S-ID-Check,December,2020,1,Unusable,X,X
+Santander UK,December,2020,4,No reported issues,X,X
 Satispay,December,2020,1,Unusable,X,X
 Schwab Mobile,November,2020,X,X,3,Biometrics login doesn't work well: re-authentication with User ID and Password on every restart of app is needed.
 Secure PDF Viewer,May,2020,4,No reported issues,4,No reported issues
@@ -535,6 +541,7 @@ TuneIn Radio,January,2021,X,X,4,No reported issues
 Tutanota,May,2020,4,No reported issues,4,No reported issues
 Twitch,December,2020,3,No notifications,X,X
 Twitter,November,2020,3,Notifications not working,3,No notifications
+TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
 Uber,June,2020,1,Unusable,2,"Add Payment screen not working, map tiles not visible"
 Uber Eats,September,2020,3,"Google Play Services Warning, but no effect",3,"Add Payment screen not working, map tiles not visible"
