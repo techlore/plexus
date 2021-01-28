@@ -209,6 +209,7 @@ Github,July,2020,4,No reported issues,4,No reported issues
 GLS mBank,October,2020,X,X,4,No reported issues
 Gmail,October,2020,1,Unusable,1,Unusable
 Goodreads,May ,2020,4,No reported issues,4,No reported issues
+Google Authenticator,January,2021,X,X,4,No reported issues
 Google Calendar,November,2020,1,"Unusable, unless signed in, which is impossible without Google Play Services",X,X
 Google Camera,June,2020,3,"Working, but need spoofed API & Image preview won't work without Google Photos installed",4,No reported issues
 Google Cardboard,June,2020,3,Purchases will not work,X,X
@@ -244,6 +245,7 @@ Grandstream Wave Lite,November,2020,4,No reported issues,X,X
 Graphing Calc (GeoGebra),August,2020,4,No reported issues,X,X
 Greenify,October,2020,X,X,4,No reported issues
 Groupme,June,2020,3,No Notifications,X,X
+GuitarTuna,January,2021,X,X,3,Main guitar/bass/ukelele tuners work fine but you can't buy other tuners or get the pro version, gives a generic loading screen
 Halifax,August,2020,X,X,4,No reported issues
 HandyTicket Deutschland,April,2020,3,No notifications,X,X
 Hargreaves Lansdown,October,2020,X,X,4,No reported issues
@@ -490,6 +492,7 @@ SNCB/NMBS,September,2020,3,"Google Play Services Warning, map not working",X,X
 SoFi,September,2020,1,"SoFi won't work unless you enable Google Play services",4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SonicDash,November,2020,X,X,4,No reported issues
+Songsterr,January,2021,X,X,3,The entire app works fine. However you can't buy the pro version within it, forcing you to use the website to buy it.
 Sonos,September,2020,4,No reported issues,X,X
 Sony Headphones,December,2020,4,No reported issues,X,X
 Sony Music Center,December,2020,4,No reported issues,X,X
@@ -564,8 +567,9 @@ TripIt,September,2020,X,X,1,Won't get past startup image
 Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 TuneIn Radio,January,2021,X,X,4,No reported issues
+Tuner - Pitched,January,2021,X,X,3,You can't buy the pro version which gets rids of the Ads but everything else seems to work fine.
 Tutanota,May,2020,4,No reported issues,4,No reported issues
-Twitch,December,2020,3,No notifications,X,X
+Twitch,January,2021,3,No notifications,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
