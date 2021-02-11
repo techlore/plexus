@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Plexus`,
+    siteUrl: `https://plexus.techlore.tech`,
     description: `Remove the fear of Android app compatibility on de-Googled devices.`,
     author: `@tomkonidas`,
   },
@@ -52,6 +53,7 @@ module.exports = {
         fieldName: "slug",
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
