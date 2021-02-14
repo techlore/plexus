@@ -70,7 +70,7 @@ I will then update the spreadsheet myself.
 
 ## Application Requests
 
-If you're unable to find an application within Plexus and don't have the means of testing them yourself, you can submit an App Request where other testers can test apps on your behalf. This is purely on a voluteer basis. There will be methods of incentivizing volunteers down the road. 
+If you're unable to find an application within Plexus and don't have the means of testing them yourself, you can submit an App Request where other testers can test apps on your behalf. This is purely on a volunteer basis. There will be methods of incentivizing volunteers down the road. 
 
 To submit an application request, do one of the following:
 1. Submit a PR with your app(s) [in the repo.](./src/data/requests.csv) 
