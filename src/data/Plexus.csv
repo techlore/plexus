@@ -216,7 +216,7 @@ Fox News,November,2020,4,No reported issues,4,No reported issues
 Freedom,May,2020,1,Unusable,X,X
 Freja eID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 FX File Explorer,September,2020,4,No reported issues,4,No reported issues
-Garmin Connect,May,2020,3,Maps do not show within the application,X,X
+Garmin Connect,March,2021,3,Maps do not show within the application,4,No reported issues
 Geekbench 5,September,2020,4,No reported issues,4,No reported issues
 Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
 Geometry Dash,August,2020,4,No reported issues,X,X
@@ -267,6 +267,7 @@ GuitarTuna,January,2021,1,"Unusable, does not open",3,"Main guitar/bass/ukelele 
 Halifax,August,2020,X,X,4,No reported issues
 HandyTicket Deutschland,April,2020,3,No notifications,X,X
 Hargreaves Lansdown,October,2020,X,X,4,No reported issues
+HBO Max,March,2021,X,X,4,No reported issues
 Headspace: meditation & sleep,July,2020,2,No premium or free trial,X,X
 Hello Weather,November,2020,X,X,3,Cannot upgrade to Pro version that has more features
 Helm Email,August,2020,4,No reported issues,X,X
@@ -521,7 +522,7 @@ SielteSpid,December,2020,4,No reported issues,X,X
 Signal,February,2021,3,Unable to use location services,4,No reported issues
 "Simple habit: meditation, sleep",July,2020,2,No premium or free trial,X,X
 Simple ToDo,December,2020,4,No reported issues,4,No reported issues
-Simplisafe,June,2020,3,"Google Play Services Warning, but no effect",X,X
+Simplisafe,March,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 Simply Wall St,December,2020,4,No reported issues,X,X
 SiriusXM,February,2021,X,X,4,No reported issues
 SKED,June,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -558,6 +559,7 @@ Steam,August,2020,3,No Notifications,4,No reported issues
 Stetson Authentication,November,2020,X,X,1,QR code won't scan
 Stetson University,November,2020,X,X,4,No reported issues
 Stick War: Legacy,November,2020,X,X,4,No reported issues
+Strava,October,2021,X,X,1,"Requires Google Maps.  With Maps installed, hangs on login."
 Stride,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Subway Surfers,May,2020,1,Unusable,4,No reported issues
 Success Wiz,October,2020,X,X,4,No reported issues
@@ -575,8 +577,9 @@ Tagesschau,December,2020,X,X,2,Some articles cannot be loaded
 Tangerine Mobile Banking,September,2020,4,No reported issues,X,X
 Taobao Lite,November,2020,4,No reported issues,X,X
 Tapatalk,November,2020,4,No reported issues,X,X
+Taste - Movie & TV Recommendations,October,2021,X,X,4,No reported issues
 Tautulli,January,2021,4,No reported issues,X,X
-Teams,November,2020,3,"Google Play Services warning, No notifications",3,No notifications
+Teams,March,2021,3,"Google Play Services warning, No notifications",4,No reported issues
 TeamViewer,February,2021,x,x,4,No reported issues
 TeamViewer Universal Add-On,February,2021,x,x,4,No reported issues
 TED,January,2021,1,"Complains about missing G Services and fails to play any video selected.",X,X
@@ -676,6 +679,8 @@ YouTube Kids,September,2020,1,Unusable,4,No reported issues
 YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Music,December,2020,2,Device files only,4,No reported issues
 Zepp,October,2020,4,No reported issues,X,X
+Zillow,March,2021,X,X,4,No reported issues
 Zip - zip.co,November,2020,X,X,4,No reported issues
 Zoom,December,2020,4,No reported issues,4,No reported issues
 Zulip,September,2020,3,Notifications not working,X,X
+Zwift Companion,March,2021,X,X,4,No reported issues
