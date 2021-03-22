@@ -38,7 +38,7 @@ When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they 
 - Test only Google Play Store applications (Regardless of where they came from, including the Aurora Store)
 - Kindly disable Netguard and other blockers
 - No Google Play Services
-- Pay extra attention to notifications as some will not properly work
+- Pay extra attention to notifications as some will not properly work. If you're testing on MicroG, it is assumed you have enabled GCM/FCM. If you have not enabled GCM/FCM, you are still free to report applications, but please exclude any information regarding missing notifications. (Notifications working is okay and encouraged even with GCM/FCM disabled.)
 - If you're testing from MicroG, only input data in the last two columns, and utilize two "X"s for the standard sections.
 - If you're testing from a fully de-googled ROM without MicroG, input data in the standard sections and mark the MicroG sections as "X"s
 
