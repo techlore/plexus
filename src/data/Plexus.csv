@@ -656,7 +656,7 @@ Twitch,January,2021,3,No notifications,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
-Uber,June,2020,1,Unusable,2,"Add Payment screen not working, map tiles not visible"
+Uber,March,2021,1,Unusable,3,"Route is not rendered properly if map is not rotated"
 Uber Eats,February,2021,3,"Google Play Services Warning, but no effect",1,Blank screen when phone number is chosen immediately after loading app
 Udemy,February,2021,3,"Will complain about no G Services when opened but work without issue.",4,No reported issues
 Uni Innsbruck,December,2020,4,No reported issues,X,X
