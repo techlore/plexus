@@ -62,6 +62,8 @@ AutomaTag,September,2020,3,No in-app purchases,3,No in-app purchases
 AutoTagger,September,2020,3,No in-app purchases,3,No in-app purchases
 Azure app,January,2021,1,"Complains about missing G Play Serv on launch but works. Without G Play Servs, your creds are not cached so you need to log in each time app is opened.",X,X
 Ballz,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
+Banco do Brasil,March,2021,X,X,4,No reported issues
+Banco Inter,March,2021,X,X,4,"App says that won't work with non oficial Android builds in the future"
 Bandcamp,September,2020,3,No notifications,4,No reported issues
 Bank of America,December,2020,4,No reported issues,4,No reported issues
 BankID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
@@ -434,6 +436,7 @@ NordVPN,December,2020,4,No reported issues,4,No reported issues
 Notion,July,2020,4,No reported issues,4,No reported issues
 Nova Launcher,May,2020,4,No reported issues,4,No reported issues
 NS&I Premium Bonds prize checker,January,2021,4,No reported issues,X,X
+Nubank,March,2021,X,X,4,No reported issues
 nzb360,January,2021,3,"Works but unable to unlock the paid for features.",X,X
 NZ COVID Tracer,June,2020,4,No reported issues,4,No reported issues
 OBB Scotty,August,2020,X,X,4,No reported issues
