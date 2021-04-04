@@ -382,7 +382,7 @@ Microsoft Teams,August,2020,4,No reported issues,4,No reported issues
 Microsoft Word,January,2021,4,No reported issues,4,No reported issues
 Migrate - custom ROM migration tool [4.0 GPE],November,2020,4,No reported issues,X,X
 Mi Movistar Argentina,October,2020,3,"Google Play Services Warning,but no effect",4,No reported issues
-MinSundhed,April,2021,3,COVID-19 notifications cannot be enabled,4,No reported issues
+MinSundhed,April,2021,3,"COVID-19 notifications cannot be enabled. Location dependant functions don't work.",4,No reported issues
 Mit 3,April,2021,3,"No notifications. App says it won't run without GSF when opened but runs fine after the message is dismissed.",X,X
 MiXplorer,October,2020,4,No reported issues,4,No reported issues
 Mobile Iron / Mobile@Work,September,2020,X,X,1,Unusable
