@@ -21,7 +21,7 @@ ADT Smart Services,June,2020,3,No notifications and Google Play Services Warning
 Advanced Download Manager,September,2020,3,No in-app purchases,3,No in-app purchases
 Afterpay,November,2020,X,X,4,No reported issues
 Aggregator,December,2020,4,No reported issues,X,X
-Airbnb,November,2020,2,"Can't login, no mapview",X,X
+Airbnb,April,2021,2,"Can successfully login, view listings, no mapview, haven't tested full booking process",X,X
 AirMessage,November,2020,4,No reported issues,X,X
 Air NZ,June,2020,3,Requires disabling notification class,X,X
 Airport Control,November,2020,X,X,4,No reported issues
