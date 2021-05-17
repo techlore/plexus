@@ -44,7 +44,7 @@ When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they 
 
 ### Contribute Method 1 (Recommended)
 
-Start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible.
+Edit the file [Plexus.csv](./src/data/Plexus.csv) and start a pull request with your apps to submit. Ensure you're maintaining the proper CSV format in alphabetical order to make merging as simple as possible.
 
 1. App Name
 2. Month Last Tested
