@@ -37,6 +37,7 @@ Amazon Shopping,February,2021,3,No notifications,4,No reported issues
 Amazon.de VISA Karte,December,2020,3,No Push Notifications,X,X
 AMBOSS Medical Knowledge Library & Clinic Resource,May,2021,X,X,4,No reported issues
 Amboss Wissen für Mediziner,December,2020,1,"not loading library and keeps linking to play services",X,X
+Amegy Bank,February,2021,X,X,4,No reported issues
 Amex Deutschland,December,2020,3,No push notifications & Google Play Services warning,X,X
 Among Us,March,2021,4,No reported issues,4,No reported issues
 Ampler,September,2020,4,No reported issues,X,X
@@ -68,6 +69,7 @@ Banco Inter,March,2021,X,X,4,"App says that won't work with non oficial Android 
 Bandcamp,September,2020,3,No notifications,4,No reported issues
 Bank of America,December,2020,4,No reported issues,4,No reported issues
 BankID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
+Barclaycard Deutschland,April,2021,1,Unusable,X,X
 Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
 Battle of Polytopia,November,2020,X,X,1,Unknown Source error: Uninstall Polytopia and get the official version from the Google Play Store
 BBC News,November,2020,4,No reported issues,4,No reported issues
@@ -164,6 +166,7 @@ Daylio,October,2020,2,Cannot subscribe to premium with play services,X,X
 DB Navigator,October,2020,2,Google Play Services warning & maps do not show,3,No delay notifications (With cloud messaging off)
 Deepfryer,August,2020,4,No reported issues - Works except the antifeatures ;>,X,X
 Deezer,May,2020,3,"Cannot sign up from the application, but can login from the application",X,X
+D-Flight,April,2021,4,No reported issues,X,X
 De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
 Deliveroo,December,2020,1,"Google Play Service warning, stuck on logo",X,X
 Delta,January,2021,2,"Works but you can't purchase any of the unlock features. Also, none of the alerts work.",X,X
@@ -177,6 +180,7 @@ Dike GoSign,December,2020,4,No reported issues,X,X
 Discord,March,2021,3,No notifications,4,No Reported Issues
 Discover,November,2020,3,No notifications,X,X
 Disney+,May,2020,3,"Cannot sign up from the application, but can login from the application",X,X
+DJI Go 4,Aprile,2021,4,No reported issues,X,X
 DKB-Banking,December,2020,3,No push notifications,4,No reported issues
 DKB-Tan2go,December,2020,1,Unusable,X,X
 Dlf Audiothek,December,2020,3,"Googel Play service warning, but no effect",X,X
@@ -316,6 +320,7 @@ HueDynamics,January,2021,4,No reported issues,X,X
 Hungry Shark Evolution,April,2021,1,Unusable,X,X
 Hushed,March,2021,X,X,3,No reported issues - Requires registration online before logging in
 HVV - Navigation & Fahrkarten für Hamburg,December,2020,3,No maps,4,No reported issues
+iClicker Reef,February,2021,X,X,4,No reported issues
 IDS JMK Poseidon,November,2020,4,Getting location slow,X,X
 iFunny,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 IMDB app,January,2021,4,No reported issues,X,X
@@ -556,6 +561,7 @@ Realtor.com,November,2020,X,X,3,Map won’t load
 Rebel Racing,January,2021,1,Unusable,X,X
 Recycle!,September,2020,3,"Google Play Services Warning, but no effect",X,X
 Reddit,April,2021,4,No notifications,4,No reported issues
+Redfin,March,2021,1,Unusable,X,X
 Reduce Photo Size,December,2020,4,No reported issues,X,X
 Red Ball 4,April,2021,4,No reported issues,X,X
 RemotePC,January,2021,4,No reported issues,X,X
@@ -565,7 +571,7 @@ Rif is fun,November,2020,4,No reported issues,4,No reported issues
 Rightmove,January,2021,4,No reported issues,X,X
 Ring,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Rippl,June,2020,4,No reported issues,4,No reported issues
-Robinhood,February,2021,3,"Google Play Services Warning, but no effect",3,No notifications
+Robinhood,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 Roblox,January,2021,1,Unusable,4,No reported issues
 Roon Remote,November,2020,1,Unusable,X,X
 Rumble,January,2021,3,"Repeated Google Play Services warning. No notifications. All else works.",X,X
@@ -620,7 +626,7 @@ Spaceship Voyager,May,2020,4,No reported issues,4,No reported issues
 Sparkasse (KontoApp),August,2020,3,Everything except Notifications (Its a webview with some weird extras nobody uses),X,X
 Spectrum TV,November,2020,X,X,4,No reported issues
 Spexor,January,2021,X,X,4,No reported issues
-Splitwise,May,2021,X,X,3,No notifications
+Splitwise,May,2021,X,X,4,No reported issues
 Spotify,May,2021,4,No reported issues,4,No reported issues
 Squore,June,2020,4,No reported issues,4,No reported issues
 STACK,September,2020,4,No reported issues,X,X
@@ -763,7 +769,7 @@ YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Music,December,2020,2,Device files only,4,No reported issues
 YouTube Studio,May,2021,1,Unusable,4,No reported issues
 Zepp,October,2020,4,No reported issues,X,X
-Zillow,March,2021,X,X,4,No reported issues
+Zillow,March,2021,1,X,Unusabled,No reported issues
 Zip - zip.co,November,2020,X,X,4,No reported issues
 Zombie Tsunami,January,2021,4,No reported issues,X,X
 Zoom,December,2020,4,No reported issues,4,No reported issues
