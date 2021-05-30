@@ -557,7 +557,7 @@ Prank Master 3D,September,2020,1,Unusable,X,X
 Prime Video,February,2021,4,No reported issues,4,No reported issues
 Privacy.com,February,2021,3,No notifications,4,No reported issues
 Pronote,April,2021,X,X,4,No reported issues
-ProtonCalendar,January,2021,3,"Works but no notifications.",4,No reported issues
+ProtonCalendar,January,2021,4,No reported issues,4,No reported issues
 ProtonMail,May,2021,3,No notifications,4,No reported issues
 Psych! Outwit Your Friends,July,2020,1,Does not load,X,X
 Publix,November,2020,X,X,4,No reported issues
@@ -613,7 +613,7 @@ Shareworks,December,2020,4,No reported issues,X,X
 Shazam,December,2020,4,No reported issues,4,No reported issues
 Shortcut Run,November,2020,X,X,4,No reported issues
 SielteSpid,December,2020,4,No reported issues,X,X
-Signal,May,2021,3,Unable to use location services,4,No reported issues
+Signal,May,2021,3,Unable to use location services, displays a notification at all times,4,No reported issues
 "Simple habit: meditation, sleep",July,2020,2,No premium or free trial,X,X
 Simple ToDo,December,2020,4,No reported issues,4,No reported issues
 Simplisafe,March,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
@@ -628,7 +628,7 @@ Sleep as Android,January,2021,4,No reported issues,X,X
 Slither.io,March,2021,4,No reported issues,X,X
 SmartNews,November,2020,4,No reported issues,4,No reported issues
 Smash Hit,April,2021,4,No reported issues,X,X
-Snapchat,May,2021,2,"You can use the Huawei Appgallery version, needs HMS core from Appgallery for login. Both HMS core and Appgallery can be uninstalled after login but you will lose notifications and get a dismissable 'HMS not installed' popup when launching the app",4,No reported issues
+Snapchat,May,2021,2,"Google Play services warning each time the app is opened, no notifications",4,No reported issues
 Snapseed,June,2020,4,No reported issues,4,No reported issues
 SNCB/NMBS,September,2020,3,"Google Play Services Warning, map not working",X,X
 SoFi,September,2020,1,"SoFi won't work unless you enable Google Play services",4,No reported issues
@@ -727,7 +727,6 @@ Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 TuneIn Radio,January,2021,X,X,4,No reported issues
 Tuner - Pitched,January,2021,X,X,3,You can't buy the pro version which gets rids of the Ads but everything else seems to work fine.
-Tutanota,May,2021,4,No reported issues,4,No reported issues
 Twitch,January,2021,3,No notifications,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
