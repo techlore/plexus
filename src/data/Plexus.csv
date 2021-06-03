@@ -47,6 +47,7 @@ Angry Birds AR: Isle of Pigs,November,2020,X,X,4,No reported issues
 AniTrend,December,2020,X,X,4,No reported issues
 Ankidroid,May,2020,4,No reported issues,4,No reported issues
 AnonAddy,February,2021,4,No reported issues,4,No reported issues
+AntennaPod,June,2021,4,No reported issues,X,X
 Anydesk,August,2020,4,No reported issues,X,X
 AnySoftKeyboard,January,2021,4,No reported issues,X,X
 APKMirror,November,2020,4,No reported issues,X,X
@@ -165,6 +166,7 @@ CSR Racing 2,January,2021,1,Unusable,X,X
 Curiosity Stream,August,2020,4,Popup says GPS is required but everything works,X,X
 Curve,December,2020,1,Crashes instantly,X,X
 DAB SecurePlus,August,2020,X,X,4,No reported issues
+DAVx^5,June,2021,4,No reported issues,X,X
 Daylio,October,2020,2,Cannot subscribe to premium with play services,X,X
 DB Navigator,October,2020,2,Google Play Services warning & maps do not show,3,No delay notifications (With cloud messaging off)
 Deepfryer,August,2020,4,No reported issues - Works except the antifeatures ;>,X,X
@@ -202,6 +204,7 @@ DropSync,January,2021,2,"Loads but unable to purchase the paid for features maki
 DS Note,February,2021,X,X,4,No reported issues
 DS Video,February,2021,X,X,2,"Streams well but cannot cast to Chromecast devices. Use VLC player"
 DUAL,August,2020,X,X,3,No in-app purchases
+DuckDuckGo Privacy Browser,June,2021,4,No reported issues,X,X
 Dunkin,February,2021,X,X,1,"Not available from Aurora Store during test and downloaded APK (v7.7.0.255) would not install properly"
 Duel Links,February,2021,3,Unable to purchase microtransactions,X,X
 Duolingo,May,2021,4,No reported issues,4,No reported issues
@@ -336,6 +339,7 @@ iFunny,February,2021,3,"Google Play Services Warning, but no effect",4,No report
 IMDB app,January,2021,4,No reported issues,X,X
 Imgur,May,2021,2,Sign-in not working,4,No reported issues
 Immuni,December,2020,1,"Google Play Services isn't ready error",X,X
+Infinity for Reddit,4,No reported issues,X,X
 Informed Delivery,September,2020,X,X,4,No reported issues
 ING Banking,January,2021,4,No reported issues,4,No reported issues
 ING Bankieren (NL),January,2021,4,No reported issues,X,X
@@ -362,6 +366,7 @@ Kaloricke Tabulky,September,2020,X,X,4,No reported issues
 KartaView,May,2021,X,X,4,No reported issues
 Kasa,February,2021,1,Unusable,4,No reported issues
 Kate Mobile,May,2021,X,X,4,No reported issues
+KDE Connect,June,2021,4,No reported issues,X,X
 kDrive,April,2021,X,X,4,No reported issues
 Keepass2Android,August,2020,4,No reported issues,4,No reported issues
 Keybase,February,2021,3,No notifications,3,No notifications
@@ -377,6 +382,7 @@ Kraken,February,2021,X,X,4,No reported issues
 Kraken Pro,December,2020,4,No reported issues,X,X
 Lastpass,February,2021,3,Premium may not work,4,No reported issues
 Lawnchair 2,December,2020,4,No reported issues,4,No reported issues
+LBRY F-Droid,June,2021,4,No reported issues,X,X
 Leboncoin,May,2021,X,X,4,No reported issues
 Ledger,December,2020,4,No reported issues,X,X
 Let's Meditate: Sleep & Guided meditation,February,2020,1,Unusable,4,No reported issues
@@ -485,6 +491,9 @@ NewPipe,May,2021,4,No reported issues,4,No reported issues
 NewsBlur,May,2021,X,X,4,No reported issues
 News Break,November,2020,X,X,4,No reported issues
 NexiPay,May,2021,X,X,3,Notification does not work
+Nextcloud,June,2021,4,No reported issues,X,X
+Nextcloud News,June,2021,4,No reported issues,X,X
+Nextcloud Notes,June,2021,4,No reported issues,X,X
 Nextbike,August,2020,2,No notifications & map not displayed (Google Maps),X,X
 Nextory,September,2020,4,No reported issues,X,X
 NFS No Limits,January,2021,1,Unusable,X,X
@@ -518,6 +527,7 @@ Opera Mini,May,2020,4,No reported issues,4,No reported issues
 Opera,September,2020,4,No reported issues,4,No reported issues
 Opera Touch,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 Orange Radio,March,2021,1,Crashes on start,X,X
+Organic Maps,June,2021,4,No reported issues,X,X
 OruxMaps,January,2021,4,Downloaded from its website,X,X
 OTG View,June,2020,4,No reported issues,4,No reported issues
 OUI.sncf,May,2021,X,X,4,No reported issues
@@ -688,6 +698,7 @@ Tangerine Mobile Banking,September,2020,4,No reported issues,X,X
 Taobao Lite,November,2020,4,No reported issues,X,X
 Tapatalk,November,2020,4,No reported issues,X,X
 Tap Tap Dash,March,2021,3,No IAPs,X,X
+Tasks.org: Open-source To-Do Lists & Reminders,June,2021,4,No reported issues,X,X
 Taste - Movie & TV Recommendations,October,2021,X,X,4,No reported issues
 Tautulli,January,2021,4,No reported issues,X,X
 Teams,March,2021,3,"Google Play Services warning, No notifications",4,No reported issues
@@ -800,6 +811,8 @@ YouTube Kids,September,2020,1,Unusable,4,No reported issues
 YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Music,December,2020,2,Device files only,4,No reported issues
 YouTube Studio,May,2021,1,Unusable,4,No reported issues
+YouTube Vanced,June,2021,1,Unusuable,X,X
+Yubico Authenticator,June,2021,4,No reported issues,X,X
 Yuka,May,2021,X,X,4,No reported issues
 Zepp,October,2020,4,No reported issues,X,X
 Zillow,March,2021,1,X,Unusabled,No reported issues
