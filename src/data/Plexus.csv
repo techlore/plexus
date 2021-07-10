@@ -32,14 +32,15 @@ Airtel Thanks,November,2020,4,No reported issues,4,No reported issues
 Akinator,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 AL-Chan,December,2020,3,Notifications don't work,4,No reported issues
 ALDI TALK,December,2020,X,X,4,No reported issues
-Alipay,November,2020,2,No reponse when pressing pay button,X,X
+Alipay,November,2020,2,No response when pressing pay button,X,X
 Alto's Adventure,May,2020,4,No reported issues,4,No reported issues
 Amazon Kindle,January,2021,4,No reported issues,4,No reported issues
 Amazon Shopping,February,2021,3,No notifications,3,App stops working occasionally
 Amazon Shopping,February,2021,3,No notifications,4,No reported issues
 Amazon.de VISA Karte,December,2020,3,No Push Notifications,X,X
 AMBOSS Medical Knowledge Library & Clinic Resource,May,2021,X,X,4,No reported issues
-Amboss Wissen für Mediziner,December,2020,1,"not loading library and keeps linking to play services",X,X
+Amboss Wissen für Mediziner,December,2020,1,not loading library and keeps linking to play services,X,X
+Amdroid Alarm Clock,July,2021,4,No reported issues,X,X
 Amegy Bank,February,2021,X,X,4,No reported issues
 American Eagle AE + Aerie,July,2021,X,X,4,No reported issues
 Amex Deutschland,December,2020,3,No push notifications & Google Play Services warning,X,X
@@ -55,7 +56,7 @@ Anydesk,August,2020,4,No reported issues,X,X
 AnySoftKeyboard,January,2021,4,No reported issues,X,X
 APKMirror,November,2020,4,No reported issues,X,X
 Apple Music,July,2020,4,No reported issues,4,No reported issues
-ARD Audiothek,December, 2020,3,No push notifications (warns about it),X,X
+ARD Audiothek,December,2020,3,No push notifications (warns about it),X,X
 Argenta,September,2020,3,Payconiq by Bancontact not working,X,X
 Argo didup famiglia,January,2021,4,No reported issues,X,X
 Arlo,December,2020,4,No reported issues,X,X
@@ -69,10 +70,10 @@ Authy,July,2021,3,"Google Play Services Warning, No notifications",4,No reported
 AutomaTag,September,2020,3,No in-app purchases,3,No in-app purchases
 AutoTagger,September,2020,3,No in-app purchases,3,No in-app purchases
 Axios registro elettronico famiglie,January,2021,4,No reported issues,X,X
-Azure app,January,2021,1,"Complains about missing G Play Serv on launch but works. Without G Play Servs, your creds are not cached so you need to log in each time app is opened.",X,X
+Azure app,January,2021,1,"Complains about missing Google Play Services on launch but works. Without Google Play Services, your credentials are not cached so you need to log in each time app is opened.",X,X
 Ballz,September,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 Banco do Brasil,March,2021,X,X,4,No reported issues
-Banco Inter,March,2021,X,X,4,"App says that won't work with non oficial Android builds in the future"
+Banco Inter,March,2021,X,X,4,App says that won't work with non official Android builds in the future
 Bandcamp,September,2020,3,No notifications,4,No reported issues
 Bank of America,December,2020,4,No reported issues,4,No reported issues
 BankID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
@@ -85,14 +86,14 @@ Beem It,November,2020,3,"Google Play Services warning, no notifications",4,No re
 Berichtenbox,April,2021,X,X,4,No reported issues
 Best Buy,November,2020,4,No reported issues,4,No reported issues
 BestSecret,April,2021,X,X,4,No reported issues
-BETTA,January,2021,1,"Unable to set the live wallpaper making the app unusable.",X,X
-Binance US,February,2021,3,"Works but not tested trading. 99% chance the alerting will work.",4,No reported issues
+BETTA,January,2021,1,Unable to set the live wallpaper making the app unusable.,X,X
+Binance US,February,2021,3,Works but not tested trading. 99% chance the alerting will work.,4,No reported issues
 Bing Search,February,2021,4,No reported issues,X,X
 BirdNET,November,2020,4,No reported issues,4,No reported issues
 BISON,April,2021,X,X,4,No reported issues
 Bitmoji,July,2021,4,No reported issues,4,No reported issues
 Bitpanda,August,2020,1,Requires SafetyNet API,X,X
-Bitslide,January,2021,4,"No issues",X,X
+Bitslide,January,2021,4,No issues,X,X
 Bitwala,May,2021,3,No notifications,4,No reported issues
 Bitwarden,April,2021,4,No reported issues,4,No reported issues
 BlackPlayer,September,2020,4,No reported issues,X,X
@@ -108,7 +109,7 @@ Bose SoundTouch,January,2021,4,No reported issues,X,X
 Brave,January,2021,3,No notifications,4,No reported issues
 Breasy,January,2021,4,No reported issues,X,X
 British Gas,January,2021,4,No reported issues,X,X
-Brooks Brothers,November,2020,X,X,1,"App won't open beyond the logo"
+Brooks Brothers,November,2020,X,X,1,App won't open beyond the logo
 BTS WORLD,May,2020,3,No notifications or in-app purchases,X,X
 Bumble,November,2020,X,X,4,No reported issues
 Button Mapper by flar2,September,2020,4,No reported issues,X,X
@@ -129,17 +130,17 @@ Capital One,November,2020,X,X,4,No reported issues
 Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
 Carx Drift Racing 2,January,2021,1,Unusable,X,X
 c:geo,January,2021,3,Live maps only show locally stored caches,X,X
-CGTN,July,2021,4,No reported issues,4,"No reported issues"
+CGTN,July,2021,4,No reported issues,4,No reported issues
 Chargepoint,October,2020,X,X,4,No reported issues
 Chase,November,2020,X,X,4,No reported issues
 ČHMÚ,November,2020,3,Everything except for getting location,X,X
-CIDR Calculator,January,2021,3,"Works with warnings that the app was designed for an older version of Android.",X,X
-China Daily,July,2021,4,"No reported issues",4,"No reported issues"
+CIDR Calculator,January,2021,3,Works with warnings that the app was designed for an older version of Android.,X,X
+China Daily,July,2021,4,No reported issues,4,No reported issues
 Cisco JABBER,September,2020,X,X,4,No reported issues
 Cisco WEBEX,September,2020,X,X,4,No reported issues
 Citi Mobile,December,2020,1,Unusable,X,X
 Citrix Secure Hub,April,2021,X,X,4,No reported issues
-Citymapper,January,2021,1,"Maps will not render. Written routing display also borked.",3,Map preview sometimes buggy
+Citymapper,January,2021,1,Maps will not render. Written routing display also borked.,3,Map preview sometimes buggy
 Clash of Clans,June,2020,3,"Some missing notifications, no in-app purchases",4,No reported issues
 Clash Royale,November,2020,X,X,3,Progress can be synced through developer's Supercell ID instead of Google Play. Cannot make in-game purchases
 Clockify,May,2020,4,No reported issues,4,No reported issues
@@ -167,7 +168,7 @@ Crédit Mutuel,May,2021,X,X,4,No reported issues
 Cronometer,November,2020,4,No reported issues,X,X
 Crossy Road,December,2020,4,No reported issues,4,No reported issues
 Crunchyroll,November,2020,X,X,4,No reported issues
-Crux,January,2021,1,"Cannot pulled news feeds.",X,X
+Crux,January,2021,1,Cannot pulled news feeds.,X,X
 Crypto.com,April,2021,X,X,1,Installs but doesn't open
 Cryptomator,April,2021,2,Google Drive not working,X,X
 CSFD.cz,September,2020,X,X,4,No reported issues
@@ -180,7 +181,7 @@ DAB SecurePlus,August,2020,X,X,4,No reported issues
 DAVx^5,June,2021,4,No reported issues,X,X
 Daylio,October,2020,2,Cannot subscribe to premium with play services,X,X
 DB Navigator,October,2020,2,Google Play Services warning & maps do not show,3,No delay notifications (With cloud messaging off)
-Deepfryer,August,2020,4,No reported issues - Works except the antifeatures ;>,X,X
+Deepfryer,August,2020,4,No reported issues - Works except the antifeatures ,>,X,
 Deezer,May,2020,3,"Cannot sign up from the application, but can login from the application",X,X
 D-Flight,April,2021,4,No reported issues,X,X
 De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
@@ -199,7 +200,7 @@ Disney+,May,2020,3,"Cannot sign up from the application, but can login from the 
 DJI Go 4,Aprile,2021,4,No reported issues,X,X
 DKB-Banking,December,2020,3,No push notifications,4,No reported issues
 DKB-Tan2go,December,2020,1,Unusable,X,X
-Dlf Audiothek,December,2020,3,"Googel Play service warning, but no effect",X,X
+Dlf Audiothek,December,2020,3,"Google Play Service warning, but no effect",X,X
 Dlf Die Nachrichten,December,2020,3,No push notifications,X,X
 Doccle,September,2020,1,"Not working without Google Play Services, stuck on boot logo",X,X
 Doctolib,May,2021,X,X,4,No reported issues
@@ -211,12 +212,12 @@ DreamLab,March,2021,4,No reported issues,4,No reported issues
 Drive Safe & Save,May,2021,x,x,4,No reported issues
 Droidcam,November,2020,4,No reported issues,4,No reported issues
 Dropbox,May,2020,4,No reported issues,4,No reported issues
-DropSync,January,2021,2,"Loads but unable to purchase the paid for features making app of very limited use.",X,X
+DropSync,January,2021,2,Loads but unable to purchase the paid for features making app of very limited use.,X,X
 DS Note,February,2021,X,X,4,No reported issues
-DS Video,February,2021,X,X,2,"Streams well but cannot cast to Chromecast devices. Use VLC player"
+DS Video,February,2021,X,X,2,Streams well but cannot cast to Chromecast devices. Use VLC player
 DUAL,August,2020,X,X,3,No in-app purchases
 DuckDuckGo Privacy Browser,June,2021,4,No reported issues,X,X
-Dunkin,February,2021,X,X,1,"Not available from Aurora Store during test and downloaded APK (v7.7.0.255) would not install properly"
+Dunkin,February,2021,X,X,1,Not available from Aurora Store during test and downloaded APK (v7.7.0.255) would not install properly
 Duel Links,February,2021,3,Unable to purchase microtransactions,X,X
 Duolingo,July,2021,4,No reported issues,4,No reported issues
 Duo Mobile,November,2020,3,Error message - Duo Push and Duo Restore don't work,3,Error message no issues
@@ -234,7 +235,7 @@ Emby,January,2021,4,No reported issues,X,X
 English - Russian dictionary,July,2020,3,No text to speech,X,X
 Enjoy,May,2021,1,No map displayed,1,No map displayed
 Enpass,January,2021,X,X,4,No reported issues
-Epoch Times App,January,2021,4,"No issues",X,X
+Epoch Times App,January,2021,4,No issues,X,X
 EteSync,April,2021,4,No reported issues,4,No reported issues
 Etsy,February,2021,X,X,4,No reported issues
 Eurail/Interrail Rail Planner,May,2021,X,X,4,No reported issues
@@ -255,7 +256,7 @@ FastMail,November,2020,X,X,4,No reported issues
 Fast Scanner,July,2020,4,No reported issues,4,No reported issues
 Fender Tune,January,2021,4,No reported issues,X,X
 Fidelity Investments,February,2021,X,X,4,No reported issues
-Fidor Banking,April,2021,2,No SmartTAN so no transfer from money possible or login to online banking in the webbrowser,1,No Login possible App crashes everytime
+Fidor Banking,April,2021,2,No SmartTAN so no transfer from money possible or login to online banking in the web browser,1,No Login possible App crashes every time
 Fila,July,2021,X,X,1,Stays stuck on loading screen
 Finecobank,May,2021,2,Authentication does not work,4,No reported issues
 Fetch Rewards,February,2021,X,X,4,No reported issues
@@ -263,11 +264,11 @@ Final Surge,October,2020,X,X,4,No reported issues
 Fire Emblem Heroes,August,2020,1,Unusable due to Google SafetyNet errors,3,No in-app purchases but no other issues with Google SafetyNet disabled in MicroG
 Firefox Focus,May,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history,4,No reported issues
 Firefox,May,2021,4,No reported issues,4,No reported issues
-Fitbit,December,2020,3,On wrist calling through BT doesn't work,X,X
+Fitbit,December,2020,3,On wrist calling through Bluetooth doesn't work,X,X
 Fitnotes,August,2020,X,X,4,No reported issues
 Flash Air,January,2021,4,No reported issues,X,X
 Flexom 2.0,May,2021,X,X,4,No reported issues
-Flightradar,January,2021,1,"Fails to open without Google Services.",X,X
+Flightradar,January,2021,1,Fails to open without Google Services.,X,X
 Flipboard,November,2020,X,X,4,No reported issues
 FlixBus,August,2020,4,No reported issues,4,No reported issues
 Flow Free,April,2021,4,No reported issues,X,X
@@ -317,7 +318,7 @@ Google Meet,January,2021,X,X,1,Unusable
 Google Messages,November,2020,4,No reported issues,X,X
 Google News,November,2020,1,"Unusable, app won't open",4,No reported issues
 Google,November,2020,1,"Unusable, App won't open",3,"Google Play Services Warning, some functions missing"
-Google Pay,November,2020,1,"Unusable",X,X
+Google Pay,November,2020,1,Unusable,X,X
 Google PDF Viewer,November,2020,4,No reported issues,4,No reported issues
 Google Phone,November,2020,4,No reported issues,X,X
 Google Photos,September,2020,3,"Google Play Services Warning, but no effect",X,X
@@ -346,7 +347,7 @@ HERE WeGo City Navigation,October,2020,4,Requires network permission access,4,No
 Hermit,December,2020,4,No reported issues,X,X
 Hill Climb Racing,January,2021,1,Unusable,X,X
 Hollister So Cal Style,July,2021,X,X,4,No reported issues
-Home Assistant,January,2021,4,"No reported issues. Notifications for camera movement untested.",X,X
+Home Assistant,January,2021,4,No reported issues. Notifications for camera movement untested.,X,X
 Home Depot,November,2020,X,X,4,No reported issues
 Home [Hue lights...],June,2020,4,No reported issues,4,No reported issues
 Homematic IP,January,2021,X,X,4,No reported issues
@@ -361,7 +362,7 @@ IDS JMK Poseidon,November,2020,4,Getting location slow,X,X
 iFunny,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 IMDB app,January,2021,4,No reported issues,X,X
 Imgur,July,2021,2,Sign-in not working,4,No reported issues
-Immuni,May,2021,1,"Google Play Services isn't ready error",4,None
+Immuni,May,2021,1,Google Play Services isn't ready error,4,None
 Infinity for Reddit,June,2021,4,No reported issues,X,X
 Informed Delivery,September,2020,X,X,4,No reported issues
 ING Banking,January,2021,4,No reported issues,4,No reported issues
@@ -456,7 +457,7 @@ Microsoft Flow,January,2021,4,No reported issues,X,X
 Microsoft News,November,2020,2,Several freezes and crashes,4,No reported issues
 Microsoft Office,January,2021,X,X,4,No reported issues
 Microsoft Office Lens,January,2021,4,No reported issues,X,X
-Microsoft OneDrive,February,2021,4,"Loads fine. Crashed on inital setup but works fine after reopening.",4,No reported issues
+Microsoft OneDrive,February,2021,4,Loads fine. Crashed on inital setup but works fine after reopening.,4,No reported issues
 Microsoft OneNote,January,2021,4,No reported issues,X,X
 Microsoft Outlook,March,2021,4,No reported issues,4,No reported issues
 Microsoft PowerPoint,February,2021,4,No reported issues,4,No reported issues
@@ -466,9 +467,9 @@ Microsoft Teams,August,2020,4,No reported issues,4,No reported issues
 Microsoft Word,January,2021,4,No reported issues,4,No reported issues
 Migrate - custom ROM migration tool [4.0 GPE],November,2020,4,No reported issues,X,X
 Mi Movistar Argentina,October,2020,3,"Google Play Services Warning,but no effect",4,No reported issues
-MinSundhed,April,2021,3,"COVID-19 notifications cannot be enabled. Location dependant functions don't work.",4,No reported issues
+MinSundhed,April,2021,3,COVID-19 notifications cannot be enabled. Location dependent functions don't work.,4,No reported issues
 Mint Mobile,May,2021,X,X,4,No reported issues
-Mit 3,April,2021,3,"No notifications. App says it won't run without GSF when opened but runs fine after the message is dismissed.",X,X
+Mit 3,April,2021,3,No notifications. App says it won't run without GSF when opened but runs fine after the message is dismissed.,X,X
 MiXplorer,October,2020,4,No reported issues,4,No reported issues
 Mobilbank DK,April,2021,3,No notifications,X,X
 Mobile Iron / Mobile@Work,September,2020,X,X,1,Unusable
@@ -503,7 +504,7 @@ Nanoleaf Smarter Series,February,2021,X,X,4,No reported issues
 Naruto Blazing,November,2020,X,X,4,No reported issues
 Naruto X Boruto Ninja Tribes,November,2020,X,X,4,No reported issues
 Naruto X Boruto Ninja Voltage,November,2020,X,X,4,No reported issues
-National Trust,January,2021,2,"Repeated Google Play Services warning. Map fails. Search fails.",X,X
+National Trust,January,2021,2,Repeated Google Play Services warning. Map fails. Search fails.,X,X
 Nationwide (UK Bank),September,2020,4,No reported issues,X,X
 Natwest (UK Bank),December,2020,1,Hangs on login after emailing natwest it's intentional,4,No reported issues
 Navionics Boating Marine & Lakes,February,2021,X,X,4,No reported issues
@@ -513,7 +514,7 @@ Nebula,January,2021,1,Crashes after login,4,No reported issues
 NemID nøgleapp,April,2021,1,Unusable,4,No reported issues
 Nerd Wallet,November,2020,X,X,4,No reported issues
 Netcup SCP,December,2020,X,X,4,No reported issues
-Netflix,July,2021,4,No reported issues,4,No reported issues
+Netflix,July,2021,3,"Works, but unable to cast to Chromecast",4,No reported issues
 Netgear Mobile,January,2021,X,X,4,No reported issues
 Newegg,November,2020,X,X,4,No reported issues
 NewsBlur,May,2021,X,X,4,No reported issues
@@ -526,7 +527,7 @@ Nextbike,August,2020,2,No notifications & map not displayed (Google Maps),X,X
 Nextory,September,2020,4,No reported issues,X,X
 NFS No Limits,January,2021,1,Unusable,X,X
 NHS Covid-19,December,2020,X,X,4,No reported Issues
-Night Screen,June,2021,4,"Can't upgrade to PRO version 'In-app billing service is unavailable'",X,X
+Night Screen,June,2021,4,Can't upgrade to PRO version 'In-app billing service is unavailable',X,X
 NINA,September,2020,X,X,1,Throws error message device could not be registered then terminates
 Nine,December,2020,X,X,4,No reported issues
 Nordea Mobile,March,2021,X,X,4,No reported issues
@@ -536,7 +537,7 @@ Notion,July,2020,4,No reported issues,4,No reported issues
 Nova Launcher,May,2020,4,No reported issues,4,No reported issues
 NS&I Premium Bonds prize checker,January,2021,4,No reported issues,X,X
 Nubank,March,2021,X,X,4,No reported issues
-nzb360,January,2021,3,"Works but unable to unlock the paid for features.",X,X
+nzb360,January,2021,3,Works but unable to unlock the paid for features.,X,X
 NZ COVID Tracer,June,2020,4,No reported issues,4,No reported issues
 OBB Scotty,August,2020,X,X,4,No reported issues
 Oculus,May,2021,4,No reported issues,4,No reported issues
@@ -581,6 +582,7 @@ Perfect Piano,February,2021,4,No reported issues,4,No reported issues
 Personal Capital,October,2020,X,X,4,No reported issues
 PESU,October,2020,X,X,4,No reported issues
 Phillips Hue,February,2021,X,X,4,No reported issues
+Phimp.me,July,2021,4,No reported issues,X,X
 PhysiApp,July,2020,1,Unusable as it won't load past the second setup screen,X,X
 PIA VPN,June,2020,4,No reported issues,4,No reported issues
 PingTools,January,2021,4,No reported issues,X,X
@@ -639,7 +641,7 @@ Rippl,June,2020,4,No reported issues,4,No reported issues
 Robinhood,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 Roblox,January,2021,1,Unusable,4,No reported issues
 Roon Remote,November,2020,1,Unusable,X,X
-Rumble,January,2021,3,"Repeated Google Play Services warning. No notifications. All else works.",X,X
+Rumble,January,2021,3,Repeated Google Play Services warning. No notifications. All else works.,X,X
 S-ID-Check,December,2020,1,Unusable,X,X
 SafeVac,May,2021,X,X,4,No reported issues
 Samsung Mobile Print,May,2021,4,No reported issues,4,No reported issues
@@ -673,7 +675,7 @@ Simply Wall St,December,2020,4,No reported issues,X,X
 SiriusXM,February,2021,X,X,4,No reported issues
 SKED,June,2020,3,"Google Play Services Warning, but no effect",X,X
 SketchBook,September,2020,4,No reported issues,X,X
-Sky Map,April,2021,3,"Google Play Services Warning upon opening the app",X,X
+Sky Map,April,2021,3,Google Play Services Warning upon opening the app,X,X
 Skype,November,2020,X,X,4,No reported issues
 Slack,May,2020,3,No notifications,X,X
 Slay the Spire,June,2021,1,Crashing instantly,X,X
@@ -684,7 +686,7 @@ Smash Hit,April,2021,4,No reported issues,X,X
 Snapchat,May,2021,2,"Google Play services warning each time the app is opened, no notifications",4,No reported issues
 Snapseed,June,2020,4,No reported issues,4,No reported issues
 SNCB/NMBS,September,2020,3,"Google Play Services Warning, map not working",X,X
-SoFi,September,2020,1,"SoFi won't work unless you enable Google Play services",4,No reported issues
+SoFi,September,2020,1,SoFi won't work unless you enable Google Play services,4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Somfy,May,2021,X,X,4,No reported issues
 SonicDash,November,2020,X,X,4,No reported issues
@@ -712,7 +714,7 @@ Steam,June,2021,3,No Notifications,4,No reported issues
 Stetson Authentication,November,2020,X,X,1,QR code won't scan
 Stetson University,November,2020,X,X,4,No reported issues
 Stick War: Legacy,November,2020,X,X,4,No reported issues
-Strava,October,2021,X,X,1,"Requires Google Maps."
+Strava,October,2021,X,X,1,Requires Google Maps.
 Stride,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Stryd,May,2021,X,X,4,Have not tested paid memberships.
 Subway Surfers,June,2021,4,No reported issues,4,No reported issues
@@ -739,10 +741,10 @@ Tasks.org: Open-source To-Do Lists & Reminders,June,2021,4,No reported issues,X,
 Taste - Movie & TV Recommendations,October,2021,X,X,4,No reported issues
 Tautulli,January,2021,4,No reported issues,X,X
 Teams,March,2021,3,"Google Play Services warning, No notifications",4,No reported issues
-Teamspeak 3,June,2021,1,"Error while checking license!",1,No reported issues
+Teamspeak 3,June,2021,1,Error while checking license!,1,No reported issues
 TeamViewer,April,2021,x,x,4,No reported issues
 TeamViewer Universal Add-On,April,2021,x,x,4,No reported issues
-TED,January,2021,1,"Complains about missing G Services and fails to play any video selected.",X,X
+TED,January,2021,1,Complains about missing G Services and fails to play any video selected.,X,X
 Telegram,May,2021,X,X,4,No reported issues
 Telegram X,December,2020,X,X,4,No reported issues
 Telepass,May,2021,4,No reported issues,4,No reported issues
@@ -762,7 +764,7 @@ Tile,September,2020,2,"Google Play Services Warning, also missing maps previews"
 Tiles Hop,January,2021,1,No reported issues,4,No reported issues
 Tinder,August,2020,1,"Doesn't keep state, unusable",4,No reported issues
 Todoist,May,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
-Tomorrow Mobile Banking,May,2021, 3,No notifications & IBAN-Scanner not working,3,IBAN-Scanner not working
+Tomorrow Mobile Banking,May,2021,3,No notifications & IBAN-Scanner not working,3,IBAN-Scanner not working
 TomTom,January,2021,4,No reported issues,X,X
 Totm,April,2021,1,Unusable,X,X
 TooGoodToGo,September,2020,1,"Unable to choose location, map not working",4,No reported issues
@@ -772,7 +774,7 @@ TradingView,February,2021,X,X,4,No reported issues
 Traffic Racer,January,2021,1,Unusable,X,X
 Taffic Rider,January,2021,1,Unusable,X,X
 Trainline,October,2020,X,X,4,No reported issues
-TransferWise Money Transfer,December,2020,3,"Google Play services warning but not effect. No card payment confirmation due to lack of notifications.",X,X
+TransferWise Money Transfer,December,2020,3,Google Play services warning but not effect. No card payment confirmation due to lack of notifications.,X,X
 Trello,May,2020,4,No reported issues,4,No reported issues
 Trenitalia,December,2020,4,"Google Play Services Warning, no effect",X,X
 Tresorit,September,2020,4,No reported issues,4,No reported issues
@@ -790,9 +792,9 @@ Twitch,January,2021,3,No notifications,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
-Uber,March,2021,1,Unusable,3,"Route is not rendered properly if map is not rotated"
+Uber,March,2021,1,Unusable,3,Route is not rendered properly if map is not rotated
 Uber Eats,February,2021,3,"Google Play Services Warning, but no effect",1,Blank screen when phone number is chosen immediately after loading app
-Udemy,February,2021,3,"Will complain about no G Services when opened but work without issue.",4,No reported issues
+Udemy,February,2021,3,Will complain about no G Services when opened but work without issue.,4,No reported issues
 Uni Innsbruck,December,2020,4,No reported issues,X,X
 Up Banking,November,2020,1,Cannot log in,4,No reported issues
 UPS,November,2020,X,X,4,No reported issues
@@ -814,17 +816,18 @@ Waking Up,August,2020,X,X,4,No reported issues
 Wall Street Journal,November,2020,X,X,4,No reported issues
 Walmart,September,2020,X,X,4,No reported issues
 Warpinator,May,2021,X,X,4,No reported issues
+WatchCheck,July,2021,4,No reported issues,X,X
 Water Store Puzzle,November,2020,X,X,4,No reported issues
-Waze,March,2020,1,"Unusable-maps don't load",2,"Unusable-maps don't load. There is a reported workaround to side-load an old APK then updating to regain map functionality. Details: https://github.com/techlore-official/plexus/issues/113#issuecomment-777272821"
-Wear OS by Google,November,2020,1,"Unusable without Google Play Services",X,X
+Waze,March,2020,1,Unusable-maps don't load,2,Unusable-maps don't load. There is a reported workaround to side-load an old APK then updating to regain map functionality. Details: https://github.com/techlore-official/plexus/issues/113#issuecomment-777272821
+Wear OS by Google,November,2020,1,Unusable without Google Play Services,X,X
 WeChat,May,2020,4,No reported issues,X,X
 Wells Fargo,November,2020,X,X,4,No reported issues
 WeShare Carsharing,May,2021,X,X,1,App is crashing instantly
-What3words,January,2021,1,"Fails to even launch.",X,X
+What3words,January,2021,1,Fails to even launch.,X,X
 WhatsApp,July,2020,4,No reported issues,4,No reported issues
 WhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
 WHOOP,January,2021,X,X,4,No reported issues
-Wild Rift,February,2021,3,"Cannot log in using Google account (app also offers Riot and Facebook logins)",X,X
+Wild Rift,February,2021,3,Cannot log in using Google account (app also offers Riot and Facebook logins),X,X
 Wifi Analyzer,August,2020,X,X,4,No reported issues
 Windtre,May,2021,4,No reported issues,4,No reported issues
 Windscribe,June,2021,4,No reported issues,4,No reported issues
@@ -845,7 +848,7 @@ Yandex Metro,May,2021,X,X,4,No reported issues
 Yandex Translate,February,2021,4,No reported issues,X,X
 Yandex Trains,May,2021,X,X,4,No reported issues
 Yandex Weather,May,2021,X,X,4,No reported issues
-Yatse,January,2021,3,"Works but unable to unlock the paid for features.",X,X
+Yatse,January,2021,3,Works but unable to unlock the paid for features.,X,X
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
 YNAB,September,2020,4,No reported issues,X,X
@@ -855,7 +858,7 @@ YouTube Kids,September,2020,1,Unusable,4,No reported issues
 YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Music,December,2020,2,Device files only,4,No reported issues
 YouTube Studio,May,2021,1,Unusable,4,No reported issues
-YouTube Vanced,June,2021,1,Unusuable,X,X
+YouTube Vanced,June,2021,1,Unusable,X,X
 Yubico Authenticator,June,2021,4,No reported issues,X,X
 Yuka,May,2021,X,X,4,No reported issues
 Zara,July,2021,X,X,4,No reported issues
