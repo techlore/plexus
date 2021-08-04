@@ -133,7 +133,7 @@ Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
 Carx Drift Racing 2,January,2021,1,Unusable,X,X
 c:geo,January,2021,3,Live maps only show locally stored caches,X,X
 CGTN,July,2021,4,No reported issues,4,No reported issues
-Chargepoint,October,2020,X,X,4,No reported issues
+Chargepoint,October,2020,2,Location and history don't work but login and NFC station activation do,4,No reported issues
 Chase,November,2020,X,X,4,No reported issues
 ČHMÚ,November,2020,3,Everything except for getting location,X,X
 CIDR Calculator,January,2021,3,Works with warnings that the app was designed for an older version of Android.,X,X
@@ -540,6 +540,7 @@ NHS Covid-19,December,2020,X,X,4,No reported Issues
 Night Screen,August,2021,4,Can't upgrade to PRO version 'In-app billing service is unavailable',X,X
 NINA,September,2020,X,X,1,Throws error message device could not be registered then terminates
 Nine,December,2020,X,X,4,No reported issues
+Nintendo Switch Online,August,2021,2,Voice chat doesn't work,X,X
 Nordea Mobile,March,2021,X,X,4,No reported issues
 Nordea Wallet,March,2021,X,X,4,No reported issues
 NordVPN,December,2020,4,No reported issues,4,No reported issues
@@ -775,6 +776,7 @@ Thuisbezorgd,June,2021,2,"No notifications,no map preview",X,X
 TickTick,August,2020,3,Occasional missed notifications,X,X
 Tidal,May,2021,4,No reported issues,4,No reported issues
 Tikkie,May,2021,3,No notifications,4,No reported issues
+TikTok,August,2021,3,No notifications,X,X
 Tile,September,2020,2,"Google Play Services Warning, also missing maps previews",4,No Reported Issues
 Tiles Hop,January,2021,1,No reported issues,4,No reported issues
 Tinder,August,2020,1,"Doesn't keep state, unusable",4,No reported issues
