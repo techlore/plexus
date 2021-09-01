@@ -78,6 +78,7 @@ Banco do Brasil,March,2021,X,X,4,No reported issues
 Banco Inter,March,2021,X,X,4,App says that won't work with non official Android builds in the future
 Bandcamp,September,2020,3,No notifications,4,No reported issues
 Bank of America,December,2020,4,No reported issues,4,No reported issues
+Bank of Ireland Mobile Banking,September,2021,1,"Can't register device, rendering application useless. This is likely due to lack of FCM/Google notification support in GrapheneOS where this was tested.",X,X
 BankID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 Barclaycard Deutschland,April,2021,1,Unusable,X,X
 Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
