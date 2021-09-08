@@ -808,7 +808,7 @@ Tile,August,2021,2,"Google Play Services Warning, also missing maps previews",3,
 Tiles Hop,January,2021,1,No reported issues,4,No reported issues
 Tinder,August,2020,1,"Doesn't keep state, unusable",4,No reported issues
 Tiny Tiny RSS,August,2021,4,No reported issues,X,X
-Todoist,September,2021,3,"Google Play Services Warning, but no effect",2,Unable to login by default. Login can by achieved by downloading older version (8000 works), signing in and then updating the app.
+Todoist,September,2021,3,"Google Play Services Warning, but no effect",2,"Unable to login by default. Login can by achieved by downloading older version (8000 works), signing in and then updating the app."
 Tomorrow Mobile Banking,May,2021,3,No notifications & IBAN-Scanner not working,3,IBAN-Scanner not working
 TomTom,January,2021,4,No reported issues,X,X
 Totm,April,2021,1,Unusable,X,X
