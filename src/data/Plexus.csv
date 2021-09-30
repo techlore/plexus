@@ -529,7 +529,7 @@ myStop Mobile,November,2020,3,No map,4,No reported issues
 MySudo,February,2021,1,Unusable,1,Unusable
 My Vodafone Italia,December,2020,3,No notifications,X,X
 MyJioApp,August,2021,4,No reported issues,X,X
-N26,February,2021,X,X,4,"Not any issue spotted, everything works as intended (including settings access and transfers confirming). Push notifications also work perfectly. Careful: for everything to work (including being able to confirm bank transfers!), needs the app to be registered in Cloud Messaging in microG (edit: not the case anymore, at least on uG 0.2.19.211515 and LineageOS 18.1, Google Device Registration is not required anymore for everything to work!)"
+N26,September,2021,3,No push notifications,4,"Not any issue spotted, everything works as intended (including settings access and transfers confirming). Push notifications also work perfectly. Careful: for everything to work (including being able to confirm bank transfers!), needs the app to be registered in Cloud Messaging in microG (edit: not the case anymore, at least on uG 0.2.19.211515 and LineageOS 18.1, Google Device Registration is not required anymore for everything to work!)"
 NAB Mobile Banking,May,2020,4,No reported issues,4,No reported issues
 Nanoleaf Smarter Series,February,2021,X,X,4,No reported issues
 Naruto Blazing,November,2020,X,X,4,No reported issues
@@ -678,6 +678,7 @@ Ring,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Rippl,June,2020,4,No reported issues,4,No reported issues
 Robinhood,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
 Roblox,January,2021,1,Unusable,4,No reported issues
+Roborock,September,2021,3,No push notifications,X,X
 Rocketbook,September,2021,X,X,3,Can't upload files to Google Drive
 Roon Remote,November,2020,1,Unusable,X,X
 Rumble,January,2021,3,Repeated Google Play Services warning. No notifications. All else works.,X,X
@@ -819,6 +820,7 @@ Tor Browser,February,2021,X,X,4,No reported issues
 Total Launcher,August,2020,X,X,3,Cannot purchase extra features
 TousAntiCovid,July,2021,X,X,4,No reported issues
 TP-Link Deco,September,2021,X,X,4,No reported issues
+Trade Republic,September,2021,1,Unuseable. But useable with Graphene OS Play Services Sandbox.,X,X
 TradingView,February,2021,X,X,4,No reported issues
 Traffic Racer,January,2021,1,Unusable,X,X
 Taffic Rider,January,2021,1,Unusable,X,X
