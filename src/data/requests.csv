@@ -4,7 +4,7 @@ Ancestry DNA,Both,No,X
 ArubaPEC,No,No,X
 BankID Sakerhetsapp,Both,Both,X
 Call Recorder,Both,No,X
-CapCut,X,X,X
+CapCut,No,X,X
 Cash App,Both,No,X
 EchoLink,Both,No,X
 eDeclaration,Both,No,Requires a traveler flying to Canadian airport
@@ -46,5 +46,5 @@ Toyota,X,X,X
 Uber Driver,X,X,X
 Uni Innsbruck,No,No,X
 VVT Tickets,No,No,X
-Wunderground,Both,No,X
+Wunderground,No,No,X
 Wyze - Make Your Home Smarter,Both,No,Requires a Wyze device
