@@ -7,7 +7,7 @@ Application,Month,Year,Rating (1-4),Notes,MicroG Rating (1-4),MicroG Notes
 3DMark,September,2020,4,No reported issues,4,No reported issues
 432 Player,September,2020,X,X,4,No reported issues
 4411,September,2020,2,"Google Play Services warning, several broken functions",X,X
-6ix9ine Runner,September,2020,1,Unusable,X,X
+6ix9ine Runner,October,2021,1,Unusable,4,No reported issues
 7zipper,December,2020,X,X,4,No reported issues
 9292 OV,July,2021,2,"Basic public transport planning works, Google Play Services warning, maps functionality (gmaps) does not work",X,X
 9GAG,January,2021,X,X,4,No reported issues
@@ -132,6 +132,7 @@ Camera Go,April,2021,X,X,4,No reported issues
 CamScanner,May,2020,4,No reported issues,4,No reported issues
 Candy Crush,January,2021,4,No reported issues,X,X
 Canvas Student,November,2020,4,No reported issues,4,No reported issues
+CapCut,October,2021,X,X,4,No reported issues
 Capital One,November,2020,X,X,4,No reported issues
 Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
 Carx Drift Racing 2,January,2021,1,Unusable,X,X
@@ -763,6 +764,7 @@ Surfshark,September,2020,X,X,4,No reported issues
 Speedtest Master,January,2021,4,No reported issues,X,X
 Swiggy,April,2021,X,X,4,Unable to use location - have to add manually
 Swisscard,September,2021,X,X,1,Starting with version 2.8.11 app will refuse functionality if not installed from official Google Play Store
+Sync for reddit,October,2021,1,Unable to verify license,1,Unable to verify license
 Sygic GPS Navigation & Offline Maps,May,2021,4,No reported issues,4,No reported issues
 Synology Drive,February,2021,4,No reported issues,4,No reported issues
 Synology DS Cam,August,2021,3,No notifications and annoying popup that says you are not running google services,X,X
@@ -802,6 +804,7 @@ TikTok,August,2021,3,No notifications,X,X
 Tile,August,2021,2,"Google Play Services Warning, also missing maps previews",3,"Map of all tiles doesn't load, independent tile maps works fine."
 Tiles Hop,January,2021,1,No reported issues,4,No reported issues
 Tinder,August,2020,1,"Doesn't keep state, unusable",4,No reported issues
+Тинькофф Джуниор (Tinkoff Junior),October,2021,X,X,4,No reported issues (Notifications untested)
 Tiny Tiny RSS,August,2021,4,No reported issues,X,X
 Todoist,September,2021,3,"Google Play Services Warning, but no effect",2,"Unable to login by default. Login can by achieved by downloading older version (8000 works), signing in and then updating the app."
 Tomorrow Mobile Banking,May,2021,3,No notifications & IBAN-Scanner not working,3,IBAN-Scanner not working
@@ -866,6 +869,7 @@ WatchCheck,July,2021,4,No reported issues,X,X
 Water Store Puzzle,November,2020,X,X,4,No reported issues
 Waze,October,2021,1,Unusable-maps don't load,4,No reported issues
 Wear OS by Google,November,2020,1,Unusable,X,X
+Weather Underground,October,2021,X,X,4,No reported issues
 WeChat,May,2020,4,No reported issues,X,X
 Wells Fargo,November,2020,X,X,4,No reported issues
 WeShare Carsharing,May,2021,X,X,1,App is crashing instantly
