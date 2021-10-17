@@ -197,6 +197,7 @@ Deezer,May,2020,3,"Cannot sign up from the application, but can login from the a
 D-Flight,April,2021,4,No reported issues,X,X
 De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
 Deliveroo,December,2020,1,Unusable,X,X
+Delivery Club,October,2021,X,X,4,No reported issues
 Delta,January,2021,2,"No in-app purchases. No alerts work.",X,X
 DHL Paket,August,2020,3,"Google Play Service warning, but no effect",4,No reported issues
 DIC-o Czech-English,August,2021,4,No reported issues,X,X
@@ -301,6 +302,7 @@ Gemalto MobilePASS+,April,2021,X,X,4,No reported issues
 Genius Lyrics,July,2020,4,No reported issues,4,No reported issues
 Geometric Weather,August,2021,4,No reported issues,X,X
 Geometry Dash,August,2020,4,No reported issues,X,X
+Gett,October,2021,X,X,4,No reported issues (Notifications untested)
 GiffGaff,December,2020,4,No reported issues - though requires an installed browser,X,X
 Gilt,July,2021,X,X,4,No reported issues
 Ginventory,December,2020,4,No reported issues,X,X
@@ -445,6 +447,7 @@ Listen Audiobook Player,May,2020,4,No reported issues,4,No reported issues
 Livescore,September,2021,X,X,4,No reported issues
 Lloyds Bank,December,2020,4,No reported issues,X,X
 LOCUS Free,September,2020,X,X,4,No reported issues
+Local Kitchen (Кухня На Районе),October,2021,1,Unusable,1,Unusable
 Lowe’s,November,2020,X,X,4,No reported issues
 Lucidity,August,2021,3,Crashes more often than on Googled device,X,X
 Luis Vuitton,July,2021,X,X,4,No reported issues
@@ -804,7 +807,7 @@ TikTok,August,2021,3,No notifications,X,X
 Tile,August,2021,2,"Google Play Services Warning, also missing maps previews",3,"Map of all tiles doesn't load, independent tile maps works fine."
 Tiles Hop,January,2021,1,No reported issues,4,No reported issues
 Tinder,August,2020,1,"Doesn't keep state, unusable",4,No reported issues
-Тинькофф Джуниор (Tinkoff Junior),October,2021,X,X,4,No reported issues (Notifications untested)
+Tinkoff Junior (Тинькофф Джуниор),October,2021,X,X,4,No reported issues (Notifications untested)
 Tiny Tiny RSS,August,2021,4,No reported issues,X,X
 Todoist,September,2021,3,"Google Play Services Warning, but no effect",2,"Unable to login by default. Login can by achieved by downloading older version (8000 works), signing in and then updating the app."
 Tomorrow Mobile Banking,May,2021,3,No notifications & IBAN-Scanner not working,3,IBAN-Scanner not working
