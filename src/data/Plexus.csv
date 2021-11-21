@@ -239,7 +239,6 @@ DS Note,February,2021,X,X,4,No reported issues
 DS Video,February,2021,X,X,2,Streams well but cannot cast to Chromecast devices. Use VLC player
 Dscout,October,2021,4,No reported issues,X,X
 DUAL,August,2020,X,X,3,No in-app purchases
-DuckDuckGo,November,2021,4,No reported issues,X,X
 Dunkin,February,2021,X,X,1,Not available from Aurora Store during test and downloaded APK (v7.7.0.255) would not install properly
 Duel Links,February,2021,3,No in-app purchases,X,X
 Duolingo,July,2021,4,No reported issues,4,No reported issues
@@ -254,7 +253,6 @@ EBT.art,October,2021,3,Text recognition doesn't work because camera crashes,X,X
 Edge,November,2020,4,No reported issues,4,No reported issues
 Edward Jones Canada,December,2020,4,No reported issues,X,X
 Electron Cash,August,2020,4,No reported issues,X,X
-Element,October,2021,3,No notifications outside device history,4,No reported issues
 Emby,January,2021,4,No reported issues,X,X
 English - Russian dictionary,July,2020,3,No text to speech,X,X
 Enjoy,May,2021,1,No map displayed,1,No map displayed
@@ -452,7 +450,6 @@ La Banque Postale,July,2021,3,Notifications won't work,4,No reported issues
 La Redoute,July,2021,X,X,4,No reported issues
 Lastpass,February,2021,3,Premium may not work,4,No reported issues
 Lawnchair 2,December,2020,4,No reported issues,4,No reported issues
-LBRY,November,2021,3,No notifications outside device history,X,X
 Leboncoin,May,2021,4,No reported issues,4,No reported issues
 Ledger Live,August,2021,4,No reported issues,4,No reported issues
 Let's Meditate: Sleep & Guided meditation,February,2020,1,Unusable,4,No reported issues
@@ -467,7 +464,7 @@ LinkedIn,January,2021,3,No notifications,4,No reported issues
 Listen Audiobook Player,May,2020,4,No reported issues,4,No reported issues
 Livescore,September,2021,X,X,4,No reported issues
 Lloyds Bank,December,2020,4,No reported issues,X,X
-Locals,November,2021,3,No notifications outside device history,X,X
+Locals.com,November,2021,3,No notifications outside device history,X,X
 LOCUS Free,September,2020,X,X,4,No reported issues
 Local Kitchen (Кухня На Районе),October,2021,1,Unusable,1,Unusable
 Lowe’s,November,2020,X,X,4,No reported issues
@@ -813,7 +810,6 @@ Sygic GPS Navigation & Offline Maps,May,2021,4,No reported issues,4,No reported 
 Synology Drive,February,2021,4,No reported issues,4,No reported issues
 Synology DS Cam,August,2021,3,No notifications and annoying popup that says you are not running google services,X,X
 Synology Memories,June,2020,4,No reported issues,4,No reported issues
-Syphon,November,2021,3,No notifications outside device history,X,X
 TAB Bank Mobile,July,2021,X,X,4,No reported issues
 Tagesschau,December,2020,X,X,2,Some articles cannot be loaded
 Tangerine Mobile Banking,September,2020,4,No reported issues,X,X
@@ -881,7 +877,6 @@ Truecaller,May,2020,4,No reported issues,4,No reported issues
 TTS Util,June,2020,4,No reported issues,4,No reported issues
 TuneIn Radio,January,2021,X,X,4,No reported issues
 Tuner - Pitched,January,2021,X,X,3,You can't buy the pro version which gets rids of the Ads but everything else seems to work fine.
-Tusky,November,2021,3,No notifications outside device history,X,X
 Twitch,January,2021,3,No notifications,4,No reported issues
 Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
