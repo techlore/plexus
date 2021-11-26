@@ -237,6 +237,7 @@ DS Note,February,2021,X,X,4,No reported issues
 DS Video,February,2021,X,X,2,Streams well but cannot cast to Chromecast devices. Use VLC player
 Dscout,October,2021,4,No reported issues,X,X
 DUAL,August,2020,X,X,3,No in-app purchases
+DuckDuckGo Privacy Browser,November,2021,X,X,4,No reported issues
 Dunkin,February,2021,X,X,1,Not available from Aurora Store during test and downloaded APK (v7.7.0.255) would not install properly
 Duel Links,February,2021,3,No in-app purchases,X,X
 Duolingo,July,2021,4,No reported issues,4,No reported issues
@@ -325,7 +326,7 @@ Golds Gym Virtual,July,2021,X,X,4,No reported issues
 Gomo,February,2021,3,"Loads the login prompt slowly, but no issues. No notifications.",X,X
 Goodreads,May,2020,4,No reported issues,4,No reported issues
 Google Authenticator,January,2021,X,X,4,No reported issues
-Google Calendar,November,2020,1,Unusable,X,X
+Google Calendar,November,2021,1,Unusable,4,No reported issues
 Google Camera,April,2021,3,"Working, but need spoofed API & Image preview won't work without Google Photos installed",4,No reported issues
 Google Cardboard,June,2020,3,No in-app purchases,X,X
 Google Chat,October,2020,1,Unusable,1,Unusable
@@ -453,6 +454,7 @@ Let's Meditate: Sleep & Guided meditation,February,2020,1,Unusable,4,No reported
 Letterboxd,May,2020,4,No reported issues,4,No reported issues
 Lichess • Free Online Chess,August,2021,4,No reported issues,X,X
 Lichness,June,2020,4,No reported issues,4,No reported issues
+Lidl Plus,November,2021,X,X,4,No reported issues
 Life360,April,2021,2,Map and Battery sharing dont work and the map does not work,X,X
 LIFX,October,2021,3,Cannot Set Schedules based off sunrise or sunset,4,No reported issues
 Lieferando,August,2020,X,X,4,No reported issues
@@ -539,6 +541,7 @@ My Dior,July,2021,X,X,4,No reported issues
 MyEdenred,September,2020,4,No reported issues,X,X
 MyFitnessPal,April,2020,3,No bar code reading,X,X
 MyHyundai with Bluelink,February,2021,X,X,4,No reported issues
+MyLebara,November,2021,X,X,4,No reported issues
 Mynexuzhealth,September,2020,1,Unusable,X,X
 My Beeling,May,2021,X,X,4,No reported issues
 My Optus,July,2020,4,No reported issues,4,No reported issues
@@ -547,7 +550,7 @@ myStop Mobile,November,2020,3,No map,4,No reported issues
 MySudo,October,2021,3,"Works without notifications using account transfer feature: https://support.mysudo.com/hc/en-us/articles/360049383553-Update-to-the-new-MySudo-for-Android-1-4-0-version-",3,"Works w/ notifications using account transfer feature: https://support.mysudo.com/hc/en-us/articles/360049383553-Update-to-the-new-MySudo-for-Android-1-4-0-version-"
 My Vodafone Italia,December,2020,3,No notifications,X,X
 MyJioApp,August,2021,4,No reported issues,X,X
-N26,September,2021,3,No push notifications,4,"No reported issues"
+N26,September,2021,3,No push notifications,4,No reported issues
 NAB Mobile Banking,May,2020,4,No reported issues,4,No reported issues
 Nanoleaf Smarter Series,February,2021,X,X,4,No reported issues
 Naruto Blazing,November,2020,X,X,4,No reported issues
@@ -587,7 +590,7 @@ Nothing Ear(1),October,2021,4,No reported issues,X,X
 Notion,July,2020,4,No reported issues,4,No reported issues
 Nova Launcher,May,2020,4,No reported issues,4,No reported issues
 NS&I Premium Bonds prize checker,January,2021,4,No reported issues,X,X
-NS,July,2021,4,No reported issues,X,X
+NS,November,2021,4,No reported issues,4,No reported issues
 Nubank,March,2021,X,X,4,No reported issues
 nzb360,January,2021,3,Works but no in-app purchases,X,X
 NZ COVID Tracer,June,2020,4,No reported issues,4,No reported issues
@@ -745,6 +748,7 @@ Slack,May,2020,3,No notifications,X,X
 Slay the Spire,June,2021,1,Crashing instantly,X,X
 Sleep as Android,January,2021,4,No reported issues,X,X
 Slither.io,March,2021,4,No reported issues,X,X
+Smart-ID,November,2021,X,X,1,App requires SafetyNet to pass
 SmartNews,November,2020,4,No reported issues,4,No reported issues
 Smash Hit,April,2021,4,No reported issues,X,X
 SMARTY,October,2021,X,X,4,No reported issues
@@ -764,6 +768,7 @@ SoundCloud,September,2020,3,Cannot login with Google account,4,No reported issue
 Southwest App,February,2021,X,X,4,No reported issues
 Spaceship Voyager,May,2020,4,No reported issues,4,No reported issues
 Sparkasse (KontoApp),August,2020,3,Everything except Notifications (Its a webview with some weird extras nobody uses),X,X
+sparuniversity,November,2021,X,X,4,No reported issues
 Spectrum TV,November,2020,X,X,4,No reported issues
 Spexor,January,2021,X,X,4,No reported issues
 Splitwise,May,2021,X,X,4,No reported issues
@@ -884,7 +889,7 @@ v2rayNG,November,2020,4,No reported issues,X,X
 Vanguard,November,2020,X,X,4,No reported issues
 Venmo,July,2021,3,App freezes occasionally when scrolling through your payment feed. No Notifications,4,No reported issues
 VIMpay,December,2020,1,Crashes instantly,X,X
-Viber,October,2021,4,No reported issues,X,X
+Viber,November,2021,4,No reported issues,4,No reported issues
 VIOFO,April,2021,X,X,4,No reported issues
 Vipps,March,2021,1,Needs passing safetynet,1,Needs passing safetynet to use
 Virgin Pulse,February,2021,X,X,4,No reported issues
