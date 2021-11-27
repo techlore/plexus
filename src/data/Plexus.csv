@@ -35,6 +35,8 @@ AL-Chan,December,2020,3,Notifications don't work,4,No reported issues
 ALDI TALK,December,2020,X,X,4,No reported issues
 Alfred Camera,October,2021,X,X,4,No reported issues
 Alipay,November,2020,2,No response when pressing pay button,X,X
+Al Jazeera,November,2021,X,X,4,No reported issues
+Al Jazeera English,November,2021,X,X,4,Connecting to the my feed section with Google doesn't work
 Al Rayan Bank UK,October,2021,X,X,4,No reported issues
 Alto's Adventure,May,2020,4,No reported issues,4,No reported issues
 Amazon Kindle,January,2021,4,No reported issues,4,No reported issues
@@ -471,6 +473,7 @@ Lyft,June,2020,1,Unusable,4,No reported issues
 Magic Earth,May,2021,4,No reported issues,4,No reported issues
 Magic Home,August,2020,X,X,4,No reported issues
 Magic: The Gathering Companion,September,2021,3,No notifications,X,X
+Majority Report,November,2021,X,X,4,No reported issues
 MAPS.ME,April,2021,4,No reported issues,4,No reported issues
 Mapillary,July,2021,X,X,4,No reported issues
 Mapy.cz,August,2021,4,No reported issues,X,X
@@ -823,6 +826,7 @@ Tesla,May,2020,2,Maps do not show within the application. Maps/location-based fe
 Testi,September,2021,X,X,4,No reported issues
 The Crypto App,January,2021,2,"No in-app purchases. Also, none of the alerts work.",X,X
 The Guardian,July,2020,4,No reported issues,4,No reported issues
+The New York Times,November,2021,X,X,4,Can't login with Google 
 The Sims 4,January,2021,4,No reported issues,X,X
 Thinkware Cloud,August,2021,4,Remember to turn off your Always on VPN before connecting via Wifi,X,X
 Threema,May,2021,3,No push notifications & uses regular polling instead,4,No reported issues
@@ -905,7 +909,7 @@ WeChat,May,2020,4,No reported issues,X,X
 Wells Fargo,November,2020,X,X,4,No reported issues
 WeShare Carsharing,May,2021,X,X,1,App is crashing instantly
 Wetherspoon,September,2021,X,X,4,No reported issues
-What3words,January,2021,1,Fails to even launch.,X,X
+What3words,January,2021,1,Fails to even launch.,4,No reported issues
 WhatsApp,October,2021,4,Cannot restore Google Drive backup,4,Cannot restore Google Drive backup
 WhatsApp Stickers 10 Sticker Packs for WA,August,2020,X,X,4,No reported issues
 WHOOP,January,2021,X,X,4,No reported issues
@@ -925,13 +929,13 @@ Xodo Docs,May,2020,4,No reported issues,4,No reported issues
 Xfinity,February,2021,X,X,4,No reported issues
 Yahoo Finance,December,2020,4,No reported issues,4,No reported issues
 Yahoo Search,February,2020,4,Tells you it will not work without GMS but works anyway,X,X
-Yandex,February,2021,4,No reported issues,X,X
-Yandex Browser with Protect,February,2021,4,No reported issues,X,X
-Yandex Maps,May,2021,X,X,4,No reported issues
-Yandex Metro,May,2021,X,X,4,No reported issues
-Yandex Translate,February,2021,4,No reported issues,X,X
-Yandex Trains,May,2021,X,X,4,No reported issues
-Yandex Weather,May,2021,X,X,4,No reported issues
+Yandex,November,2021,4,No reported issues,4,No reported issues
+Yandex Browser with Protect,November,2021,4,No reported issues,4,No reported issues
+Yandex Maps,November,2021,X,X,4,No reported issues
+Yandex Metro,November,2021,X,X,4,No reported issues
+Yandex Translate,November,2021,4,No reported issues,4,No reported issues
+Yandex Trains,November,2021,X,X,4,No reported issues
+Yandex Weather,November,2021,X,X,4,No reported issues
 Yatse,January,2021,3,Works but no in-app purchases,X,X
 "Yes, that dress!",September,2020,1,Unusable,X,X
 Yi Home,June,2020,4,No reported issues,4,No reported issues
@@ -943,7 +947,7 @@ YouTube Kids,September,2020,1,Unusable,4,No reported issues
 YouTube,May,2020,1,Unusable,4,No reported issues
 YouTube Music,December,2020,2,Device files only,4,No reported issues
 YouTube Studio,May,2021,1,Unusable,4,No reported issues
-YouTube Vanced,June,2021,1,Unusable,X,X
+YouTube Vanced,June,2021,1,Unusable,4,No reported issues
 Yubico Authenticator,June,2021,4,No reported issues,X,X
 Yuka,May,2021,X,X,4,No reported issues
 Zara,July,2021,X,X,4,No reported issues
