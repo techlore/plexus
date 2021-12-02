@@ -9,6 +9,8 @@ Application,Month,Year,Rating (1-4),Notes,MicroG Rating (1-4),MicroG Notes
 4411,September,2020,2,"Google Play Services warning, several broken functions",X,X
 6ix9ine Runner,October,2021,1,Unusable,4,No reported issues
 7zipper,December,2020,X,X,4,No reported issues
+99pay,November,2021,X,X,4,No reported issues
+99pop,November,2021,X,X,1,Unusable
 9292 OV,July,2021,2,"Basic public transport planning works, Google Play Services warning, maps functionality (gmaps) does not work",X,X
 9GAG,January,2021,X,X,4,No reported issues
 A+ Gallery,January,2021,4,No reported issues,X,X
@@ -87,6 +89,7 @@ Bandcamp,September,2020,3,No notifications,4,No reported issues
 Bank of America,December,2020,4,No reported issues,4,No reported issues
 Bank of Ireland Mobile Banking,September,2021,1,Unusable,X,X
 BankID,February,2021,3,"Google Play Services Warning, but no effect",4,No reported issues
+Banrisul,November,2021,X,X,4,No reported issues
 Barclaycard Deutschland,April,2021,1,Unusable,X,X
 Barclays,August,2020,X,X,1,Won't start with unlocked bootloader
 Battle of Polytopia,November,2020,X,X,1,Unusable: 'Uninstall Polytopia and get the official version from the Google Play Store'
@@ -130,6 +133,7 @@ CAA,December,2020,4,No reported issues,X,X
 Cabify,September,2020,1,Unusable,4,No reported issues
 Caf,August,2020,X,X,4,No reported issues
 Cake Wallet,October,2021,4,No reported issues,X,X
+Caixa,November,2021,X,X,4,No reported issues
 Calculator++,May,2020,4,No reported issues,4,No reported issues
 Call a Bike,October,2020,X,X,4,No reported issues
 Calm,June,2020,4,No reported issues,4,No reported issues
@@ -143,6 +147,7 @@ Canvas Student,November,2020,4,No reported issues,4,No reported issues
 CapCut,October,2021,X,X,4,No reported issues
 Capital One,November,2020,X,X,4,No reported issues
 Car Scanner,June,2020,3,Can't Buy Pro Version,X,X
+Carteira Digital de Trânsito,November,2021,X,X,4,No reported issues
 Carx Drift Racing 2,January,2021,1,Unusable,X,X
 c:geo,January,2021,3,Live maps only show locally stored caches,X,X
 CGTN,July,2021,4,No reported issues,4,No reported issues
@@ -288,6 +293,7 @@ Final Surge,October,2020,X,X,4,No reported issues
 Fire Emblem Heroes,August,2020,1,Unusable,3,No in-app purchases
 Firefox Focus,May,2020,3,Possible bug that disallows performing a search. Fixed by erasing browser history,4,No reported issues
 Firefox,August,2021,4,No reported issues,4,No reported issues
+Fit,November,2021,X,X,4,No reported issues
 Fitbit,December,2020,3,On wrist calling through Bluetooth doesn't work,X,X
 Fitnotes,August,2020,X,X,4,No reported issues
 Flash Air,January,2021,4,No reported issues,X,X
@@ -318,6 +324,7 @@ Geometric Weather,August,2021,4,No reported issues,X,X
 Geometry Dash,August,2020,4,No reported issues,X,X
 Gett,October,2021,X,X,4,No reported issues (Notifications untested)
 GiffGaff,December,2020,4,No reported issues - though requires an installed browser,X,X
+Giga Monitor,November,2021,X,X,4,May be slower
 Gilt,July,2021,X,X,4,No reported issues
 Ginventory,December,2020,4,No reported issues,X,X
 Github,July,2020,4,No reported issues,4,No reported issues
@@ -460,6 +467,7 @@ Lichess • Free Online Chess,August,2021,4,No reported issues,X,X
 Lichness,June,2020,4,No reported issues,4,No reported issues
 Lidl Plus,November,2021,X,X,4,No reported issues
 Life360,April,2021,2,Map and Battery sharing dont work and the map does not work,X,X
+Lifesum,November,2021,X,X,4,No reported issues
 LIFX,October,2021,3,Cannot Set Schedules based off sunrise or sunset,4,No reported issues
 Lieferando,August,2020,X,X,4,No reported issues
 Lime,August,2020,X,X,4,No reported issues
@@ -654,6 +662,7 @@ Phimp.me,July,2021,4,No reported issues,X,X
 Photomath,August,2021,1,Unusable,X,X
 PhysiApp,July,2020,1,Unusable,X,X
 PIA VPN,June,2020,4,No reported issues,4,No reported issues
+PicPay,November,2021,X,X,4,No reported issues
 Pillars,October,2021,X,X,4,No reported issues
 PingTools,January,2021,4,No reported issues,X,X
 Pinterest,February,2021,3,"Google Play Services Warning, but no effect",1,Unusable
@@ -719,6 +728,7 @@ Roblox,January,2021,1,Unusable,4,No reported issues
 Roborock,September,2021,3,No push notifications,X,X
 Rocketbook,September,2021,X,X,3,Can't upload files to Google Drive
 Roon Remote,November,2020,1,Unusable,X,X
+Rosetta Stone,November,2021,X,X,3,Had to disable microG in order to use it
 Rumble,January,2021,3,"Google Play Services Warning, but no effect. No notifications.",X,X
 S-ID-Check,December,2020,1,Unusable,X,X
 SafeVac,May,2021,X,X,4,No reported issues
@@ -773,6 +783,7 @@ Snapseed,June,2020,4,No reported issues,4,No reported issues
 SNCB/NMBS,September,2020,3,"Google Play Services Warning, map not working",X,X
 SoFi,September,2020,1,SoFi won't work unless you enable Google Play services,4,No reported issues
 SolarEdge,June,2020,3,"Google Play Services Warning, but no effect",X,X
+SoloLearn,November,2021,X,X,4,No reported issues
 Somfy,May,2021,X,X,4,No reported issues
 SonicDash,November,2020,X,X,4,No reported issues
 Songsterr,January,2021,X,X,3,"The entire app works fine. No in-app purchases, forcing you to use the site to buy it."
