@@ -1,4 +1,22 @@
 Application,Month,Year,Rating (1-4),Notes,MicroG Rating (1-4),MicroG Notes
+
+Arte,December,2021,X,X,4,No reported issues
+Chromium,December,2021,X,X,4,No reported issues
+eToro,December,2021,X,X,4,No reported issues
+Feeder,December,2021,X,X,4No reported issues
+INCI Beauty,December,2021,X,X,4,No reported issues
+Mattermost,December,2021,X,X,4,No reported issues
+Mediapart,December,2021,X,X,4,No reported issues
+New Pipe,December,2021,X,X,4,No reported issues
+Pass Culture,December,2021,X,X,3,A few bugs
+Paylib sans contact,December,2021,X,X,4,No reported issues
+Pumpkin,December,2021,X,X,4,No reported issues
+Rakuten,December,2021,X,X,4,No reported issues
+Shotgun,December,2021,X,X,4,No reported issues
+Slack,December,2021,3,No notifications,4,No reported issues ( added informations about MicroG)
+TimeTree,December,2021,X,X,4,No reported issues
+Tor Browser,,December,2021,X,X,4,No reported issues
+
 1&1 Control-Center,October,2020,3,No notifications,X,X
 112 Where are you,December,2020,3,Slower localization with occasional issues,X,X
 12 Minutes,December,2020,3,Cannot verify purchases,X,X
