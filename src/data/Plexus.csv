@@ -223,7 +223,6 @@ De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
 Deliveroo,December,2020,1,Unusable,X,X
 Delivery Club,October,2021,X,X,4,No reported issues
 Delta,January,2021,2,No in-app purchases. No alerts work.,X,X
-DHL Paket,August,2020,3,"Google Play Service warning, but no effect",4,No reported issues
 DIC-o Czech-English,August,2021,4,No reported issues,X,X
 DIC-o Czech-German,August,2021,4,No reported issues,X,X
 DiDi China,November,2020,4,No reported issues,X,X
@@ -691,6 +690,7 @@ Podcast Addict,August,2020,X,X,4,No reported issues
 Pokemon Go,February,2021,X,X,1,Cannot authenticate login
 PokeMMO,October,2021,4,No reported issues,X,X
 Popcorn Time,June,2020,3,"Buggy, Crashes Occasionally",X,X
+Post & DHL,January,2022,3,"Google Play Service warning, but no effect",4,No reported issues
 PosteID,December,2020,1,Unusable,3,Works well but with no notifications
 Postepay,December,2020,3,No notifications can still authorize payments by searching the request in the notifications section inside the app,X,X
 Poweramp,April,2021,4,No reported issues,4,Paid version only works with a license bought on the app's offical website.
