@@ -658,6 +658,7 @@ OUI.sncf,May,2021,X,X,4,No reported issues
 Outlook,November,2021,1,"App starts and then auto-closes after about five seconds.  This is on current Outlook version 4.2142.1.  Downgrading to version 4.2131.1 made the app stable and it worked fine.  Somewhere between those two versions, Microsoft changed something to make this no longer work",4,No reported issues
 Oxygen Updater,October,2021,X,X,4,Font issues with news article titles
 Oxen Wallet,February,2021,X,X,4,No reported issues
+Pagerduty,January,2022,4,Notifications work with grapheneOS Sandbox,X,X
 PAKO 2,January,2020,3,"Google Play Services Warning, but no effect",X,X
 PAKO,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Palm Beach Research Group Mobile,February,2021,X,X,4,No reported issues
