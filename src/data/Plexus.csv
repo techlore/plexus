@@ -115,11 +115,12 @@ Bitslide,January,2021,4,No issues,X,X
 Bitwala,May,2021,3,No notifications,4,No reported issues
 Bitwarden,April,2021,4,No reported issues,4,No reported issues
 BlackPlayer,September,2020,4,No reported issues,X,X
+Blinkist,February,2022,X,X,4,No reported issues
 Blockfolio,December,2020,3,"Google Play Services Warning, but no effect",4,No reported issues
 Bloons TD Battles,April,2021,4,No Reported Issues,X,X
 BlueDriver,September,2020,4,No reported issues,X,X
 BlueMail Lite,February,2021,X,X,4,No reported issues
-Bolt,December,2020,X,X,4,No reported issues
+Bolt,February,2022,X,X,2,As soon as you open e-scooter menu app crashes
 BOM Weather,May,2020,4,No reported issues,4,No reported issues
 Boom Beach,February,2021,X,X,3,No in-app purchases
 Bose Connect,December,2020,4,No reported issues,X,X
@@ -130,6 +131,7 @@ Breasy,January,2021,4,No reported issues,X,X
 BRD Bitcoin Wallet,October,2021,4,No reported issues,X,X
 British Gas,January,2021,4,No reported issues,X,X
 Brooks Brothers,November,2020,X,X,1,Unusable
+Brother iPrint&Scan,February,2022,X,X,4,No reported issues
 BTS WORLD,May,2020,3,No notifications or in-app purchases,X,X
 Bumble,May,2021,X,X,4,No reported issues
 Button Mapper by flar2,September,2020,4,No reported issues,X,X
@@ -225,6 +227,8 @@ De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
 Deliveroo,December,2020,1,Unusable,X,X
 Delivery Club,October,2021,X,X,4,No reported issues
 Delta,January,2021,2,No in-app purchases. No alerts work.,X,X
+Deutsche Bank Mobile,February,2022,X,X,4,No reported issues
+Deutsche Bank photoTan,February,2022,X,X,4,No reported issues
 DIC-o Czech-English,August,2021,4,No reported issues,X,X
 DIC-o Czech-German,August,2021,4,No reported issues,X,X
 DiDi China,November,2020,4,No reported issues,X,X
@@ -569,6 +573,7 @@ MusicBee WiFi Sync,October,2020,4,No reported issues,X,X
 MVG Fahrinfo,March,2020,3,Maps do not show within the application,X,X
 MX Player,May,2020,4,No reported issues,4,No reported issues
 My Boy,November,2020,4,No reported issues,X,X
+mydealz,February,2022,X,X,4,No reported issues
 My EE,March,2021,4,No reported issues,X,X
 MySolarEdge,January,2021,4,No reported issues,X,X
 My Talking Tom Friends,January,2021,4,No reported issues,X,X
@@ -668,6 +673,7 @@ Parking Jam 3D,November,2020,X,X,4,No reported issues
 ParkMate,March,2020,4,No reported issues,4,No reported issues
 ParkNow,January,2021,1,Unusable,4,No reported issues
 Patreon,October,2021,2,No notifications & unable to apply text to within lens. Some performance issues,2,Unable to apply text to within lens. Some performance issues
+PAYBACK,February,2022,X,X,4,No reported issues
 Payconiq by Bancontact,September,2020,1,Not working without Google Play Services,X,X
 Paydirekt,December,2020,3,No push notifications,X,X
 PayMyPark,March,2020,4,No reported issues,4,No reported issues
@@ -930,7 +936,7 @@ Twitter,November,2020,3,Notifications not working,3,No notifications
 TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
 Uber,March,2021,1,Unusable,3,Route is not rendered properly if map is not rotated
-Uber Eats,February,2021,3,"Google Play Services Warning, but no effect",1,Blank screen when phone number is chosen immediately after loading app
+Uber Eats,February,2022,X,X,3,No map being showed after order, standard map works fine
 Udemy,February,2021,3,"Google Play Services Warning, no effect",4,No reported issues
 Unacademy Learning App,August,2021,4,No reported issues,X,X
 Uni Innsbruck,December,2020,4,No reported issues,X,X
