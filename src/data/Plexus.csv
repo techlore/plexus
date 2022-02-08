@@ -853,7 +853,7 @@ Steam,August,2021,3,No Notifications,4,No reported issues
 Stetson Authentication,November,2020,X,X,1,QR code won't scan
 Stetson University,November,2020,X,X,4,No reported issues
 Stick War: Legacy,November,2020,X,X,4,No reported issues
-Strava,October,2021,X,X,1,Requires Google Maps.
+Strava,January,2022,X,X,3,"Only problem with microg is initial login hurdles: First, the app requires Google Maps. After that you need to log in via facebook, or have droidguard helper (found from microg repository) so that you complete the google captcha when logging in via only email. You may also need google safety net activated in the microg settings."
 Stride,June,2020,3,"Google Play Services Warning, but no effect",X,X
 Stryd,May,2021,X,X,4,Have not tested paid memberships.
 Subway Surfers,June,2021,4,No reported issues,4,No reported issues
