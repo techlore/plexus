@@ -242,7 +242,7 @@ Disney+,May,2020,3,"Cannot sign up from the application, but can login from the 
 DJI Go 4,Aprile,2021,4,No reported issues,X,X
 DKB,February,2022,3,Cannot enable Visa card notifications,X,X
 DKB-Banking,December,2020,3,No push notifications,4,No reported issues
-DKB-Tan2go,December,2020,1,Unusable,X,X
+DKB-Tan2go,February,2022,2,Complains about missing Play Services on startup but works afterwards. Cannot use biometric login (fingerprint),X,X
 Dlf Audiothek,December,2020,3,"Google Play Service warning, but no effect",X,X
 Dlf Die Nachrichten,December,2020,3,No push notifications,X,X
 ditto,November,2021,3,No notifications outside device history,X,X
