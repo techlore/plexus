@@ -955,6 +955,7 @@ TypeApp,December,2020,X,X,4,No reported issues
 Ubank,November,2020,3,No notifications and no Tap & Pay (detects root),4,No reported issues
 Uber,March,2021,1,Unusable,3,Route is not rendered properly if map is not rotated
 Uber Eats,February,2021,3,"Google Play Services Warning, but no effect",1,Blank screen when phone number is chosen immediately after loading app
+UBS Access: Secure login,May,2022,X,X,1,App launches normally. At the last step of the setup an error occurs: "Please try again to activate the Access App or arrange a callback now."
 Udemy,February,2021,3,"Google Play Services Warning, no effect",4,No reported issues
 Unacademy Learning App,August,2021,4,No reported issues,X,X
 Uni Innsbruck,December,2020,4,No reported issues,X,X
