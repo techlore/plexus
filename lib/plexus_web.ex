@@ -16,6 +16,7 @@ defmodule PlexusWeb do
   below. Instead, define any helper function in modules
   and import those modules here.
   """
+  use Boundary, deps: [Plexus, Ecto.Changeset], exports: [Endpoint]
 
   def controller do
     quote do
