@@ -10,7 +10,7 @@
 
 Google Play Services are an integral part of most Android devices that enable users to utilize their Google account on their phone, as well as enable Google-specific features for applications that rely on them.
 
-When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. Plexus supports ROMs with no Google Play Services e.g: [(GrapheneOS)](https://grapheneos.org/), as well as ROMs with [microG](https://microg.org/), an open source alternative of Google Play Services, e.g: [(CalyxOS)](https://calyxos.org/). 
+When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they are faced with opening their standard applications hoping they work. Plexus aims to beat the guessing game and allow users to know exactly what will happen once they flash a new ROM. Plexus supports ROMs with no Google Play Services e.g: [(GrapheneOS)](https://grapheneos.org/), as well as ROMs with [microG](https://microg.org/), an open source alternative of Google Play Services, e.g: [(CalyxOS)](https://calyxos.org/).
 
 ## Navigating Plexus
 
@@ -18,7 +18,7 @@ When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they 
 
 * To view the CSV spreadsheet (and contribute) view it [here](./src/data/Plexus.csv).
 
-* To create or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv) 
+* To create or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv)
 
 * To join our Matrix room, [go here.](https://matrix.to/#/#plexus:matrix.org)
 
@@ -70,10 +70,10 @@ I will then update the spreadsheet myself.
 
 ## Application Requests
 
-If you're unable to find an application within Plexus and don't have the means of testing them yourself, you can submit an App Request where other testers can test apps on your behalf. This is purely on a volunteer basis. There will be methods of incentivizing volunteers down the road. 
+If you're unable to find an application within Plexus and don't have the means of testing them yourself, you can submit an App Request where other testers can test apps on your behalf. This is purely on a volunteer basis. There will be methods of incentivizing volunteers down the road.
 
 To submit an application request, do one of the following:
-1. Submit a PR with your app(s) [in the repo.](./src/data/requests.csv) 
+1. Submit a PR with your app(s) [in the repo.](./src/data/requests.csv)
 2. Email support@techlore.tech with the following information: Name/Alias, App Name(s),MicroG (Yes/No), Urgent (Yes/No)
 
 ## Future Plans & Goals
