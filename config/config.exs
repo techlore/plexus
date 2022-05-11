@@ -8,7 +8,8 @@
 import Config
 
 config :plexus,
-  ecto_repos: [Plexus.Repo]
+  ecto_repos: [Plexus.Repo],
+  generators: [binary_id: true]
 
 # Configures the endpoint
 config :plexus, PlexusWeb.Endpoint,
