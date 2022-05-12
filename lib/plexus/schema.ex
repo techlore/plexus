@@ -4,6 +4,8 @@ defmodule Plexus.Schema do
       use Ecto.Schema
 
       alias __MODULE__
+      alias Plexus.Schemas
+      alias Plexus.Schemas.Enums
 
       import Ecto.Changeset
 

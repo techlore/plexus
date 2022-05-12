@@ -3483,15 +3483,6 @@
     "MG_Notes": null
   },
   {
-    "Application": "GoSign by InfoCert SpA",
-    "Package": "it.infocert.mobile.dike",
-    "Version": "0.0.0",
-    "DG_Rating": 4,
-    "MG_Rating": null,
-    "DG_Notes": "No reported issues",
-    "MG_Notes": null
-  },
-  {
     "Application": "Gotify",
     "Package": "com.github.gotify",
     "Version": "0.0.0",
@@ -3903,15 +3894,6 @@
     "DG_Rating": 4,
     "MG_Rating": 4,
     "DG_Notes": "No reported issues",
-    "MG_Notes": "No reported issues"
-  },
-  {
-    "Application": "Infomaniak kDrive",
-    "Package": "com.infomaniak.drive",
-    "Version": "0.0.0",
-    "DG_Rating": null,
-    "MG_Rating": 4,
-    "DG_Notes": null,
     "MG_Notes": "No reported issues"
   },
   {
@@ -4432,7 +4414,7 @@
     "Package": "org.lichess.mobileapp",
     "Version": "0.0.0",
     "DG_Rating": 4,
-    "MG_Rating": "4",
+    "MG_Rating": 4,
     "DG_Notes": "No reported issues",
     "MG_Notes": "No reported issues"
   },
@@ -4602,7 +4584,7 @@
     "Application": "Ma Banque (Crédit agricoles)",
     "Package": "fr.creditagricole.androidapp",
     "Version": "0.0.0",
-    "DG_Rating": 0,
+    "DG_Rating": 1,
     "MG_Rating": null,
     "DG_Notes": "Don't start",
     "MG_Notes": null
@@ -8759,15 +8741,6 @@
   {
     "Application": "VLC",
     "Package": "org.videolan.vlc",
-    "Version": "0.0.0",
-    "DG_Rating": 4,
-    "MG_Rating": 4,
-    "DG_Notes": "No reported issues",
-    "MG_Notes": "No reported issues"
-  },
-  {
-    "Application": "VPN by Private Internet Access",
-    "Package": "com.privateinternetaccess.android",
     "Version": "0.0.0",
     "DG_Rating": 4,
     "MG_Rating": 4,
