@@ -1,12 +1,10 @@
 # Plexus
 ***Remove the fear of Android app compatibility on de-Googled devices.***
 
-![](https://i.creativecommons.org/p/zero/1.0/88x31.png) This project is licensed under the CC0 V1 License.
-
 ## Important updates as of May 12, 2022
 Hey everyone, thanks for visiting the repo & thank you to all contributors. Plexus is going through a massive transition right now:
 * [The Plexus application has been released](https://github.com/techlore/Plexus-app)
-* [The Plexus data in that repo is now a JSON format](https://github.com/techlore/Plexus-app/blob/main/Plexus.json) meaning we now have two different datasets, at least temporarily.
+* [The Plexus data in that repo is now in JSON format](https://github.com/techlore/Plexus-app/blob/main/Plexus.json) meaning we now have two different datasets, at least temporarily.
 * The JSON format is already better than the terrible CSV format in this repo, but the JSON format is actually temporary. We are working on an API to avoid the entire GitHub submission workflow.
 * Because so many changes are happening at once, we will not be accepting pull requests until our new workflow is completed. Once it's completed, we will be manually porting over your submissions to the new data and closing the PRs.
 * Once everything is completed, all submissions will only be done via the application. We don't have an estimate yet, but it'll be the best ever experience once this is completed, enabling anyone to easily submit apps in an automated fashion in bulk.
@@ -83,7 +81,8 @@ To submit an application request, do one of the following:
 2. Email support@techlore.tech with the following information: Name/Alias, App Name(s),MicroG (Yes/No), Urgent (Yes/No)
 
 ## Future Plans & Goals
-- Support for application package names & version numbers
 - Support for "recommended alternatives" similar to alternativeto.net
 - More thorough data showing what OS & ROM was used for testing
-- An app you can download from F-Droid that conveniently scans app on your phone allowing you to submit scores within a centralized location.
+
+## License
+Except where indicated otherwise, this project is licensed under the terms of [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
