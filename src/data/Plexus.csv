@@ -174,12 +174,15 @@ Cisco WEBEX,September,2020,X,X,4,No reported issues
 Citi Mobile,December,2020,1,Unusable,X,X
 Citra Emulator,October,2021,2,Can't upgrade to premium,X,X
 Citrix Secure Hub,April,2021,X,X,4,No reported issues
+Citrix Secure Mail,May,2022,X,X,4,No reported issues
+Citrix Secure Web,May,2022,X,X,4,No reported issues
 Citymapper,January,2021,1,Maps will not render. Written routing display also borked.,3,Map preview sometimes buggy
 Clash of Clans,June,2020,3,"Some missing notifications, no in-app purchases",3,No in-app purchases
 Clash Royale,November,2020,X,X,3,Progress can be synced through developer's Supercell ID instead of Google Play. No in-app purchases
 Clockify,May,2020,4,No reported issues,4,No reported issues
 CloudEdge,January,2021,X,X,4,No reported issues
 CNN,November,2020,4,No reported issues,4,No reported issues
+CodeCheck,May,2022,X,X,4,No reported issues
 Coinbase,June,2020,4,No reported issues,4,No reported issues
 Coinbase Wallet,February,2021,X,X,4,No reported issues
 Coinbase Pro,February,2021,X,X,4,No reported issues
@@ -230,6 +233,7 @@ De Lijn,September,2020,2,"Google Play Services warning, map not working",X,X
 Deliveroo,December,2020,1,Unusable,X,X
 Delivery Club,October,2021,X,X,4,No reported issues
 Delta,January,2021,2,No in-app purchases. No alerts work.,X,X
+Deutsche Bank photoTAN,May,2022,X,X,4,No reported issues
 DIC-o Czech-English,August,2021,4,No reported issues,X,X
 DIC-o Czech-German,August,2021,4,No reported issues,X,X
 DiDi China,November,2020,4,No reported issues,X,X
@@ -771,6 +775,7 @@ RT News,January,2022,X,X,4,No reported issues
 Rumble,January,2022,3,"Google Play Services Warning, but no effect. No notifications.",4,No reported issues
 Ryanair,January,2022,X,X,4,No reported issues
 S-ID-Check,December,2020,1,Unusable,X,X
+S-pushTAN,May,2022,X,X,4,No reported issues
 SafeVac,May,2021,X,X,4,No reported issues
 Samsung Health,October,2021,X,X,4,No reported issues
 Samsung Mobile Print,May,2021,4,No reported issues,4,No reported issues
