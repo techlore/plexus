@@ -12,7 +12,7 @@ defmodule Plexus.Fixtures do
       name: "application#{System.unique_integer()}",
       package: "tech.techlore.plexus"
     })
-    |> Plexus.Applications.create!()
+    |> Plexus.Applications.create_application!()
   end
 
   def application_rating_fixture(attrs \\ %{}) do
@@ -24,7 +24,7 @@ defmodule Plexus.Fixtures do
       rating: Enum.random(1..4),
       notes: gnu_linux()
     })
-    |> Plexus.ApplicationRatings.create!()
+    |> Plexus.ApplicationRatings.create_application_rating!()
   end
 
   defp application_rating_status do

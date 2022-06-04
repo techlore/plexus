@@ -4,10 +4,10 @@ defmodule Plexus.ApplicationsTest do
   alias Plexus.Applications
   alias Plexus.Schemas.Application
 
-  describe "create/1" do
+  describe "create_application/1" do
     test "with invalid data returns error changeset" do
       invalid_attrs = %{name: nil}
-      assert {:error, %Ecto.Changeset{}} = Applications.create(invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = Applications.create_application(invalid_attrs)
     end
 
     test "with valid data creates an application" do
@@ -16,7 +16,7 @@ defmodule Plexus.ApplicationsTest do
         package: "tech.techlore.plexus"
       }
 
-      assert {:ok, %Application{} = application} = Applications.create(valid_attrs)
+      assert {:ok, %Application{} = application} = Applications.create_application(valid_attrs)
 
       assert application.name == "Unique 42"
       assert application.package == "tech.techlore.plexus"

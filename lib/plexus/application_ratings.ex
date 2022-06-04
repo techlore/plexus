@@ -5,8 +5,8 @@ defmodule Plexus.ApplicationRatings do
   @doc """
   Creates an application_rating.
   """
-  @spec create!(map()) :: ApplicationRating.t()
-  def create!(attrs \\ %{}) do
+  @spec create_application_rating!(map()) :: ApplicationRating.t()
+  def create_application_rating!(attrs \\ %{}) do
     %ApplicationRating{}
     |> ApplicationRating.changeset(attrs)
     |> Repo.insert!()
@@ -15,8 +15,9 @@ defmodule Plexus.ApplicationRatings do
   @doc """
   Creates an application_rating.
   """
-  @spec create(map()) :: {:ok, ApplicationRating.t()} | {:error, Ecto.Changeset.t()}
-  def create(attrs \\ %{}) do
+  @spec create_application_rating(map()) ::
+          {:ok, ApplicationRating.t()} | {:error, Ecto.Changeset.t()}
+  def create_application_rating(attrs \\ %{}) do
     %ApplicationRating{}
     |> ApplicationRating.changeset(attrs)
     |> Repo.insert()
