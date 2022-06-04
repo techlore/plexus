@@ -9,6 +9,8 @@ import Config
 
 config :plexus,
   ecto_repos: [Plexus.Repo],
+  migration_primary_key: [id: :uuid, type: :binary_id],
+  migration_timestamps: [type: :utc_datetime_usec],
   generators: [binary_id: true]
 
 # Configures the endpoint
