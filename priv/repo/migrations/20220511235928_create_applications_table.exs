@@ -1,14 +1,12 @@
-defmodule Plexus.Repo.Migrations.AddApplicationsTable do
+defmodule Plexus.Repo.Migrations.CreateApplicationsTable do
   use Ecto.Migration
 
   def change do
     execute "CREATE EXTENSION IF NOT EXISTS citext", ""
 
-    create table(:applications, primary_key: false) do
-      add :id, :binary_id, primary_key: true
+    create table(:applications) do
       add :name, :citext, null: false
       add :package, :string
-
       timestamps()
     end
 

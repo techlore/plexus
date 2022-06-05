@@ -7,11 +7,11 @@
 # General application configuration
 import Config
 
-config :plexus,
-  ecto_repos: [Plexus.Repo],
+config :plexus, ecto_repos: [Plexus.Repo]
+
+config :plexus, Plexus.Repo,
   migration_primary_key: [id: :uuid, type: :binary_id],
-  migration_timestamps: [type: :utc_datetime_usec],
-  generators: [binary_id: true]
+  migration_timestamps: [type: :utc_datetime_usec]
 
 # Configures the endpoint
 config :plexus, PlexusWeb.Endpoint,

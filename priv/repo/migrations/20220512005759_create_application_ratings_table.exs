@@ -1,10 +1,8 @@
-defmodule Plexus.Repo.Migrations.AddApplicationRatingsTable do
+defmodule Plexus.Repo.Migrations.CreateApplicationRatingsTable do
   use Ecto.Migration
 
   def change do
-    create table(:application_ratings, primary_key: false) do
-      add :id, :binary_id, primary_key: true
-
+    create table(:application_ratings) do
       add :application_id, references(:applications, type: :binary_id, on_delete: :delete_all),
         null: false
 
@@ -14,7 +12,6 @@ defmodule Plexus.Repo.Migrations.AddApplicationRatingsTable do
       add :google_lib, :string, null: false
       add :rating, :integer, null: false
       add :notes, :text
-
       timestamps()
     end
 
