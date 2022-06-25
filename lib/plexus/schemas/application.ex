@@ -11,7 +11,6 @@ defmodule Plexus.Schemas.Application do
 
   @required [:name]
   @optional [:package]
-  @doc false
   def changeset(application, attrs) do
     application
     |> cast(attrs, @required ++ @optional)

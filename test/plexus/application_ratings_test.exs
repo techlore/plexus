@@ -1,10 +1,10 @@
 defmodule Plexus.ApplicationRatingsTest do
   use Plexus.DataCase, async: true
 
+  import Plexus.Fixtures
+
   alias Plexus.ApplicationRatings
   alias Plexus.Schemas.ApplicationRating
-
-  import Plexus.Fixtures
 
   describe "create_application_rating/1" do
     test "with invalid data returns error changeset" do

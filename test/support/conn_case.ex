@@ -1,3 +1,4 @@
+# credo:disable-for-this-file Credo.Check.Design.AliasUsage
 defmodule PlexusWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by

@@ -8,6 +8,7 @@ defmodule Plexus.Schema do
       alias Plexus.Schemas.Enums
 
       import Ecto.Changeset
+      import Ecto.Query
 
       @type t :: %__MODULE__{}
 

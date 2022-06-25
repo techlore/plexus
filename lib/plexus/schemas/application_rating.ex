@@ -22,7 +22,6 @@ defmodule Plexus.Schemas.ApplicationRating do
     :google_lib
   ]
   @optional [:notes]
-  @doc false
   def changeset(application_rating, attrs) do
     application_rating
     |> cast(attrs, @required ++ @optional)
