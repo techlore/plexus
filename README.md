@@ -24,8 +24,6 @@ When users move to a de-googled ROM like GrapheneOS, CalyxOS or LineageOS, they 
 
 * To create or view app requests where other testers can contribute and volunteer to test for you, [go here](./src/data/requests.csv) 
 
-* To join our Matrix room, [go here.](https://matrix.to/#/#plexus:matrix.org)
-
 **NOTE: Plexus is only for applications directly or indirectly from the Google Play Store. Please do not submit applications from F-Droid as they are all expected to work.**
 
 ## What Do The Ratings Mean?
