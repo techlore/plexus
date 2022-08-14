@@ -11,5 +11,6 @@ defmodule Plexus.Repo.Migrations.CreateApplicationsTable do
     end
 
     create unique_index(:applications, [:name])
+    create unique_index(:applications, [:package])
   end
 end

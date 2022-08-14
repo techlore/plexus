@@ -74,15 +74,11 @@ defmodule Plexus.AccountsTest do
 
     test "validates username and password and role when given" do
       {:error, changeset} =
-        Accounts.register_user(%{username: "t", password: "invalid", role: :intruder})
+        Accounts.register_user(%{username: "t", password: "meh", role: :intruder})
 
       assert %{
                username: ["should be at least 3 character(s)"],
-               password: [
-                 "at least one digit or punctuation character",
-                 "at least one upper case character",
-                 "should be at least 8 character(s)"
-               ],
+               password: ["should be at least 4 character(s)"],
                role: ["is invalid"]
              } = errors_on(changeset)
     end
