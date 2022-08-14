@@ -2,9 +2,16 @@ defmodule Plexus.Applications do
   alias Plexus.Repo
   alias Plexus.Schemas.Application
 
-  @doc """
-  Creates an application.
-  """
+  @spec get_application!(Ecto.UUID.t()) :: Application.t()
+  def get_application!(id) do
+    Repo.get!(Application, id)
+  end
+
+  @spec list_applications(keyword()) :: [Application.t()]
+  def list_applications(_opts \\ []) do
+    Repo.all(Application)
+  end
+
   @spec create_application!(map()) :: Application.t()
   def create_application!(attrs \\ %{}) do
     %Application{}
@@ -12,9 +19,6 @@ defmodule Plexus.Applications do
     |> Repo.insert!()
   end
 
-  @doc """
-  Creates an application.
-  """
   @spec create_application(map()) :: {:ok, Application.t()} | {:error, Ecto.Changeset.t()}
   def create_application(attrs \\ %{}) do
     %Application{}
@@ -22,9 +26,6 @@ defmodule Plexus.Applications do
     |> Repo.insert()
   end
 
-  @doc """
-  Creates or updates an application if already exists.
-  """
   @spec upsert_application!(map()) :: Application.t()
   def upsert_application!(%{id: application_id} = attrs) do
     application =

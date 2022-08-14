@@ -38,10 +38,13 @@ defmodule PlexusWeb.Router do
     live_dashboard "/dev/dashboard", metrics: PlexusWeb.Telemetry
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PlexusWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PlexusWeb.API do
+    pipe_through :api
+
+    scope "/v1", V1, as: :v1 do
+      resources "/applications", ApplicationController, only: [:index, :create, :show]
+    end
+  end
 
   # Enables the Swoosh mailbox preview in development.
   #
