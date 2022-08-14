@@ -5,7 +5,7 @@ defmodule Plexus.Schemas.UserToken do
 
   @session_validity_in_days 60
 
-  schema "users_tokens" do
+  schema "user_tokens" do
     field :token, :binary
     field :context, :string
     field :sent_to, :string
