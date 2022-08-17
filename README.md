@@ -1,6 +1,8 @@
 # Plexus
 ***Remove the fear of Android app compatibility on de-Googled devices.***
 
+[![CI](https://github.com/techlore/plexus/actions/workflows/ci.yaml/badge.svg)](https://github.com/techlore/plexus/actions/workflows/ci.yaml)
+
 ## Important updates as of May 12, 2022
 Hey everyone, thanks for visiting the repo & thank you to all contributors. Plexus is going through a massive transition right now:
 * [The Plexus application has been released](https://github.com/techlore/Plexus-app)
