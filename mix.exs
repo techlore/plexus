@@ -10,7 +10,8 @@ defmodule Plexus.MixProject do
       compilers: [:boundary, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: dialyzer()
     ]
   end
 
@@ -52,7 +53,7 @@ defmodule Plexus.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:boundary, "~> 0.9.2", runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -69,6 +70,13 @@ defmodule Plexus.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.deploy": ["esbuild default --minify", "phx.digest"]
+    ]
+  end
+
+  defp dialyzer do
+    [
+      plt_add_apps: [:ex_unit],
+      plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
     ]
   end
 end
