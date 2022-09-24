@@ -53,7 +53,8 @@ defmodule Plexus.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:boundary, "~> 0.9.2", runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:scrivener_ecto, "~> 2.0"}
     ]
   end
 
