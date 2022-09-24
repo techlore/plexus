@@ -8,8 +8,9 @@ defmodule Plexus.Applications do
   end
 
   @spec list_applications(keyword()) :: Repo.page(Application.t())
-  def list_applications(_opts \\ []) do
-    Repo.paginate(Application)
+  def list_applications(opts \\ []) do
+    opts = Keyword.take(opts, [:page])
+    Repo.paginate(Application, opts)
   end
 
   @spec create_application!(map()) :: Application.t()
