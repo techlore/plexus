@@ -3,9 +3,16 @@ defmodule PlexusWeb.API.V1.ApplicationView do
 
   alias PlexusWeb.API.V1.ApplicationView
 
-  def render("index.json", %{applications: applications}) do
-    data = render_many(applications, ApplicationView, "application.json")
-    %{data: data}
+  def render("index.json", %{page: page}) do
+    data = render_many(page.entries, ApplicationView, "application.json")
+
+    %{
+      data: data,
+      page_number: page.page_number,
+      page_size: page.page_size,
+      total_entries: page.total_entries,
+      total_pages: page.total_pages
+    }
   end
 
   def render("show.json", %{application: application}) do
