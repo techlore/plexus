@@ -7,8 +7,8 @@ defmodule PlexusWeb.API.V1.ApplicationController do
   action_fallback PlexusWeb.FallbackController
 
   def index(conn, _params) do
-    applications = Applications.list_applications()
-    render(conn, "index.json", applications: applications)
+    page = Applications.list_applications()
+    render(conn, "index.json", page: page)
   end
 
   def create(conn, %{"application" => application_params}) do
