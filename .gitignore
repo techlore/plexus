@@ -32,3 +32,5 @@ plexus-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Ignore Dialyzer plts
+/priv/plts/
