@@ -1,16 +1,43 @@
 defmodule Plexus.Applications do
+  import Ecto.Query
+
   alias Plexus.Repo
   alias Plexus.Schemas.Application
+  alias Plexus.Schemas.ApplicationRating
 
   @spec get_application!(Ecto.UUID.t()) :: Application.t()
   def get_application!(id) do
-    Repo.get!(Application, id)
+    ratings = approved_ratings()
+
+    query =
+      from a in Application,
+        where: a.id == ^id,
+        left_join: ar in ^ratings,
+        on: ar.application_id == a.id,
+        group_by: [a.id],
+        select_merge: %{rating: fragment("round(?,2)::float", avg(ar.rating))}
+
+    Repo.one!(query)
   end
 
   @spec list_applications(keyword()) :: Repo.page(Application.t())
   def list_applications(opts \\ []) do
     opts = Keyword.take(opts, [:page])
-    Repo.paginate(Application, opts)
+    ratings = approved_ratings()
+
+    query =
+      from a in Application,
+        left_join: ar in ^ratings,
+        on: ar.application_id == a.id,
+        order_by: [a.name],
+        group_by: [a.id],
+        select_merge: %{rating: fragment("round(?,2)::float", avg(ar.rating))}
+
+    Repo.paginate(query, opts)
+  end
+
+  defp approved_ratings do
+    from ar in ApplicationRating, where: [status: :approved]
   end
 
   @spec create_application!(map()) :: Application.t()
