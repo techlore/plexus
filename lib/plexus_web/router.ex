@@ -43,7 +43,7 @@ defmodule PlexusWeb.Router do
 
     scope "/v1", V1, as: :v1 do
       resources "/applications", ApplicationController, only: [:index, :create, :show]
-      resources "/applications/:application_id/ratings", RatingController, only: [:index]
+      resources "/applications/:application_id/ratings", RatingController, only: [:index, :show]
     end
   end
 

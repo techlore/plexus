@@ -10,4 +10,9 @@ defmodule PlexusWeb.API.V1.RatingController do
     page = ApplicationRatings.list_application_ratings(application_id, opts)
     render(conn, "index.json", page: page)
   end
+
+  def show(conn, %{"id" => id}) do
+    rating = ApplicationRatings.get_application_rating!(id)
+    render(conn, "show.json", rating: rating)
+  end
 end
