@@ -1,8 +1,8 @@
 defmodule Plexus.ApplicationRatings do
+  import Ecto.Query
+
   alias Plexus.Repo
   alias Plexus.Schemas.ApplicationRating
-
-  import Ecto.Query
 
   @spec get_application_rating!(Ecto.UUID.t()) :: ApplicationRating.t()
   def get_application_rating!(id) do

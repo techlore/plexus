@@ -13,7 +13,10 @@ defmodule PlexusWeb.API.V1.RatingController do
   end
 
   def create(conn, %{"application_id" => application_id, "rating" => params}) do
-    params = Map.put(params, "application_id", application_id)
+    params =
+      params
+      |> Map.put("application_id", application_id)
+      |> Map.put("status", "approved")
 
     with {:ok, %ApplicationRating{} = rating} <-
            ApplicationRatings.create_application_rating(params) do

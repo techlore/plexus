@@ -12,9 +12,10 @@ defmodule PlexusWeb.API.V1.ApplicationController do
     render(conn, "index.json", page: page)
   end
 
-  def create(conn, %{"application" => application_params}) do
-    with {:ok, %Application{} = application} <-
-           Applications.create_application(application_params) do
+  def create(conn, %{"application" => params}) do
+    with {:ok, %Application{id: id}} <- Applications.create_application(params) do
+      application = Applications.get_application!(id)
+
       conn
       |> put_status(:created)
       |> put_resp_header("location", show_path(application))
