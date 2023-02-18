@@ -15,6 +15,7 @@ defmodule Plexus.ApplicationRatings do
 
     ApplicationRating
     |> where([ar], ar.application_id == ^application_id)
+    |> order_by(desc: :application_build_number)
     |> Repo.paginate(opts)
   end
 
