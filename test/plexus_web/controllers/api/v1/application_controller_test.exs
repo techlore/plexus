@@ -1,7 +1,7 @@
 defmodule PlexusWeb.API.V1.ApplicationControllerTest do
   use PlexusWeb.ConnCase, async: true
 
-  import Plexus.ApplicationsFixtures
+  import Plexus.Fixtures
 
   @invalid_attrs %{name: nil, package: nil}
 

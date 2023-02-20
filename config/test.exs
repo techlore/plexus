@@ -20,9 +20,6 @@ config :plexus, PlexusWeb.Endpoint,
   secret_key_base: "RWcgI9zmB/FtIwGz6a3XfPZ13v5SO1t6/c4r5zx6TUvXugfbG4mk7PXQ81sBC/kR",
   server: false
 
-# In test we don't send emails.
-config :plexus, Plexus.Mailer, adapter: Swoosh.Adapters.Test
-
 # Print only warnings and errors during test
 config :logger, level: :warn
 

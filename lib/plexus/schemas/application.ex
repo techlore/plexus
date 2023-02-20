@@ -5,6 +5,7 @@ defmodule Plexus.Schemas.Application do
     field :name, :string
     field :package, :string
     field :rating, :float, virtual: true
+    has_many :ratings, Schemas.Rating
 
     timestamps()
   end
@@ -15,5 +16,6 @@ defmodule Plexus.Schemas.Application do
     application
     |> cast(attrs, @required ++ @optional)
     |> validate_required(@required)
+    |> cast_assoc(:ratings)
   end
 end
