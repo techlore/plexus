@@ -19,8 +19,8 @@ defmodule Plexus.Applications do
         on: mgr.application_id == a.id,
         group_by: [a.id],
         select_merge: %{
-          rating: fragment("floor(?)::integer", avg(r.score)),
-          micro_g_rating: fragment("floor(?)::integer", avg(mgr.score))
+          score: fragment("floor(?)::integer", avg(r.score)),
+          micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
         }
 
     Repo.one!(query)
@@ -41,8 +41,8 @@ defmodule Plexus.Applications do
         order_by: [a.name],
         group_by: [a.id],
         select_merge: %{
-          rating: fragment("floor(?)::integer", avg(r.score)),
-          micro_g_rating: fragment("floor(?)::integer", avg(mgr.score))
+          score: fragment("floor(?)::integer", avg(r.score)),
+          micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
         }
 
     Repo.paginate(query, opts)

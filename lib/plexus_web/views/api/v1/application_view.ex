@@ -25,7 +25,8 @@ defmodule PlexusWeb.API.V1.ApplicationView do
       id: application.id,
       name: application.name,
       package: application.package,
-      rating: application.rating
+      score: application.score,
+      micro_g_score: application.micro_g_score
     }
   end
 end
