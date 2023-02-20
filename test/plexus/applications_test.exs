@@ -55,6 +55,32 @@ defmodule Plexus.ApplicationsTest do
     end
   end
 
+  describe "list_applications/1" do
+    setup do
+      application = application_fixture()
+
+      rating_fixture(%{application_id: application.id, score: 2, google_lib: :none})
+      rating_fixture(%{application_id: application.id, score: 4, google_lib: :micro_g})
+
+      [applications: [application], score: 2, micro_g_score: 4]
+    end
+
+    test "returns a page with a list of application structs" do
+      application_fixture()
+      assert %Scrivener.Page{entries: applications} = Applications.list_applications()
+
+      for application <- applications do
+        assert is_struct(application, Application)
+      end
+    end
+
+    test "paginating with page opt" do
+      for _ <- 1..15, do: application_fixture()
+      assert %Scrivener.Page{page_number: 1} = Applications.list_applications()
+      assert %Scrivener.Page{page_number: 2} = Applications.list_applications(page: 2)
+    end
+  end
+
   describe "create_application/1" do
     test "with invalid data returns error changeset" do
       assert {:error, %Ecto.Changeset{}} = Applications.create_application(@invalid_attrs)
