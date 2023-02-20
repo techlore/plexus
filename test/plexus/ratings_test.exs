@@ -6,6 +6,21 @@ defmodule Plexus.RatingsTest do
   alias Plexus.Ratings
   alias Plexus.Schemas.Rating
 
+  describe "fetch_rating!/1" do
+    test "returns a rating struct" do
+      rating = rating_fixture()
+      assert %Rating{} = Ratings.fetch_rating!(rating.id)
+    end
+
+    test "raises an error when not found" do
+      rating_id = Ecto.UUID.generate()
+
+      assert_raise Ecto.NoResultsError, fn ->
+        Ratings.fetch_rating!(rating_id)
+      end
+    end
+  end
+
   describe "create_rating/1" do
     test "with invalid data returns error changeset" do
       invalid_attrs = %{

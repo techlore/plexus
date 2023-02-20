@@ -18,7 +18,7 @@ defmodule Plexus.ApplicationsTest do
       assert %Application{} = Applications.fetch_application!(application.id)
     end
 
-    test "raises error when not found" do
+    test "raises an error when not found" do
       application_id = Ecto.UUID.generate()
 
       assert_raise Ecto.NoResultsError, fn ->
@@ -66,7 +66,6 @@ defmodule Plexus.ApplicationsTest do
     end
 
     test "returns a page with a list of application structs" do
-      application_fixture()
       assert %Scrivener.Page{entries: applications} = Applications.list_applications()
 
       for application <- applications do
@@ -84,6 +83,15 @@ defmodule Plexus.ApplicationsTest do
   describe "create_application/1" do
     test "with invalid data returns error changeset" do
       assert {:error, %Ecto.Changeset{}} = Applications.create_application(@invalid_attrs)
+    end
+
+    test "validates required fields" do
+      {:error, changeset} = Applications.create_application(%{})
+
+      assert %{
+               name: ["can't be blank"],
+               package: ["can't be blank"]
+             } = errors_on(changeset)
     end
 
     test "with valid data creates an application" do
