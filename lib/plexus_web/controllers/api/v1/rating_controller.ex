@@ -1,14 +1,14 @@
 defmodule PlexusWeb.API.V1.RatingController do
   use PlexusWeb, :controller
 
-  alias Plexus.ApplicationRatings
-  alias Plexus.Schemas.ApplicationRating
+  alias Plexus.Ratings
+  alias Plexus.Schemas.Rating
 
   action_fallback PlexusWeb.FallbackController
 
   def index(conn, %{"application_id" => application_id} = params) do
     opts = [page: Map.get(params, "page", 1)]
-    page = ApplicationRatings.list_application_ratings(application_id, opts)
+    page = Ratings.list_ratings(application_id, opts)
     render(conn, "index.json", page: page)
   end
 
@@ -18,8 +18,7 @@ defmodule PlexusWeb.API.V1.RatingController do
       |> Map.put("application_id", application_id)
       |> Map.put("status", "approved")
 
-    with {:ok, %ApplicationRating{} = rating} <-
-           ApplicationRatings.create_application_rating(params) do
+    with {:ok, %Rating{} = rating} <- Ratings.create_rating(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", show_path(rating))
@@ -28,7 +27,7 @@ defmodule PlexusWeb.API.V1.RatingController do
   end
 
   def show(conn, %{"id" => id}) do
-    rating = ApplicationRatings.get_application_rating!(id)
+    rating = Ratings.get_rating!(id)
     render(conn, "show.json", rating: rating)
   end
 

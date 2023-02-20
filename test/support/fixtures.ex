@@ -3,38 +3,72 @@ defmodule Plexus.Fixtures do
   This module defines test helpers for creating
   entities via the `Plexus` context.
   """
-
+  alias Plexus.Applications
+  alias Plexus.Ratings
   alias Plexus.Schemas.Enums
 
-  def application_fixture(attrs \\ %{}) do
-    attrs
-    |> Enum.into(%{
-      name: "application#{System.unique_integer()}",
-      package: "tech.techlore.plexus"
+  ## Applications ##############################################################
+
+  def valid_application_attributes(attrs \\ %{}) do
+    Enum.into(attrs, %{
+      name: unique_application_name(),
+      package: unique_application_package()
     })
-    |> Plexus.Applications.create_application!()
   end
 
-  def application_rating_fixture(attrs \\ %{}) do
-    attrs
-    |> Enum.into(%{
-      application_version: "42.69.420",
-      status: application_rating_status(),
+  def application_fixture(attrs \\ %{}) do
+    {:ok, application} =
+      attrs
+      |> valid_application_attributes()
+      |> Applications.create_application()
+
+    application
+  end
+
+  ## Ratings ###################################################################
+
+  def valid_rating_attributes(attrs \\ %{}) do
+    Enum.into(attrs, %{
+      application_id: application_fixture().id,
+      application_version: unique_application_version(),
+      application_build_number: unique_application_build_number(),
+      status: :approved,
       google_lib: google_lib(),
-      rating: Enum.random(1..4),
+      score: Enum.random(1..4),
       notes: gnu_linux()
     })
-    |> Plexus.ApplicationRatings.create_application_rating!()
   end
 
-  defp application_rating_status do
-    Enums.ApplicationRatingStatus.values()
-    |> Enum.random()
+  def rating_fixture(attrs \\ %{}) do
+    {:ok, rating} =
+      attrs
+      |> valid_rating_attributes()
+      |> Ratings.create_rating()
+
+    rating
   end
+
+  ## Generators ################################################################
 
   defp google_lib do
     Enums.GoogleLib.values()
     |> Enum.random()
+  end
+
+  def unique_application_name do
+    "application#{System.unique_integer()}"
+  end
+
+  def unique_application_package do
+    "com.plexus.application-#{System.unique_integer()}"
+  end
+
+  def unique_application_version do
+    "#{:rand.uniform(69)}-#{:rand.uniform(69)}-#{:rand.uniform(69)}"
+  end
+
+  def unique_application_build_number do
+    System.unique_integer([:positive])
   end
 
   defp gnu_linux do

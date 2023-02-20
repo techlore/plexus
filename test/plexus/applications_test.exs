@@ -1,7 +1,7 @@
 defmodule Plexus.ApplicationsTest do
   use Plexus.DataCase, async: true
 
-  import Plexus.ApplicationsFixtures
+  import Plexus.Fixtures
 
   alias Plexus.Applications
   alias Plexus.Schemas.Application

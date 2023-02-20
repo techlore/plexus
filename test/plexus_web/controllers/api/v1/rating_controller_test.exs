@@ -1,8 +1,7 @@
 defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
   use PlexusWeb.ConnCase, async: true
 
-  import Plexus.ApplicationsFixtures
-  import Plexus.ApplicationRatingsFixtures
+  import Plexus.Fixtures
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
@@ -24,9 +23,9 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
           application_id: application_id,
           application_version: application_version,
           application_build_number: application_build_number,
-          rating: rating,
+          score: score,
           notes: notes
-        } = application_rating_fixture()
+        } = rating_fixture()
 
       conn = get(conn, Routes.v1_rating_path(conn, :show, application_id, id))
 
@@ -39,7 +38,7 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
                "application_build_number" => ^application_build_number,
                "status" => ^status,
                "google_lib" => ^google_lib,
-               "rating" => ^rating,
+               "score" => ^score,
                "notes" => ^notes
              } = json_response(conn, 200)["data"]
     end
@@ -47,7 +46,7 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
 
   describe "create ratings" do
     test "renders rating when data is valid", %{conn: conn} do
-      attrs = valid_application_rating_attributes()
+      attrs = valid_rating_attributes()
 
       conn = post(conn, Routes.v1_rating_path(conn, :create, attrs.application_id), rating: attrs)
       assert %{"id" => id} = json_response(conn, 201)["data"]

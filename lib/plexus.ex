@@ -7,6 +7,6 @@ defmodule Plexus do
   if it comes from the database, an external API or others.
   """
   use Boundary,
-    exports: [Accounts, Applications, ApplicationRatings, {Schemas, except: []}],
+    exports: [Accounts, Applications, Ratings, {Schemas, except: []}],
     deps: []
 end

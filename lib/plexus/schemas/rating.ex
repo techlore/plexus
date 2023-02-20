@@ -1,12 +1,12 @@
-defmodule Plexus.Schemas.ApplicationRating do
+defmodule Plexus.Schemas.Rating do
   use Plexus.Schema
 
-  schema "application_ratings" do
+  schema "ratings" do
     field :application_version, :string
     field :application_build_number, :integer
-    field :status, Ecto.Enum, values: Enums.ApplicationRatingStatus.values()
+    field :status, Ecto.Enum, values: Enums.RatingStatus.values()
     field :google_lib, Ecto.Enum, values: Enums.GoogleLib.values()
-    field :rating, :integer
+    field :score, :integer
     field :notes, :string
     belongs_to :application, Schemas.Application
 
@@ -17,7 +17,7 @@ defmodule Plexus.Schemas.ApplicationRating do
     :application_id,
     :application_version,
     :application_build_number,
-    :rating,
+    :score,
     :status,
     :google_lib
   ]
@@ -27,8 +27,6 @@ defmodule Plexus.Schemas.ApplicationRating do
     |> cast(attrs, @required ++ @optional)
     |> validate_required(@required)
     |> assoc_constraint(:application)
-    |> validate_inclusion(:status, Enums.ApplicationRatingStatus.values())
-    |> validate_inclusion(:google_lib, Enums.GoogleLib.values())
-    |> validate_number(:rating, greater_than_or_equal_to: 1, less_than_or_equal_to: 4)
+    |> validate_number(:score, greater_than_or_equal_to: 1, less_than_or_equal_to: 4)
   end
 end

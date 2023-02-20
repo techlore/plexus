@@ -28,7 +28,7 @@ applications = [
         application_build_number: 70_902_003,
         status: :approved,
         google_lib: :none,
-        rating: 3,
+        score: 3,
         notes: "No notifications"
       }
     ]
@@ -45,7 +45,7 @@ applications = [
         application_build_number: 998,
         status: :approved,
         google_lib: :none,
-        rating: 4,
+        score: 2,
         notes: nil
       },
       %{
@@ -55,7 +55,7 @@ applications = [
         application_build_number: 998,
         status: :approved,
         google_lib: :micro_g,
-        rating: 4,
+        score: 4,
         notes: nil
       },
       %{
@@ -65,7 +65,7 @@ applications = [
         application_build_number: 767,
         status: :approved,
         google_lib: :none,
-        rating: 4,
+        score: 4,
         notes: nil
       }
     ]
@@ -82,7 +82,7 @@ applications = [
         application_build_number: 88_902_003,
         status: :approved,
         google_lib: :none,
-        rating: 1,
+        score: 1,
         notes: "Unusable"
       },
       %{
@@ -92,7 +92,7 @@ applications = [
         application_build_number: 88_902_003,
         status: :approved,
         google_lib: :micro_g,
-        rating: 4,
+        score: 4,
         notes: nil
       }
     ]
@@ -109,7 +109,7 @@ applications = [
         application_build_number: 20199,
         status: :approved,
         google_lib: :none,
-        rating: 4,
+        score: 3,
         notes: nil
       },
       %{
@@ -119,7 +119,7 @@ applications = [
         application_build_number: 20199,
         status: :approved,
         google_lib: :micro_g,
-        rating: 4,
+        score: 4,
         notes: nil
       }
     ]
