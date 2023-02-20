@@ -5,8 +5,8 @@ defmodule Plexus.Applications do
   alias Plexus.Schemas.Application
   alias Plexus.Schemas.Rating
 
-  @spec get_application!(Ecto.UUID.t()) :: Application.t()
-  def get_application!(id) do
+  @spec fetch_application!(Ecto.UUID.t()) :: Application.t()
+  def fetch_application!(id) do
     ratings = approved_ratings()
     micro_g_ratings = approved_micro_g_ratings()
 
@@ -54,13 +54,6 @@ defmodule Plexus.Applications do
 
   defp approved_micro_g_ratings do
     from ar in Rating, where: [status: :approved, google_lib: :micro_g]
-  end
-
-  @spec create_application!(map()) :: Application.t()
-  def create_application!(attrs \\ %{}) do
-    %Application{}
-    |> Application.changeset(attrs)
-    |> Repo.insert!()
   end
 
   @spec create_application(map()) :: {:ok, Application.t()} | {:error, Ecto.Changeset.t()}
