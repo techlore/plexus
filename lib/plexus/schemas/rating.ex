@@ -4,7 +4,6 @@ defmodule Plexus.Schemas.Rating do
   schema "ratings" do
     field :application_version, :string
     field :application_build_number, :integer
-    field :status, Ecto.Enum, values: Enums.RatingStatus.values()
     field :google_lib, Ecto.Enum, values: Enums.GoogleLib.values()
     field :score, :integer
     field :notes, :string
@@ -18,7 +17,6 @@ defmodule Plexus.Schemas.Rating do
     :application_version,
     :application_build_number,
     :score,
-    :status,
     :google_lib
   ]
   @optional [:notes]

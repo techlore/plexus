@@ -7,8 +7,8 @@ defmodule Plexus.Applications do
 
   @spec fetch_application!(Ecto.UUID.t()) :: Application.t()
   def fetch_application!(id) do
-    ratings = approved_ratings()
-    micro_g_ratings = approved_micro_g_ratings()
+    ratings = ratings_query()
+    micro_g_ratings = micro_g_ratings_query()
 
     query =
       from a in Application,
@@ -29,8 +29,8 @@ defmodule Plexus.Applications do
   @spec list_applications(keyword()) :: Repo.page(Application.t())
   def list_applications(opts \\ []) do
     opts = Keyword.take(opts, [:page])
-    ratings = approved_ratings()
-    micro_g_ratings = approved_micro_g_ratings()
+    ratings = ratings_query()
+    micro_g_ratings = micro_g_ratings_query()
 
     query =
       from a in Application,
@@ -48,12 +48,12 @@ defmodule Plexus.Applications do
     Repo.paginate(query, opts)
   end
 
-  defp approved_ratings do
-    from ar in Rating, where: [status: :approved, google_lib: :none]
+  defp ratings_query do
+    from ar in Rating, where: [google_lib: :none]
   end
 
-  defp approved_micro_g_ratings do
-    from ar in Rating, where: [status: :approved, google_lib: :micro_g]
+  defp micro_g_ratings_query do
+    from ar in Rating, where: [google_lib: :micro_g]
   end
 
   @spec create_application(map()) :: {:ok, Application.t()} | {:error, Ecto.Changeset.t()}

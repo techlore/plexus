@@ -25,7 +25,6 @@ defmodule PlexusWeb.API.V1.RatingView do
       id: rating.id,
       application_version: rating.application_version,
       application_build_number: rating.application_build_number,
-      status: rating.status,
       google_lib: rating.google_lib,
       score: rating.score,
       notes: rating.notes

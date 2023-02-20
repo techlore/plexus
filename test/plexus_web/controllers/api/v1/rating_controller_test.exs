@@ -29,14 +29,12 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
 
       conn = get(conn, Routes.v1_rating_path(conn, :show, application_id, id))
 
-      status = to_string(application_rating.status)
       google_lib = to_string(application_rating.google_lib)
 
       assert %{
                "id" => ^id,
                "application_version" => ^application_version,
                "application_build_number" => ^application_build_number,
-               "status" => ^status,
                "google_lib" => ^google_lib,
                "score" => ^score,
                "notes" => ^notes

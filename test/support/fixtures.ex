@@ -32,7 +32,6 @@ defmodule Plexus.Fixtures do
       application_id: application_fixture().id,
       application_version: unique_application_version(),
       application_build_number: unique_application_build_number(),
-      status: :approved,
       google_lib: google_lib(),
       score: Enum.random(1..4),
       notes: gnu_linux()

@@ -51,7 +51,6 @@ defmodule Plexus.RatingsTest do
         application_id: nil,
         application_version: nil,
         application_build_number: nil,
-        status: nil,
         google_lib: nil,
         score: 69
       }
@@ -67,8 +66,7 @@ defmodule Plexus.RatingsTest do
                application_id: ["can't be blank"],
                application_version: ["can't be blank"],
                google_lib: ["can't be blank"],
-               score: ["can't be blank"],
-               status: ["can't be blank"]
+               score: ["can't be blank"]
              } = errors_on(changeset)
     end
 
@@ -81,7 +79,6 @@ defmodule Plexus.RatingsTest do
       assert rating.application_id == application.id
       assert rating.application_version == attrs.application_version
       assert rating.application_build_number == attrs.application_build_number
-      assert rating.status == attrs.status
       assert rating.google_lib == attrs.google_lib
       assert rating.score == attrs.score
       assert rating.notes == attrs.notes
