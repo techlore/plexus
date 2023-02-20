@@ -1,20 +1,6 @@
 # Script for populating the database. You can run it as:
 #
 #     mix run priv/repo/seeds.exs
-{:ok, _admin_user} =
-  Plexus.Accounts.register_user(%{
-    username: "admin",
-    password: "admin",
-    role: :admin
-  })
-
-{:ok, _developer_user} =
-  Plexus.Accounts.register_user(%{
-    username: "developer",
-    password: "developer",
-    role: :developer
-  })
-
 applications = [
   %{
     id: "5c369728-3ed1-48b5-920e-88bff883caa1",
