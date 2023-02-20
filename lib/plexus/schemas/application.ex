@@ -4,7 +4,8 @@ defmodule Plexus.Schemas.Application do
   schema "applications" do
     field :name, :string
     field :package, :string
-    field :rating, :float, virtual: true
+    field :rating, :integer, virtual: true
+    field :micro_g_rating, :integer, virtual: true
     has_many :ratings, Schemas.Rating
 
     timestamps()
