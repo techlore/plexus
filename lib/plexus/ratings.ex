@@ -4,8 +4,8 @@ defmodule Plexus.Ratings do
   alias Plexus.Repo
   alias Plexus.Schemas.Rating
 
-  @spec get_rating!(Ecto.UUID.t()) :: Rating.t()
-  def get_rating!(id) do
+  @spec fetch_rating!(Ecto.UUID.t()) :: Rating.t()
+  def fetch_rating!(id) do
     Repo.get!(Rating, id)
   end
 
@@ -17,13 +17,6 @@ defmodule Plexus.Ratings do
     |> where([r], r.application_id == ^application_id)
     |> order_by(desc: :application_build_number)
     |> Repo.paginate(opts)
-  end
-
-  @spec create_rating!(map()) :: Rating.t()
-  def create_rating!(attrs \\ %{}) do
-    %Rating{}
-    |> Rating.changeset(attrs)
-    |> Repo.insert!()
   end
 
   @spec create_rating(map()) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}

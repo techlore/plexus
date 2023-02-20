@@ -5,17 +5,23 @@ defmodule Plexus.Applications do
   alias Plexus.Schemas.Application
   alias Plexus.Schemas.Rating
 
-  @spec get_application!(Ecto.UUID.t()) :: Application.t()
-  def get_application!(id) do
+  @spec fetch_application!(Ecto.UUID.t()) :: Application.t()
+  def fetch_application!(id) do
     ratings = approved_ratings()
+    micro_g_ratings = approved_micro_g_ratings()
 
     query =
       from a in Application,
         where: a.id == ^id,
         left_join: r in ^ratings,
         on: r.application_id == a.id,
+        left_join: mgr in ^micro_g_ratings,
+        on: mgr.application_id == a.id,
         group_by: [a.id],
-        select_merge: %{rating: fragment("round(?,2)::float", avg(r.score))}
+        select_merge: %{
+          score: fragment("floor(?)::integer", avg(r.score)),
+          micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
+        }
 
     Repo.one!(query)
   end
@@ -24,27 +30,30 @@ defmodule Plexus.Applications do
   def list_applications(opts \\ []) do
     opts = Keyword.take(opts, [:page])
     ratings = approved_ratings()
+    micro_g_ratings = approved_micro_g_ratings()
 
     query =
       from a in Application,
         left_join: r in ^ratings,
         on: r.application_id == a.id,
+        left_join: mgr in ^micro_g_ratings,
+        on: mgr.application_id == a.id,
         order_by: [a.name],
         group_by: [a.id],
-        select_merge: %{rating: fragment("round(?,2)::float", avg(r.score))}
+        select_merge: %{
+          score: fragment("floor(?)::integer", avg(r.score)),
+          micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
+        }
 
     Repo.paginate(query, opts)
   end
 
   defp approved_ratings do
-    from ar in Rating, where: [status: :approved]
+    from ar in Rating, where: [status: :approved, google_lib: :none]
   end
 
-  @spec create_application!(map()) :: Application.t()
-  def create_application!(attrs \\ %{}) do
-    %Application{}
-    |> Application.changeset(attrs)
-    |> Repo.insert!()
+  defp approved_micro_g_ratings do
+    from ar in Rating, where: [status: :approved, google_lib: :micro_g]
   end
 
   @spec create_application(map()) :: {:ok, Application.t()} | {:error, Ecto.Changeset.t()}

@@ -6,6 +6,45 @@ defmodule Plexus.RatingsTest do
   alias Plexus.Ratings
   alias Plexus.Schemas.Rating
 
+  describe "fetch_rating!/1" do
+    test "returns a rating struct" do
+      rating = rating_fixture()
+      assert %Rating{} = Ratings.fetch_rating!(rating.id)
+    end
+
+    test "raises an error when not found" do
+      rating_id = Ecto.UUID.generate()
+
+      assert_raise Ecto.NoResultsError, fn ->
+        Ratings.fetch_rating!(rating_id)
+      end
+    end
+  end
+
+  describe "list_ratings/2" do
+    setup do
+      application = application_fixture()
+      rating = rating_fixture(%{application_id: application.id})
+
+      [application: application, ratings: [rating]]
+    end
+
+    test "returns a page with a list of rating structs", %{application: application} do
+      assert %Scrivener.Page{entries: ratings} = Ratings.list_ratings(application.id)
+
+      for rating <- ratings do
+        assert is_struct(rating, Rating)
+      end
+    end
+
+    test "paginating with page opt", %{application: application} do
+      for _ <- 1..15, do: rating_fixture(application_id: application.id)
+
+      assert %Scrivener.Page{page_number: 1} = Ratings.list_ratings(application.id)
+      assert %Scrivener.Page{page_number: 2} = Ratings.list_ratings(application.id, page: 2)
+    end
+  end
+
   describe "create_rating/1" do
     test "with invalid data returns error changeset" do
       invalid_attrs = %{
@@ -20,28 +59,32 @@ defmodule Plexus.RatingsTest do
       assert {:error, %Ecto.Changeset{}} = Ratings.create_rating(invalid_attrs)
     end
 
+    test "validates required fields" do
+      {:error, changeset} = Ratings.create_rating(%{})
+
+      assert %{
+               application_build_number: ["can't be blank"],
+               application_id: ["can't be blank"],
+               application_version: ["can't be blank"],
+               google_lib: ["can't be blank"],
+               score: ["can't be blank"],
+               status: ["can't be blank"]
+             } = errors_on(changeset)
+    end
+
     test "with valid data creates an application_rating" do
       application = application_fixture()
+      attrs = valid_rating_attributes(%{application_id: application.id})
 
-      valid_attrs = %{
-        application_id: application.id,
-        application_version: "42.69.420",
-        application_build_number: 1234,
-        status: :approved,
-        google_lib: :micro_g,
-        score: 4,
-        notes: "vim > emacs"
-      }
+      assert {:ok, %Rating{} = rating} = Ratings.create_rating(attrs)
 
-      assert {:ok, %Rating{} = application_rating} = Ratings.create_rating(valid_attrs)
-
-      assert application_rating.application_id == application.id
-      assert application_rating.application_version == "42.69.420"
-      assert application_rating.application_build_number == 1234
-      assert application_rating.status == :approved
-      assert application_rating.google_lib == :micro_g
-      assert application_rating.score == 4
-      assert application_rating.notes == "vim > emacs"
+      assert rating.application_id == application.id
+      assert rating.application_version == attrs.application_version
+      assert rating.application_build_number == attrs.application_build_number
+      assert rating.status == attrs.status
+      assert rating.google_lib == attrs.google_lib
+      assert rating.score == attrs.score
+      assert rating.notes == attrs.notes
     end
   end
 end

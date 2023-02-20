@@ -27,7 +27,7 @@ defmodule PlexusWeb.API.V1.RatingController do
   end
 
   def show(conn, %{"id" => id}) do
-    rating = Ratings.get_rating!(id)
+    rating = Ratings.fetch_rating!(id)
     render(conn, "show.json", rating: rating)
   end
 
