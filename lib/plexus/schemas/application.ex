@@ -11,12 +11,14 @@ defmodule Plexus.Schemas.Application do
     timestamps()
   end
 
-  @required [:name]
-  @optional [:package]
+  @required [:name, :package]
+  @optional []
   def changeset(application, attrs) do
     application
     |> cast(attrs, @required ++ @optional)
     |> validate_required(@required)
+    |> unique_constraint(:name)
+    |> unique_constraint(:package)
     |> cast_assoc(:ratings)
   end
 end

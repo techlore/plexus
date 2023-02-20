@@ -87,13 +87,24 @@ defmodule Plexus.ApplicationsTest do
     end
 
     test "with valid data creates an application" do
-      name = unique_application_name()
-      package = unique_application_package()
-      attrs = %{name: name, package: package}
+      attrs = valid_application_attributes()
       assert {:ok, %Application{} = application} = Applications.create_application(attrs)
+      assert application.name == attrs.name
+      assert application.package == attrs.package
+    end
 
-      assert application.name == name
-      assert application.package == package
+    test "handles unique name constraint" do
+      application = application_fixture()
+      attrs = valid_application_attributes(name: application.name)
+      assert {:error, changeset} = Applications.create_application(attrs)
+      assert %{name: ["has already been taken"]} = errors_on(changeset)
+    end
+
+    test "handles unique package constraint" do
+      application = application_fixture()
+      attrs = valid_application_attributes(package: application.package)
+      assert {:error, changeset} = Applications.create_application(attrs)
+      assert %{package: ["has already been taken"]} = errors_on(changeset)
     end
   end
 end
