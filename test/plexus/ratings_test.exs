@@ -24,13 +24,13 @@ defmodule Plexus.RatingsTest do
   describe "list_ratings/2" do
     setup do
       application = application_fixture()
-      rating = rating_fixture(%{application_id: application.id})
+      rating = rating_fixture(%{application_package: application.package})
 
       [application: application, ratings: [rating]]
     end
 
     test "returns a page with a list of rating structs", %{application: application} do
-      assert %Scrivener.Page{entries: ratings} = Ratings.list_ratings(application.id)
+      assert %Scrivener.Page{entries: ratings} = Ratings.list_ratings(application.package)
 
       for rating <- ratings do
         assert is_struct(rating, Rating)
@@ -38,17 +38,17 @@ defmodule Plexus.RatingsTest do
     end
 
     test "paginating with page opt", %{application: application} do
-      for _ <- 1..15, do: rating_fixture(application_id: application.id)
+      for _ <- 1..15, do: rating_fixture(application_package: application.package)
 
-      assert %Scrivener.Page{page_number: 1} = Ratings.list_ratings(application.id)
-      assert %Scrivener.Page{page_number: 2} = Ratings.list_ratings(application.id, page: 2)
+      assert %Scrivener.Page{page_number: 1} = Ratings.list_ratings(application.package)
+      assert %Scrivener.Page{page_number: 2} = Ratings.list_ratings(application.package, page: 2)
     end
   end
 
   describe "create_rating/1" do
     test "with invalid data returns error changeset" do
       invalid_attrs = %{
-        application_id: nil,
+        application_package: nil,
         application_version: nil,
         application_build_number: nil,
         google_lib: nil,
@@ -63,7 +63,7 @@ defmodule Plexus.RatingsTest do
 
       assert %{
                application_build_number: ["can't be blank"],
-               application_id: ["can't be blank"],
+               application_package: ["can't be blank"],
                application_version: ["can't be blank"],
                google_lib: ["can't be blank"],
                score: ["can't be blank"]
@@ -72,11 +72,11 @@ defmodule Plexus.RatingsTest do
 
     test "with valid data creates an application_rating" do
       application = application_fixture()
-      attrs = valid_rating_attributes(%{application_id: application.id})
+      attrs = valid_rating_attributes(%{application_package: application.package})
 
       assert {:ok, %Rating{} = rating} = Ratings.create_rating(attrs)
 
-      assert rating.application_id == application.id
+      assert rating.application_package == application.package
       assert rating.application_version == attrs.application_version
       assert rating.application_build_number == attrs.application_build_number
       assert rating.google_lib == attrs.google_lib

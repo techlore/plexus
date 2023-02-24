@@ -21,16 +21,12 @@ defmodule PlexusWeb.API.V1.ApplicationControllerTest do
       name = unique_application_name()
       package = unique_application_package()
       attrs = %{name: name, package: package}
+
       conn = post(conn, Routes.v1_application_path(conn, :create), application: attrs)
-      assert %{"id" => id} = json_response(conn, 201)["data"]
+      assert %{"package" => package} = json_response(conn, 201)["data"]
 
-      conn = get(conn, Routes.v1_application_path(conn, :show, id))
-
-      assert %{
-               "id" => ^id,
-               "name" => ^name,
-               "package" => ^package
-             } = json_response(conn, 200)["data"]
+      conn = get(conn, Routes.v1_application_path(conn, :show, package))
+      assert %{"package" => ^package, "name" => ^name} = json_response(conn, 200)["data"]
     end
 
     test "renders errors when data is invalid", %{conn: conn} do

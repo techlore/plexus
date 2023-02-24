@@ -22,9 +22,8 @@ defmodule PlexusWeb.API.V1.ApplicationView do
 
   def render("application.json", %{application: application}) do
     %{
-      id: application.id,
-      name: application.name,
       package: application.package,
+      name: application.name,
       score: application.score,
       micro_g_score: application.micro_g_score
     }

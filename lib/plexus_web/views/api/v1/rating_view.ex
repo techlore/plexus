@@ -23,6 +23,7 @@ defmodule PlexusWeb.API.V1.RatingView do
   def render("rating.json", %{rating: rating}) do
     %{
       id: rating.id,
+      application_package: rating.application_package,
       application_version: rating.application_version,
       application_build_number: rating.application_build_number,
       google_lib: rating.google_lib,

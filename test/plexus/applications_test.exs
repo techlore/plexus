@@ -15,43 +15,52 @@ defmodule Plexus.ApplicationsTest do
     end
 
     test "returns an application struct", %{application: application} do
-      assert %Application{} = Applications.fetch_application!(application.id)
+      assert %Application{} = Applications.fetch_application!(application.package)
     end
 
     test "raises an error when not found" do
-      application_id = Ecto.UUID.generate()
+      package = unique_application_package()
 
       assert_raise Ecto.NoResultsError, fn ->
-        Applications.fetch_application!(application_id)
+        Applications.fetch_application!(package)
       end
     end
 
     test "includes rating score", %{application: application} do
       for score <- 1..4 do
-        rating_fixture(%{application_id: application.id, score: score, google_lib: :none})
+        rating_fixture(%{
+          application_package: application.package,
+          score: score,
+          google_lib: :none
+        })
       end
 
       # we validate that the average score is 2. avg(1 + 2 + 3 + 4) == 2
       avg_score = 2
 
-      assert %Application{score: ^avg_score} = Applications.fetch_application!(application.id)
+      assert %Application{score: ^avg_score} =
+               Applications.fetch_application!(application.package)
     end
 
     test "includes MicroG rating score", %{application: application} do
       for score <- 2..4 do
-        rating_fixture(%{application_id: application.id, score: score, google_lib: :micro_g})
+        rating_fixture(%{
+          application_package: application.package,
+          score: score,
+          google_lib: :micro_g
+        })
       end
 
       # we validate that the average score is 2. avg(2 + 3 + 4) == 3
       avg_score = 3
 
       assert %Application{micro_g_score: ^avg_score} =
-               Applications.fetch_application!(application.id)
+               Applications.fetch_application!(application.package)
     end
 
     test "scores are nil without ratings", %{application: application} do
       assert %Application{score: nil, micro_g_score: nil} =
-               Applications.fetch_application!(application.id)
+               Applications.fetch_application!(application.package)
     end
   end
 
@@ -59,8 +68,8 @@ defmodule Plexus.ApplicationsTest do
     setup do
       application = application_fixture()
 
-      rating_fixture(%{application_id: application.id, score: 2, google_lib: :none})
-      rating_fixture(%{application_id: application.id, score: 4, google_lib: :micro_g})
+      rating_fixture(%{application_package: application.package, score: 2, google_lib: :none})
+      rating_fixture(%{application_package: application.package, score: 4, google_lib: :micro_g})
 
       [applications: [application], score: 2, micro_g_score: 4]
     end

@@ -5,19 +5,19 @@ defmodule Plexus.Applications do
   alias Plexus.Schemas.Application
   alias Plexus.Schemas.Rating
 
-  @spec fetch_application!(Ecto.UUID.t()) :: Application.t()
-  def fetch_application!(id) do
+  @spec fetch_application!(String.t()) :: Application.t()
+  def fetch_application!(package) do
     ratings = ratings_query()
     micro_g_ratings = micro_g_ratings_query()
 
     query =
       from a in Application,
-        where: a.id == ^id,
+        where: a.package == ^package,
         left_join: r in ^ratings,
-        on: r.application_id == a.id,
+        on: r.application_package == a.package,
         left_join: mgr in ^micro_g_ratings,
-        on: mgr.application_id == a.id,
-        group_by: [a.id],
+        on: mgr.application_package == a.package,
+        group_by: [a.package],
         select_merge: %{
           score: fragment("floor(?)::integer", avg(r.score)),
           micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
@@ -35,11 +35,11 @@ defmodule Plexus.Applications do
     query =
       from a in Application,
         left_join: r in ^ratings,
-        on: r.application_id == a.id,
+        on: r.application_package == a.package,
         left_join: mgr in ^micro_g_ratings,
-        on: mgr.application_id == a.id,
+        on: mgr.application_package == a.package,
         order_by: [a.name],
-        group_by: [a.id],
+        group_by: [a.package],
         select_merge: %{
           score: fragment("floor(?)::integer", avg(r.score)),
           micro_g_score: fragment("floor(?)::integer", avg(mgr.score))
@@ -64,10 +64,10 @@ defmodule Plexus.Applications do
   end
 
   @spec upsert_application!(map()) :: Application.t()
-  def upsert_application!(%{id: application_id} = attrs) do
+  def upsert_application!(%{package: package} = attrs) do
     application =
-      with nil <- Repo.get(Application, application_id) do
-        %Application{id: application_id}
+      with nil <- Repo.get(Application, package) do
+        %Application{package: package}
       end
 
     application

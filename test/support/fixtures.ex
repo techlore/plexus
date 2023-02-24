@@ -11,8 +11,8 @@ defmodule Plexus.Fixtures do
 
   def valid_application_attributes(attrs \\ %{}) do
     Enum.into(attrs, %{
-      name: unique_application_name(),
-      package: unique_application_package()
+      package: unique_application_package(),
+      name: unique_application_name()
     })
   end
 
@@ -29,7 +29,7 @@ defmodule Plexus.Fixtures do
 
   def valid_rating_attributes(attrs \\ %{}) do
     Enum.into(attrs, %{
-      application_id: application_fixture().id,
+      application_package: application_fixture().package,
       application_version: unique_application_version(),
       application_build_number: unique_application_build_number(),
       google_lib: google_lib(),
