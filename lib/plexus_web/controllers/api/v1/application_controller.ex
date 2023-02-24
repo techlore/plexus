@@ -13,8 +13,8 @@ defmodule PlexusWeb.API.V1.ApplicationController do
   end
 
   def create(conn, %{"application" => params}) do
-    with {:ok, %Application{id: id}} <- Applications.create_application(params) do
-      application = Applications.fetch_application!(id)
+    with {:ok, %Application{package: package}} <- Applications.create_application(params) do
+      application = Applications.fetch_application!(package)
 
       conn
       |> put_status(:created)
@@ -23,8 +23,8 @@ defmodule PlexusWeb.API.V1.ApplicationController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    application = Applications.fetch_application!(id)
+  def show(conn, %{"package" => package}) do
+    application = Applications.fetch_application!(package)
     render(conn, "show.json", application: application)
   end
 

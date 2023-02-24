@@ -20,19 +20,20 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
       application_rating =
         %{
           id: id,
-          application_id: application_id,
+          application_package: application_package,
           application_version: application_version,
           application_build_number: application_build_number,
           score: score,
           notes: notes
         } = rating_fixture()
 
-      conn = get(conn, Routes.v1_rating_path(conn, :show, application_id, id))
+      conn = get(conn, Routes.v1_rating_path(conn, :show, application_package, id))
 
       google_lib = to_string(application_rating.google_lib)
 
       assert %{
                "id" => ^id,
+               "application_package" => ^application_package,
                "application_version" => ^application_version,
                "application_build_number" => ^application_build_number,
                "google_lib" => ^google_lib,
@@ -46,10 +47,12 @@ defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
     test "renders rating when data is valid", %{conn: conn} do
       attrs = valid_rating_attributes()
 
-      conn = post(conn, Routes.v1_rating_path(conn, :create, attrs.application_id), rating: attrs)
+      conn =
+        post(conn, Routes.v1_rating_path(conn, :create, attrs.application_package), rating: attrs)
+
       assert %{"id" => id} = json_response(conn, 201)["data"]
 
-      conn = get(conn, Routes.v1_rating_path(conn, :show, attrs.application_id, id))
+      conn = get(conn, Routes.v1_rating_path(conn, :show, attrs.application_package, id))
       assert %{"id" => ^id} = json_response(conn, 200)["data"]
     end
 

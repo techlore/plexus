@@ -4,13 +4,12 @@ defmodule Plexus.Repo.Migrations.CreateApplicationsTable do
   def change do
     execute "CREATE EXTENSION IF NOT EXISTS citext", ""
 
-    create table(:applications) do
+    create table(:applications, primary_key: false) do
+      add :package, :citext, primary_key: true
       add :name, :citext, null: false
-      add :package, :string
       timestamps()
     end
 
     create unique_index(:applications, [:name])
-    create unique_index(:applications, [:package])
   end
 end

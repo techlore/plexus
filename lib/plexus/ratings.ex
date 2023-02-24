@@ -9,12 +9,12 @@ defmodule Plexus.Ratings do
     Repo.get!(Rating, id)
   end
 
-  @spec list_ratings(Ecto.UUID.t(), keyword()) :: Repo.page(Rating.t())
-  def list_ratings(application_id, opts \\ []) do
+  @spec list_ratings(String.t(), keyword()) :: Repo.page(Rating.t())
+  def list_ratings(application_package, opts \\ []) do
     opts = Keyword.take(opts, [:page])
 
     Rating
-    |> where([r], r.application_id == ^application_id)
+    |> where([r], r.application_package == ^application_package)
     |> order_by(desc: :application_build_number)
     |> Repo.paginate(opts)
   end

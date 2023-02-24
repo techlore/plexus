@@ -3,8 +3,9 @@ defmodule Plexus.Repo.Migrations.CreateRatingsTable do
 
   def change do
     create table(:ratings) do
-      add :application_id, references(:applications, type: :binary_id, on_delete: :delete_all),
-        null: false
+      add :application_package,
+          references(:applications, column: :package, type: :string, on_delete: :delete_all),
+          null: false
 
       add :application_version, :string, null: false
       add :application_build_number, :integer, null: false
@@ -14,7 +15,7 @@ defmodule Plexus.Repo.Migrations.CreateRatingsTable do
       timestamps()
     end
 
-    create index(:ratings, [:application_id])
+    create index(:ratings, [:application_package])
     create index(:ratings, [:google_lib])
   end
 end

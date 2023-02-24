@@ -7,21 +7,25 @@ defmodule Plexus.Schemas.Rating do
     field :google_lib, Ecto.Enum, values: Enums.GoogleLib.values()
     field :score, :integer
     field :notes, :string
-    belongs_to :application, Schemas.Application
+
+    belongs_to :application, Schemas.Application,
+      type: :string,
+      references: :package,
+      foreign_key: :application_package
 
     timestamps()
   end
 
   @required [
-    :application_id,
+    :application_package,
     :application_version,
     :application_build_number,
     :score,
     :google_lib
   ]
   @optional [:notes]
-  def changeset(application_rating, attrs) do
-    application_rating
+  def changeset(rating, attrs) do
+    rating
     |> cast(attrs, @required ++ @optional)
     |> validate_required(@required)
     |> assoc_constraint(:application)

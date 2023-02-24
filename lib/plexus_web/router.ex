@@ -33,10 +33,11 @@ defmodule PlexusWeb.Router do
     pipe_through :api
 
     scope "/v1", V1, as: :v1 do
-      resources "/applications", ApplicationController, only: [:index, :create, :show]
-
-      resources "/applications/:application_id/ratings", RatingController,
+      resources "/applications", ApplicationController,
+        param: "package",
         only: [:index, :create, :show]
+
+      resources "/applications/:package/ratings", RatingController, only: [:index, :create, :show]
     end
   end
 end
