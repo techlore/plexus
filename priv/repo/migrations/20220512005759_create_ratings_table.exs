@@ -4,7 +4,7 @@ defmodule Plexus.Repo.Migrations.CreateRatingsTable do
   def change do
     create table(:ratings) do
       add :application_package,
-          references(:applications, column: :package, type: :string, on_delete: :delete_all),
+          references(:applications, column: :package, type: :citext, on_delete: :delete_all),
           null: false
 
       add :application_version, :string, null: false
