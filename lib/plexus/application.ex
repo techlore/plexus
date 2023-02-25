@@ -2,16 +2,16 @@ defmodule Plexus.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
-  use Boundary, top_level?: true, deps: [Plexus, PlexusWeb]
+
   use Application
 
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      Plexus.Repo,
       # Start the Telemetry supervisor
       PlexusWeb.Telemetry,
+      # Start the Ecto repository
+      Plexus.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: Plexus.PubSub},
       # Start the Endpoint (http/https)

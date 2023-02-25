@@ -1,6 +1,6 @@
 /**
  * @license MIT
- * topbar 1.0.0, 2021-01-06
+ * topbar 2.0.0, 2023-02-04
  * https://buunguyen.github.io/topbar
  * Copyright (c) 2021 Buu Nguyen
  */
@@ -35,10 +35,11 @@
   })();
 
   var canvas,
-    progressTimerId,
-    fadeTimerId,
     currentProgress,
     showing,
+    progressTimerId = null,
+    fadeTimerId = null,
+    delayTimerId = null,
     addEvent = function (elem, type, handler) {
       if (elem.addEventListener) elem.addEventListener(type, handler, false);
       else if (elem.attachEvent) elem.attachEvent("on" + type, handler);
@@ -95,21 +96,26 @@
         for (var key in opts)
           if (options.hasOwnProperty(key)) options[key] = opts[key];
       },
-      show: function () {
+      show: function (delay) {
         if (showing) return;
-        showing = true;
-        if (fadeTimerId !== null) window.cancelAnimationFrame(fadeTimerId);
-        if (!canvas) createCanvas();
-        canvas.style.opacity = 1;
-        canvas.style.display = "block";
-        topbar.progress(0);
-        if (options.autoRun) {
-          (function loop() {
-            progressTimerId = window.requestAnimationFrame(loop);
-            topbar.progress(
-              "+" + 0.05 * Math.pow(1 - Math.sqrt(currentProgress), 2)
-            );
-          })();
+        if (delay) {
+          if (delayTimerId) return;
+          delayTimerId = setTimeout(() => topbar.show(), delay);
+        } else  {
+          showing = true;
+          if (fadeTimerId !== null) window.cancelAnimationFrame(fadeTimerId);
+          if (!canvas) createCanvas();
+          canvas.style.opacity = 1;
+          canvas.style.display = "block";
+          topbar.progress(0);
+          if (options.autoRun) {
+            (function loop() {
+              progressTimerId = window.requestAnimationFrame(loop);
+              topbar.progress(
+                "+" + 0.05 * Math.pow(1 - Math.sqrt(currentProgress), 2)
+              );
+            })();
+          }
         }
       },
       progress: function (to) {
@@ -125,6 +131,8 @@
         return currentProgress;
       },
       hide: function () {
+        clearTimeout(delayTimerId);
+        delayTimerId = null;
         if (!showing) return;
         showing = false;
         if (progressTimerId != null) {
