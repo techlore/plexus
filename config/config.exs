@@ -13,6 +13,7 @@ config :plexus,
 
 # Configures the endpoint
 config :plexus, PlexusWeb.Endpoint,
+  adapter: Bandit.PhoenixAdapter,
   url: [host: "localhost"],
   render_errors: [
     formats: [html: PlexusWeb.ErrorHTML, json: PlexusWeb.ErrorJSON],
