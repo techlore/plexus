@@ -20,10 +20,13 @@ defmodule PlexusWeb.Router do
     get "/", PageController, :home
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PlexusWeb do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", PlexusWeb.API.V1 do
+    pipe_through :api
+
+    get "/apps", AppController, :index
+    get "/apps/:package", AppController, :show
+    post "/apps", AppController, :create
+  end
 
   # Enable LiveDashboard in development
   if Application.compile_env(:plexus, :dev_routes) do
