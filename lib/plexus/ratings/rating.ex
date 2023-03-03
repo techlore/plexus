@@ -9,7 +9,6 @@ defmodule Plexus.Ratings.Rating do
     2 -> Bronze
     3 -> Silver
     4 -> Gold
-
   """
   use Plexus.Schema
 

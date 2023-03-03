@@ -77,7 +77,6 @@ jobs:
           mix deps.get
 
       - name: Compile Project
-        if: steps.mix-build.outputs.cache-hit != 'true'
         run: |
           MIX_ENV=test mix compile --warnings-as-errors
           MIX_ENV=dev mix compile --warnings-as-errors
