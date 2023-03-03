@@ -1,4 +1,6 @@
 defmodule PlexusWeb.API.V1.AppJSON do
+  use PlexusWeb, :json
+
   alias Plexus.Apps.App
 
   @doc """
@@ -22,15 +24,6 @@ defmodule PlexusWeb.API.V1.AppJSON do
     %{
       package: app.package,
       name: app.name
-    }
-  end
-
-  defp meta(%Scrivener.Page{} = page) do
-    %{
-      page_number: page.page_number,
-      limit: page.page_size,
-      total_count: page.total_entries,
-      total_pages: page.total_pages
     }
   end
 end

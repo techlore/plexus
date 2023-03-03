@@ -49,6 +49,12 @@ defmodule PlexusWeb do
     end
   end
 
+  def json do
+    quote do
+      import PlexusWeb.MetaJSON
+    end
+  end
+
   def live_view do
     quote do
       use Phoenix.LiveView,
