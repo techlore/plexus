@@ -42,25 +42,46 @@ jobs:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
 
-      - name: Retrieve Mix Dependencies Cache
+      - name: Restore Mix Dependencies Cache
         uses: actions/cache@v3
-        id: mix-cache
+        id: mix-deps
         with:
           path: deps
-          key: mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
+          key: mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
-            mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
-            mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
+            mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
+            mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
+
+      - name: Restore Mix Build Cache
+        uses: actions/cache@v3
+        id: mix-build
+        with:
+          path: _build
+          key: mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
+            mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
+
+      - name: Restore PLT cache
+        uses: actions/cache@v3
+        id: plt-cache
+        with:
+          path: priv/plts
+          key: plt-${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: plt-${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('**/mix.lock') }}
 
       - name: Install Mix Dependencies
-        if: steps.mix-cache.outputs.cache-hit != 'true'
+        if: steps.mix-deps.outputs.cache-hit != 'true'
         run: |
           mix local.rebar --force
           mix local.hex --force
           mix deps.get
 
-      - name: Check Mix Compilation
-        run: mix compile --warnings-as-errors
+      - name: Compile Project
+        if: steps.mix-build.outputs.cache-hit != 'true'
+        run: |
+          MIX_ENV=test mix compile --warnings-as-errors
+          MIX_ENV=dev mix compile --warnings-as-errors
 
       - name: Check Unused Dependencies
         run: mix deps.unlock --check-unused
@@ -73,3 +94,10 @@ jobs:
 
       - name: Run Credo
         run: mix credo --strict
+
+      - name: Create PLT
+        if: steps.plt-cache.outputs.cache-hit != 'true'
+        run: MIX_ENV=dev mix dialyzer --plt
+
+      - name: Run Dialyzer
+        run: MIX_ENV=dev mix dialyzer --no-check --halt-exit-status --format github

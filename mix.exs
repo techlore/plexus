@@ -9,7 +9,12 @@ defmodule Plexus.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [
+        plt_add_deps: :transitive,
+        remove_defaults: [:unknown],
+        plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
+      ]
     ]
   end
 
@@ -50,6 +55,7 @@ defmodule Plexus.MixProject do
       {:jason, "~> 1.2"},
       {:bandit, ">= 0.6.9"},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:scrivener_ecto, "~> 2.0"}
     ]
   end
