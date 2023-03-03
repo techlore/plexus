@@ -4,8 +4,8 @@ defmodule Plexus.Apps do
   """
   import Ecto.Query, warn: false
 
-  alias Plexus.Repo
   alias Plexus.Apps.App
+  alias Plexus.Repo
 
   def list_apps do
     Repo.paginate(App)

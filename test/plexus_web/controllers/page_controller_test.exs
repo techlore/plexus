@@ -1,5 +1,5 @@
 defmodule PlexusWeb.PageControllerTest do
-  use PlexusWeb.ConnCase
+  use PlexusWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

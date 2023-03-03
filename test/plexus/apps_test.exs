@@ -1,5 +1,5 @@
 defmodule Plexus.AppsTest do
-  use Plexus.DataCase
+  use Plexus.DataCase, async: true
 
   import Plexus.AppsFixtures
 

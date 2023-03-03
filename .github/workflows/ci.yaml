@@ -70,3 +70,6 @@ jobs:
 
       - name: Run Tests
         run: mix test --trace --slowest 10
+
+      - name: Run Credo
+        run: mix credo --strict

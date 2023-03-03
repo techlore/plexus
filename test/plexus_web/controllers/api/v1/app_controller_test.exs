@@ -1,5 +1,5 @@
 defmodule PlexusWeb.API.V1.AppControllerTest do
-  use PlexusWeb.ConnCase
+  use PlexusWeb.ConnCase, async: true
 
   import Plexus.AppsFixtures
 

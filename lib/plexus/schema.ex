@@ -1,4 +1,9 @@
 defmodule Plexus.Schema do
+  @moduledoc ~S"""
+  Provides baseline functionality for modules which define schemas mapping to
+  database tables.
+  """
+
   defmacro __using__(_) do
     quote do
       use Ecto.Schema

@@ -11,8 +11,7 @@ config :plexus,
   ecto_repos: [Plexus.Repo],
   generators: [binary_id: true]
 
-config :plexus, :generators,
-  api_prefix: "/api/v1"
+config :plexus, :generators, api_prefix: "/api/v1"
 
 config :plexus, Plexus.Repo,
   migration_primary_key: [id: :uuid, type: :binary_id],
