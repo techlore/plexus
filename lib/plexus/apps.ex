@@ -2,36 +2,38 @@ defmodule Plexus.Apps do
   @moduledoc """
   The Apps context.
   """
-  import Ecto.Query, warn: false
+  import Ecto.Changeset
+  import Ecto.Query
 
+  alias Plexus.QueryHelpers
   alias Plexus.Repo
   alias Plexus.Schemas.App
 
-  def list_apps do
-    Repo.paginate(App)
+  @spec list_apps(Keyword.t()) :: Repo.page(App.t())
+  def list_apps(opts \\ []) do
+    App
+    |> QueryHelpers.merge_opts(opts)
+    |> Repo.paginate()
   end
 
-  def get_app!(package) do
-    Repo.get!(App, package)
+  @spec get_app!(String.t(), Keyword.t()) :: App.t()
+  def get_app!(package, opts \\ []) do
+    App
+    |> where([a], a.package == ^package)
+    |> QueryHelpers.merge_opts(opts)
+    |> Repo.one!()
   end
 
-  def create_app(attrs \\ %{}) do
+  @spec create_app(%{
+          package: String.t(),
+          name: String.t()
+        }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
+  def create_app(params) do
     %App{}
-    |> App.changeset(attrs)
+    |> change(%{package: params.package, name: params.name})
+    |> validate_required([:package, :name])
+    |> unique_constraint(:name)
+    |> unique_constraint(:package, name: :apps_pkey)
     |> Repo.insert()
-  end
-
-  def update_app(%App{} = app, attrs) do
-    app
-    |> App.changeset(attrs)
-    |> Repo.update()
-  end
-
-  def delete_app(%App{} = app) do
-    Repo.delete(app)
-  end
-
-  def change_app(%App{} = app, attrs \\ %{}) do
-    App.changeset(app, attrs)
   end
 end

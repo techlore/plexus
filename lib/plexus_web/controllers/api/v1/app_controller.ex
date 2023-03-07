@@ -2,7 +2,7 @@ defmodule PlexusWeb.API.V1.AppController do
   use PlexusWeb, :controller
 
   alias Plexus.Apps
-  alias Plexus.Schemas.App
+  alias PlexusWeb.Params
 
   action_fallback PlexusWeb.FallbackController
 
@@ -11,8 +11,14 @@ defmodule PlexusWeb.API.V1.AppController do
     render(conn, :index, page: page)
   end
 
-  def create(conn, %{"app" => app_params}) do
-    with {:ok, %App{} = app} <- Apps.create_app(app_params) do
+  def create(conn, %{"app" => params}) do
+    schema = %{
+      package: {:string, required: true},
+      name: {:string, required: true}
+    }
+
+    with {:ok, params} <- Params.normalize(params, schema),
+         {:ok, app} <- Apps.create_app(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", ~p"/api/v1/apps/#{app}")

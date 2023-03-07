@@ -14,13 +14,4 @@ defmodule Plexus.Schemas.App do
 
     timestamps()
   end
-
-  @doc false
-  def changeset(app, attrs) do
-    app
-    |> cast(attrs, [:package, :name])
-    |> validate_required([:package, :name])
-    |> unique_constraint(:name)
-    |> unique_constraint(:package, name: :apps_pkey)
-  end
 end

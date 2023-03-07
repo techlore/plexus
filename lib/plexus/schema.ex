@@ -1,5 +1,5 @@
 defmodule Plexus.Schema do
-  @moduledoc ~S"""
+  @moduledoc """
   Provides baseline functionality for modules which define schemas mapping to
   database tables.
   """
