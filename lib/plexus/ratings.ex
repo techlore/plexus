@@ -5,8 +5,8 @@ defmodule Plexus.Ratings do
   import Ecto.Query, warn: false
 
   alias Plexus.QueryHelpers
-  alias Plexus.Ratings.Rating
   alias Plexus.Repo
+  alias Plexus.Schemas.Rating
 
   def list_ratings(opts \\ []) do
     Rating

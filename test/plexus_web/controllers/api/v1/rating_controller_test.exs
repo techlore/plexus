@@ -4,7 +4,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
   import Plexus.AppsFixtures
   import Plexus.RatingsFixtures
 
-  alias Plexus.Ratings.Rating
+  alias Plexus.Schemas.Rating
 
   @create_attrs %{
     app_build_number: 42,

@@ -5,7 +5,7 @@ defmodule Plexus.RatingsTest do
   import Plexus.RatingsFixtures
 
   alias Plexus.Ratings
-  alias Plexus.Ratings.Rating
+  alias Plexus.Schemas.Rating
 
   @invalid_attrs %{
     app_build_number: nil,
@@ -105,7 +105,7 @@ defmodule Plexus.RatingsTest do
   describe "preload_app/1" do
     test "returns a rating with its app preloaded" do
       rating = rating_fixture()
-      assert %Rating{app: %Plexus.Apps.App{}} = Ratings.preload_app(rating)
+      assert %Rating{app: %Plexus.Schemas.App{}} = Ratings.preload_app(rating)
     end
   end
 end

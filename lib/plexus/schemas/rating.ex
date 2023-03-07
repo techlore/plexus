@@ -1,4 +1,4 @@
-defmodule Plexus.Ratings.Rating do
+defmodule Plexus.Schemas.Rating do
   @moduledoc """
   A classification or ranking of an App based on a comparative assessment of
   their quality, standard, or performance.
@@ -19,7 +19,7 @@ defmodule Plexus.Ratings.Rating do
     field :notes, :string
     field :score, :integer
 
-    belongs_to :app, Plexus.Apps.App,
+    belongs_to :app, Plexus.Schemas.App,
       type: :string,
       references: :package,
       foreign_key: :app_package

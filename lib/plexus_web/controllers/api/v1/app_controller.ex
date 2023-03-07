@@ -2,7 +2,7 @@ defmodule PlexusWeb.API.V1.AppController do
   use PlexusWeb, :controller
 
   alias Plexus.Apps
-  alias Plexus.Apps.App
+  alias Plexus.Schemas.App
 
   action_fallback PlexusWeb.FallbackController
 

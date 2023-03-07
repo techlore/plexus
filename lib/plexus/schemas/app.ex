@@ -1,4 +1,4 @@
-defmodule Plexus.Apps.App do
+defmodule Plexus.Schemas.App do
   @moduledoc """
   A software application running on the Android platform. Because the Android
   platform is built for mobile devices, a typical Android app is designed for a

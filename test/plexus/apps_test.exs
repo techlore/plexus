@@ -4,7 +4,7 @@ defmodule Plexus.AppsTest do
   import Plexus.AppsFixtures
 
   alias Plexus.Apps
-  alias Plexus.Apps.App
+  alias Plexus.Schemas.App
 
   @invalid_attrs %{name: nil, package: nil}
 

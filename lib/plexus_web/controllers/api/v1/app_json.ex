@@ -1,7 +1,7 @@
 defmodule PlexusWeb.API.V1.AppJSON do
   use PlexusWeb, :json
 
-  alias Plexus.Apps.App
+  alias Plexus.Schemas.App
 
   @doc """
   Renders a list of apps.

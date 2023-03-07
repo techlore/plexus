@@ -1,7 +1,7 @@
 defmodule PlexusWeb.API.V1.RatingJSON do
   use PlexusWeb, :json
 
-  alias Plexus.Ratings.Rating
+  alias Plexus.Schemas.Rating
 
   @doc """
   Renders a list of ratings.

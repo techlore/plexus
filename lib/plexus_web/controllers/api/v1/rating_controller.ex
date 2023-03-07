@@ -2,7 +2,7 @@ defmodule PlexusWeb.API.V1.RatingController do
   use PlexusWeb, :controller
 
   alias Plexus.Ratings
-  alias Plexus.Ratings.Rating
+  alias Plexus.Schemas.Rating
 
   action_fallback PlexusWeb.FallbackController
 
