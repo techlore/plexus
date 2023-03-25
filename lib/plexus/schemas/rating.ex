@@ -2,13 +2,6 @@ defmodule Plexus.Schemas.Rating do
   @moduledoc """
   A classification or ranking of an App based on a comparative assessment of
   their quality, standard, or performance.
-
-  We use a score for the following tier levels:
-
-    1 -> Borked
-    2 -> Bronze
-    3 -> Silver
-    4 -> Gold
   """
   use Plexus.Schema
 

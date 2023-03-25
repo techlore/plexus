@@ -23,7 +23,6 @@ defmodule PlexusWeb.API.V1.RatingJSON do
   defp data(%Rating{} = rating) do
     %{
       id: rating.id,
-      app_name: rating.app.name,
       app_package: rating.app_package,
       app_version: rating.app_version,
       app_build_number: rating.app_build_number,

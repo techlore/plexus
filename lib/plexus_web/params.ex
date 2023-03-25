@@ -4,10 +4,19 @@ defmodule PlexusWeb.Params do
   """
 
   @type field :: atom()
-  @type type :: atom()
+  @type type :: atom() | tuple()
   @type opts :: Keyword.t()
 
   @type schema :: %{field() => {type(), opts()}}
+
+  @type t :: %__MODULE__{
+          types: map(),
+          defaults: map(),
+          permitted: [atom()],
+          required: [atom()]
+        }
+
+  defstruct defaults: %{}, types: %{}, permitted: [], required: []
 
   @doc """
   Normalize external input params.
@@ -28,21 +37,28 @@ defmodule PlexusWeb.Params do
 
   """
   @spec normalize(map(), schema()) :: {:ok, map()} | {:error, Ecto.Changeset.t()}
-  def normalize(params, schema) do
-    %{defaults: data, types: types, permitted: permitted, required: required} =
-      Enum.reduce(schema, %{defaults: %{}, types: %{}, permitted: [], required: []}, fn
-        {field, {type, opts}}, acc ->
-          acc
-          |> put_default(field, opts)
-          |> put_type(field, type)
-          |> put_permitted(field)
-          |> put_required(field, opts)
-      end)
+  def normalize(unsigned_params, schema) do
+    %{
+      defaults: data,
+      types: types,
+      permitted: permitted,
+      required: required
+    } = prepare(schema)
 
     {data, types}
-    |> Ecto.Changeset.cast(params, permitted)
+    |> Ecto.Changeset.cast(unsigned_params, permitted)
     |> Ecto.Changeset.validate_required(required)
     |> Ecto.Changeset.apply_action(:normalize)
+  end
+
+  defp prepare(schema) do
+    Enum.reduce(schema, %__MODULE__{}, fn {field, {type, opts}}, acc ->
+      acc
+      |> put_default(field, opts)
+      |> put_type(field, type)
+      |> put_permitted(field)
+      |> put_required(field, opts)
+    end)
   end
 
   defp put_default(acc, field, opts) do

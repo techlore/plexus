@@ -27,11 +27,9 @@ defmodule PlexusWeb.Router do
     get "/apps/:package", AppController, :show
     post "/apps", AppController, :create
 
-    get "/ratings", RatingController, :index
-    get "/ratings/:id", RatingController, :show
-    post "/ratings", RatingController, :create
-    patch "/ratings/:id", RatingController, :update
-    put "/ratings/:id", RatingController, :update
+    get "/apps/:package/ratings", RatingController, :index
+    get "/apps/:package/ratings/:id", RatingController, :show
+    post "/apps/:package/ratings", RatingController, :create
   end
 
   # Enable LiveDashboard in development

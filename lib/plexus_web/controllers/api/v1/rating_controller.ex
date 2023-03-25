@@ -2,34 +2,44 @@ defmodule PlexusWeb.API.V1.RatingController do
   use PlexusWeb, :controller
 
   alias Plexus.Ratings
-  alias Plexus.Schemas.Rating
+  alias PlexusWeb.Params
 
   action_fallback PlexusWeb.FallbackController
 
-  def index(conn, _params) do
-    page = Ratings.list_ratings(preload: :app)
+  def index(conn, %{"package" => app_package}) do
+    opts = [order_by: [desc: :app_build_number, desc: :updated_at]]
+    page = Ratings.list_ratings(app_package, opts)
     render(conn, :index, page: page)
   end
 
-  def create(conn, %{"rating" => rating_params}) do
-    with {:ok, %Rating{} = rating} <- Ratings.create_rating(rating_params) do
+  def create(conn, %{"package" => app_package, "rating" => params}) do
+    schema = %{
+      app_package: {:string, [required: true]},
+      app_version: {:string, [required: true]},
+      app_build_number: {:integer, [required: true]},
+      google_lib: {google_lib_enum(), [required: true]},
+      notes: {:string, []},
+      score: {:integer, [required: true]}
+    }
+
+    params = Map.put(params, "app_package", app_package)
+
+    with {:ok, params} <- Params.normalize(params, schema),
+         {:ok, rating} <- Ratings.create_rating(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", ~p"/api/v1/ratings/#{rating}")
-      |> render(:show, rating: Ratings.preload_app(rating))
+      |> render(:show, rating: rating)
     end
   end
 
   def show(conn, %{"id" => id}) do
-    rating = Ratings.get_rating!(id, preload: :app)
+    rating = Ratings.get_rating!(id)
     render(conn, :show, rating: rating)
   end
 
-  def update(conn, %{"id" => id, "rating" => rating_params}) do
-    rating = Ratings.get_rating!(id, preload: :app)
-
-    with {:ok, %Rating{} = rating} <- Ratings.update_rating(rating, rating_params) do
-      render(conn, :show, rating: rating)
-    end
+  defp google_lib_enum do
+    values = Ecto.Enum.values(Plexus.Schemas.Rating, :google_lib)
+    {:parameterized, Ecto.Enum, Ecto.Enum.init(values: values)}
   end
 end
