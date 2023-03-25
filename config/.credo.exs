@@ -100,12 +100,7 @@
           {Credo.Check.Readability.LargeNumbers, []},
           {Credo.Check.Readability.MaxLineLength, [priority: :low, max_length: 120]},
           {Credo.Check.Readability.ModuleAttributeNames, []},
-          {Credo.Check.Readability.ModuleDoc,
-           [
-             ignore_names: [
-               ~r/(\.\w+Controller|\.Endpoint|\.\w+Live(\.\w+)?|\.Repo|\.Router|\.\w+Socket|\.\w+View|\.\w+HTML|\.\w+JSON)$/
-             ]
-           ]},
+          {Credo.Check.Readability.ModuleDoc, []},
           {Credo.Check.Readability.ImplTrue, []},
           {Credo.Check.Readability.ModuleNames, []},
           {Credo.Check.Readability.MultiAlias, []},
