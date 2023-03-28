@@ -18,7 +18,7 @@ defmodule Plexus.Repo.Migrations.CreateRatings do
     end
 
     create index(:ratings, [:app_package])
-    create index(:ratings, [:app_package, :app_version])
-    create index(:ratings, [:app_package, :app_build_number])
+    create index(:ratings, [:google_lib])
+    create index(:ratings, [:app_package, :google_lib])
   end
 end
