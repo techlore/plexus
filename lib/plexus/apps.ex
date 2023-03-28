@@ -8,6 +8,8 @@ defmodule Plexus.Apps do
   alias Plexus.QueryHelpers
   alias Plexus.Repo
   alias Plexus.Schemas.App
+  alias Plexus.Schemas.Rating
+  alias Plexus.Schemas.Score
 
   @spec list_apps(Keyword.t()) :: Repo.page(App.t())
   def list_apps(opts \\ []) do
@@ -30,10 +32,32 @@ defmodule Plexus.Apps do
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def create_app(params) do
     %App{}
-    |> change(%{package: params.package, name: params.name})
+    |> cast(params, [:package, :name])
     |> validate_required([:package, :name])
     |> unique_constraint(:name)
     |> unique_constraint(:package, name: :apps_pkey)
     |> Repo.insert()
+  end
+
+  def get_scores(%App{} = app) do
+    for google_lib <- Ecto.Enum.values(Rating, :google_lib) do
+      get_score(app, google_lib)
+    end
+  end
+
+  def get_score(%App{package: app_package}, google_lib) do
+    query =
+      from r in Rating,
+        where: r.app_package == ^app_package and r.google_lib == ^google_lib,
+        group_by: [r.app_package, r.google_lib],
+        select: %{
+          app_package: r.app_package,
+          google_lib: r.google_lib,
+          numerator: fragment("CAST(ROUND(AVG(?)::numeric, 2) AS FLOAT)", r.score),
+          total_count: count(r.id)
+        }
+
+    data = Repo.one(query) || %{app_package: app_package, google_lib: google_lib}
+    struct(Score, data)
   end
 end

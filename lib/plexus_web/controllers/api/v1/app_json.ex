@@ -3,9 +3,6 @@ defmodule PlexusWeb.API.V1.AppJSON do
 
   alias Plexus.Schemas.App
 
-  @doc """
-  Renders a list of apps.
-  """
   def index(%{page: page}) do
     %{
       data: for(app <- page.entries, do: data(app)),
@@ -13,9 +10,6 @@ defmodule PlexusWeb.API.V1.AppJSON do
     }
   end
 
-  @doc """
-  Renders a single app.
-  """
   def show(%{app: app}) do
     %{data: data(app)}
   end

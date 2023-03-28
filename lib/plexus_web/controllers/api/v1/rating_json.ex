@@ -3,9 +3,6 @@ defmodule PlexusWeb.API.V1.RatingJSON do
 
   alias Plexus.Schemas.Rating
 
-  @doc """
-  Renders a list of ratings.
-  """
   def index(%{page: page}) do
     %{
       data: for(rating <- page.entries, do: data(rating)),
@@ -13,9 +10,6 @@ defmodule PlexusWeb.API.V1.RatingJSON do
     }
   end
 
-  @doc """
-  Renders a single rating.
-  """
   def show(%{rating: rating}) do
     %{data: data(rating)}
   end

@@ -28,7 +28,7 @@ defmodule PlexusWeb.API.V1.RatingController do
          {:ok, rating} <- Ratings.create_rating(params) do
       conn
       |> put_status(:created)
-      |> put_resp_header("location", ~p"/api/v1/ratings/#{rating}")
+      |> put_resp_header("location", ~p"/api/v1/apps/#{app_package}/ratings/#{rating}")
       |> render(:show, rating: rating)
     end
   end

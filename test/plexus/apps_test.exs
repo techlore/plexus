@@ -2,9 +2,11 @@ defmodule Plexus.AppsTest do
   use Plexus.DataCase, async: true
 
   import Plexus.AppsFixtures
+  import Plexus.RatingsFixtures
 
   alias Plexus.Apps
   alias Plexus.Schemas.App
+  alias Plexus.Schemas.Score
 
   @invalid_attrs %{name: nil, package: nil}
 
@@ -47,6 +49,23 @@ defmodule Plexus.AppsTest do
 
       attrs = %{package: unique_app_package(), name: app.name}
       assert {:error, %Ecto.Changeset{}} = Apps.create_app(attrs)
+    end
+  end
+
+  describe "get_score/2" do
+    test "with valid app" do
+      app = app_fixture()
+      app_package = app.package
+      rating_fixture(%{app_package: app_package, score: 3, google_lib: :micro_g})
+      rating_fixture(%{app_package: app_package, score: 4, google_lib: :micro_g})
+
+      assert %Score{
+               app_package: ^app_package,
+               google_lib: :micro_g,
+               numerator: 3.5,
+               denominator: 4,
+               total_count: 2
+             } = Apps.get_score(app, :micro_g)
     end
   end
 end
