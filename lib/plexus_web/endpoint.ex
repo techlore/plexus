@@ -7,7 +7,8 @@ defmodule PlexusWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_plexus_key",
-    signing_salt: "C6ZUTk6P"
+    signing_salt: "Mc6JTxJo",
+    same_site: "Lax"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -20,7 +21,7 @@ defmodule PlexusWeb.Endpoint do
     at: "/",
     from: :plexus,
     gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt)
+    only: PlexusWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

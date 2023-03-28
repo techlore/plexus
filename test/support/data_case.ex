@@ -1,4 +1,3 @@
-# credo:disable-for-this-file Credo.Check.Design.AliasUsage
 defmodule Plexus.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
@@ -29,9 +28,16 @@ defmodule Plexus.DataCase do
   end
 
   setup tags do
+    Plexus.DataCase.setup_sandbox(tags)
+    :ok
+  end
+
+  @doc """
+  Sets up the sandbox based on the test tags.
+  """
+  def setup_sandbox(tags) do
     pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Plexus.Repo, shared: not tags[:async])
     on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
-    :ok
   end
 
   @doc """

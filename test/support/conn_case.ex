@@ -1,4 +1,3 @@
-# credo:disable-for-this-file Credo.Check.Design.AliasUsage
 defmodule PlexusWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
@@ -20,21 +19,20 @@ defmodule PlexusWeb.ConnCase do
 
   using do
     quote do
+      # The default endpoint for testing
+      @endpoint PlexusWeb.Endpoint
+
+      use PlexusWeb, :verified_routes
+
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
       import PlexusWeb.ConnCase
-
-      alias PlexusWeb.Router.Helpers, as: Routes
-
-      # The default endpoint for testing
-      @endpoint PlexusWeb.Endpoint
     end
   end
 
   setup tags do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(Plexus.Repo, shared: not tags[:async])
-    on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
+    Plexus.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

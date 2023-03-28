@@ -1,4 +1,4 @@
-# fly.toml file generated for plexus on 2022-07-17T09:56:30-04:00
+# fly.toml file generated for plexus on 2023-02-25T17:32:17-05:00
 
 app = "plexus"
 kill_signal = "SIGTERM"
@@ -15,6 +15,9 @@ processes = []
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
+  cmd = []
+  entrypoint = []
+  exec = []
 
 [[services]]
   http_checks = []

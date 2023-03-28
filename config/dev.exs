@@ -23,10 +23,10 @@ config :plexus, PlexusWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "YGK2c14oUnzTeFrQliR3Ke8aOA2wou6SrnltP5JJeLQXXPmGyfMdBxOjCtlxZh3C",
+  secret_key_base: "GlYS1qm795y/lKf05MVjuUK3aSqI6k+rqWJgUCYE16Zn2qbxKP+s9PNQ8v/HMc2i",
   watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
@@ -37,7 +37,6 @@ config :plexus, PlexusWeb.Endpoint,
 #
 #     mix phx.gen.cert
 #
-# Note that this task requires Erlang/OTP 20 or later.
 # Run `mix help phx.gen.cert` for more information.
 #
 # The `http:` config above can be replaced with:
@@ -59,10 +58,12 @@ config :plexus, PlexusWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/plexus_web/(live|views)/.*(ex)$",
-      ~r"lib/plexus_web/templates/.*(eex)$"
+      ~r"lib/plexus_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
+
+# Enable dev routes for dashboard and mailbox
+config :plexus, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

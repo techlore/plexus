@@ -2,6 +2,10 @@ name: CI
 
 on: push
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+
 jobs:
   elixir:
     name: Elixir ${{ matrix.elixir }} (OTP ${{ matrix.otp }})
@@ -25,15 +29,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.14.0'
-            otp: '25.0.3'
+          - elixir: '1.14.3'
+            otp: '25.2.3'
 
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.10.0
-        with:
-          access_token: ${{ github.token }}
-
       - uses: actions/checkout@v3
 
       - name: Setup Elixir
@@ -42,24 +41,27 @@ jobs:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
 
-      - name: Retrieve Mix Dependencies Cache
+      - name: Restore Mix Dependencies Cache
         uses: actions/cache@v3
-        id: mix-cache
+        id: mix-deps
         with:
           path: deps
-          key: mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
+          key: mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
-            mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
-            mix-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
+            mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
+            mix-deps-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
 
-      - name: Install Mix Dependencies
-        if: steps.mix-cache.outputs.cache-hit != 'true'
-        run: |
-          mix local.rebar --force
-          mix local.hex --force
-          mix deps.get
+      - name: Restore Mix Build Cache
+        uses: actions/cache@v3
+        id: mix-build
+        with:
+          path: _build
+          key: mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-${{ env.cache-name }}-
+            mix-build-${{ runner.os }}-${{ matrix.otp }}-${{ matrix.elixir }}-
 
-      - name: Retrieve PLT cache
+      - name: Restore PLT cache
         uses: actions/cache@v3
         id: plt-cache
         with:
@@ -67,12 +69,17 @@ jobs:
           key: plt-${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: plt-${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('**/mix.lock') }}
 
-      - name: Create PLT
-        if: steps.plt-cache.outputs.cache-hit != 'true'
-        run: mix dialyzer --plt
+      - name: Install Mix Dependencies
+        if: steps.mix-deps.outputs.cache-hit != 'true'
+        run: |
+          mix local.rebar --force
+          mix local.hex --force
+          mix deps.get
 
-      - name: Check Mix Compilation
-        run: mix compile --warnings-as-errors
+      - name: Compile Project
+        run: |
+          MIX_ENV=test mix compile --warnings-as-errors
+          MIX_ENV=dev mix compile --warnings-as-errors
 
       - name: Check Unused Dependencies
         run: mix deps.unlock --check-unused
@@ -86,5 +93,9 @@ jobs:
       - name: Run Credo
         run: mix credo --strict
 
+      - name: Create PLT
+        if: steps.plt-cache.outputs.cache-hit != 'true'
+        run: MIX_ENV=dev mix dialyzer --plt
+
       - name: Run Dialyzer
-        run: mix dialyzer --no-check --halt-exit-status
+        run: MIX_ENV=dev mix dialyzer --no-check --halt-exit-status --format github

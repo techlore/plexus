@@ -1,87 +1,60 @@
 defmodule Plexus.RatingsTest do
   use Plexus.DataCase, async: true
 
-  import Plexus.Fixtures
+  import Plexus.AppsFixtures
+  import Plexus.RatingsFixtures
 
   alias Plexus.Ratings
   alias Plexus.Schemas.Rating
 
-  describe "fetch_rating!/1" do
-    test "returns a rating struct" do
+  @invalid_attrs %{
+    app_package: nil,
+    app_build_number: nil,
+    app_version: nil,
+    google_lib: nil,
+    notes: nil,
+    score: nil
+  }
+
+  describe "list_ratings/1" do
+    test "returns a page of ratings" do
+      app = app_fixture()
+      rating = rating_fixture(%{app_package: app.package})
+      assert %Scrivener.Page{entries: [^rating]} = Ratings.list_ratings(app.package)
+    end
+  end
+
+  describe "get_rating!/2" do
+    test "returns the rating with given id" do
       rating = rating_fixture()
-      assert %Rating{} = Ratings.fetch_rating!(rating.id)
-    end
-
-    test "raises an error when not found" do
-      rating_id = Ecto.UUID.generate()
-
-      assert_raise Ecto.NoResultsError, fn ->
-        Ratings.fetch_rating!(rating_id)
-      end
+      assert Ratings.get_rating!(rating.id) == rating
     end
   end
 
-  describe "list_ratings/2" do
-    setup do
-      application = application_fixture()
-      rating = rating_fixture(%{application_package: application.package})
+  describe "create_rating!/1" do
+    test "with valid data creates a rating" do
+      app = app_fixture()
 
-      [application: application, ratings: [rating]]
-    end
-
-    test "returns a page with a list of rating structs", %{application: application} do
-      assert %Scrivener.Page{entries: ratings} = Ratings.list_ratings(application.package)
-
-      for rating <- ratings do
-        assert is_struct(rating, Rating)
-      end
-    end
-
-    test "paginating with page opt", %{application: application} do
-      for _ <- 1..15, do: rating_fixture(application_package: application.package)
-
-      assert %Scrivener.Page{page_number: 1} = Ratings.list_ratings(application.package)
-      assert %Scrivener.Page{page_number: 2} = Ratings.list_ratings(application.package, page: 2)
-    end
-  end
-
-  describe "create_rating/1" do
-    test "with invalid data returns error changeset" do
-      invalid_attrs = %{
-        application_package: nil,
-        application_version: nil,
-        application_build_number: nil,
-        google_lib: nil,
-        score: 69
+      valid_attrs = %{
+        app_package: app.package,
+        app_build_number: 42,
+        app_version: "some app_version",
+        google_lib: :none,
+        notes: "some notes",
+        score: 3
       }
 
-      assert {:error, %Ecto.Changeset{}} = Ratings.create_rating(invalid_attrs)
+      assert {:ok, %Rating{} = rating} = Ratings.create_rating(valid_attrs)
+      assert rating.app_package == app.package
+      assert rating.app_build_number == 42
+      assert rating.app_version == "some app_version"
+      assert rating.google_lib == :none
+      assert rating.notes == "some notes"
+      assert rating.score == 3
     end
 
-    test "validates required fields" do
-      {:error, changeset} = Ratings.create_rating(%{})
-
-      assert %{
-               application_build_number: ["can't be blank"],
-               application_package: ["can't be blank"],
-               application_version: ["can't be blank"],
-               google_lib: ["can't be blank"],
-               score: ["can't be blank"]
-             } = errors_on(changeset)
-    end
-
-    test "with valid data creates an application_rating" do
-      application = application_fixture()
-      attrs = valid_rating_attributes(%{application_package: application.package})
-
-      assert {:ok, %Rating{} = rating} = Ratings.create_rating(attrs)
-
-      assert rating.application_package == application.package
-      assert rating.application_version == attrs.application_version
-      assert rating.application_build_number == attrs.application_build_number
-      assert rating.google_lib == attrs.google_lib
-      assert rating.score == attrs.score
-      assert rating.notes == attrs.notes
+    test "invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Ratings.create_rating(@invalid_attrs)
     end
   end
 end

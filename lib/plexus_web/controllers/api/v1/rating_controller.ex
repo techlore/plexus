@@ -2,33 +2,44 @@ defmodule PlexusWeb.API.V1.RatingController do
   use PlexusWeb, :controller
 
   alias Plexus.Ratings
-  alias Plexus.Schemas.Rating
+  alias PlexusWeb.Params
 
   action_fallback PlexusWeb.FallbackController
 
-  def index(conn, %{"package" => package} = params) do
-    opts = [page: Map.get(params, "page", 1)]
-    page = Ratings.list_ratings(package, opts)
-    render(conn, "index.json", page: page)
+  def index(conn, %{"package" => app_package}) do
+    opts = [order_by: [desc: :app_build_number, desc: :updated_at]]
+    page = Ratings.list_ratings(app_package, opts)
+    render(conn, :index, page: page)
   end
 
-  def create(conn, %{"package" => package, "rating" => params}) do
-    params = Map.put(params, "application_package", package)
+  def create(conn, %{"package" => app_package, "rating" => params}) do
+    schema = %{
+      app_package: {:string, [required: true]},
+      app_version: {:string, [required: true]},
+      app_build_number: {:integer, [required: true]},
+      google_lib: {google_lib_enum(), [required: true]},
+      notes: {:string, []},
+      score: {:integer, [required: true]}
+    }
 
-    with {:ok, %Rating{} = rating} <- Ratings.create_rating(params) do
+    params = Map.put(params, "app_package", app_package)
+
+    with {:ok, params} <- Params.normalize(params, schema),
+         {:ok, rating} <- Ratings.create_rating(params) do
       conn
       |> put_status(:created)
-      |> put_resp_header("location", show_path(rating))
-      |> render("show.json", rating: rating)
+      |> put_resp_header("location", ~p"/api/v1/apps/#{app_package}/ratings/#{rating}")
+      |> render(:show, rating: rating)
     end
   end
 
   def show(conn, %{"id" => id}) do
-    rating = Ratings.fetch_rating!(id)
-    render(conn, "show.json", rating: rating)
+    rating = Ratings.get_rating!(id)
+    render(conn, :show, rating: rating)
   end
 
-  defp show_path(rating) do
-    Routes.v1_rating_path(PlexusWeb.Endpoint, :show, rating.application_package, rating)
+  defp google_lib_enum do
+    values = Ecto.Enum.values(Plexus.Schemas.Rating, :google_lib)
+    {:parameterized, Ecto.Enum, Ecto.Enum.init(values: values)}
   end
 end

@@ -1,64 +1,108 @@
-defmodule PlexusWeb.Controllers.Api.V1.RatingControllerTest do
+defmodule PlexusWeb.API.V1.RatingControllerTest do
   use PlexusWeb.ConnCase, async: true
 
-  import Plexus.Fixtures
+  import Plexus.AppsFixtures
+
+  @create_attrs %{
+    app_build_number: 42,
+    app_version: "some app_version",
+    google_lib: :none,
+    notes: "some notes",
+    score: 2
+  }
+  @invalid_attrs %{
+    app_build_number: nil,
+    app_version: nil,
+    google_lib: nil,
+    notes: nil,
+    score: nil
+  }
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
   end
 
   describe "index" do
-    test "lists all ratings for the given application", %{conn: conn} do
-      application = application_fixture()
-      conn = get(conn, Routes.v1_rating_path(conn, :index, application))
+    test "lists all ratings", %{conn: conn} do
+      app = app_fixture()
+      conn = get(conn, ~p"/api/v1/apps/#{app}/ratings")
       assert json_response(conn, 200)["data"] == []
+    end
+
+    test "renders meta", %{conn: conn} do
+      app = app_fixture()
+      conn = get(conn, ~p"/api/v1/apps/#{app}/ratings")
+
+      assert %{
+               "meta" => %{
+                 "page_number" => 1,
+                 "limit" => 15,
+                 "total_count" => 0,
+                 "total_pages" => 1
+               }
+             } = json_response(conn, 200)
     end
   end
 
-  describe "show" do
-    test "fetches the application rating", %{conn: conn} do
-      application_rating =
-        %{
-          id: id,
-          application_package: application_package,
-          application_version: application_version,
-          application_build_number: application_build_number,
-          score: score,
-          notes: notes
-        } = rating_fixture()
+  describe "create rating" do
+    test "renders rating when data is valid", %{conn: conn} do
+      %{package: app_package} = app_fixture()
+      attrs = Map.put(@create_attrs, :app_package, app_package)
 
-      conn = get(conn, Routes.v1_rating_path(conn, :show, application_package, id))
+      conn = post(conn, ~p"/api/v1/apps/#{app_package}/ratings", rating: attrs)
+      assert %{"id" => id} = json_response(conn, 201)["data"]
 
-      google_lib = to_string(application_rating.google_lib)
+      conn = get(conn, ~p"/api/v1/apps/#{app_package}/ratings/#{id}")
 
       assert %{
                "id" => ^id,
-               "application_package" => ^application_package,
-               "application_version" => ^application_version,
-               "application_build_number" => ^application_build_number,
-               "google_lib" => ^google_lib,
-               "score" => ^score,
-               "notes" => ^notes
+               "app_package" => ^app_package,
+               "app_build_number" => 42,
+               "app_version" => "some app_version",
+               "google_lib" => "none",
+               "notes" => "some notes",
+               "score" => %{"numerator" => 2, "denominator" => 4}
              } = json_response(conn, 200)["data"]
-    end
-  end
-
-  describe "create ratings" do
-    test "renders rating when data is valid", %{conn: conn} do
-      attrs = valid_rating_attributes()
-
-      conn =
-        post(conn, Routes.v1_rating_path(conn, :create, attrs.application_package), rating: attrs)
-
-      assert %{"id" => id} = json_response(conn, 201)["data"]
-
-      conn = get(conn, Routes.v1_rating_path(conn, :show, attrs.application_package, id))
-      assert %{"id" => ^id} = json_response(conn, 200)["data"]
     end
 
     test "renders errors when data is invalid", %{conn: conn} do
-      conn = post(conn, Routes.v1_rating_path(conn, :create, application_fixture()), rating: %{})
-      assert json_response(conn, 422)["errors"] != %{}
+      app = app_fixture()
+      conn = post(conn, ~p"/api/v1/apps/#{app}/ratings", rating: @invalid_attrs)
+
+      assert %{
+               "errors" => %{
+                 "app_build_number" => ["can't be blank"],
+                 "app_version" => ["can't be blank"],
+                 "google_lib" => ["can't be blank"],
+                 "score" => ["can't be blank"]
+               }
+             } = json_response(conn, 422)
+    end
+
+    test "renders error when score is out of upper range", %{conn: conn} do
+      app = app_fixture()
+      attrs = Map.put(@create_attrs, :score, 5)
+
+      conn = post(conn, ~p"/api/v1/apps/#{app}/ratings", rating: attrs)
+
+      assert %{
+               "errors" => %{
+                 "score" => ["must be less than or equal to 4"]
+               }
+             } = json_response(conn, 422)
+    end
+
+    test "renders error when score is out of lower range", %{conn: conn} do
+      app = app_fixture()
+      attrs = Map.put(@create_attrs, :score, 0)
+
+      conn = post(conn, ~p"/api/v1/apps/#{app}/ratings", rating: attrs)
+
+      assert %{
+               "errors" => %{
+                 "score" => ["must be greater than or equal to 1"]
+               }
+             } = json_response(conn, 422)
     end
   end
 end

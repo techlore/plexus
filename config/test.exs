@@ -17,11 +17,11 @@ config :plexus, Plexus.Repo,
 # you can enable the server option below.
 config :plexus, PlexusWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "RWcgI9zmB/FtIwGz6a3XfPZ13v5SO1t6/c4r5zx6TUvXugfbG4mk7PXQ81sBC/kR",
+  secret_key_base: "veS0NANViCjPnwp0MPoIGe9SR0xufpWITElCJdSK/i/1brIbUIODa4uZIapDI0XX",
   server: false
 
 # Print only warnings and errors during test
-config :logger, level: :warn
+config :logger, level: :warning
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime

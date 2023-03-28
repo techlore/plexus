@@ -2,16 +2,16 @@ defmodule Plexus.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
-  use Boundary, top_level?: true, deps: [Plexus, PlexusWeb]
+
   use Application
 
-  @impl true
+  @impl Application
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      Plexus.Repo,
       # Start the Telemetry supervisor
       PlexusWeb.Telemetry,
+      # Start the Ecto repository
+      Plexus.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: Plexus.PubSub},
       # Start the Endpoint (http/https)
@@ -28,7 +28,7 @@ defmodule Plexus.Application do
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
-  @impl true
+  @impl Application
   def config_change(changed, _new, removed) do
     PlexusWeb.Endpoint.config_change(changed, removed)
     :ok
