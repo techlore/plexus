@@ -14,7 +14,8 @@ defmodule PlexusWeb.API.V1.AppController do
   def create(conn, %{"app" => params}) do
     schema = %{
       package: {:string, required: true},
-      name: {:string, required: true}
+      name: {:string, required: true},
+      icon_url: {:string, []}
     }
 
     with {:ok, params} <- Params.normalize(params, schema),

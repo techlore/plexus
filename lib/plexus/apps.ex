@@ -27,12 +27,13 @@ defmodule Plexus.Apps do
   end
 
   @spec create_app(%{
+          optional(:icon_url) => String.t(),
           package: String.t(),
           name: String.t()
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def create_app(params) do
     %App{}
-    |> cast(params, [:package, :name])
+    |> cast(params, [:package, :name, :icon_url])
     |> validate_required([:package, :name])
     |> unique_constraint(:name)
     |> unique_constraint(:package, name: :apps_pkey)

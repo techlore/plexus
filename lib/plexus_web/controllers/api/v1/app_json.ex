@@ -17,7 +17,8 @@ defmodule PlexusWeb.API.V1.AppJSON do
   defp data(%App{} = app) do
     %{
       package: app.package,
-      name: app.name
+      name: app.name,
+      icon_url: app.icon_url
     }
   end
 end
