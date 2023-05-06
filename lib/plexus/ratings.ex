@@ -14,7 +14,7 @@ defmodule Plexus.Ratings do
     Rating
     |> where([r], r.app_package == ^app_package)
     |> QueryHelpers.merge_opts(opts)
-    |> Repo.paginate()
+    |> Repo.paginate(opts)
   end
 
   @spec get_rating!(Ecto.UUID.t(), Keyword.t()) :: Rating.t()

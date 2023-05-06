@@ -39,6 +39,15 @@ defmodule PlexusWeb.API.V1.AppController do
       {"scores", "true"}, acc ->
         Keyword.put(acc, :scores, true)
 
+      {"page", page}, acc ->
+        case Integer.parse(page) do
+          {value, _remainder} ->
+            Keyword.put(acc, :page, value)
+
+          :error ->
+            acc
+        end
+
       _other, acc ->
         acc
     end)
