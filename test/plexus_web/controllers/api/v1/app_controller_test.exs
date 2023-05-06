@@ -34,6 +34,15 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
                }
              } = json_response(conn, 200)
     end
+
+    test "with scores", %{conn: conn} do
+      app_fixture()
+      opts = %{scores: true}
+      conn = get(conn, ~p"/api/v1/apps?#{opts}")
+
+      assert [%{"scores" => scores}] = json_response(conn, 200)["data"]
+      assert is_list(scores)
+    end
   end
 
   describe "create app" do

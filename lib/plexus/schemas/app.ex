@@ -12,6 +12,7 @@ defmodule Plexus.Schemas.App do
     field :package, :string, primary_key: true
     field :name, :string
     field :icon_url, :string
+    field :scores, {:array, :map}, virtual: true
 
     timestamps()
   end
