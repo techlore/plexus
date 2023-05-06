@@ -25,7 +25,7 @@ defmodule Plexus.Apps do
     App
     |> with_scores(opts)
     |> QueryHelpers.merge_opts(opts)
-    |> Repo.paginate()
+    |> Repo.paginate(opts)
   end
 
   @doc """
