@@ -11,17 +11,37 @@ defmodule Plexus.Apps do
   alias Plexus.Schemas.Rating
   alias Plexus.Schemas.Score
 
+  @doc """
+  Fetches a page of Apps.
+
+  ## Options
+
+    - See `Plexus.QueryHelpers.merge_opts/2`
+    - `:scores` :: boolean (default: `false`)
+
+  """
   @spec list_apps(Keyword.t()) :: Repo.page(App.t())
   def list_apps(opts \\ []) do
     App
+    |> with_scores(opts)
     |> QueryHelpers.merge_opts(opts)
     |> Repo.paginate()
   end
 
+  @doc """
+  Fetches an App.
+
+  ## Options
+
+    - See `Plexus.QueryHelpers.merge_opts/2`
+    - `:scores` :: boolean (default: `false`)
+
+  """
   @spec get_app!(String.t(), Keyword.t()) :: App.t()
   def get_app!(package, opts \\ []) do
     App
     |> where([a], a.package == ^package)
+    |> with_scores(opts)
     |> QueryHelpers.merge_opts(opts)
     |> Repo.one!()
   end
@@ -40,25 +60,43 @@ defmodule Plexus.Apps do
     |> Repo.insert()
   end
 
-  def get_scores(%App{} = app) do
-    for google_lib <- Ecto.Enum.values(Rating, :google_lib) do
-      get_score(app, google_lib)
+  defp with_scores(query, opts) do
+    if Keyword.get(opts, :scores, false) do
+      with_scores(query)
+    else
+      query
     end
   end
 
-  def get_score(%App{package: app_package}, google_lib) do
-    query =
-      from r in Rating,
-        where: r.app_package == ^app_package and r.google_lib == ^google_lib,
-        group_by: [r.app_package, r.google_lib],
-        select: %{
-          app_package: r.app_package,
-          google_lib: r.google_lib,
-          numerator: fragment("CAST(ROUND(AVG(?)::numeric, 2) AS FLOAT)", r.score),
-          total_count: count(r.id)
-        }
+  defp with_scores(query) do
+    google_lib_micro_g = from Rating, where: [google_lib: :micro_g]
+    google_lib_none = from Rating, where: [google_lib: :none]
 
-    data = Repo.one(query) || %{app_package: app_package, google_lib: google_lib}
-    struct(Score, data)
+    query
+    |> join(:left, [a], r_micro_g in subquery(google_lib_micro_g),
+      on: a.package == r_micro_g.app_package
+    )
+    |> join(:left, [a, _], r_none in subquery(google_lib_none),
+      on: a.package == r_none.app_package
+    )
+    |> group_by([a, r_micro_g, r_none], [a.package, r_micro_g.google_lib, r_none.google_lib])
+    |> select_merge([a, r_micro_g, r_none], %{
+      scores: [
+        %Score{
+          app_package: a.package,
+          google_lib: :micro_g,
+          numerator:
+            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_micro_g.score),
+          total_count: count(r_micro_g.id, :distinct)
+        },
+        %Score{
+          app_package: a.package,
+          google_lib: :none,
+          numerator:
+            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_none.score),
+          total_count: count(r_none.id, :distinct)
+        }
+      ]
+    })
   end
 end

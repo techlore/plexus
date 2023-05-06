@@ -6,8 +6,9 @@ defmodule PlexusWeb.API.V1.AppController do
 
   action_fallback PlexusWeb.FallbackController
 
-  def index(conn, _params) do
-    page = Apps.list_apps()
+  def index(conn, params) do
+    opts = build_opts(params)
+    page = Apps.list_apps(opts)
     render(conn, :index, page: page)
   end
 
@@ -27,8 +28,19 @@ defmodule PlexusWeb.API.V1.AppController do
     end
   end
 
-  def show(conn, %{"package" => package}) do
-    app = Apps.get_app!(package)
+  def show(conn, %{"package" => package} = params) do
+    opts = build_opts(params)
+    app = Apps.get_app!(package, opts)
     render(conn, :show, app: app)
+  end
+
+  defp build_opts(params) do
+    Enum.reduce(params, [], fn
+      {"scores", "true"}, acc ->
+        Keyword.put(acc, :scores, true)
+
+      _other, acc ->
+        acc
+    end)
   end
 end
