@@ -57,6 +57,15 @@ defmodule PlexusWeb.API.V1.RatingController do
             acc
         end
 
+      {"limit", limit}, acc ->
+        case Integer.parse(limit) do
+          {value, _remainder} ->
+            Keyword.put(acc, :limit, value)
+
+          :error ->
+            acc
+        end
+
       _other, acc ->
         acc
     end)

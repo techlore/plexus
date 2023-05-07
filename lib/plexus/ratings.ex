@@ -5,18 +5,38 @@ defmodule Plexus.Ratings do
   import Ecto.Changeset
   import Ecto.Query
 
+  alias Plexus.PaginationHelpers
   alias Plexus.QueryHelpers
   alias Plexus.Repo
   alias Plexus.Schemas.Rating
 
+  @doc """
+  Fetches a page of Ratings.
+
+  ## Options
+
+    - See `Plexus.QueryHelpers.merge_opts/2`
+    - See `Plexus.PaginationHelpers.page_opts/2`
+
+  """
   @spec list_ratings(String.t(), Keyword.t()) :: Repo.page(Rating.t())
   def list_ratings(app_package, opts \\ []) do
+    page_opts = PaginationHelpers.page_opts(opts)
+
     Rating
     |> where([r], r.app_package == ^app_package)
     |> QueryHelpers.merge_opts(opts)
-    |> Repo.paginate(opts)
+    |> Repo.paginate(page_opts)
   end
 
+  @doc """
+  Fetches a Rating.
+
+  ## Options
+
+    - See `Plexus.QueryHelpers.merge_opts/2`
+
+  """
   @spec get_rating!(Ecto.UUID.t(), Keyword.t()) :: Rating.t()
   def get_rating!(id, opts \\ []) do
     Rating

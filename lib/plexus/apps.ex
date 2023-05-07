@@ -5,6 +5,7 @@ defmodule Plexus.Apps do
   import Ecto.Changeset
   import Ecto.Query
 
+  alias Plexus.PaginationHelpers
   alias Plexus.QueryHelpers
   alias Plexus.Repo
   alias Plexus.Schemas.App
@@ -17,15 +18,18 @@ defmodule Plexus.Apps do
   ## Options
 
     - See `Plexus.QueryHelpers.merge_opts/2`
+    - See `Plexus.PaginationHelpers.page_opts/2`
     - `:scores` :: boolean (default: `false`)
 
   """
   @spec list_apps(Keyword.t()) :: Repo.page(App.t())
   def list_apps(opts \\ []) do
+    page_opts = PaginationHelpers.page_opts(opts)
+
     App
     |> with_scores(opts)
     |> QueryHelpers.merge_opts(opts)
-    |> Repo.paginate(opts)
+    |> Repo.paginate(page_opts)
   end
 
   @doc """
