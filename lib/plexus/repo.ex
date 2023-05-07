@@ -1,6 +1,6 @@
 defmodule Plexus.Repo do
   use Ecto.Repo, otp_app: :plexus, adapter: Ecto.Adapters.Postgres
-  use Scrivener, page_size: 15
+  use Scrivener, page_size: 25
 
   @typedoc """
   What is returned from a `Plexus.Repo.paginate/2` call.

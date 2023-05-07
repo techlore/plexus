@@ -28,7 +28,7 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
       assert %{
                "meta" => %{
                  "page_number" => 1,
-                 "limit" => 15,
+                 "limit" => 25,
                  "total_count" => 0,
                  "total_pages" => 1
                }
