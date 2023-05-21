@@ -47,8 +47,8 @@ defmodule Plexus.Ratings do
   @spec create_rating(%{
           optional(:notes) => String.t(),
           optional(:rom_name) => String.t(),
-          optional(:rom_version) => String.t(),
           optional(:rom_build) => String.t(),
+          android_version: String.t(),
           app_package: String.t(),
           app_version: String.t(),
           app_build_number: non_neg_integer(),

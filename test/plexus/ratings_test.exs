@@ -37,17 +37,18 @@ defmodule Plexus.RatingsTest do
 
       valid_attrs = %{
         app_package: app.package,
+        android_version: "some android_version",
         app_build_number: 42,
         app_version: "some app_version",
         google_lib: :none,
         notes: "some notes",
         score: 3,
         rom_name: "some ROM name",
-        rom_version: "some ROM version",
         rom_build: "some ROM build"
       }
 
       assert {:ok, %Rating{} = rating} = Ratings.create_rating(valid_attrs)
+      assert rating.android_version == "some android_version"
       assert rating.app_package == app.package
       assert rating.app_build_number == 42
       assert rating.app_version == "some app_version"
@@ -55,7 +56,6 @@ defmodule Plexus.RatingsTest do
       assert rating.notes == "some notes"
       assert rating.score == 3
       assert rating.rom_name == "some ROM name"
-      assert rating.rom_version == "some ROM version"
       assert rating.rom_build == "some ROM build"
     end
 

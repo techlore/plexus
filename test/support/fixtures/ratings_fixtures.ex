@@ -18,6 +18,13 @@ defmodule Plexus.RatingsFixtures do
     System.unique_integer([:positive])
   end
 
+  @doc """
+  Generate a unique android version.
+  """
+  def unique_android_version do
+    "android-v#{:rand.uniform(69)}-#{:rand.uniform(69)}-#{:rand.uniform(69)}"
+  end
+
   defp gnu_linux do
     """
     I'd just like to interject for a moment.  What you're referring to as Linux,
@@ -47,6 +54,7 @@ defmodule Plexus.RatingsFixtures do
     {:ok, rating} =
       attrs
       |> Enum.into(%{
+        android_version: unique_android_version(),
         app_build_number: unique_app_build_number(),
         app_version: unique_app_version(),
         app_package: Plexus.AppsFixtures.app_fixture().package,

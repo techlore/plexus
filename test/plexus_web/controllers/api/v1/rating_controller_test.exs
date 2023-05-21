@@ -4,13 +4,13 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
   import Plexus.AppsFixtures
 
   @create_attrs %{
+    android_version: "some android version",
     app_build_number: 42,
     app_version: "some app_version",
     google_lib: :none,
     notes: "some notes",
     score: 2,
     rom_name: "some ROM name",
-    rom_version: "some ROM version",
     rom_build: "some ROM build"
   }
 
@@ -60,11 +60,11 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
 
       assert %{
                "id" => ^id,
+               "android_version" => "some android version",
                "app_package" => ^app_package,
                "app_build_number" => 42,
                "app_version" => "some app_version",
                "rom_name" => "some ROM name",
-               "rom_version" => "some ROM version",
                "rom_build" => "some ROM build",
                "google_lib" => "none",
                "notes" => "some notes",
@@ -78,6 +78,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
 
       assert %{
                "errors" => %{
+                 "android_version" => ["can't be blank"],
                  "app_build_number" => ["can't be blank"],
                  "app_version" => ["can't be blank"],
                  "google_lib" => ["can't be blank"],

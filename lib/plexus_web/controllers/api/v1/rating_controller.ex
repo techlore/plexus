@@ -17,11 +17,11 @@ defmodule PlexusWeb.API.V1.RatingController do
 
   def create(conn, %{"package" => app_package, "rating" => params}) do
     schema = %{
+      android_version: {:string, [required: true]},
       app_package: {:string, [required: true]},
       app_version: {:string, [required: true]},
       app_build_number: {:integer, [required: true]},
       rom_name: {:string, []},
-      rom_version: {:string, []},
       rom_build: {:string, []},
       google_lib: {google_lib_enum(), [required: true]},
       notes: {:string, []},

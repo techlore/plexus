@@ -8,8 +8,8 @@ defmodule Plexus.Schemas.Rating do
   schema "ratings" do
     field :app_build_number, :integer
     field :app_version, :string
+    field :android_version, :string
     field :rom_name, :string
-    field :rom_version, :string
     field :rom_build, :string
     field :google_lib, Ecto.Enum, values: [:none, :micro_g]
     field :notes, :string
@@ -23,8 +23,8 @@ defmodule Plexus.Schemas.Rating do
     timestamps()
   end
 
-  @required [:app_package, :app_version, :app_build_number, :google_lib, :score]
-  @optional [:notes, :rom_name, :rom_version, :rom_build]
+  @required [:android_version, :app_package, :app_version, :app_build_number, :google_lib, :score]
+  @optional [:notes, :rom_name, :rom_build]
   @doc false
   def changeset(%Rating{} = rating, attrs) do
     rating
