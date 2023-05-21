@@ -6,6 +6,9 @@ defmodule Plexus.Repo.Migrations.CreateRatings do
       add :id, :binary_id, primary_key: true
       add :app_version, :string, null: false
       add :app_build_number, :integer, null: false
+      add :rom_name, :string
+      add :rom_version, :string
+      add :rom_build, :string
       add :google_lib, :string, null: false
       add :score, :integer, null: false
       add :notes, :text

@@ -2,7 +2,6 @@ defmodule Plexus.Ratings do
   @moduledoc """
   The Ratings context.
   """
-  import Ecto.Changeset
   import Ecto.Query
 
   alias Plexus.PaginationHelpers
@@ -46,19 +45,19 @@ defmodule Plexus.Ratings do
   end
 
   @spec create_rating(%{
+          optional(:notes) => String.t(),
+          optional(:rom_name) => String.t(),
+          optional(:rom_version) => String.t(),
+          optional(:rom_build) => String.t(),
           app_package: String.t(),
           app_version: String.t(),
           app_build_number: non_neg_integer(),
           google_lib: atom(),
-          score: pos_integer(),
-          notes: String.t()
+          score: pos_integer()
         }) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
   def create_rating(params) do
     %Rating{}
-    |> cast(params, [:app_package, :app_version, :app_build_number, :google_lib, :score, :notes])
-    |> validate_required([:app_package, :app_version, :app_build_number, :google_lib, :score])
-    |> assoc_constraint(:app)
-    |> validate_number(:score, greater_than_or_equal_to: 1, less_than_or_equal_to: 4)
+    |> Rating.changeset(params)
     |> Repo.insert()
   end
 end
