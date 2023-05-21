@@ -6,8 +6,11 @@ defmodule PlexusWeb.API.V1.RatingController do
 
   action_fallback PlexusWeb.FallbackController
 
-  def index(conn, %{"package" => app_package}) do
-    opts = [order_by: [desc: :app_build_number, desc: :updated_at]]
+  def index(conn, %{"package" => app_package} = params) do
+    opts =
+      [order_by: [desc: :app_build_number, desc: :updated_at]]
+      |> Keyword.merge(build_opts(params))
+
     page = Ratings.list_ratings(app_package, opts)
     render(conn, :index, page: page)
   end
@@ -41,5 +44,30 @@ defmodule PlexusWeb.API.V1.RatingController do
   defp google_lib_enum do
     values = Ecto.Enum.values(Plexus.Schemas.Rating, :google_lib)
     {:parameterized, Ecto.Enum, Ecto.Enum.init(values: values)}
+  end
+
+  defp build_opts(params) do
+    Enum.reduce(params, [], fn
+      {"page", page}, acc ->
+        case Integer.parse(page) do
+          {value, _remainder} ->
+            Keyword.put(acc, :page, value)
+
+          :error ->
+            acc
+        end
+
+      {"limit", limit}, acc ->
+        case Integer.parse(limit) do
+          {value, _remainder} ->
+            Keyword.put(acc, :limit, value)
+
+          :error ->
+            acc
+        end
+
+      _other, acc ->
+        acc
+    end)
   end
 end

@@ -5,7 +5,8 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
 
   @create_attrs %{
     name: unique_app_name(),
-    package: unique_app_package()
+    package: unique_app_package(),
+    icon_url: "https://some-website.com/image/123"
   }
 
   @invalid_attrs %{name: nil, package: nil}
@@ -27,24 +28,36 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
       assert %{
                "meta" => %{
                  "page_number" => 1,
-                 "limit" => 15,
+                 "limit" => 25,
                  "total_count" => 0,
                  "total_pages" => 1
                }
              } = json_response(conn, 200)
+    end
+
+    test "with scores", %{conn: conn} do
+      app_fixture()
+      opts = %{scores: true}
+      conn = get(conn, ~p"/api/v1/apps?#{opts}")
+
+      assert [%{"scores" => scores}] = json_response(conn, 200)["data"]
+      assert is_list(scores)
     end
   end
 
   describe "create app" do
     test "renders app when data is valid", %{conn: conn} do
       conn = post(conn, ~p"/api/v1/apps", app: @create_attrs)
-      assert %{"package" => package, "name" => name} = json_response(conn, 201)["data"]
+
+      assert %{"package" => package, "name" => name, "icon_url" => icon_url} =
+               json_response(conn, 201)["data"]
 
       conn = get(conn, ~p"/api/v1/apps/#{package}")
 
       assert %{
                "package" => ^package,
-               "name" => ^name
+               "name" => ^name,
+               "icon_url" => ^icon_url
              } = json_response(conn, 200)["data"]
     end
 

@@ -11,6 +11,8 @@ defmodule Plexus.Schemas.App do
   schema "apps" do
     field :package, :string, primary_key: true
     field :name, :string
+    field :icon_url, :string
+    field :scores, {:array, :map}, virtual: true
 
     timestamps()
   end

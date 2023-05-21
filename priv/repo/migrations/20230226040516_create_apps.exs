@@ -9,6 +9,7 @@ defmodule Plexus.Repo.Migrations.CreateApps do
     create table(:apps, primary_key: false) do
       add :package, :citext, primary_key: true
       add :name, :citext, null: false
+      add :icon_url, :text
 
       timestamps()
     end
