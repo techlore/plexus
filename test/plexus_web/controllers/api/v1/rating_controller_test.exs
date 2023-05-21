@@ -8,8 +8,12 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
     app_version: "some app_version",
     google_lib: :none,
     notes: "some notes",
-    score: 2
+    score: 2,
+    rom_name: "some ROM name",
+    rom_version: "some ROM version",
+    rom_build: "some ROM build"
   }
+
   @invalid_attrs %{
     app_build_number: nil,
     app_version: nil,
@@ -59,6 +63,9 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "app_package" => ^app_package,
                "app_build_number" => 42,
                "app_version" => "some app_version",
+               "rom_name" => "some ROM name",
+               "rom_version" => "some ROM version",
+               "rom_build" => "some ROM build",
                "google_lib" => "none",
                "notes" => "some notes",
                "score" => %{"numerator" => 2, "denominator" => 4}
