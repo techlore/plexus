@@ -12,6 +12,8 @@ defmodule Plexus.RatingsTest do
     app_build_number: nil,
     app_version: nil,
     google_lib: nil,
+    rom_name: nil,
+    rom_build: nil,
     notes: nil,
     score: nil
   }

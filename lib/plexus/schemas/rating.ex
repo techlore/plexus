@@ -23,8 +23,17 @@ defmodule Plexus.Schemas.Rating do
     timestamps()
   end
 
-  @required [:android_version, :app_package, :app_version, :app_build_number, :google_lib, :score]
-  @optional [:notes, :rom_name, :rom_build]
+  @required [
+    :android_version,
+    :app_package,
+    :app_version,
+    :app_build_number,
+    :rom_name,
+    :rom_build,
+    :google_lib,
+    :score
+  ]
+  @optional [:notes]
   @doc false
   def changeset(%Rating{} = rating, attrs) do
     rating
