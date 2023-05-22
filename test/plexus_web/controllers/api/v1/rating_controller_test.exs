@@ -81,6 +81,8 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                  "android_version" => ["can't be blank"],
                  "app_build_number" => ["can't be blank"],
                  "app_version" => ["can't be blank"],
+                 "rom_name" => ["can't be blank"],
+                 "rom_build" => ["can't be blank"],
                  "google_lib" => ["can't be blank"],
                  "score" => ["can't be blank"]
                }

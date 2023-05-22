@@ -21,8 +21,8 @@ defmodule PlexusWeb.API.V1.RatingController do
       app_package: {:string, [required: true]},
       app_version: {:string, [required: true]},
       app_build_number: {:integer, [required: true]},
-      rom_name: {:string, []},
-      rom_build: {:string, []},
+      rom_name: {:string, [required: true]},
+      rom_build: {:string, [required: true]},
       google_lib: {google_lib_enum(), [required: true]},
       notes: {:string, []},
       score: {:integer, [required: true]}
