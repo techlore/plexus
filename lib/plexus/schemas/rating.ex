@@ -12,6 +12,7 @@ defmodule Plexus.Schemas.Rating do
     field :rom_name, :string
     field :rom_build, :string
     field :google_lib, Ecto.Enum, values: [:none, :micro_g]
+    field :installation_source, :string
     field :notes, :string
     field :score, :integer
 
@@ -31,6 +32,7 @@ defmodule Plexus.Schemas.Rating do
     :rom_name,
     :rom_build,
     :google_lib,
+    :installation_source,
     :score
   ]
   @optional [:notes]

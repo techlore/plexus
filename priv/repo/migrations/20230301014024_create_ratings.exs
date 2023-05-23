@@ -11,6 +11,7 @@ defmodule Plexus.Repo.Migrations.CreateRatings do
       add :rom_build, :string
       add :google_lib, :string, null: false
       add :score, :integer, null: false
+      add :installation_source, :text
       add :notes, :text
 
       add :app_package,
