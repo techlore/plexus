@@ -23,6 +23,7 @@ defmodule PlexusWeb.API.V1.RatingJSON do
       app_build_number: rating.app_build_number,
       rom_name: rating.rom_name,
       rom_build: rating.rom_build,
+      installation_source: rating.installation_source,
       score: %{numerator: rating.score, denominator: 4},
       notes: rating.notes,
       google_lib: rating.google_lib

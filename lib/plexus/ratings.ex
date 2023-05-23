@@ -52,6 +52,7 @@ defmodule Plexus.Ratings do
           app_build_number: non_neg_integer(),
           rom_name: String.t(),
           rom_build: String.t(),
+          installation_source: String.t(),
           google_lib: atom(),
           score: pos_integer()
         }) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}

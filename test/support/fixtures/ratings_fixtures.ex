@@ -60,6 +60,7 @@ defmodule Plexus.RatingsFixtures do
         app_package: Plexus.AppsFixtures.app_fixture().package,
         rom_name: "Graphene",
         rom_build: "ROMv1",
+        installation_source: "fdroid",
         google_lib: :none,
         notes: gnu_linux(),
         score: 2

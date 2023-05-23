@@ -10,14 +10,19 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
     google_lib: :none,
     notes: "some notes",
     score: 2,
+    installation_source: "fdroid",
     rom_name: "some ROM name",
     rom_build: "some ROM build"
   }
 
   @invalid_attrs %{
+    android_version: nil,
     app_build_number: nil,
     app_version: nil,
     google_lib: nil,
+    installation_source: nil,
+    rom_name: nil,
+    rom_build: nil,
     notes: nil,
     score: nil
   }
@@ -66,6 +71,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "app_version" => "some app_version",
                "rom_name" => "some ROM name",
                "rom_build" => "some ROM build",
+               "installation_source" => "fdroid",
                "google_lib" => "none",
                "notes" => "some notes",
                "score" => %{"numerator" => 2, "denominator" => 4}
@@ -83,6 +89,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                  "app_version" => ["can't be blank"],
                  "rom_name" => ["can't be blank"],
                  "rom_build" => ["can't be blank"],
+                 "installation_source" => ["can't be blank"],
                  "google_lib" => ["can't be blank"],
                  "score" => ["can't be blank"]
                }

@@ -14,6 +14,7 @@ defmodule Plexus.RatingsTest do
     google_lib: nil,
     rom_name: nil,
     rom_build: nil,
+    installation_source: nil,
     notes: nil,
     score: nil
   }
@@ -45,6 +46,7 @@ defmodule Plexus.RatingsTest do
         google_lib: :none,
         notes: "some notes",
         score: 3,
+        installation_source: "fdroid",
         rom_name: "some ROM name",
         rom_build: "some ROM build"
       }
@@ -57,6 +59,7 @@ defmodule Plexus.RatingsTest do
       assert rating.google_lib == :none
       assert rating.notes == "some notes"
       assert rating.score == 3
+      assert rating.installation_source == "fdroid"
       assert rating.rom_name == "some ROM name"
       assert rating.rom_build == "some ROM build"
     end
