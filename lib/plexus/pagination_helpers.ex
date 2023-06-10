@@ -18,7 +18,7 @@ defmodule Plexus.PaginationHelpers do
       ...>   page_size: 30,
       ...>   page: 9
       ...> })
-      [page_size: 30, page: 9]
+      [page: 9, page_size: 30]
 
       iex> Plexus.PaginationHelpers.page_opts(%{
       ...>   limit: 30
