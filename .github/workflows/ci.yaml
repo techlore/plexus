@@ -29,8 +29,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.14.3'
-            otp: '25.2.3'
+          - elixir: '1.14.5'
+            otp: '26.0'
 
     steps:
       - uses: actions/checkout@v3
@@ -40,6 +40,7 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
+          version-type: strict
 
       - name: Restore Mix Dependencies Cache
         uses: actions/cache@v3
