@@ -23,7 +23,7 @@ defmodule Plexus.Repo do
   back if the lambda returns `{:error, reason}`. In both cases, the function
   returns the result of the lambda.
   """
-  @spec transact((() -> any()), keyword()) :: {:ok, any()} | {:error, any()}
+  @spec transact((-> any()), keyword()) :: {:ok, any()} | {:error, any()}
   def transact(fun, opts \\ []) do
     transaction(
       fn ->
