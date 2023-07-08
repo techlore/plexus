@@ -30,6 +30,9 @@ defmodule PlexusWeb.Router do
     get "/apps/:package/ratings", RatingController, :index
     get "/apps/:package/ratings/:id", RatingController, :show
     post "/apps/:package/ratings", RatingController, :create
+
+    post "/devices/register", DeviceController, :register
+    post "/devices/verify", DeviceController, :verify
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
