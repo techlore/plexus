@@ -15,9 +15,9 @@ defmodule Plexus.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Plexus.PubSub},
       # Start the Endpoint (http/https)
-      PlexusWeb.Endpoint
+      PlexusWeb.Endpoint,
       # Start a worker by calling: Plexus.Worker.start_link(arg)
-      # {Plexus.Worker, arg}
+      {Registry, keys: :unique, name: Registry.Device}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
