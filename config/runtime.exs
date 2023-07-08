@@ -94,4 +94,11 @@ if config_env() == :prod do
   #       force_ssl: [hsts: true]
   #
   # Check `Plug.SSL` for all available options in `force_ssl`.
+
+  ## Configuring the mailer
+
+  config :plexus, Plexus.Mailer,
+    adapter: Swoosh.Adapters.Mailjet,
+    api_key: System.fetch_env!("MAILJET_API_KEY"),
+    secret: System.fetch_env!("MAILJET_SECRET")
 end

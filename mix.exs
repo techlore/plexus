@@ -56,7 +56,9 @@ defmodule Plexus.MixProject do
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:scrivener_ecto, "~> 2.0"},
-      {:nimble_totp, "~> 1.0"}
+      {:nimble_totp, "~> 1.0"},
+      {:swoosh, "~> 1.3"},
+      {:finch, "~> 0.13"}
     ]
   end
 
