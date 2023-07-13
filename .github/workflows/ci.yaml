@@ -29,7 +29,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.15.1'
+          - elixir: '1.15.2'
             otp: '26'
 
     steps:

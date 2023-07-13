@@ -30,9 +30,13 @@ defmodule PlexusWeb.Router do
     get "/apps/:package/ratings", RatingController, :index
     get "/apps/:package/ratings/:id", RatingController, :show
     post "/apps/:package/ratings", RatingController, :create
+
+    post "/devices/register", DeviceController, :register
+    post "/devices/verify", DeviceController, :verify
+    post "/devices/renew", DeviceController, :renew
   end
 
-  # Enable LiveDashboard in development
+  # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:plexus, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
@@ -45,6 +49,7 @@ defmodule PlexusWeb.Router do
       pipe_through :browser
 
       live_dashboard "/dashboard", metrics: PlexusWeb.Telemetry
+      forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
 end
