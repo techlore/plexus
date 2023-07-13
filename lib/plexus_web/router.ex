@@ -33,6 +33,7 @@ defmodule PlexusWeb.Router do
 
     post "/devices/register", DeviceController, :register
     post "/devices/verify", DeviceController, :verify
+    post "/devices/renew", DeviceController, :renew
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

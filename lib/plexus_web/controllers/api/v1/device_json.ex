@@ -12,4 +12,8 @@ defmodule PlexusWeb.API.V1.DeviceJSON do
   def verify(_) do
     %{errors: %{detail: "Invalid or expired passcode"}}
   end
+
+  def renew(%{token: token}) do
+    %{data: %{token: token}}
+  end
 end

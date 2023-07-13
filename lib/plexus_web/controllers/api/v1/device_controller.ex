@@ -57,6 +57,32 @@ defmodule PlexusWeb.API.V1.DeviceController do
     end
   end
 
+  def renew(conn, _params) do
+    with {:ok, token} <- fetch_authorization_token(conn),
+         {:ok, %{device_id: device_id, email: email}} <- verify_token(conn, token) do
+      conn
+      |> put_status(:created)
+      |> render(:verify, token: token_builder(device_id, email))
+    end
+  end
+
+  defp fetch_authorization_token(conn) do
+    case get_req_header(conn, "authorization") do
+      ["Bearer " <> token] ->
+        {:ok, token}
+
+      nil ->
+        send_resp(conn, 401, "Authorization header is missing")
+    end
+  end
+
+  defp verify_token(conn, token) do
+    with {:error, _reason} <-
+           Phoenix.Token.verify(PlexusWeb.Endpoint, @salt, token, max_age: :infinity) do
+      send_resp(conn, 500, "Invalid token")
+    end
+  end
+
   defp token_builder(device_id, email) do
     Phoenix.Token.sign(PlexusWeb.Endpoint, @salt, %{device_id: device_id, email: email})
   end
