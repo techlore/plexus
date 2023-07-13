@@ -71,7 +71,7 @@ defmodule PlexusWeb.API.V1.DeviceController do
       ["Bearer " <> token] ->
         {:ok, token}
 
-      nil ->
+      _ ->
         send_resp(conn, 401, "Authorization header is missing")
     end
   end
