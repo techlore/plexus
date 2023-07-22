@@ -57,6 +57,7 @@ defmodule Plexus.MixProject do
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:scrivener_ecto, "~> 2.0"},
       {:nimble_totp, "~> 1.0"},
+      {:plug_cowboy, "~> 2.6"},
       {:swoosh, "~> 1.3"},
       {:gen_smtp, "~> 1.2"},
       {:finch, "~> 0.13"}
