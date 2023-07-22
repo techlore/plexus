@@ -20,6 +20,17 @@ defmodule PlexusWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/admin", PlexusWeb.Admin do
+    pipe_through :browser
+
+    live "/apps", AppLive.Index, :index
+    live "/apps/new", AppLive.Index, :new
+    live "/apps/:package/edit", AppLive.Index, :edit
+
+    live "/apps/:package", AppLive.Show, :show
+    live "/apps/:package/show/edit", AppLive.Show, :edit
+  end
+
   scope "/api/v1", PlexusWeb.API.V1 do
     pipe_through :api
 

@@ -1,0 +1,43 @@
+<.header>
+  <%= @app.name %>
+  <:actions>
+    <.link patch={~p"/admin/apps/#{@app}/show/edit"} phx-click={JS.push_focus()}>
+      <.button>Edit app</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Name"><%= @app.name %></:item>
+  <:item title="Package"><%= @app.package %></:item>
+  <:item title="Icon">
+    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+      <img
+        src={@app.icon_url}
+        alt={@app.name <> " Icon"}
+        class="h-64 w-64 object-cover object-center"
+      />
+    </div>
+  </:item>
+
+  <:item title="Native"><.score app={@app} google_lib={:none} /></:item>
+  <:item title="MicroG"><.score app={@app} google_lib={:micro_g} /></:item>
+</.list>
+
+<.back navigate={~p"/admin/apps"}>Back to apps</.back>
+
+<.modal
+  :if={@live_action == :edit}
+  id="app-modal"
+  show
+  on_cancel={JS.patch(~p"/admin/apps/#{@app}")}
+>
+  <.live_component
+    module={PlexusWeb.Admin.AppLive.FormComponent}
+    id={@app.package}
+    title={@page_title}
+    action={@live_action}
+    app={@app}
+    patch={~p"/admin/apps/#{@app}"}
+  />
+</.modal>

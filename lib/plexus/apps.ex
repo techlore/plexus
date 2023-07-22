@@ -2,7 +2,6 @@ defmodule Plexus.Apps do
   @moduledoc """
   The Apps context.
   """
-  import Ecto.Changeset
   import Ecto.Query
 
   alias Plexus.PaginationHelpers
@@ -57,11 +56,28 @@ defmodule Plexus.Apps do
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def create_app(params) do
     %App{}
-    |> cast(params, [:package, :name, :icon_url])
-    |> validate_required([:package, :name])
-    |> unique_constraint(:name)
-    |> unique_constraint(:package, name: :apps_pkey)
+    |> change_app(params)
     |> Repo.insert()
+  end
+
+  @spec update_app(App.t(), %{
+          optional(:icon_url) => String.t(),
+          name: String.t()
+        }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
+  def update_app(%App{} = app, params) do
+    app
+    |> change_app(params)
+    |> Repo.update()
+  end
+
+  @spec change_app(App.t(), map()) :: Ecto.Changeset.t()
+  def change_app(app, params \\ %{}) do
+    App.changeset(app, params)
+  end
+
+  @spec delete_app(App.t()) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
+  def delete_app(%App{} = app) do
+    Repo.delete(app)
   end
 
   defp with_scores(query, opts) do
@@ -88,17 +104,17 @@ defmodule Plexus.Apps do
       scores: [
         %Score{
           app_package: a.package,
-          google_lib: :micro_g,
-          numerator:
-            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_micro_g.score),
-          total_count: count(r_micro_g.id, :distinct)
-        },
-        %Score{
-          app_package: a.package,
           google_lib: :none,
           numerator:
             fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_none.score),
           total_count: count(r_none.id, :distinct)
+        },
+        %Score{
+          app_package: a.package,
+          google_lib: :micro_g,
+          numerator:
+            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_micro_g.score),
+          total_count: count(r_micro_g.id, :distinct)
         }
       ]
     })

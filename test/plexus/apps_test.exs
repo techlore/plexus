@@ -21,7 +21,7 @@ defmodule Plexus.AppsTest do
       %Scrivener.Page{entries: apps} = Apps.list_apps(scores: true)
 
       for app <- apps do
-        assert [%Score{google_lib: :micro_g}, %Score{google_lib: :none}] = app.scores
+        assert [%Score{google_lib: :none}, %Score{google_lib: :micro_g}] = app.scores
       end
     end
   end
@@ -45,17 +45,17 @@ defmodule Plexus.AppsTest do
       assert [
                %Score{
                  app_package: ^app_package,
-                 google_lib: :micro_g,
-                 numerator: 3.67,
-                 denominator: 4,
-                 total_count: 3
-               },
-               %Score{
-                 app_package: ^app_package,
                  google_lib: :none,
                  numerator: 1.5,
                  denominator: 4,
                  total_count: 2
+               },
+               %Score{
+                 app_package: ^app_package,
+                 google_lib: :micro_g,
+                 numerator: 3.67,
+                 denominator: 4,
+                 total_count: 3
                }
              ] = app.scores
     end
