@@ -58,6 +58,7 @@ defmodule Plexus.MixProject do
       {:scrivener_ecto, "~> 2.0"},
       {:nimble_totp, "~> 1.0"},
       {:swoosh, "~> 1.3"},
+      {:gen_smtp, "~> 1.2"},
       {:finch, "~> 0.13"}
     ]
   end
