@@ -98,7 +98,15 @@ if config_env() == :prod do
   ## Configuring the mailer
 
   config :plexus, Plexus.Mailer,
-    adapter: Swoosh.Adapters.Mailjet,
-    api_key: System.fetch_env!("MAILJET_API_KEY"),
-    secret: System.fetch_env!("MAILJET_SECRET")
+    adapter: Swoosh.Adapters.SMTP,
+    relay: System.fetch_env!("SMTP_SERVER"),
+    username: System.fetch_env!("SMTP_USERNAME"),
+    password: System.fetch_env!("SMTP_PASSWORD"),
+    ssl: false,
+    tls: :always,
+    tls_options: [verify: :verify_none],
+    auth: :always,
+    port: System.fetch_env!("SMTP_PORT"),
+    retries: 2,
+    no_mx_lookups: false
 end
