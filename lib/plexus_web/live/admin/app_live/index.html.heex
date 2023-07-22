@@ -1,0 +1,70 @@
+<.header>
+  Apps (<%= @page_metadata.total_entries %> entries)
+  <:actions>
+    <.link patch={~p"/admin/apps/new"}>
+      <.button>New App</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table
+  id="apps"
+  rows={@streams.apps}
+  row_click={fn {_id, app} -> JS.navigate(~p"/admin/apps/#{app}") end}
+>
+  <:col :let={{_id, app}} label="Icon">
+    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+      <img
+        src={app.icon_url}
+        alt={app.name <> " Icon"}
+        class="h-16 w-16 object-cover object-center"
+      />
+    </div>
+  </:col>
+  <:col :let={{_dom_id, app}} label="Name">
+    <h3 class="text-sm text-gray-700"><%= app.name %></h3>
+  </:col>
+  <:col :let={{_dom_id, app}} label="Package">
+    <p class="text-sm text-gray-700"><%= app.package %></p>
+  </:col>
+  <:col :let={{_dom_id, %{scores: [native_score, _micro_g_score]}}} label="Native">
+    <p class="text-sm text-gray-700">
+      <%= native_score.numerator %>/<%= native_score.denominator %>
+    </p>
+  </:col>
+  <:col :let={{_dom_id, %{scores: [_native_score, micro_g_score]}}} label="MicroG">
+    <p class="text-sm text-gray-700">
+      <%= micro_g_score.numerator %>/<%= micro_g_score.denominator %>
+    </p>
+  </:col>
+  <:action :let={{_dom_id, app}}>
+    <div class="sr-only">
+      <.link navigate={~p"/admin/apps/#{app}"}>Show</.link>
+    </div>
+    <.link patch={~p"/admin/apps/#{app}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={{dom_id, app}}>
+    <.link
+      phx-click={JS.push("delete", value: %{package: app.package}) |> hide("##{dom_id}")}
+      data-confirm="Are you sure?"
+    >
+      Delete
+    </.link>
+  </:action>
+</.table>
+
+<.modal
+  :if={@live_action in [:new, :edit]}
+  id="app-modal"
+  show
+  on_cancel={JS.patch(~p"/admin/apps")}
+>
+  <.live_component
+    module={PlexusWeb.Admin.AppLive.FormComponent}
+    id={@app.package || :new}
+    title={@page_title}
+    action={@live_action}
+    app={@app}
+    patch={~p"/admin/apps"}
+  />
+</.modal>
