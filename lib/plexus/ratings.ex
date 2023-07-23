@@ -60,5 +60,14 @@ defmodule Plexus.Ratings do
     %Rating{}
     |> Rating.changeset(params)
     |> Repo.insert()
+    |> broadcast(:app_rating_updated)
+  end
+
+  defp broadcast({:error, _reason} = error, _event), do: error
+
+  defp broadcast({:ok, rating}, event) do
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps", {event, rating})
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps:#{rating.app_package}", {event, rating})
+    {:ok, rating}
   end
 end

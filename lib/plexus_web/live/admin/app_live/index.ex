@@ -6,6 +6,8 @@ defmodule PlexusWeb.Admin.AppLive.Index do
 
   @impl Phoenix.LiveView
   def mount(_params, _session, socket) do
+    if connected?(socket), do: Apps.subscribe()
+
     {entries, page_metadata} =
       [scores: true, order_by: :name, page_size: 9999]
       |> Apps.list_apps()
@@ -42,9 +44,40 @@ defmodule PlexusWeb.Admin.AppLive.Index do
   end
 
   @impl Phoenix.LiveView
-  def handle_info({PlexusWeb.Admin.AppLive.FormComponent, {:saved, app}}, socket) do
+  def handle_info({:app_created, app}, socket) do
     app = Apps.get_app!(app.package, scores: true)
-    {:noreply, stream_insert(socket, :apps, app, at: 0)}
+
+    {:noreply,
+     socket
+     |> update(:page_metadata, &%{&1 | total_entries: &1.total_entries + 1})
+     |> put_flash(:info, "'#{app.name}' Created")
+     |> stream_insert(:apps, app, at: 0)}
+  end
+
+  def handle_info({:app_updated, app}, socket) do
+    app = Apps.get_app!(app.package, scores: true)
+
+    {:noreply,
+     socket
+     |> put_flash(:info, "'#{app.name}' Updated")
+     |> stream_insert(:apps, app)}
+  end
+
+  def handle_info({:app_deleted, app}, socket) do
+    {:noreply,
+     socket
+     |> update(:page_metadata, &%{&1 | total_entries: &1.total_entries - 1})
+     |> put_flash(:info, "'#{app.name}' Deleted")
+     |> stream_delete(:apps, app)}
+  end
+
+  def handle_info({:app_rating_updated, rating}, socket) do
+    app = Apps.get_app!(rating.app_package, scores: true)
+
+    {:noreply,
+     socket
+     |> put_flash(:info, "'#{app.name}' Rating Updated")
+     |> stream_insert(:apps, app)}
   end
 
   @impl Phoenix.LiveView
