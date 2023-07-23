@@ -56,8 +56,9 @@ defmodule Plexus.Apps do
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def create_app(params) do
     %App{}
-    |> change_app(params)
+    |> App.changeset(params)
     |> Repo.insert()
+    |> broadcast(:app_created)
   end
 
   @spec update_app(App.t(), %{
@@ -66,8 +67,9 @@ defmodule Plexus.Apps do
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def update_app(%App{} = app, params) do
     app
-    |> change_app(params)
+    |> App.changeset(params)
     |> Repo.update()
+    |> broadcast(:app_updated)
   end
 
   @spec change_app(App.t(), map()) :: Ecto.Changeset.t()
@@ -77,7 +79,9 @@ defmodule Plexus.Apps do
 
   @spec delete_app(App.t()) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def delete_app(%App{} = app) do
-    Repo.delete(app)
+    app
+    |> Repo.delete()
+    |> broadcast(:app_deleted)
   end
 
   defp with_scores(query, opts) do
@@ -118,5 +122,23 @@ defmodule Plexus.Apps do
         }
       ]
     })
+  end
+
+  @spec subscribe :: :ok
+  def subscribe do
+    Phoenix.PubSub.subscribe(Plexus.PubSub, "apps")
+  end
+
+  @spec subscribe(String.t()) :: :ok
+  def subscribe(package) do
+    Phoenix.PubSub.subscribe(Plexus.PubSub, "apps:#{package}")
+  end
+
+  defp broadcast({:error, _reason} = error, _event), do: error
+
+  defp broadcast({:ok, app}, event) do
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps", {event, app})
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps:#{app.package}", {event, app})
+    {:ok, app}
   end
 end

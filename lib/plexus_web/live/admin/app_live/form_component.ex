@@ -55,13 +55,8 @@ defmodule PlexusWeb.Admin.AppLive.FormComponent do
 
   defp save_app(socket, :edit, app_params) do
     case Apps.update_app(socket.assigns.app, app_params) do
-      {:ok, app} ->
-        notify_parent({:saved, app})
-
-        {:noreply,
-         socket
-         |> put_flash(:info, "App updated successfully")
-         |> push_patch(to: socket.assigns.patch)}
+      {:ok, _app} ->
+        {:noreply, push_patch(socket, to: socket.assigns.patch)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign_form(socket, changeset)}
@@ -70,13 +65,8 @@ defmodule PlexusWeb.Admin.AppLive.FormComponent do
 
   defp save_app(socket, :new, app_params) do
     case Apps.create_app(app_params) do
-      {:ok, app} ->
-        notify_parent({:saved, app})
-
-        {:noreply,
-         socket
-         |> put_flash(:info, "App created successfully")
-         |> push_patch(to: socket.assigns.patch)}
+      {:ok, _app} ->
+        {:noreply, push_patch(socket, to: socket.assigns.patch)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign_form(socket, changeset)}
@@ -86,6 +76,4 @@ defmodule PlexusWeb.Admin.AppLive.FormComponent do
   defp assign_form(socket, %Ecto.Changeset{} = changeset) do
     assign(socket, :form, to_form(changeset))
   end
-
-  defp notify_parent(msg), do: send(self(), {__MODULE__, msg})
 end
