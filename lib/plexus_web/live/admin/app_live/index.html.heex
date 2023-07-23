@@ -13,11 +13,11 @@
   row_click={fn {_id, app} -> JS.navigate(~p"/admin/apps/#{app}") end}
 >
   <:col :let={{_id, app}} label="Icon">
-    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+    <div class="aspect-h-1 aspect-w-1 w-16 h-16 overflow-hidden">
       <img
         src={app.icon_url}
         alt={app.name <> " Icon"}
-        class="h-16 w-16 object-cover object-center"
+        class="h-full w-full object-cover object-center"
       />
     </div>
   </:col>
@@ -28,14 +28,10 @@
     <p class="text-sm text-gray-700"><%= app.package %></p>
   </:col>
   <:col :let={{_dom_id, %{scores: [native_score, _micro_g_score]}}} label="Native">
-    <p class="text-sm text-gray-700">
-      <%= native_score.numerator %>/<%= native_score.denominator %>
-    </p>
+    <.badge score={native_score} />
   </:col>
   <:col :let={{_dom_id, %{scores: [_native_score, micro_g_score]}}} label="MicroG">
-    <p class="text-sm text-gray-700">
-      <%= micro_g_score.numerator %>/<%= micro_g_score.denominator %>
-    </p>
+    <.badge score={micro_g_score} />
   </:col>
   <:action :let={{_dom_id, app}}>
     <div class="sr-only">

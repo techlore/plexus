@@ -593,6 +593,37 @@ defmodule PlexusWeb.CoreComponents do
     """
   end
 
+  attr :score, Plexus.Schemas.Score, required: true
+
+  def badge(%{score: %Plexus.Schemas.Score{}} = assigns) do
+    level =
+      case floor(assigns.score.numerator) do
+        0 -> :unrated
+        1 -> :borked
+        2 -> :bronze
+        3 -> :silver
+        4 -> :gold
+      end
+
+    assigns =
+      assigns
+      |> assign(:level, level)
+      |> assign(:title, Phoenix.Naming.humanize(level))
+
+    ~H"""
+    <span class={[
+      "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium",
+      @level == :unrated && "bg-gray-100 text-gray-800",
+      @level == :borked && "bg-red-800 text-red-100",
+      @level == :bronze && "bg-amber-800 text-amber-100",
+      @level == :silver && "bg-slate-300 text-slate-800",
+      @level == :gold && "bg-amber-200 text-amber-800"
+    ]}>
+      <%= @title %>
+    </span>
+    """
+  end
+
   ## JS Commands
 
   def show(js \\ %JS{}, selector) do
