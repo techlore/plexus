@@ -13,8 +13,8 @@ defmodule PlexusWeb.Admin.AppLive.Show do
   def handle_params(%{"package" => package}, _, socket) do
     {:noreply,
      socket
-     |> assign(:page_title, page_title(socket.assigns.live_action))
-     |> assign(:app, Apps.get_app!(package, scores: true))}
+     |> assign(:app, Apps.get_app!(package, scores: true))
+     |> assign_page_title()}
   end
 
   @impl Phoenix.LiveView
@@ -53,6 +53,12 @@ defmodule PlexusWeb.Admin.AppLive.Show do
     """
   end
 
-  defp page_title(:show), do: "Show App"
-  defp page_title(:edit), do: "Edit App"
+  defp assign_page_title(socket) do
+    action = socket.assigns.live_action
+    app = socket.assigns.app
+    assign(socket, :page_title, page_title(action, app))
+  end
+
+  defp page_title(:show, app), do: app.name
+  defp page_title(:edit, app), do: "Edit " <> app.name
 end
