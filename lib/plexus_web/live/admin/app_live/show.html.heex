@@ -20,8 +20,24 @@
     </div>
   </:item>
 
-  <:item title="Native"><.score app={@app} google_lib={:none} /></:item>
-  <:item title="MicroG"><.score app={@app} google_lib={:micro_g} /></:item>
+  <:item title="Native">
+    <.score app={@app} google_lib={:none} />
+    <.link
+      navigate={~p"/admin/apps/#{@app}/ratings/none"}
+      class="block text-sm font-semibold leading-6 text-zinc-900 hover:text-zinc-700"
+    >
+      View ratings
+    </.link>
+  </:item>
+  <:item title="MicroG">
+    <.score app={@app} google_lib={:micro_g} />
+    <.link
+      navigate={~p"/admin/apps/#{@app}/ratings/micro_g"}
+      class="block text-sm font-semibold leading-6 text-zinc-900 hover:text-zinc-700 self-end"
+    >
+      View ratings
+    </.link>
+  </:item>
 </.list>
 
 <.back navigate={~p"/admin/apps"}>Back to apps</.back>

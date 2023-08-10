@@ -63,6 +63,13 @@ defmodule Plexus.Ratings do
     |> broadcast(:app_rating_updated)
   end
 
+  @spec delete_rating(Rating.t()) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
+  def delete_rating(%Rating{} = rating) do
+    rating
+    |> Repo.delete()
+    |> broadcast(:rating_deleted)
+  end
+
   defp broadcast({:error, _reason} = error, _event), do: error
 
   defp broadcast({:ok, rating}, event) do
