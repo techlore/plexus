@@ -24,6 +24,9 @@ defmodule Plexus.QueryHelpers do
       {:preload, associations}, query ->
         from q in query, preload: ^associations
 
+      {:google_lib, google_lib}, query ->
+        from q in query, where: q.google_lib == ^google_lib
+
       _, query ->
         query
     end)
