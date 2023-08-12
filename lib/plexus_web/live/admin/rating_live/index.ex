@@ -5,20 +5,24 @@ defmodule PlexusWeb.Admin.RatingLive.Index do
   alias Plexus.Ratings
 
   @impl Phoenix.LiveView
-  def mount(%{"package" => package, "google_lib" => google_lib}, _session, socket) do
+  def mount(%{"package" => package, "rating_type" => rating_type}, _session, socket) do
     if connected?(socket), do: Apps.subscribe(package)
+    rating_type = String.to_existing_atom(rating_type)
 
     page =
       Ratings.list_ratings(package,
-        google_lib: google_lib,
+        rating_type: rating_type,
         page_size: 9999,
         order_by: [desc: :app_build_number, desc: :updated_at]
       )
 
+    app = Apps.get_app!(package, scores: true)
+
     {:ok,
      socket
-     |> assign(:google_lib, google_lib)
-     |> assign(:app, Apps.get_app!(package, scores: true))
+     |> assign(:rating_type, rating_type)
+     |> assign(:app, app)
+     |> assign(:score, app.scores[rating_type])
      |> stream(:ratings, page.entries)}
   end
 
@@ -53,7 +57,7 @@ defmodule PlexusWeb.Admin.RatingLive.Index do
   end
 
   def handle_info({:app_rating_updated, rating}, socket) do
-    if rating.google_lib == String.to_existing_atom(socket.assigns.google_lib) do
+    if rating.rating_type == String.to_existing_atom(socket.assigns.rating_type) do
       {:noreply,
        socket
        |> put_flash(:info, "Rating Added")

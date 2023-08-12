@@ -26,20 +26,16 @@ defmodule PlexusWeb.API.V1.AppJSON do
 
   defp data(%Score{} = score) do
     %{
-      google_lib: score.google_lib,
+      rating_type: score.rating_type,
       numerator: score.numerator,
       denominator: score.denominator,
       total_count: score.total_count
     }
   end
 
-  defp merge_scores(payload, scores) when is_list(scores) do
-    scores
-    |> Enum.reverse()
-    |> Enum.reduce(payload, fn score, acc ->
-      score_data = data(score)
-      Map.update(acc, :scores, [score_data], &[score_data | &1])
-    end)
+  defp merge_scores(payload, scores) when is_map(scores) do
+    data = Map.new(scores, fn {rating_type, score} -> {rating_type, data(score)} end)
+    Map.put(payload, :scores, data)
   end
 
   defp merge_scores(payload, _scores), do: payload

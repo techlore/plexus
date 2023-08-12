@@ -53,7 +53,7 @@ defmodule Plexus.Ratings do
           rom_name: String.t(),
           rom_build: String.t(),
           installation_source: String.t(),
-          google_lib: atom(),
+          rating_type: atom(),
           score: pos_integer()
         }) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
   def create_rating(params) do

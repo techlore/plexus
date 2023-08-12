@@ -7,7 +7,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
     android_version: "some android version",
     app_build_number: 42,
     app_version: "some app_version",
-    google_lib: :none,
+    rating_type: :native,
     notes: "some notes",
     score: 2,
     installation_source: "fdroid",
@@ -19,7 +19,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
     android_version: nil,
     app_build_number: nil,
     app_version: nil,
-    google_lib: nil,
+    rating_type: nil,
     installation_source: nil,
     rom_name: nil,
     rom_build: nil,
@@ -72,7 +72,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "rom_name" => "some ROM name",
                "rom_build" => "some ROM build",
                "installation_source" => "fdroid",
-               "google_lib" => "none",
+               "rating_type" => "native",
                "notes" => "some notes",
                "score" => %{"numerator" => 2, "denominator" => 4}
              } = json_response(conn, 200)["data"]
@@ -90,7 +90,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                  "rom_name" => ["can't be blank"],
                  "rom_build" => ["can't be blank"],
                  "installation_source" => ["can't be blank"],
-                 "google_lib" => ["can't be blank"],
+                 "rating_type" => ["can't be blank"],
                  "score" => ["can't be blank"]
                }
              } = json_response(conn, 422)

@@ -61,7 +61,7 @@ defmodule Plexus.RatingsFixtures do
         rom_name: "Graphene",
         rom_build: "ROMv1",
         installation_source: "fdroid",
-        google_lib: :none,
+        rating_type: :native,
         notes: gnu_linux(),
         score: 2
       })

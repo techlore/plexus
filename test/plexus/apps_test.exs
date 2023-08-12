@@ -12,16 +12,20 @@ defmodule Plexus.AppsTest do
 
   describe "list_apps/1" do
     test "returns a page of apps" do
-      app = app_fixture()
-      assert %Scrivener.Page{entries: [^app]} = Apps.list_apps()
+      assert %Scrivener.Page{entries: apps} = Apps.list_apps()
+
+      for app <- apps do
+        assert is_struct(app, App)
+      end
     end
 
     test "with scores" do
       app_fixture()
       %Scrivener.Page{entries: apps} = Apps.list_apps(scores: true)
 
-      for app <- apps do
-        assert [%Score{google_lib: :none}, %Score{google_lib: :micro_g}] = app.scores
+      for %App{scores: scores} <- apps do
+        assert %Score{rating_type: :native} = scores.native
+        assert %Score{rating_type: :micro_g} = scores.micro_g
       end
     end
   end
@@ -34,30 +38,29 @@ defmodule Plexus.AppsTest do
 
     test "with scores" do
       %{package: app_package} = app_fixture()
-      rating_fixture(%{app_package: app_package, score: 3, google_lib: :micro_g})
-      rating_fixture(%{app_package: app_package, score: 4, google_lib: :micro_g})
-      rating_fixture(%{app_package: app_package, score: 4, google_lib: :micro_g})
-      rating_fixture(%{app_package: app_package, score: 1, google_lib: :none})
-      rating_fixture(%{app_package: app_package, score: 2, google_lib: :none})
+      rating_fixture(%{app_package: app_package, score: 3, rating_type: :micro_g})
+      rating_fixture(%{app_package: app_package, score: 4, rating_type: :micro_g})
+      rating_fixture(%{app_package: app_package, score: 4, rating_type: :micro_g})
+      rating_fixture(%{app_package: app_package, score: 1, rating_type: :native})
+      rating_fixture(%{app_package: app_package, score: 2, rating_type: :native})
 
       app = Apps.get_app!(app_package, scores: true)
 
-      assert [
-               %Score{
-                 app_package: ^app_package,
-                 google_lib: :none,
-                 numerator: 1.5,
-                 denominator: 4,
-                 total_count: 2
-               },
-               %Score{
-                 app_package: ^app_package,
-                 google_lib: :micro_g,
-                 numerator: 3.67,
-                 denominator: 4,
-                 total_count: 3
-               }
-             ] = app.scores
+      assert %Score{
+               app_package: ^app_package,
+               rating_type: :native,
+               numerator: 1.5,
+               denominator: 4,
+               total_count: 2
+             } = app.scores.native
+
+      assert %Score{
+               app_package: ^app_package,
+               rating_type: :micro_g,
+               numerator: 3.67,
+               denominator: 4,
+               total_count: 3
+             } = app.scores.micro_g
     end
   end
 

@@ -21,16 +21,16 @@
   </:item>
 
   <:item title="Native">
-    <.score app={@app} google_lib={:none} />
+    <.score app={@app} rating_type={:native} />
     <.link
-      navigate={~p"/admin/apps/#{@app}/ratings/none"}
+      navigate={~p"/admin/apps/#{@app}/ratings/native"}
       class="block text-sm font-semibold leading-6 text-zinc-900 hover:text-zinc-700"
     >
       View ratings
     </.link>
   </:item>
   <:item title="MicroG">
-    <.score app={@app} google_lib={:micro_g} />
+    <.score app={@app} rating_type={:micro_g} />
     <.link
       navigate={~p"/admin/apps/#{@app}/ratings/micro_g"}
       class="block text-sm font-semibold leading-6 text-zinc-900 hover:text-zinc-700 self-end"

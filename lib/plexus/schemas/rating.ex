@@ -11,7 +11,7 @@ defmodule Plexus.Schemas.Rating do
     field :android_version, :string
     field :rom_name, :string
     field :rom_build, :string
-    field :google_lib, Ecto.Enum, values: [:none, :micro_g]
+    field :rating_type, Ecto.Enum, values: [:native, :micro_g]
     field :installation_source, :string
     field :notes, :string
     field :score, :integer
@@ -31,7 +31,7 @@ defmodule Plexus.Schemas.Rating do
     :app_build_number,
     :rom_name,
     :rom_build,
-    :google_lib,
+    :rating_type,
     :installation_source,
     :score
   ]
