@@ -9,7 +9,7 @@ defmodule Plexus.Repo.Migrations.CreateRatings do
       add :app_build_number, :integer
       add :rom_name, :string
       add :rom_build, :string
-      add :google_lib, :string, null: false
+      add :rating_type, :string, null: false
       add :score, :integer, null: false
       add :installation_source, :text
       add :notes, :text
@@ -22,7 +22,7 @@ defmodule Plexus.Repo.Migrations.CreateRatings do
     end
 
     create index(:ratings, [:app_package])
-    create index(:ratings, [:google_lib])
-    create index(:ratings, [:app_package, :google_lib])
+    create index(:ratings, [:rating_type])
+    create index(:ratings, [:app_package, :rating_type])
   end
 end

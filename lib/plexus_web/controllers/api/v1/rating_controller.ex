@@ -24,7 +24,7 @@ defmodule PlexusWeb.API.V1.RatingController do
       rom_name: {:string, [required: true]},
       rom_build: {:string, [required: true]},
       installation_source: {:string, [required: true]},
-      google_lib: {google_lib_enum(), [required: true]},
+      rating_type: {rating_type_enum(), [required: true]},
       notes: {:string, []},
       score: {:integer, [required: true]}
     }
@@ -45,8 +45,8 @@ defmodule PlexusWeb.API.V1.RatingController do
     render(conn, :show, rating: rating)
   end
 
-  defp google_lib_enum do
-    values = Ecto.Enum.values(Plexus.Schemas.Rating, :google_lib)
+  defp rating_type_enum do
+    values = Ecto.Enum.values(Plexus.Schemas.Rating, :rating_type)
     {:parameterized, Ecto.Enum, Ecto.Enum.init(values: values)}
   end
 

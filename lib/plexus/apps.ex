@@ -93,34 +93,30 @@ defmodule Plexus.Apps do
   end
 
   defp with_scores(query) do
-    google_lib_micro_g = from Rating, where: [google_lib: :micro_g]
-    google_lib_none = from Rating, where: [google_lib: :none]
+    micro_g = from Rating, where: [rating_type: :micro_g]
+    native = from Rating, where: [rating_type: :native]
 
     query
-    |> join(:left, [a], r_micro_g in subquery(google_lib_micro_g),
-      on: a.package == r_micro_g.app_package
-    )
-    |> join(:left, [a, _], r_none in subquery(google_lib_none),
-      on: a.package == r_none.app_package
-    )
-    |> group_by([a, r_micro_g, r_none], [a.package, r_micro_g.google_lib, r_none.google_lib])
-    |> select_merge([a, r_micro_g, r_none], %{
-      scores: [
-        %Score{
+    |> join(:left, [a], r_micro_g in subquery(micro_g), on: a.package == r_micro_g.app_package)
+    |> join(:left, [a, _], r_native in subquery(native), on: a.package == r_native.app_package)
+    |> group_by([a, r_micro_g, r_native], [a.package, r_micro_g.rating_type, r_native.rating_type])
+    |> select_merge([a, r_micro_g, r_native], %{
+      scores: %{
+        native: %Score{
           app_package: a.package,
-          google_lib: :none,
+          rating_type: :native,
           numerator:
-            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_none.score),
-          total_count: count(r_none.id, :distinct)
+            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_native.score),
+          total_count: count(r_native.id, :distinct)
         },
-        %Score{
+        micro_g: %Score{
           app_package: a.package,
-          google_lib: :micro_g,
+          rating_type: :micro_g,
           numerator:
             fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_micro_g.score),
           total_count: count(r_micro_g.id, :distinct)
         }
-      ]
+      }
     })
   end
 

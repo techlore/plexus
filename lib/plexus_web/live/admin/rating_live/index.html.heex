@@ -1,7 +1,7 @@
 <.header>
-  <%= @app.name %> <%= if @google_lib == "none", do: "Native", else: "MicroG" %> Ratings
+  <%= @app.name %> <%= if @rating_type == :native, do: "Native", else: "MicroG" %> Ratings
   <:subtitle>
-    <.badge score={Enum.find(@app.scores, &(to_string(&1.google_lib) == @google_lib))} />
+    <.badge score={@score} />
   </:subtitle>
 </.header>
 

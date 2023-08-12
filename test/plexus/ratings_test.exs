@@ -11,7 +11,7 @@ defmodule Plexus.RatingsTest do
     app_package: nil,
     app_build_number: nil,
     app_version: nil,
-    google_lib: nil,
+    rating_type: nil,
     rom_name: nil,
     rom_build: nil,
     installation_source: nil,
@@ -43,7 +43,7 @@ defmodule Plexus.RatingsTest do
         android_version: "some android_version",
         app_build_number: 42,
         app_version: "some app_version",
-        google_lib: :none,
+        rating_type: :native,
         notes: "some notes",
         score: 3,
         installation_source: "fdroid",
@@ -56,7 +56,7 @@ defmodule Plexus.RatingsTest do
       assert rating.app_package == app.package
       assert rating.app_build_number == 42
       assert rating.app_version == "some app_version"
-      assert rating.google_lib == :none
+      assert rating.rating_type == :native
       assert rating.notes == "some notes"
       assert rating.score == 3
       assert rating.installation_source == "fdroid"

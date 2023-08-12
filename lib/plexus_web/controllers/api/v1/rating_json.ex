@@ -26,7 +26,7 @@ defmodule PlexusWeb.API.V1.RatingJSON do
       installation_source: rating.installation_source,
       score: %{numerator: rating.score, denominator: 4},
       notes: rating.notes,
-      google_lib: rating.google_lib
+      rating_type: rating.rating_type
     }
   end
 end

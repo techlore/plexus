@@ -45,7 +45,7 @@ defmodule PlexusWeb.Admin.AppLive.Show do
       assign(
         assigns,
         :score,
-        Enum.find(assigns.app.scores, &(&1.google_lib == assigns.google_lib))
+        assigns.app.scores[assigns.rating_type]
       )
 
     ~H"""

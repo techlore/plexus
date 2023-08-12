@@ -30,7 +30,7 @@ defmodule PlexusWeb.Router do
     live "/apps/:package", AppLive.Show, :show
     live "/apps/:package/show/edit", AppLive.Show, :edit
 
-    live "/apps/:package/ratings/:google_lib", RatingLive.Index, :index
+    live "/apps/:package/ratings/:rating_type", RatingLive.Index, :index
   end
 
   scope "/api/v1", PlexusWeb.API.V1 do

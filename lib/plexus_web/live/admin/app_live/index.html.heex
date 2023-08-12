@@ -27,11 +27,11 @@
   <:col :let={{_dom_id, app}} label="Package">
     <p class="text-sm text-gray-700"><%= app.package %></p>
   </:col>
-  <:col :let={{_dom_id, %{scores: [native_score, _micro_g_score]}}} label="Native">
-    <.badge score={native_score} />
+  <:col :let={{_dom_id, app}} label="Native">
+    <.badge score={app.scores.native} />
   </:col>
-  <:col :let={{_dom_id, %{scores: [_native_score, micro_g_score]}}} label="MicroG">
-    <.badge score={micro_g_score} />
+  <:col :let={{_dom_id, app}} label="MicroG">
+    <.badge score={app.scores.micro_g} />
   </:col>
   <:action :let={{_dom_id, app}}>
     <div class="sr-only">
