@@ -17,6 +17,8 @@ defmodule PlexusWeb.ConnCase do
 
   use ExUnit.CaseTemplate
 
+  @salt "device auth"
+
   using do
     quote do
       # The default endpoint for testing
@@ -34,5 +36,19 @@ defmodule PlexusWeb.ConnCase do
   setup tags do
     Plexus.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
+  end
+
+  def setup_json(context) do
+    {:ok, conn: Plug.Conn.put_req_header(context.conn, "accept", "application/json")}
+  end
+
+  def setup_authenticated_device(context) do
+    token =
+      Phoenix.Token.sign(PlexusWeb.Endpoint, @salt, %{
+        device_id: "device_id",
+        email: "user@techlore.tech"
+      })
+
+    {:ok, conn: Plug.Conn.put_req_header(context.conn, "authorization", "Bearer " <> token)}
   end
 end

@@ -14,6 +14,10 @@ defmodule PlexusWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :authenticated_device do
+    plug PlexusWeb.APIAuthPlug
+  end
+
   scope "/", PlexusWeb do
     pipe_through :browser
 
@@ -36,13 +40,18 @@ defmodule PlexusWeb.Router do
   scope "/api/v1", PlexusWeb.API.V1 do
     pipe_through :api
 
+    scope "/" do
+      pipe_through :authenticated_device
+
+      post "/apps", AppController, :create
+      post "/apps/:package/ratings", RatingController, :create
+    end
+
     get "/apps", AppController, :index
     get "/apps/:package", AppController, :show
-    post "/apps", AppController, :create
 
     get "/apps/:package/ratings", RatingController, :index
     get "/apps/:package/ratings/:id", RatingController, :show
-    post "/apps/:package/ratings", RatingController, :create
 
     post "/devices/register", DeviceController, :register
     post "/devices/verify", DeviceController, :verify

@@ -11,9 +11,7 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
 
   @invalid_attrs %{name: nil, package: nil}
 
-  setup %{conn: conn} do
-    {:ok, conn: put_req_header(conn, "accept", "application/json")}
-  end
+  setup [:setup_json, :setup_authenticated_device]
 
   describe "index" do
     test "lists all apps", %{conn: conn} do

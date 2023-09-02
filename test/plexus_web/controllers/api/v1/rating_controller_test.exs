@@ -27,9 +27,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
     score: nil
   }
 
-  setup %{conn: conn} do
-    {:ok, conn: put_req_header(conn, "accept", "application/json")}
-  end
+  setup [:setup_json, :setup_authenticated_device]
 
   describe "index" do
     test "lists all ratings", %{conn: conn} do
