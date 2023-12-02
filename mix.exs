@@ -11,7 +11,6 @@ defmodule Plexus.MixProject do
       aliases: aliases(),
       deps: deps(),
       dialyzer: [
-        plt_add_deps: :transitive,
         remove_defaults: [:unknown],
         plt_file: {:no_warn, "priv/plts/dialyzer.plt"}
       ]
