@@ -18,6 +18,10 @@ defmodule PlexusWeb.Router do
     plug PlexusWeb.APIAuthPlug
   end
 
+  pipeline :ensure_auth do
+    plug :auth
+  end
+
   scope "/", PlexusWeb do
     pipe_through :browser
 
@@ -25,7 +29,7 @@ defmodule PlexusWeb.Router do
   end
 
   scope "/admin", PlexusWeb.Admin do
-    pipe_through :browser
+    pipe_through [:browser, :ensure_auth]
 
     live "/apps", AppLive.Index, :index
     live "/apps/new", AppLive.Index, :new
@@ -73,5 +77,10 @@ defmodule PlexusWeb.Router do
       live_dashboard "/dashboard", metrics: PlexusWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
+  end
+
+  defp auth(conn, _opts) do
+    [username: username, password: password] = Application.fetch_env!(:plexus, :basic_auth)
+    Plug.BasicAuth.basic_auth(conn, username: username, password: password)
   end
 end

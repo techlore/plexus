@@ -13,6 +13,10 @@ config :plexus,
 
 config :plexus, :generators, api_prefix: "/api/v1"
 
+config :plexus, :basic_auth,
+  username: "plexus",
+  password: "plexus"
+
 config :plexus, Plexus.Repo,
   migration_primary_key: [id: :uuid, type: :binary_id],
   migration_timestamps: [type: :utc_datetime_usec]

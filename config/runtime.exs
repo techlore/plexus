@@ -21,6 +21,10 @@ if System.get_env("PHX_SERVER") do
 end
 
 if config_env() == :prod do
+  config :plexus, :basic_auth,
+    username: System.fetch_env!("BASIC_AUTH_USERNAME"),
+    password: System.fetch_env!("BASIC_AUTH_PASSWORD")
+
   database_url =
     System.get_env("DATABASE_URL") ||
       raise """
