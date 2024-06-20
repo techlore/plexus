@@ -43,3 +43,7 @@ kill_timeout = "5s"
     timeout = "2s"
     grace_period = "1s"
     restart_limit = 0
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "1gb"

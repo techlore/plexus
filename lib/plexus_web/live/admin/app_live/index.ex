@@ -9,7 +9,7 @@ defmodule PlexusWeb.Admin.AppLive.Index do
     if connected?(socket), do: Apps.subscribe()
 
     {entries, page_metadata} =
-      [scores: true, order_by: :name, page_size: 10]
+      [scores: true, order_by: :name, page_size: 9999]
       |> Apps.list_apps()
       |> Map.pop(:entries)
 
