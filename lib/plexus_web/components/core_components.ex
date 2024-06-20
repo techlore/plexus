@@ -19,6 +19,7 @@ defmodule PlexusWeb.CoreComponents do
   import PlexusWeb.Gettext
 
   alias Phoenix.LiveView.JS
+  alias Plexus.Schemas.Score
 
   @doc """
   Renders a modal.
@@ -475,8 +476,10 @@ defmodule PlexusWeb.CoreComponents do
       <table class="w-[40rem] mt-11 sm:w-full">
         <thead class="text-sm text-left leading-6 text-zinc-500">
           <tr>
-            <th :for={col <- @col} class="p-0 pr-6 pb-4 font-normal"><%= col[:label] %></th>
-            <th class="relative p-0 pb-4"><span class="sr-only"><%= gettext("Actions") %></span></th>
+            <th :for={col <- @col} class="p-0 pb-4 pr-6 font-normal"><%= col[:label] %></th>
+            <th :if={@action != []} class="relative p-0 pb-4">
+              <span class="sr-only"><%= gettext("Actions") %></span>
+            </th>
           </tr>
         </thead>
         <tbody
@@ -499,10 +502,10 @@ defmodule PlexusWeb.CoreComponents do
             </td>
             <td :if={@action != []} class="relative w-14 p-0">
               <div class="relative whitespace-nowrap py-4 text-right text-sm font-medium">
-                <span class="absolute -inset-y-px left-0 group-hover:bg-zinc-50 sm:rounded-r-xl" />
+                <span class="absolute -inset-y-px -right-4 left-0 group-hover:bg-zinc-50 sm:rounded-r-xl" />
                 <span
                   :for={action <- @action}
-                  class="relative ml-4 last:mr-4 font-semibold leading-6 text-zinc-900 hover:text-zinc-700"
+                  class="relative ml-4 font-semibold leading-6 text-zinc-900 hover:text-zinc-700"
                 >
                   <%= render_slot(action, @row_item.(row)) %>
                 </span>
@@ -596,14 +599,7 @@ defmodule PlexusWeb.CoreComponents do
   attr :score, Plexus.Schemas.Score, required: true
 
   def badge(%{score: %Plexus.Schemas.Score{}} = assigns) do
-    level =
-      case floor(assigns.score.numerator) do
-        0 -> :unrated
-        1 -> :borked
-        2 -> :bronze
-        3 -> :silver
-        4 -> :gold
-      end
+    level = Score.level(assigns.score)
 
     assigns =
       assigns
@@ -621,6 +617,64 @@ defmodule PlexusWeb.CoreComponents do
     ]}>
       <%= @title %>
     </span>
+    """
+  end
+
+  def card(assigns) do
+    assigns =
+      assigns
+      |> assign(:native_level, Score.level(assigns.app.scores.native))
+      |> assign(:micro_g_level, Score.level(assigns.app.scores.micro_g))
+      |> assign(
+        :total_counts,
+        assigns.app.scores.native.total_count + assigns.app.scores.micro_g.total_count
+      )
+
+    ~H"""
+    <div class="flex drop-shadow-sm hover:drop-shadow-md">
+      <div class="aspect-h-1 aspect-w-1 w-20 h-20 bg-white overflow-hidden">
+        <img
+          src={@app.icon_url}
+          alt={@app.name <> " Icon"}
+          class="h-full w-full object-cover object-center"
+        />
+      </div>
+      <div class="flex-1 flex items-center justify-between bg-white truncate">
+        <div class="flex-1 px-4 py-2 text-sm leading-5 truncate">
+          <div class="truncate text-gray-900 font-medium transition ease-in-out duration-150">
+            <%= @app.name %>
+          </div>
+          <p :if={@total_counts == 1} class="text-gray-500 truncate">
+            <%= @total_counts %> Rating
+          </p>
+          <p :if={@total_counts != 1} class="text-gray-500 truncate">
+            <%= @total_counts %> Ratings
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div class={[
+          "flex-1 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium",
+          @native_level == :unrated && "bg-gray-700",
+          @native_level == :borked && "bg-red-800",
+          @native_level == :bronze && "bg-amber-800",
+          @native_level == :silver && "bg-slate-300 text-black",
+          @native_level == :gold && "bg-amber-200 black"
+        ]}>
+          <%= @app.scores.native.numerator %>
+        </div>
+        <div class={[
+          "flex-1 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium",
+          @micro_g_level == :unrated && "bg-gray-700",
+          @micro_g_level == :borked && "bg-red-800",
+          @micro_g_level == :bronze && "bg-amber-800",
+          @micro_g_level == :silver && "bg-slate-300 text-black",
+          @micro_g_level == :gold && "bg-amber-200 text-black"
+        ]}>
+          &mu;<%= @app.scores.micro_g.numerator %>
+        </div>
+      </div>
+    </div>
     """
   end
 

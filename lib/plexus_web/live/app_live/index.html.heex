@@ -1,0 +1,24 @@
+<.header>
+  Apps (<%= @total_entries %> entries)
+</.header>
+
+<ul
+  id="apps"
+  phx-update="stream"
+  phx-viewport-top={@page > 1 && "prev-page"}
+  phx-viewport-bottom={!@end_of_timeline? && "next-page"}
+  phx-page-loading
+  class={[
+    "mt-3 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3",
+    if(@end_of_timeline?, do: "pb-10", else: "pb-[calc(200vh)]"),
+    if(@page == 1, do: "pt-10", else: "pt-[calc(200vh)]")
+  ]}
+>
+  <li :for={{id, app} <- @streams.apps} id={id} class="col-span-1 shadow-sm rounded-md">
+    <.card app={app} navigate={~p"/"} />
+  </li>
+</ul>
+
+<div :if={@end_of_timeline?} class="mt-5 text-[50px] text-center">
+  🎉 You made it to the end of the list 🎉
+</div>

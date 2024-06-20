@@ -9,4 +9,14 @@ defmodule Plexus.Schemas.Score do
     field :denominator, :integer, default: 4
     field :total_count, :integer, default: 0
   end
+
+  def level(%Score{numerator: numerator}) do
+    case floor(numerator) do
+      0 -> :unrated
+      1 -> :borked
+      2 -> :bronze
+      3 -> :silver
+      4 -> :gold
+    end
+  end
 end
