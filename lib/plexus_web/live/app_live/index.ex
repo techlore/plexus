@@ -39,7 +39,7 @@ defmodule PlexusWeb.AppLive.Index do
 
   defp apply_action(socket, :index, _params) do
     socket
-    |> assign(:page_title, "Apps")
+    |> assign(:page_title, "Crowdsourced de-Googled Android apps status ratings")
     |> assign(:app, nil)
   end
 

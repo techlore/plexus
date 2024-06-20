@@ -21,7 +21,7 @@ defmodule PlexusWeb.Endpoint do
     at: "/",
     from: :plexus,
     gzip: false,
-    only: PlexusWeb.static_paths()
+    only_matching: PlexusWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
