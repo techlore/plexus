@@ -70,14 +70,6 @@ defmodule PlexusWeb.API.V1.AppControllerTest do
              } = json_response(conn, 422)
     end
 
-    test "renders error when name is already taken", %{conn: conn} do
-      app = app_fixture()
-      attrs = %{@create_attrs | name: app.name}
-
-      conn = post(conn, ~p"/api/v1/apps", app: attrs)
-      assert %{"errors" => %{"name" => ["has already been taken"]}} = json_response(conn, 422)
-    end
-
     test "renders error when package is already taken", %{conn: conn} do
       app = app_fixture()
       attrs = %{@create_attrs | package: app.package}

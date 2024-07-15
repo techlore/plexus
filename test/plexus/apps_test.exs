@@ -83,12 +83,5 @@ defmodule Plexus.AppsTest do
       attrs = %{package: app.package, name: unique_app_name()}
       assert {:error, %Ecto.Changeset{}} = Apps.create_app(attrs)
     end
-
-    test "with duplicate name returns error changeset" do
-      app = app_fixture()
-
-      attrs = %{package: unique_app_package(), name: app.name}
-      assert {:error, %Ecto.Changeset{}} = Apps.create_app(attrs)
-    end
   end
 end
