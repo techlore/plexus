@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a new idea for this project
+title: "[Feature request]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: desc
+    attributes:
+      label: Description
+      description: A clear and concise description of the feature or change you would like to see in the app.
+    validations:
+      required: true
+  - type: textarea
+    id: addcontext
+    attributes:
+      label: Additional context
+      description: |
+        Provide any additional information, screenshots, or examples that would help illustrate your feature request.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      description: By submitting this feature request, you acknowledge the following
+      options:
+        - label: This is not a duplicate of another feature request.
+          required: true
