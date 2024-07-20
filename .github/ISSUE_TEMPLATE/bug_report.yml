@@ -1,0 +1,41 @@
+name: Bug report
+description:  Report a bug or issue with the app
+title: "[Issue]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: desc
+    attributes:
+      label: Description
+      description: A clear & concise description of what the issue is.
+    validations:
+      required: true
+  - type: textarea
+    id: repsteps
+    attributes:
+      label: Steps to reproduce the issue
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages/logs
+      description: |
+        If possible, provide the error messages/logs to make it easier to identify the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: addcontext
+    attributes:
+      label: Additional context
+      description: Any other relevant information or context that can help us understand the issue.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      description: By reporting this issue, you acknowledge the following
+      options:
+        - label: This is not a duplicate of another issue.
+          required: true
