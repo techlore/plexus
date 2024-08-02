@@ -2,6 +2,12 @@
   Apps (<%= @total_entries %> entries)
 </.header>
 
+<.simple_form for={@form} id="search-form" phx-change="search" phx-submit="search">
+  <.focus_wrap id="focus-first-search">
+    <.input field={@form[:search]} label="Search" phx-debounce="300" />
+  </.focus_wrap>
+</.simple_form>
+
 <ul
   id="apps"
   phx-update="stream"
@@ -9,7 +15,7 @@
   phx-viewport-bottom={!@end_of_timeline? && "next-page"}
   phx-page-loading
   class={[
-    "mt-3 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3",
+    "mt-1 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3",
     if(@end_of_timeline?, do: "pb-10", else: "pb-[calc(200vh)]"),
     if(@page == 1, do: "pt-10", else: "pt-[calc(200vh)]")
   ]}
@@ -19,6 +25,10 @@
   </li>
 </ul>
 
-<div :if={@end_of_timeline?} class="mt-5 text-[50px] text-center">
-  🎉 You made it to the end of the list 🎉
+<div :if={@no_results?} class="mt-5 text-[50px] text-center">
+  No apps found<br />😭
+</div>
+
+<div :if={@end_of_timeline? and not @no_results?} class="mt-5 text-[50px] text-center">
+  End of list<br />🤭
 </div>

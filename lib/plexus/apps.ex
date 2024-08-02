@@ -28,6 +28,7 @@ defmodule Plexus.Apps do
     App
     |> with_scores(opts)
     |> QueryHelpers.merge_opts(opts)
+    |> filter(opts)
     |> Repo.paginate(page_opts)
   end
 
@@ -118,6 +119,27 @@ defmodule Plexus.Apps do
         }
       }
     })
+  end
+
+  defp filter(query, opts) do
+    Enum.reduce(opts, query, fn
+      {_, ""}, query ->
+        query
+
+      {:search_term, search_term}, query ->
+        pattern = "%#{search_term}%"
+
+        from q in query,
+          where:
+            fragment("SIMILARITY(?, ?) > .30", q.name, ^search_term) or
+              ilike(q.name, ^pattern) or
+              fragment("SIMILARITY(?, ?) > .30", q.package, ^search_term) or
+              ilike(q.package, ^pattern),
+          order_by: fragment("LEVENSHTEIN(?, ?)", q.name, ^search_term)
+
+      _, query ->
+        query
+    end)
   end
 
   @spec subscribe :: :ok
