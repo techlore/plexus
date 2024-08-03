@@ -15,7 +15,7 @@ kill_timeout = "5s"
   release_command = "/app/bin/migrate"
 
 [env]
-  PHX_HOST = "plexus.fly.dev"
+  PHX_HOST = "plexus.techlore.tech"
   PORT = "8080"
 
 [[services]]
