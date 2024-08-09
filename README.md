@@ -3,6 +3,10 @@
 # Plexus
 ***Remove the fear of Android app compatibility on de-Googled devices.***
 
+[📱 Download the Application here to view & contribute data](https://github.com/techlore/Plexus-app?tab=readme-ov-file#download)
+
+[🖥️ View Plexus Data on our website](https://plexus.techlore.tech)
+
 [![CI](https://github.com/techlore/plexus/actions/workflows/ci.yaml/badge.svg)](https://github.com/techlore/plexus/actions/workflows/ci.yaml)
 
 
