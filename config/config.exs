@@ -14,8 +14,8 @@ config :plexus,
 config :plexus, :generators, api_prefix: "/api/v1"
 
 config :plexus, :basic_auth,
-  username: "plexus",
-  password: "plexus"
+  username: "admin",
+  password: "admin"
 
 config :plexus, Plexus.Repo,
   migration_primary_key: [id: :uuid, type: :binary_id],

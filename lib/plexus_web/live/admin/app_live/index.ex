@@ -8,21 +8,60 @@ defmodule PlexusWeb.Admin.AppLive.Index do
   def mount(_params, _session, socket) do
     if connected?(socket), do: Apps.subscribe()
 
-    {entries, page_metadata} =
-      [scores: true, order_by: :name, page_size: 9999]
-      |> Apps.list_apps()
-      |> Map.pop(:entries)
-
     {:ok,
      socket
-     |> assign(:page_metadata, page_metadata)
-     |> stream_configure(:apps, dom_id: &"apps-#{&1.package}")
-     |> stream(:apps, entries)}
+     |> assign(:page, 1)
+     |> assign(:form, to_form(changeset(), as: :form))
+     |> assign(:no_results?, false)
+     |> assign(:end_of_timeline?, false)
+     |> stream_configure(:apps, dom_id: &"apps-#{&1.package}")}
+  end
+
+  defp changeset(params \\ %{}) do
+    types = %{search: :string}
+    data = %{}
+    Ecto.Changeset.cast({data, types}, params, Map.keys(types))
+  end
+
+  defp paginate_apps(socket, new_page) when new_page >= 1 do
+    %Scrivener.Page{
+      total_entries: total_entries,
+      total_pages: total_pages,
+      entries: apps
+    } =
+      Apps.list_apps(
+        search_term: socket.assigns.search_term,
+        page: new_page,
+        scores: true,
+        order_by: :name,
+        page_size: 50
+      )
+
+    case {apps, new_page} do
+      {[], page} when page != 1 ->
+        assign(socket, end_of_timeline?: total_pages == new_page)
+
+      {apps, _} ->
+        opts = if new_page == 1, do: [reset: true], else: []
+        end_of_timeline? = new_page >= total_pages
+
+        socket
+        |> assign(end_of_timeline?: end_of_timeline?)
+        |> assign(no_results?: apps == [])
+        |> assign(:page, new_page)
+        |> assign(:total_entries, total_entries)
+        |> stream(:apps, apps, opts)
+    end
   end
 
   @impl Phoenix.LiveView
   def handle_params(params, _url, socket) do
-    {:noreply, apply_action(socket, socket.assigns.live_action, params)}
+    {:noreply,
+     socket
+     |> assign(:search_term, params["q"])
+     |> assign(:form, to_form(changeset(%{search: params["q"]}), as: :form))
+     |> paginate_apps(1)
+     |> apply_action(socket.assigns.live_action, params)}
   end
 
   defp apply_action(socket, :edit, %{"package" => package}) do
@@ -41,6 +80,44 @@ defmodule PlexusWeb.Admin.AppLive.Index do
     socket
     |> assign(:page_title, "Apps")
     |> assign(:app, nil)
+  end
+
+  @impl Phoenix.LiveView
+  def handle_event("search", %{"form" => form}, socket) do
+    params =
+      form
+      |> Map.get("search", "")
+      |> String.trim()
+      |> case do
+        "" -> %{}
+        "*" -> %{}
+        term -> %{q: term}
+      end
+
+    {:noreply, push_patch(socket, to: ~p"/admin/apps?#{params}")}
+  end
+
+  def handle_event("next-page", _, socket) do
+    {:noreply, paginate_apps(socket, socket.assigns.page + 1)}
+  end
+
+  def handle_event("prev-page", %{"_overran" => true}, socket) do
+    {:noreply, paginate_apps(socket, 1)}
+  end
+
+  def handle_event("prev-page", _, socket) do
+    if socket.assigns.page > 1 do
+      {:noreply, paginate_apps(socket, socket.assigns.page - 1)}
+    else
+      {:noreply, socket}
+    end
+  end
+
+  def handle_event("delete", %{"package" => package}, socket) do
+    app = Apps.get_app!(package)
+    {:ok, _} = Apps.delete_app(app)
+
+    {:noreply, stream_delete(socket, :apps, app)}
   end
 
   @impl Phoenix.LiveView
@@ -78,13 +155,5 @@ defmodule PlexusWeb.Admin.AppLive.Index do
      socket
      |> put_flash(:info, "'#{app.name}' Rating Updated")
      |> stream_insert(:apps, app)}
-  end
-
-  @impl Phoenix.LiveView
-  def handle_event("delete", %{"package" => package}, socket) do
-    app = Apps.get_app!(package)
-    {:ok, _} = Apps.delete_app(app)
-
-    {:noreply, stream_delete(socket, :apps, app)}
   end
 end
