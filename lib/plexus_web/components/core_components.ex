@@ -459,6 +459,9 @@ defmodule PlexusWeb.CoreComponents do
     default: &Function.identity/1,
     doc: "the function for mapping each row before calling the :col and :action slots"
 
+  attr :viewport_top, :string
+  attr :viewport_bottom, :string
+
   slot :col, required: true do
     attr :label, :string
   end
@@ -485,6 +488,9 @@ defmodule PlexusWeb.CoreComponents do
         <tbody
           id={@id}
           phx-update={match?(%Phoenix.LiveView.LiveStream{}, @rows) && "stream"}
+          phx-viewport-top={match?(%Phoenix.LiveView.LiveStream{}, @rows) && @viewport_top}
+          phx-viewport-bottom={match?(%Phoenix.LiveView.LiveStream{}, @rows) && @viewport_bottom}
+          phx-page-loading
           class="relative divide-y divide-zinc-100 border-t border-zinc-200 text-sm leading-6 text-zinc-700"
         >
           <tr :for={row <- @rows} id={@row_id && @row_id.(row)} class="group hover:bg-zinc-50">
