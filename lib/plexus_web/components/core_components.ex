@@ -489,7 +489,9 @@ defmodule PlexusWeb.CoreComponents do
           id={@id}
           phx-update={match?(%Phoenix.LiveView.LiveStream{}, @rows) && "stream"}
           phx-viewport-top={match?(%Phoenix.LiveView.LiveStream{}, @rows) && assigns[:viewport_top]}
-          phx-viewport-bottom={match?(%Phoenix.LiveView.LiveStream{}, @rows) && assigns[:viewport_bottom]}
+          phx-viewport-bottom={
+            match?(%Phoenix.LiveView.LiveStream{}, @rows) && assigns[:viewport_bottom]
+          }
           phx-page-loading
           class="relative divide-y divide-zinc-100 border-t border-zinc-200 text-sm leading-6 text-zinc-700"
         >
