@@ -12,6 +12,7 @@ defmodule PlexusWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug OpenApiSpex.Plug.PutApiSpec, module: PlexusWeb.ApiSpec
   end
 
   pipeline :authenticated_device do
@@ -22,10 +23,11 @@ defmodule PlexusWeb.Router do
     plug :auth
   end
 
-  scope "/", PlexusWeb do
+  scope "/" do
     pipe_through :browser
 
-    live "/", AppLive.Index, :index
+    live "/", PlexusWeb.AppLive.Index, :index
+    get "/swaggerui", OpenApiSpex.Plug.SwaggerUI, path: "/api/openapi"
   end
 
   scope "/admin", PlexusWeb.Admin do
@@ -39,6 +41,11 @@ defmodule PlexusWeb.Router do
     live "/apps/:package/show/edit", AppLive.Show, :edit
 
     live "/apps/:package/ratings/:rating_type", RatingLive.Index, :index
+  end
+
+  scope "/api" do
+    pipe_through :api
+    get "/openapi", OpenApiSpex.Plug.RenderSpec, []
   end
 
   scope "/api/v1", PlexusWeb.API.V1 do

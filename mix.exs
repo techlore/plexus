@@ -4,7 +4,7 @@ defmodule Plexus.MixProject do
   def project do
     [
       app: :plexus,
-      version: "0.1.0",
+      version: "1.0.0",
       elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
@@ -59,7 +59,9 @@ defmodule Plexus.MixProject do
       {:plug_cowboy, "~> 2.6"},
       {:swoosh, "~> 1.3"},
       {:gen_smtp, "~> 1.2"},
-      {:finch, "~> 0.13"}
+      {:finch, "~> 0.13"},
+      {:open_api_spex, "~> 3.20"},
+      {:ymlr, "~> 5.1"}
     ]
   end
 
