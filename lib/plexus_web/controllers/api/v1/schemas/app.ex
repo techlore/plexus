@@ -9,7 +9,7 @@ defmodule PlexusWeb.API.V1.Schemas.App do
     type: :object,
     properties: %{
       name: %Schema{type: :string, description: "Name"},
-      package: %Schema{type: :string, description: "Android Package"},
+      package: %Schema{type: :string, description: "App Package"},
       icon_url: %Schema{type: :string, description: "URL of Icon"},
       scores: Scores
     },

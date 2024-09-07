@@ -52,7 +52,7 @@ defmodule PlexusWeb.API.V1.AppController do
     parameters: [
       package: [
         in: :path,
-        description: "Android Package",
+        description: "App Package",
         type: :string,
         required: true,
         example: "com.google.android.youtube"
