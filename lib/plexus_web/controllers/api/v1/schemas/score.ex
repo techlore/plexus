@@ -8,7 +8,7 @@ defmodule PlexusWeb.API.V1.Schemas.Score do
     type: :object,
     properties: %{
       rating_type: %Schema{type: :string, description: "Rating Type", enum: ["micro_g", "native"]},
-      numenator: %Schema{type: :number, description: "Numenator"},
+      numerator: %Schema{type: :number, description: "Numerator"},
       denominator: %Schema{type: :integer, description: "Denominator"},
       total_count: %Schema{type: :string, description: "Total count of ratings"}
     },
