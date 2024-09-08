@@ -1,10 +1,32 @@
 defmodule PlexusWeb.API.V1.RatingController do
   use PlexusWeb, :controller
+  use OpenApiSpex.ControllerSpecs
 
   alias Plexus.Ratings
+  alias PlexusWeb.API.V1.Schemas.RatingResponse
+  alias PlexusWeb.API.V1.Schemas.RatingsResponse
   alias PlexusWeb.Params
 
   action_fallback PlexusWeb.FallbackController
+
+  tags ["ratings"]
+
+  operation :index,
+    summary: "List Application Ratings",
+    parameters: [
+      package: [
+        in: :path,
+        description: "App Package",
+        type: :string,
+        required: true,
+        example: "org.thoughtcrime.securesms"
+      ],
+      page: [in: :query, description: "Page number", type: :integer, example: 1],
+      limit: [in: :query, description: "Max results per page", type: :integer, example: 5]
+    ],
+    responses: [
+      ok: {"Ratings", "application/json", RatingsResponse}
+    ]
 
   def index(conn, %{"package" => app_package} = params) do
     opts =
@@ -14,6 +36,8 @@ defmodule PlexusWeb.API.V1.RatingController do
     page = Ratings.list_ratings(app_package, opts)
     render(conn, :index, page: page)
   end
+
+  operation :create, false
 
   def create(conn, %{"package" => app_package, "rating" => params}) do
     schema = %{
@@ -39,6 +63,28 @@ defmodule PlexusWeb.API.V1.RatingController do
       |> render(:show, rating: rating)
     end
   end
+
+  operation :show,
+    summary: "Get Application Rating",
+    parameters: [
+      package: [
+        in: :path,
+        description: "App Package",
+        type: :string,
+        required: true,
+        example: "org.thoughtcrime.securesms"
+      ],
+      id: [
+        in: :path,
+        description: "Rating Unique Identifier",
+        type: :string,
+        required: true,
+        example: "72f5d88e-a467-4729-998f-db1edcfad6bc"
+      ]
+    ],
+    responses: [
+      ok: {"Rating", "application/json", RatingResponse}
+    ]
 
   def show(conn, %{"id" => id}) do
     rating = Ratings.get_rating!(id)

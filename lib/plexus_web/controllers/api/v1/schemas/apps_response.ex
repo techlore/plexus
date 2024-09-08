@@ -6,7 +6,7 @@ defmodule PlexusWeb.API.V1.Schemas.AppsResponse do
 
   OpenApiSpex.schema(%{
     title: "AppsResponse",
-    description: "Response schema for a list of applications",
+    description: "Response Schema for a List of Applications",
     type: :object,
     properties: %{
       data: %Schema{type: :array, items: App},
@@ -15,28 +15,28 @@ defmodule PlexusWeb.API.V1.Schemas.AppsResponse do
     example: %{
       "data" => [
         %{
-          "name" => "YouTube Music",
-          "package" => "com.google.android.youtube.tvmusic",
+          "name" => "Signal",
+          "package" => "org.thoughtcrime.securesms",
           "scores" => %{
             "native" => %{
               "rating_type" => "native",
-              "numerator" => 1.1,
-              "total_count" => 21,
-              "denominator" => 4
+              "numerator" => 3.86,
+              "denominator" => 4,
+              "total_count" => 28
             },
             "micro_g" => %{
               "rating_type" => "micro_g",
-              "numerator" => 3.7,
-              "total_count" => 43,
-              "denominator" => 4
+              "numerator" => 3.92,
+              "denominator" => 4,
+              "total_count" => 25
             }
           },
           "icon_url" =>
-            "https://play-lh.googleusercontent.com/76AjYITcB0dI0sFqdQjNgXQxRMlDIswbp0BAU_O5Oob-73b6cqKggVlAiNXQAW5Bl1g"
+            "https://play-lh.googleusercontent.com/jCln_XT8Ruzp7loH1S6yM-ZzzpLP1kZ3CCdXVEo0tP2w5HNtWQds6lo6aLxLIjiW_X8"
         }
       ],
       "meta" => %{
-        "page_number" => 3,
+        "page_number" => 1,
         "limit" => 1,
         "total_count" => 420,
         "total_pages" => 69

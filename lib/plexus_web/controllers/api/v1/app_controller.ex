@@ -14,10 +14,10 @@ defmodule PlexusWeb.API.V1.AppController do
   operation :index,
     summary: "List Applications",
     parameters: [
-      page: [in: :query, description: "Page number", type: :integer, example: 2],
+      page: [in: :query, description: "Page number", type: :integer, example: 1],
       limit: [in: :query, description: "Max results per page", type: :integer, example: 25],
       scores: [in: :query, description: "Include scores", type: :boolean, example: true],
-      q: [in: :query, description: "Search query", type: :string, example: "YouTube"]
+      q: [in: :query, description: "Search query", type: :string, example: "Signal"]
     ],
     responses: [
       ok: {"Applications", "application/json", AppsResponse}
@@ -55,12 +55,12 @@ defmodule PlexusWeb.API.V1.AppController do
         description: "App Package",
         type: :string,
         required: true,
-        example: "com.google.android.youtube"
+        example: "org.thoughtcrime.securesms"
       ],
       scores: [in: :query, description: "Include scores", type: :boolean, example: true]
     ],
     responses: [
-      ok: {"Applications", "application/json", AppResponse}
+      ok: {"Application", "application/json", AppResponse}
     ]
 
   def show(conn, %{"package" => package} = params) do
