@@ -1,6 +1,6 @@
 defmodule PlexusWeb.API.V1.Schemas.App do
   alias OpenApiSpex.Schema
-  alias PlexusWeb.API.V1.Schemas.Scores
+  alias PlexusWeb.API.V1.Schemas.AverageScores
   require OpenApiSpex
 
   OpenApiSpex.schema(%{
@@ -11,7 +11,7 @@ defmodule PlexusWeb.API.V1.Schemas.App do
       name: %Schema{type: :string, description: "Name"},
       package: %Schema{type: :string, description: "App Package"},
       icon_url: %Schema{type: :string, description: "URL of Icon"},
-      scores: Scores
+      scores: AverageScores
     },
     example: %{
       "name" => "YouTube Music",

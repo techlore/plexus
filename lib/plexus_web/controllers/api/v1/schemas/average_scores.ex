@@ -1,14 +1,14 @@
-defmodule PlexusWeb.API.V1.Schemas.Scores do
-  alias PlexusWeb.API.V1.Schemas.Score
+defmodule PlexusWeb.API.V1.Schemas.AverageScores do
+  alias PlexusWeb.API.V1.Schemas.AppScore
   require OpenApiSpex
 
   OpenApiSpex.schema(%{
     title: "Scores",
-    description: "A Representation of Scores",
+    description: "The Average Scores of an App",
     type: :object,
     properties: %{
-      micro_g: Score,
-      native: Score
+      micro_g: AppScore,
+      native: AppScore
     },
     derive?: false,
     example: %{
