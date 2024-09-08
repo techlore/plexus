@@ -14,24 +14,24 @@ defmodule PlexusWeb.API.V1.Schemas.App do
       scores: AverageScores
     },
     example: %{
-      "name" => "YouTube Music",
-      "package" => "com.google.android.youtube.tvmusic",
+      "name" => "Signal",
+      "package" => "org.thoughtcrime.securesms",
       "scores" => %{
         "native" => %{
           "rating_type" => "native",
-          "numerator" => 1.2,
-          "total_count" => 21,
-          "denominator" => 4
+          "numerator" => 3.86,
+          "denominator" => 4,
+          "total_count" => 28
         },
         "micro_g" => %{
           "rating_type" => "micro_g",
-          "numerator" => 4.0,
-          "total_count" => 44,
-          "denominator" => 4
+          "numerator" => 3.92,
+          "denominator" => 4,
+          "total_count" => 25
         }
       },
       "icon_url" =>
-        "https://play-lh.googleusercontent.com/76AjYITcB0dI0sFqdQjNgXQxRMlDIswbp0BAU_O5Oob-73b6cqKggVlAiNXQAW5Bl1g"
+        "https://play-lh.googleusercontent.com/jCln_XT8Ruzp7loH1S6yM-ZzzpLP1kZ3CCdXVEo0tP2w5HNtWQds6lo6aLxLIjiW_X8"
     }
   })
 end
