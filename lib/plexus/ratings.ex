@@ -4,6 +4,7 @@ defmodule Plexus.Ratings do
   """
   import Ecto.Query
 
+  alias Plexus.Apps
   alias Plexus.PaginationHelpers
   alias Plexus.QueryHelpers
   alias Plexus.Repo
@@ -55,11 +56,14 @@ defmodule Plexus.Ratings do
           installation_source: String.t(),
           rating_type: atom(),
           score: pos_integer()
-        }) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
-  def create_rating(params) do
-    %Rating{}
-    |> Rating.changeset(params)
-    |> Repo.insert()
+        }) :: {:ok, Rating.t()} | {:error, :not_found} | {:error, Ecto.Changeset.t()}
+  def create_rating(%{app_package: app_package} = params) do
+    Repo.transact(fn ->
+      with {:ok, app} <- Apps.fetch_app(app_package),
+           {:ok, _app} <- Apps.update_app(app, %{updated_at: DateTime.utc_now()}) do
+        Repo.insert(Rating.changeset(%Rating{}, params))
+      end
+    end)
     |> broadcast(:app_rating_updated)
   end
 

@@ -50,6 +50,14 @@ defmodule Plexus.Apps do
     |> Repo.one!()
   end
 
+  @spec fetch_app(String.t()) :: {:ok, App.t()} | {:error, :not_found}
+  def fetch_app(package) do
+    case Repo.get(App, package) do
+      %App{} = app -> {:ok, app}
+      nil -> {:error, :not_found}
+    end
+  end
+
   @spec create_app(%{
           optional(:icon_url) => String.t(),
           package: String.t(),
@@ -63,8 +71,9 @@ defmodule Plexus.Apps do
   end
 
   @spec update_app(App.t(), %{
+          optional(:updated_at) => DateTime.t(),
           optional(:icon_url) => String.t(),
-          name: String.t()
+          optional(:name) => String.t()
         }) :: {:ok, App.t()} | {:error, Ecto.Changeset.t()}
   def update_app(%App{} = app, params) do
     app
