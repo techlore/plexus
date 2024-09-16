@@ -19,7 +19,8 @@ defmodule PlexusWeb.API.V1.AppJSON do
     %{
       package: app.package,
       name: app.name,
-      icon_url: app.icon_url
+      icon_url: app.icon_url,
+      updated_at: DateTime.truncate(app.updated_at, :second)
     }
     |> merge_scores(app.scores)
   end

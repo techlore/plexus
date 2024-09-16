@@ -17,6 +17,7 @@ defmodule PlexusWeb.API.V1.Schemas.AppsResponse do
         %{
           "name" => "Signal",
           "package" => "org.thoughtcrime.securesms",
+          "updated_at" => "2024-04-30T22:41:19Z",
           "scores" => %{
             "native" => %{
               "rating_type" => "native",
