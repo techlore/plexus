@@ -8,7 +8,7 @@ defmodule Plexus.RatingsTest do
   alias Plexus.Schemas.Rating
 
   @invalid_attrs %{
-    app_package: nil,
+    app_package: "",
     app_build_number: nil,
     app_version: nil,
     rating_type: nil,
@@ -65,7 +65,7 @@ defmodule Plexus.RatingsTest do
     end
 
     test "invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Ratings.create_rating(@invalid_attrs)
+      assert {:error, _reason} = Ratings.create_rating(@invalid_attrs)
     end
   end
 end

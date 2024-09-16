@@ -20,7 +20,7 @@ defmodule Plexus.Schemas.App do
   @spec changeset(App.t(), map()) :: Ecto.Changeset.t()
   def changeset(%App{} = app, params) do
     app
-    |> cast(params, [:package, :name, :icon_url])
+    |> cast(params, [:package, :name, :icon_url, :updated_at])
     |> validate_required([:package, :name])
     |> unique_constraint(:package, name: :apps_pkey)
   end
