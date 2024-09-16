@@ -126,6 +126,9 @@ defmodule Plexus.Apps do
       {_, ""}, query ->
         query
 
+      {:updated_at_greater_than_or_equal_to, dt}, query ->
+        from q in query, where: q.updated_at >= ^dt
+
       {:search_term, search_term}, query ->
         pattern = "%#{search_term}%"
 

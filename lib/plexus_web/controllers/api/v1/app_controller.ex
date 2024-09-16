@@ -17,7 +17,17 @@ defmodule PlexusWeb.API.V1.AppController do
       page: [in: :query, description: "Page number", type: :integer, example: 1],
       limit: [in: :query, description: "Max results per page", type: :integer, example: 25],
       scores: [in: :query, description: "Include scores", type: :boolean, example: true],
-      q: [in: :query, description: "Search query", type: :string, example: "Signal"]
+      q: [in: :query, description: "Search query", type: :string, example: "Signal"],
+      last_updated: [
+        in: :query,
+        description: "Apps that have updates after or on your datetime. Using RFC 3339",
+        type: %OpenApiSpex.Schema{type: :string, format: "date-time"},
+        example:
+          DateTime.utc_now()
+          |> DateTime.add(-7, :day)
+          |> DateTime.truncate(:second)
+          |> DateTime.to_iso8601(:extended)
+      ]
     ],
     responses: [
       ok: {"Applications", "application/json", AppsResponse}
@@ -76,6 +86,15 @@ defmodule PlexusWeb.API.V1.AppController do
 
       {"scores", "true"}, acc ->
         Keyword.put(acc, :scores, true)
+
+      {"last_updated", last_updated}, acc ->
+        case DateTime.from_iso8601(last_updated) do
+          {:ok, last_updated_dt, _utc_offset} ->
+            Keyword.put(acc, :updated_at_greater_than_or_equal_to, last_updated_dt)
+
+          _ ->
+            acc
+        end
 
       {"page", page}, acc ->
         case Integer.parse(page) do
