@@ -10,7 +10,6 @@ defmodule Plexus.RatingsTest do
   @invalid_attrs %{
     app_package: "",
     app_build_number: nil,
-    app_version: nil,
     rating_type: nil,
     rom_name: nil,
     rom_build: nil,
@@ -62,6 +61,24 @@ defmodule Plexus.RatingsTest do
       assert rating.installation_source == "fdroid"
       assert rating.rom_name == "some ROM name"
       assert rating.rom_build == "some ROM build"
+    end
+
+    test "handles optional app_version" do
+      app = app_fixture()
+
+      valid_attrs = %{
+        app_package: app.package,
+        android_version: "some android_version",
+        app_build_number: 42,
+        app_version: nil,
+        rating_type: :native,
+        score: 3,
+        installation_source: "fdroid",
+        rom_name: "some ROM name",
+        rom_build: "some ROM build"
+      }
+
+      assert {:ok, %Rating{}} = Ratings.create_rating(valid_attrs)
     end
 
     test "invalid data returns error changeset" do

@@ -76,6 +76,25 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
              } = json_response(conn, 200)["data"]
     end
 
+    test "handles null/empty app_verison", %{conn: conn} do
+      %{package: app_package} = app_fixture()
+      attrs = Map.put(@create_attrs, :app_package, app_package)
+
+      conn =
+        post(conn, ~p"/api/v1/apps/#{app_package}/ratings",
+          rating: Map.put(attrs, :app_version, nil)
+        )
+
+      assert %{"app_version" => ""} = json_response(conn, 201)["data"]
+
+      conn =
+        post(conn, ~p"/api/v1/apps/#{app_package}/ratings",
+          rating: Map.put(attrs, :app_version, "")
+        )
+
+      assert %{"app_version" => ""} = json_response(conn, 201)["data"]
+    end
+
     test "renders errors when data is invalid", %{conn: conn} do
       app = app_fixture()
       conn = post(conn, ~p"/api/v1/apps/#{app}/ratings", rating: @invalid_attrs)
@@ -84,7 +103,6 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "errors" => %{
                  "android_version" => ["can't be blank"],
                  "app_build_number" => ["can't be blank"],
-                 "app_version" => ["can't be blank"],
                  "rom_name" => ["can't be blank"],
                  "rom_build" => ["can't be blank"],
                  "installation_source" => ["can't be blank"],

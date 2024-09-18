@@ -27,7 +27,6 @@ defmodule Plexus.Schemas.Rating do
   @required [
     :android_version,
     :app_package,
-    :app_version,
     :app_build_number,
     :rom_name,
     :rom_build,
@@ -35,7 +34,7 @@ defmodule Plexus.Schemas.Rating do
     :installation_source,
     :score
   ]
-  @optional [:notes]
+  @optional [:app_version, :notes]
   @doc false
   def changeset(%Rating{} = rating, attrs) do
     rating

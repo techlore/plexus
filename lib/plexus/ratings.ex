@@ -49,7 +49,7 @@ defmodule Plexus.Ratings do
           optional(:notes) => String.t(),
           android_version: String.t(),
           app_package: String.t(),
-          app_version: String.t(),
+          app_version: String.t() | nil,
           app_build_number: non_neg_integer(),
           rom_name: String.t(),
           rom_build: String.t(),
