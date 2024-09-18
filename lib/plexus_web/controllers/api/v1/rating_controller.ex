@@ -43,7 +43,7 @@ defmodule PlexusWeb.API.V1.RatingController do
     schema = %{
       android_version: {:string, [required: true]},
       app_package: {:string, [required: true]},
-      app_version: {:string, [required: true]},
+      app_version: {:string, [required: false]},
       app_build_number: {:integer, [required: true]},
       rom_name: {:string, [required: true]},
       rom_build: {:string, [required: true]},

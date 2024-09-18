@@ -19,7 +19,7 @@ defmodule PlexusWeb.API.V1.RatingJSON do
       id: rating.id,
       android_version: rating.android_version,
       app_package: rating.app_package,
-      app_version: rating.app_version,
+      app_version: rating.app_version || "",
       app_build_number: rating.app_build_number,
       rom_name: rating.rom_name,
       rom_build: rating.rom_build,
