@@ -638,8 +638,8 @@ defmodule PlexusWeb.CoreComponents do
       )
 
     ~H"""
-    <div class="flex drop-shadow-sm hover:drop-shadow-md">
-      <div class="aspect-h-1 aspect-w-1 w-20 h-20 bg-white overflow-hidden">
+    <div class="flex">
+      <div class="aspect-h-1 aspect-w-1 w-24 h-24 bg-white overflow-hidden">
         <img
           src={@app.icon_url}
           alt={@app.name <> " Icon"}
@@ -647,37 +647,43 @@ defmodule PlexusWeb.CoreComponents do
         />
       </div>
       <div class="flex-1 flex items-center justify-between bg-white truncate">
-        <div class="flex-1 px-4 py-2 text-sm leading-5 truncate">
-          <div class="truncate text-gray-900 font-medium transition ease-in-out duration-150">
+        <div class="flex-1 px-4 py-2 text-md leading-5 truncate">
+          <div class="truncate text-gray-900 font-semibold transition ease-in-out duration-150">
             <%= @app.name %>
           </div>
-          <p :if={@total_counts == 1} class="text-gray-500 truncate">
+          <p :if={@total_counts == 1} class="text-gray-600 truncate">
             <%= @total_counts %> Rating
           </p>
-          <p :if={@total_counts != 1} class="text-gray-500 truncate">
+          <p :if={@total_counts != 1} class="text-gray-600 truncate">
             <%= @total_counts %> Ratings
           </p>
         </div>
       </div>
-      <div class="flex flex-col justify-between">
-        <div class={[
-          "flex-1 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium",
-          @native_level == :unrated && "bg-gray-700",
-          @native_level == :borked && "bg-red-800",
-          @native_level == :bronze && "bg-amber-800",
-          @native_level == :silver && "bg-slate-300 text-black",
-          @native_level == :gold && "bg-amber-200 black"
-        ]}>
+      <div class="flex flex-col justify-between bg-white">
+        <div
+          title="DeGoogled Score"
+          class={[
+            "flex flex-1 items-center justify-center w-24 text-white text-sm leading-5 font-medium",
+            @native_level == :unrated && "bg-gray-700",
+            @native_level == :borked && "bg-red-800",
+            @native_level == :bronze && "bg-amber-800",
+            @native_level == :silver && "bg-slate-300 text-black",
+            @native_level == :gold && "bg-amber-200 black"
+          ]}
+        >
           <%= @app.scores.native.numerator %>
         </div>
-        <div class={[
-          "flex-1 flex items-center justify-center w-16 text-white text-sm leading-5 font-medium",
-          @micro_g_level == :unrated && "bg-gray-700",
-          @micro_g_level == :borked && "bg-red-800",
-          @micro_g_level == :bronze && "bg-amber-800",
-          @micro_g_level == :silver && "bg-slate-300 text-black",
-          @micro_g_level == :gold && "bg-amber-200 text-black"
-        ]}>
+        <div
+          title="MicroG Score"
+          class={[
+            "flex flex-1 items-center justify-center w-24 text-white text-sm leading-5 font-medium",
+            @micro_g_level == :unrated && "bg-gray-700",
+            @micro_g_level == :borked && "bg-red-800",
+            @micro_g_level == :bronze && "bg-amber-800",
+            @micro_g_level == :silver && "bg-slate-300 text-black",
+            @micro_g_level == :gold && "bg-amber-200 text-black"
+          ]}
+        >
           &mu;<%= @app.scores.micro_g.numerator %>
         </div>
       </div>
