@@ -15,8 +15,7 @@ defmodule PlexusWeb.CoreComponents do
   Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
   """
   use Phoenix.Component
-
-  import PlexusWeb.Gettext
+  use Gettext, backend: PlexusWeb.Gettext
 
   alias Phoenix.LiveView.JS
   alias Plexus.Schemas.Score

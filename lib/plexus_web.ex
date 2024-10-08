@@ -45,7 +45,7 @@ defmodule PlexusWeb do
         layouts: [html: PlexusWeb.Layouts]
 
       import Plug.Conn
-      import PlexusWeb.Gettext
+      use Gettext, backend: PlexusWebApp.Gettext
 
       unquote(verified_routes())
     end
@@ -89,11 +89,11 @@ defmodule PlexusWeb do
 
   defp html_helpers do
     quote do
+      use Gettext, backend: PlexusWebApp.Gettext
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
       import PlexusWeb.CoreComponents
-      import PlexusWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS

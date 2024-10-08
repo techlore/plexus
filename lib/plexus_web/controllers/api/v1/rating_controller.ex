@@ -93,7 +93,7 @@ defmodule PlexusWeb.API.V1.RatingController do
 
   defp rating_type_enum do
     values = Ecto.Enum.values(Plexus.Schemas.Rating, :rating_type)
-    {:parameterized, Ecto.Enum, Ecto.Enum.init(values: values)}
+    {:parameterized, {Ecto.Enum, Ecto.Enum.init(values: values)}}
   end
 
   defp build_opts(params) do
