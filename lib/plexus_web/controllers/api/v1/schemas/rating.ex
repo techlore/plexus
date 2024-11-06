@@ -12,7 +12,7 @@ defmodule PlexusWeb.API.V1.Schemas.Rating do
       android_version: %Schema{type: :string, description: "Android Version"},
       app_package: %Schema{type: :string, description: "App Package"},
       app_version: %Schema{type: :string, description: "App Version"},
-      app_build_number: %Schema{type: :integer, description: "App Build Number"},
+      app_build_number: %Schema{type: :integer, format: :int64, description: "App Build Number"},
       rom_name: %Schema{type: :string, description: "ROM Name"},
       rom_build: %Schema{type: :string, description: "ROM Build"},
       installation_source: %Schema{type: :string, description: "Installation Source"},
