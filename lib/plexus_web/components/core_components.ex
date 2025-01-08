@@ -18,6 +18,7 @@ defmodule PlexusWeb.CoreComponents do
   use Gettext, backend: PlexusWeb.Gettext
 
   alias Phoenix.LiveView.JS
+  alias Plexus.Schemas.App
   alias Plexus.Schemas.Score
 
   @doc """
@@ -627,6 +628,9 @@ defmodule PlexusWeb.CoreComponents do
     """
   end
 
+  defp icon_url(%App{icon_url: url = "https://play-lh" <> _}), do: url <> "=w96-h96"
+  defp icon_url(%App{icon_url: url}), do: url
+
   def card(assigns) do
     assigns =
       assigns
@@ -641,7 +645,7 @@ defmodule PlexusWeb.CoreComponents do
     <div class="flex">
       <div class="aspect-h-1 aspect-w-1 w-24 h-24 bg-white overflow-hidden">
         <img
-          src={@app.icon_url}
+          src={icon_url(@app)}
           alt={@app.name <> " Icon"}
           class="h-full w-full object-cover object-center"
         />
