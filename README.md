@@ -12,6 +12,7 @@
 
 ## Contents
 - [Overview](#overview)
+- [API documentation](#api-documentation)
 - [Help & FAQs](#help--faqs)
 - [Privacy policy](#privacy-policy)
 - [Issues](#issues)
@@ -28,6 +29,9 @@ Google Play Services are essential components on most Android devices. They allo
 Plexus provides detailed insights into app compatibility whether you’re using ROMs without Google Play Services (like _LineageOS_) or ROMs with microG (such as _CalyxOS_). It helps you identify which apps work, don’t work or have limited features.
 <br>All the information is crowdsourced by the community, for the community.
 
+## API documentation
+
+You can find the Plexus API documentation [here](https://plexus.techlore.tech/swaggerui).
 
 ## Help & FAQs
 - Visit the [Help page](https://github.com/techlore/Plexus-app/wiki/Help) to familiarize yourself with the all the indicators & know how to submit ratings.
