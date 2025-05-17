@@ -29,8 +29,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - elixir: '1.15.4'
-            otp: '26'
+          - elixir: '1.18.3'
+            otp: '27'
 
     steps:
       - uses: actions/checkout@v3
