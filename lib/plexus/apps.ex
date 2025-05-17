@@ -38,7 +38,7 @@ defmodule Plexus.Apps do
   @spec fetch_most_recently_added_app! :: App.t()
   def fetch_most_recently_added_app! do
     App
-    |> order_by(:inserted_at)
+    |> order_by(desc: :inserted_at)
     |> limit(1)
     |> Repo.one!()
   end
