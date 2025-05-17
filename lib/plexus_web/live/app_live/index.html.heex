@@ -26,7 +26,7 @@
     if(@page == 1, do: "pt-10", else: "pt-[calc(200vh)]")
   ]}
 >
-  <li :for={{id, app} <- @streams.apps} id={id} class="col-span-1 shadow-sm rounded-md">
+  <li :for={{id, app} <- @streams.apps} id={id} class="col-span-1 shadow-xs rounded-md">
     <.card app={app} navigate={~p"/"} />
   </li>
 </ul>
