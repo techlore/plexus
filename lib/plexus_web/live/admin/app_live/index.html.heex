@@ -1,5 +1,5 @@
 <.header>
-  Apps (<%= @total_entries %> entries)
+  Apps ({@total_entries} entries)
   <:actions>
     <.link patch={~p"/admin/apps/new"}>
       <.button>New App</.button>
@@ -37,10 +37,10 @@
       </div>
     </:col>
     <:col :let={{_dom_id, app}} label="Name">
-      <h3 class="text-sm text-gray-700"><%= app.name %></h3>
+      <h3 class="text-sm text-gray-700">{app.name}</h3>
     </:col>
     <:col :let={{_dom_id, app}} label="Package">
-      <p class="text-sm text-gray-700"><%= app.package %></p>
+      <p class="text-sm text-gray-700">{app.package}</p>
     </:col>
     <:col :let={{_dom_id, app}} label="De-Googled">
       <.badge score={app.scores.native} />

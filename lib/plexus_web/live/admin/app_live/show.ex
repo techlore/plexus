@@ -49,7 +49,7 @@ defmodule PlexusWeb.Admin.AppLive.Show do
       )
 
     ~H"""
-    <%= @score.numerator %>/<%= @score.denominator %> (<%= @score.total_count %> ratings)
+    {@score.numerator}/{@score.denominator} ({@score.total_count} ratings)
     """
   end
 

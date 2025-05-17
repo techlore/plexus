@@ -8,7 +8,7 @@ defmodule PlexusWeb.Admin.AppLive.FormComponent do
     ~H"""
     <div>
       <.header>
-        <%= @title %>
+        {@title}
       </.header>
 
       <.simple_form

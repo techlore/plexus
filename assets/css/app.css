@@ -1,5 +1,2 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
+@import "tailwindcss";
 /* This file is for your main application CSS */

@@ -1,5 +1,5 @@
 <.header>
-  <%= @app.name %> <%= if @rating_type == :native, do: "Native", else: "MicroG" %> Ratings
+  {@app.name} {if @rating_type == :native, do: "Native", else: "MicroG"} Ratings
   <:subtitle>
     <.badge score={@score} />
   </:subtitle>
@@ -7,24 +7,24 @@
 
 <.table id="ratings" rows={@streams.ratings}>
   <:col :let={{_id, rating}} label="Score">
-    <p class="text-sm text-gray-700"><%= rating.score %></p>
+    <p class="text-sm text-gray-700">{rating.score}</p>
   </:col>
   <:col :let={{_id, rating}} label="App Version">
     <p class="text-sm text-gray-700">
-      <%= rating.app_version %> (<%= rating.app_build_number %>)
+      {rating.app_version} ({rating.app_build_number})
     </p>
   </:col>
   <:col :let={{_id, rating}} label="ROM">
-    <p class="text-sm text-gray-700"><%= rating.rom_name %> (<%= rating.rom_build %>)</p>
+    <p class="text-sm text-gray-700">{rating.rom_name} ({rating.rom_build})</p>
   </:col>
   <:col :let={{_id, rating}} label="Android Version">
-    <p class="text-sm text-gray-700"><%= rating.android_version %></p>
+    <p class="text-sm text-gray-700">{rating.android_version}</p>
   </:col>
   <:col :let={{_id, rating}} label="Installation Source">
-    <p class="text-sm text-gray-700"><%= rating.installation_source %></p>
+    <p class="text-sm text-gray-700">{rating.installation_source}</p>
   </:col>
   <:col :let={{_id, rating}} label="Notes">
-    <p class="text-sm text-gray-700 whitespace-pre-line"><%= rating.notes %></p>
+    <p class="text-sm text-gray-700 whitespace-pre-line">{rating.notes}</p>
   </:col>
   <:action :let={{id, rating}}>
     <.link
