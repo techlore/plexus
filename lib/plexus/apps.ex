@@ -33,6 +33,17 @@ defmodule Plexus.Apps do
   end
 
   @doc """
+  Fetches the most recently added app
+  """
+  @spec fetch_most_recently_added_app! :: App.t()
+  def fetch_most_recently_added_app! do
+    App
+    |> order_by(:inserted_at)
+    |> limit(1)
+    |> Repo.one!()
+  end
+
+  @doc """
   Fetches an App.
 
   ## Options

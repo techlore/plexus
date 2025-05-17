@@ -23,6 +23,8 @@ defmodule PlexusWeb.Router do
     plug :auth
   end
 
+  get "/sitemap.xml", PlexusWeb.SitemapController, :index
+
   scope "/" do
     pipe_through :browser
 

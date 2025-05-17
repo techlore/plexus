@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <%= for route <- @routes do %>
+  <url>
+    <loc><%= route.path %></loc>
+    <%= if route.last_mod do %><lastmod><%= route.last_mod %></lastmod><% end %>
+    <changefreq><%= route.change_freq %></changefreq>
+    <priority><%= route.priority %></priority>
+  </url>
+  <% end %>
+</urlset>
