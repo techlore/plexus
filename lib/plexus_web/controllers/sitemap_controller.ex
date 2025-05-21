@@ -57,7 +57,7 @@ defmodule PlexusWeb.SitemapController do
   defp change_freq("/swaggerui"), do: "yearly"
   defp change_freq(_), do: "weekly"
 
-  defp last_mod("/") do
+  defp last_mod(path) when path in ["/", "/apps"] do
     Plexus.Apps.fetch_most_recently_added_app!()
     |> Map.fetch!(:inserted_at)
     |> DateTime.to_date()

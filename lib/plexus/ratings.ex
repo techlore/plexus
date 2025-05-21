@@ -74,6 +74,74 @@ defmodule Plexus.Ratings do
     |> broadcast(:rating_deleted)
   end
 
+  @spec ratings_submitted_count :: pos_integer()
+  def ratings_submitted_count do
+    Repo.aggregate(Rating, :count)
+  end
+
+  @spec ratings_count_since(DateTime.t()) :: pos_integer()
+  def ratings_count_since(datetime) do
+    Rating
+    |> where([rating], rating.inserted_at >= ^datetime)
+    |> Repo.aggregate(:count)
+  end
+
+  def gold_de_googled_count do
+    Rating
+    |> where([rating], rating.score >= 4)
+    |> where([rating], rating.rating_type == :native)
+    |> Repo.aggregate(:count)
+  end
+
+  def gold_micro_g_count do
+    Rating
+    |> where([rating], rating.score >= 4)
+    |> where([rating], rating.rating_type == :micro_g)
+    |> Repo.aggregate(:count)
+  end
+
+  def silver_de_googled_count do
+    Rating
+    |> where([rating], rating.score >= 3 and rating.score < 4)
+    |> where([rating], rating.rating_type == :native)
+    |> Repo.aggregate(:count)
+  end
+
+  def silver_micro_g_count do
+    Rating
+    |> where([rating], rating.score >= 3 and rating.score < 4)
+    |> where([rating], rating.rating_type == :micro_g)
+    |> Repo.aggregate(:count)
+  end
+
+  def bronze_de_googled_count do
+    Rating
+    |> where([rating], rating.score >= 2 and rating.score < 3)
+    |> where([rating], rating.rating_type == :native)
+    |> Repo.aggregate(:count)
+  end
+
+  def bronze_micro_g_count do
+    Rating
+    |> where([rating], rating.score >= 2 and rating.score < 3)
+    |> where([rating], rating.rating_type == :micro_g)
+    |> Repo.aggregate(:count)
+  end
+
+  def broken_de_googled_count do
+    Rating
+    |> where([rating], rating.score < 2)
+    |> where([rating], rating.rating_type == :native)
+    |> Repo.aggregate(:count)
+  end
+
+  def broken_micro_g_count do
+    Rating
+    |> where([rating], rating.score < 2)
+    |> where([rating], rating.rating_type == :micro_g)
+    |> Repo.aggregate(:count)
+  end
+
   defp broadcast({:error, _reason} = error, _event), do: error
 
   defp broadcast({:ok, rating}, event) do
