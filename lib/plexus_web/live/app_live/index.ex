@@ -73,7 +73,7 @@ defmodule PlexusWeb.AppLive.Index do
         term -> %{q: term}
       end
 
-    {:noreply, push_patch(socket, to: ~p"/?#{params}")}
+    {:noreply, push_patch(socket, to: ~p"/apps?#{params}")}
   end
 
   def handle_event("next-page", _, socket) do
