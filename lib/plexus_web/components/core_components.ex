@@ -15,6 +15,12 @@ defmodule PlexusWeb.CoreComponents do
   Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
   """
   use Phoenix.Component
+
+  use Phoenix.VerifiedRoutes,
+    endpoint: PlexusWeb.Endpoint,
+    router: PlexusWeb.Router,
+    statics: PlexusWeb.static_paths()
+
   use Gettext, backend: PlexusWeb.Gettext
 
   alias Phoenix.LiveView.JS
@@ -642,15 +648,16 @@ defmodule PlexusWeb.CoreComponents do
       )
 
     ~H"""
-    <div class="flex">
-      <div class="aspect-h-1 aspect-w-1 w-24 h-24 bg-white overflow-hidden">
+    <div class="flex bg-gray-100">
+      <div class="aspect-h-1 aspect-w-1 w-24 h-24 overflow-hidden">
         <img
           src={icon_url(@app)}
           alt={@app.name <> " Icon"}
+          loading="lazy"
           class="h-full w-full object-cover object-center"
         />
       </div>
-      <div class="flex-1 flex items-center justify-between bg-white truncate">
+      <div class="flex-1 flex items-center justify-between truncate">
         <div class="flex-1 px-4 py-2 text-md leading-5 truncate">
           <div class="truncate text-gray-900 font-semibold transition ease-in-out duration-150">
             {@app.name}
@@ -663,32 +670,32 @@ defmodule PlexusWeb.CoreComponents do
           </p>
         </div>
       </div>
-      <div class="flex flex-col justify-between bg-white">
+      <div class="flex flex-col justify-between bg-gray-900">
         <div
           title="DeGoogled Score"
           class={[
             "flex flex-1 items-center justify-center w-24 text-white text-sm leading-5 font-medium",
-            @native_level == :unrated && "bg-gray-700",
-            @native_level == :borked && "bg-red-800",
-            @native_level == :bronze && "bg-amber-800",
-            @native_level == :silver && "bg-slate-300 text-black",
-            @native_level == :gold && "bg-amber-200 black"
+            @native_level == :unrated && "bg-linear-45 from-indigo-500 to-indigo-900",
+            @native_level == :borked && "bg-linear-45 from-broken-500 to-broken-900",
+            @native_level == :bronze && "bg-linear-45 from-bronze-400 to-bronze-800",
+            @native_level == :silver && "bg-linear-45 from-silver-300 to-silver-700",
+            @native_level == :gold && "bg-linear-45 from-gold-500 to-gold-900"
           ]}
         >
-          {@app.scores.native.numerator}
+          <img src={~p"/images/de_googled.svg"} width="24" />
         </div>
         <div
           title="MicroG Score"
           class={[
             "flex flex-1 items-center justify-center w-24 text-white text-sm leading-5 font-medium",
-            @micro_g_level == :unrated && "bg-gray-700",
-            @micro_g_level == :borked && "bg-red-800",
-            @micro_g_level == :bronze && "bg-amber-800",
-            @micro_g_level == :silver && "bg-slate-300 text-black",
-            @micro_g_level == :gold && "bg-amber-200 text-black"
+            @micro_g_level == :unrated && "bg-linear-45 from-indigo-500 to-indigo-900",
+            @micro_g_level == :borked && "bg-linear-45 from-broken-500 to-broken-900",
+            @micro_g_level == :bronze && "bg-linear-45 from-bronze-400 to-bronze-800",
+            @micro_g_level == :silver && "bg-linear-45 from-silver-300 to-silver-700",
+            @micro_g_level == :gold && "bg-linear-45 from-gold-500 to-gold-900"
           ]}
         >
-          &mu;{@app.scores.micro_g.numerator}
+          <img src={~p"/images/micro_g.svg"} width="24" />
         </div>
       </div>
     </div>

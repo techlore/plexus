@@ -10,11 +10,59 @@
   phx-submit="search"
 >
   <.focus_wrap id="focus-first-search">
-    <.input field={@form[:search]} label="Search" phx-debounce="300" />
+    <div class="mt-2 flex">
+      <div class="-mr-px grid grow grid-cols-1 focus-within:relative">
+        <input
+          phx-debounce="300"
+          aria-label="Search apps"
+          type="text"
+          name={@form[:search].name}
+          value={Phoenix.HTML.Form.normalize_value("text", @form[:search].value)}
+          id="query"
+          class="col-start-1 row-start-1 block w-full rounded-l-md bg-white py-1.5 pr-3 pl-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:pl-9 sm:text-sm/6"
+          placeholder="Search app name or package..."
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="pointer-events-none col-start-1 row-start-1 ml-3 size-5 self-center text-gray-400 sm:size-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+          />
+        </svg>
+      </div>
+      <button
+        type="submit"
+        class="flex shrink-0 items-center gap-x-1.5 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 outline-1 -outline-offset-1 outline-gray-300 hover:bg-gray-50 focus:relative focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          aria-hidden="true"
+          data-slot="icon"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="-ml-0.5 size-4 text-gray-400"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          />
+        </svg>
+      </button>
+    </div>
   </.focus_wrap>
 </.simple_form>
 
-<ul
+<div
   id="apps"
   phx-update="stream"
   phx-viewport-top={@page > 1 && "prev-page"}
@@ -26,15 +74,11 @@
     if(@page == 1, do: "pt-10", else: "pt-[calc(200vh)]")
   ]}
 >
-  <li :for={{id, app} <- @streams.apps} id={id} class="col-span-1 shadow-xs rounded-md">
+  <div :for={{id, app} <- @streams.apps} id={id} class="col-span-1 shadow-xs">
     <.card app={app} navigate={~p"/"} />
-  </li>
-</ul>
+  </div>
+</div>
 
 <div :if={@no_results?} class="mt-5 text-[50px] text-center">
   No Results
-</div>
-
-<div :if={@end_of_timeline? and not @no_results?} class="mt-5 text-[50px] text-center">
-  End of List
 </div>
