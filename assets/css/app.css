@@ -1,2 +1,44 @@
 @import "tailwindcss";
 /* This file is for your main application CSS */
+
+@theme {
+    --color-gold-100: #fff8e1;
+    --color-gold-200: #ffecb3;
+    --color-gold-300: #ffe082;
+    --color-gold-400: #ffd54f;
+    --color-gold-500: #ffca28;
+    --color-gold-600: #ffc107;
+    --color-gold-700: #ffb300;
+    --color-gold-800: #ffa000;
+    --color-gold-900: #ff8f00;
+
+    --color-silver-100: #f4f4f5;
+    --color-silver-200: #e4e4e7;
+    --color-silver-300: #d4d4d8;
+    --color-silver-400: #a1a1aa;
+    --color-silver-500: #9ca3af;
+    --color-silver-600: #71717a;
+    --color-silver-700: #52525b;
+    --color-silver-800: #3f3f46;
+    --color-silver-900: #27272a;
+
+    --color-bronze-100: #fef1e8;
+    --color-bronze-200: #f9dbc5;
+    --color-bronze-300: #f4c4a2;
+    --color-bronze-400: #efae80;
+    --color-bronze-500: #cd7f32;
+    --color-bronze-600: #b87333;
+    --color-bronze-700: #a65e2e;
+    --color-bronze-800: #8c4c25;
+    --color-bronze-900: #703b1c;
+
+    --color-broken-100: #fee2e2;
+    --color-broken-200: #fecaca;
+    --color-broken-300: #fca5a5;
+    --color-broken-400: #f87171;
+    --color-broken-500: #ef4444;
+    --color-broken-600: #dc2626;
+    --color-broken-700: #b91c1c;
+    --color-broken-800: #991b1b;
+    --color-broken-900: #7f1d1d;
+}

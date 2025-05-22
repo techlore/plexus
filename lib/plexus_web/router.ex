@@ -28,7 +28,8 @@ defmodule PlexusWeb.Router do
   scope "/" do
     pipe_through :browser
 
-    live "/", PlexusWeb.AppLive.Index, :index
+    live "/", PlexusWeb.HomeLive, :index
+    live "/apps", PlexusWeb.AppLive.Index, :index
     get "/swaggerui", OpenApiSpex.Plug.SwaggerUI, path: "/api/openapi"
   end
 

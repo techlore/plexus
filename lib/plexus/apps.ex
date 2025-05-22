@@ -165,6 +165,18 @@ defmodule Plexus.Apps do
     end)
   end
 
+  @spec apps_available_count :: pos_integer()
+  def apps_available_count do
+    Repo.aggregate(App, :count)
+  end
+
+  @spec apps_count_since(DateTime.t()) :: pos_integer()
+  def apps_count_since(datetime) do
+    App
+    |> where([app], app.inserted_at >= ^datetime)
+    |> Repo.aggregate(:count)
+  end
+
   @spec subscribe :: :ok
   def subscribe do
     Phoenix.PubSub.subscribe(Plexus.PubSub, "apps")
