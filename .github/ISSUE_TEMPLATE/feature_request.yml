@@ -26,3 +26,5 @@ body:
       options:
         - label: This is not a duplicate of another feature request.
           required: true
+        - label: This is related only to the API/website & not the [app](https://github.com/techlore/Plexus-app).
+          required: true
