@@ -45,10 +45,13 @@ Privacy policy is located [here](https://github.com/techlore/Plexus/blob/main/PR
 ## Issues
 If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/techlore/Plexus/issues).
 <br>We encourage you to search for existing issues before opening a new one. Any duplicates will be closed.
+> [!NOTE]
+> This issue tracker is for the API/website only.
+<br>For any issues related to the app, please report them [here](https://github.com/techlore/Plexus-app/issues).
 
 
 ## Contributing
-- New pull requests can be submitted [here](https://github.com/techlore/Plexus/pulls).
+- New pull requests related to the API/Website can be submitted [here](https://github.com/techlore/Plexus/pulls).
 - To submit data please use the [Plexus app](https://github.com/techlore/Plexus-app).
 
 
