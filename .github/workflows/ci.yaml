@@ -40,7 +40,6 @@ jobs:
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
-          version-type: strict
 
       - name: Restore Mix Dependencies Cache
         uses: actions/cache@v3
