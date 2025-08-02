@@ -18,7 +18,8 @@ defmodule PlexusWeb.API.V1.Schemas.Rating do
       installation_source: %Schema{type: :string, description: "Installation Source"},
       score: Score,
       notes: %Schema{type: :string, description: "Notes", nullable: true},
-      rating_type: %Schema{type: :string, description: "Rating Type", enum: ["micro_g", "native"]}
+      rating_type: %Schema{type: :string, description: "Rating Type", enum: ["micro_g", "native"]},
+      rated_at: %Schema{type: :string, description: "Rated at timestamp", format: :"date-time"}
     },
     example: %{
       "id" => "72f5d88e-a467-4729-998f-db1edcfad6bc",
@@ -31,7 +32,8 @@ defmodule PlexusWeb.API.V1.Schemas.Rating do
       "installation_source" => "google_play_alternative",
       "notes" => nil,
       "rom_build" => "2024083100",
-      "rom_name" => "GrapheneOS"
+      "rom_name" => "GrapheneOS",
+      "rated_at" => "2025-05-19T23:02:29.837724Z"
     }
   })
 end

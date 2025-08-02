@@ -57,7 +57,7 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
       attrs = Map.put(@create_attrs, :app_package, app_package)
 
       conn = post(conn, ~p"/api/v1/apps/#{app_package}/ratings", rating: attrs)
-      assert %{"id" => id} = json_response(conn, 201)["data"]
+      assert %{"id" => id, "rated_at" => rated_at} = json_response(conn, 201)["data"]
 
       conn = get(conn, ~p"/api/v1/apps/#{app_package}/ratings/#{id}")
 
@@ -72,7 +72,8 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "installation_source" => "fdroid",
                "rating_type" => "native",
                "notes" => "some notes",
-               "score" => %{"numerator" => 2, "denominator" => 4}
+               "score" => %{"numerator" => 2, "denominator" => 4},
+               "rated_at" => ^rated_at
              } = json_response(conn, 200)["data"]
     end
 
