@@ -88,28 +88,28 @@ defmodule Plexus.Ratings do
 
   def gold_de_googled_count do
     Rating
-    |> where([rating], rating.score >= 4)
+    |> where([rating], rating.score >= 3.5)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def gold_micro_g_count do
     Rating
-    |> where([rating], rating.score >= 4)
+    |> where([rating], rating.score >= 3.5)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end
 
   def silver_de_googled_count do
     Rating
-    |> where([rating], rating.score >= 3 and rating.score < 4)
+    |> where([rating], rating.score >= 3 and rating.score < 3.5)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def silver_micro_g_count do
     Rating
-    |> where([rating], rating.score >= 3 and rating.score < 4)
+    |> where([rating], rating.score >= 3 and rating.score < 3.5)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end
