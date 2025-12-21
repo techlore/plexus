@@ -11,7 +11,7 @@ defmodule Plexus.Schemas.Score do
   end
 
   def level(%Score{numerator: numerator}) do
-    case do
+    cond do
       numerator < 1 -> :unrated
       numerator < 2 -> :borked
       numerator < 3 -> :bronze
