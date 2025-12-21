@@ -11,12 +11,12 @@ defmodule Plexus.Schemas.Score do
   end
 
   def level(%Score{numerator: numerator}) do
-    case floor(numerator) do
-      0 -> :unrated
-      1 -> :borked
-      2 -> :bronze
-      3 -> :silver
-      4 -> :gold
+    cond do
+      numerator < 1 -> :unrated
+      numerator < 2 -> :borked
+      numerator < 3 -> :bronze
+      numerator < 3.5 -> :silver
+      true -> :gold
     end
   end
 end
