@@ -88,56 +88,56 @@ defmodule Plexus.Ratings do
 
   def gold_de_googled_count do
     Rating
-    |> where([rating], rating.score >= 3.5)
+    |> where([rating], rating.score == 4)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def gold_micro_g_count do
     Rating
-    |> where([rating], rating.score >= 3.5)
+    |> where([rating], rating.score == 4)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end
 
   def silver_de_googled_count do
     Rating
-    |> where([rating], rating.score >= 3 and rating.score < 3.5)
+    |> where([rating], rating.score == 3)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def silver_micro_g_count do
     Rating
-    |> where([rating], rating.score >= 3 and rating.score < 3.5)
+    |> where([rating], rating.score == 3)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end
 
   def bronze_de_googled_count do
     Rating
-    |> where([rating], rating.score >= 2 and rating.score < 3)
+    |> where([rating], rating.score == 2)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def bronze_micro_g_count do
     Rating
-    |> where([rating], rating.score >= 2 and rating.score < 3)
+    |> where([rating], rating.score == 2)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end
 
   def broken_de_googled_count do
     Rating
-    |> where([rating], rating.score < 2)
+    |> where([rating], rating.score == 1)
     |> where([rating], rating.rating_type == :native)
     |> Repo.aggregate(:count)
   end
 
   def broken_micro_g_count do
     Rating
-    |> where([rating], rating.score < 2)
+    |> where([rating], rating.score == 1)
     |> where([rating], rating.rating_type == :micro_g)
     |> Repo.aggregate(:count)
   end

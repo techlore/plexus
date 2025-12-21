@@ -114,28 +114,38 @@ defmodule Plexus.Apps do
   end
 
   defp with_scores(query) do
-    micro_g = from Rating, where: [rating_type: :micro_g]
-    native = from Rating, where: [rating_type: :native]
+    ratings_agg =
+      from r in Rating,
+        group_by: [r.app_package, r.rating_type],
+        select: %{
+          app_package: r.app_package,
+          rating_type: r.rating_type,
+          avg_score: fragment("CAST(ROUND(AVG(?)::numeric, 2) AS FLOAT)", r.score),
+          total_count: count(r.id)
+        }
 
     query
-    |> join(:left, [a], r_micro_g in subquery(micro_g), on: a.package == r_micro_g.app_package)
-    |> join(:left, [a, _], r_native in subquery(native), on: a.package == r_native.app_package)
-    |> group_by([a, r_micro_g, r_native], [a.package, r_micro_g.rating_type, r_native.rating_type])
-    |> select_merge([a, r_micro_g, r_native], %{
+    |> join(:left, [a], agg in subquery(ratings_agg),
+      on: a.package == agg.app_package and agg.rating_type == :native,
+      as: :native_agg
+    )
+    |> join(:left, [a], agg in subquery(ratings_agg),
+      on: a.package == agg.app_package and agg.rating_type == :micro_g,
+      as: :micro_g_agg
+    )
+    |> select_merge([a, native_agg: n, micro_g_agg: m], %{
       scores: %{
         native: %Score{
           app_package: a.package,
           rating_type: :native,
-          numerator:
-            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_native.score),
-          total_count: count(r_native.id, :distinct)
+          numerator: coalesce(n.avg_score, 0.0),
+          total_count: coalesce(n.total_count, 0)
         },
         micro_g: %Score{
           app_package: a.package,
           rating_type: :micro_g,
-          numerator:
-            fragment("CAST(ROUND(AVG(COALESCE(?, 0))::numeric, 2) AS FLOAT)", r_micro_g.score),
-          total_count: count(r_micro_g.id, :distinct)
+          numerator: coalesce(m.avg_score, 0.0),
+          total_count: coalesce(m.total_count, 0)
         }
       }
     })
