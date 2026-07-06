@@ -10,6 +10,15 @@ defmodule PlexusWeb.API.V1.RatingJSON do
     }
   end
 
+  def create(%{rating: rating, delete_token: delete_token}) do
+    %{
+      data:
+        rating
+        |> data()
+        |> Map.put(:delete_token, delete_token)
+    }
+  end
+
   def show(%{rating: rating}) do
     %{data: data(rating)}
   end

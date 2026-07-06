@@ -15,6 +15,7 @@ defmodule Plexus.Schemas.Rating do
     field :installation_source, :string
     field :notes, :string
     field :score, :integer
+    field :delete_token_hash, :binary
 
     belongs_to :app, Plexus.Schemas.App,
       type: :string,
@@ -34,7 +35,7 @@ defmodule Plexus.Schemas.Rating do
     :installation_source,
     :score
   ]
-  @optional [:app_version, :notes]
+  @optional [:app_version, :delete_token_hash, :notes]
   @doc false
   def changeset(%Rating{} = rating, attrs) do
     rating

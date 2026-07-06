@@ -56,11 +56,11 @@ defmodule PlexusWeb.API.V1.RatingController do
     params = Map.put(params, "app_package", app_package)
 
     with {:ok, params} <- Params.normalize(params, schema),
-         {:ok, rating} <- Ratings.create_rating(params) do
+         {:ok, rating, delete_token} <- Ratings.create_rating(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", ~p"/api/v1/apps/#{app_package}/ratings/#{rating}")
-      |> render(:show, rating: rating)
+      |> render(:create, rating: rating, delete_token: delete_token)
     end
   end
 

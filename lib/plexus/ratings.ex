@@ -56,12 +56,16 @@ defmodule Plexus.Ratings do
           installation_source: String.t(),
           rating_type: atom(),
           score: pos_integer()
-        }) :: {:ok, Rating.t()} | {:error, :not_found} | {:error, Ecto.Changeset.t()}
+        }) :: {:ok, Rating.t(), String.t()} | {:error, :not_found} | {:error, Ecto.Changeset.t()}
   def create_rating(%{app_package: app_package} = params) do
     Repo.transact(fn ->
       with {:ok, app} <- Apps.fetch_app(app_package),
-           {:ok, _app} <- Apps.update_app(app, %{updated_at: DateTime.utc_now()}) do
-        Repo.insert(Rating.changeset(%Rating{}, params))
+           {:ok, _app} <- Apps.update_app(app, %{updated_at: DateTime.utc_now()}),
+           {delete_token, delete_token_hash} = Plexus.DeleteToken.generate(),
+           params = Map.put(params, :delete_token_hash, delete_token_hash),
+           changeset = Rating.changeset(%Rating{}, params),
+           {:ok, rating} <- Repo.insert(changeset) do
+        {:ok, {rating, delete_token}}
       end
     end)
     |> broadcast(:app_rating_updated)
@@ -143,6 +147,12 @@ defmodule Plexus.Ratings do
   end
 
   defp broadcast({:error, _reason} = error, _event), do: error
+
+  defp broadcast({:ok, {rating, delete_token}}, event) do
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps", {event, rating})
+    Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps:#{rating.app_package}", {event, rating})
+    {:ok, rating, delete_token}
+  end
 
   defp broadcast({:ok, rating}, event) do
     Phoenix.PubSub.broadcast!(Plexus.PubSub, "apps", {event, rating})

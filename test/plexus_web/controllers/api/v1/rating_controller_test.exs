@@ -57,7 +57,12 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
       attrs = Map.put(@create_attrs, :app_package, app_package)
 
       conn = post(conn, ~p"/api/v1/apps/#{app_package}/ratings", rating: attrs)
-      assert %{"id" => id, "rated_at" => rated_at} = json_response(conn, 201)["data"]
+
+      assert %{
+               "id" => id,
+               "rated_at" => rated_at,
+               "delete_token" => delete_token_hash
+             } = json_response(conn, 201)["data"]
 
       conn = get(conn, ~p"/api/v1/apps/#{app_package}/ratings/#{id}")
 
@@ -75,6 +80,8 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                "score" => %{"numerator" => 2, "denominator" => 4},
                "rated_at" => ^rated_at
              } = json_response(conn, 200)["data"]
+
+      assert is_binary(delete_token_hash)
     end
 
     test "handles null/empty app_verison", %{conn: conn} do

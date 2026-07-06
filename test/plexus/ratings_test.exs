@@ -50,7 +50,7 @@ defmodule Plexus.RatingsTest do
         rom_build: "some ROM build"
       }
 
-      assert {:ok, %Rating{} = rating} = Ratings.create_rating(valid_attrs)
+      assert {:ok, %Rating{} = rating, _delete_token} = Ratings.create_rating(valid_attrs)
       assert rating.android_version == "some android_version"
       assert rating.app_package == app.package
       assert rating.app_build_number == 42
@@ -78,7 +78,7 @@ defmodule Plexus.RatingsTest do
         rom_build: "some ROM build"
       }
 
-      assert {:ok, %Rating{}} = Ratings.create_rating(valid_attrs)
+      assert {:ok, %Rating{}, _delete_token} = Ratings.create_rating(valid_attrs)
     end
 
     test "invalid data returns error changeset" do

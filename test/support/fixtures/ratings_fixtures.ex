@@ -51,7 +51,7 @@ defmodule Plexus.RatingsFixtures do
   Generate a rating.
   """
   def rating_fixture(attrs \\ %{}) do
-    {:ok, rating} =
+    {:ok, rating, _delete_token} =
       attrs
       |> Enum.into(%{
         android_version: unique_android_version(),
