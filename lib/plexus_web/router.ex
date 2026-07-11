@@ -59,6 +59,7 @@ defmodule PlexusWeb.Router do
 
       post "/apps", AppController, :create
       post "/apps/:package/ratings", RatingController, :create
+      delete "/apps/:package/ratings/:id", RatingController, :delete
     end
 
     get "/apps", AppController, :index

@@ -69,4 +69,27 @@ defmodule Plexus.RatingsFixtures do
 
     rating
   end
+
+  @doc """
+  Generate a rating and returns the delete_token along with it.
+  """
+  def rating_fixture_with_delete_token(attrs \\ %{}) do
+    {:ok, rating, delete_token} =
+      attrs
+      |> Enum.into(%{
+        android_version: unique_android_version(),
+        app_build_number: unique_app_build_number(),
+        app_version: unique_app_version(),
+        app_package: Plexus.AppsFixtures.app_fixture().package,
+        rom_name: "Graphene",
+        rom_build: "ROMv1",
+        installation_source: "fdroid",
+        rating_type: :native,
+        notes: gnu_linux(),
+        score: 2
+      })
+      |> Plexus.Ratings.create_rating()
+
+    {rating, delete_token}
+  end
 end

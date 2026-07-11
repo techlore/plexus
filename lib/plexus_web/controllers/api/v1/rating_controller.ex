@@ -91,6 +91,20 @@ defmodule PlexusWeb.API.V1.RatingController do
     render(conn, :show, rating: rating)
   end
 
+  operation :delete, false
+
+  def delete(conn, %{"id" => id, "delete_token" => token}) do
+    with {:ok, rating} <- Ratings.fetch_rating(id),
+         {:ok, _deleted_rating} <- Ratings.delete_rating(rating, token) do
+      send_resp(conn, :no_content, "")
+    else
+      _error ->
+        # To avoid revealing if the token is invalid or the resource is not
+        # found, we just always return not found. This is more secure.
+        {:error, :not_found}
+    end
+  end
+
   defp rating_type_enum do
     values = Ecto.Enum.values(Plexus.Schemas.Rating, :rating_type)
     {:parameterized, {Ecto.Enum, Ecto.Enum.init(values: values)}}

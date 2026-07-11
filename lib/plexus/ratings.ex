@@ -5,6 +5,7 @@ defmodule Plexus.Ratings do
   import Ecto.Query
 
   alias Plexus.Apps
+  alias Plexus.DeleteToken
   alias Plexus.PaginationHelpers
   alias Plexus.QueryHelpers
   alias Plexus.Repo
@@ -32,6 +33,8 @@ defmodule Plexus.Ratings do
   @doc """
   Fetches a Rating.
 
+  Raises on not found.
+
   ## Options
 
     - See `Plexus.QueryHelpers.merge_opts/2`
@@ -43,6 +46,26 @@ defmodule Plexus.Ratings do
     |> where([r], r.id == ^id)
     |> QueryHelpers.merge_opts(opts)
     |> Repo.one!()
+  end
+
+  @doc """
+  Fetches a Rating.
+
+  ## Options
+
+    - See `Plexus.QueryHelpers.merge_opts/2`
+
+  """
+  @spec fetch_rating(Ecto.UUID.t(), Keyword.t()) :: {:ok, Rating.t()} | {:error, :not_found}
+  def fetch_rating(id, opts \\ []) do
+    Rating
+    |> where([r], r.id == ^id)
+    |> QueryHelpers.merge_opts(opts)
+    |> Repo.one()
+    |> case do
+      nil -> {:error, :not_found}
+      rating -> {:ok, rating}
+    end
   end
 
   @spec create_rating(%{
@@ -61,7 +84,7 @@ defmodule Plexus.Ratings do
     Repo.transact(fn ->
       with {:ok, app} <- Apps.fetch_app(app_package),
            {:ok, _app} <- Apps.update_app(app, %{updated_at: DateTime.utc_now()}),
-           {delete_token, delete_token_hash} = Plexus.DeleteToken.generate(),
+           {delete_token, delete_token_hash} = DeleteToken.generate(),
            params = Map.put(params, :delete_token_hash, delete_token_hash),
            changeset = Rating.changeset(%Rating{}, params),
            {:ok, rating} <- Repo.insert(changeset) do
@@ -71,11 +94,29 @@ defmodule Plexus.Ratings do
     |> broadcast(:app_rating_updated)
   end
 
+  @doc """
+  Deletes a rating.
+
+  use `delete_rating/1` when using in the admin dashboard.
+  use `delete_rating/2` in the public API to ensure ownership.
+  """
   @spec delete_rating(Rating.t()) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
   def delete_rating(%Rating{} = rating) do
     rating
     |> Repo.delete()
     |> broadcast(:rating_deleted)
+  end
+
+  @spec delete_rating(Rating.t(), String.t()) ::
+          {:ok, Rating.t()}
+          | {:error, Ecto.Changeset.t()}
+          | {:error, :unauthorized}
+  def delete_rating(%Rating{} = rating, delete_token) do
+    if DeleteToken.valid?(rating.delete_token_hash, delete_token) do
+      delete_rating(rating)
+    else
+      {:error, :unauthorized}
+    end
   end
 
   @spec ratings_submitted_count :: pos_integer()

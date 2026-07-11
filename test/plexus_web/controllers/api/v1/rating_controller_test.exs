@@ -2,6 +2,9 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
   use PlexusWeb.ConnCase, async: true
 
   import Plexus.AppsFixtures
+  import Plexus.RatingsFixtures
+
+  alias Plexus.Ratings
 
   @create_attrs %{
     android_version: "some android version",
@@ -48,6 +51,50 @@ defmodule PlexusWeb.API.V1.RatingControllerTest do
                  "total_pages" => 1
                }
              } = json_response(conn, 200)
+    end
+  end
+
+  describe "delete rating" do
+    test "with a valid delete token", %{conn: conn} do
+      {rating, delete_token} = rating_fixture_with_delete_token()
+
+      conn =
+        delete(conn, ~p"/api/v1/apps/#{rating.app_package}/ratings/#{rating.id}", %{
+          "delete_token" => delete_token
+        })
+
+      assert response(conn, 204)
+
+      assert_raise Ecto.NoResultsError, fn ->
+        Ratings.get_rating!(rating.id)
+      end
+    end
+
+    test "returns not found with an invalid delete token", %{conn: conn} do
+      rating = rating_fixture()
+
+      conn =
+        delete(conn, ~p"/api/v1/apps/#{rating.app_package}/ratings/#{rating.id}", %{
+          "delete_token" => "wrong-token"
+        })
+
+      assert json_response(conn, 404) == %{
+               "errors" => %{"detail" => "Not Found"}
+             }
+    end
+
+    test "returns not found for an unknown rating", %{conn: conn} do
+      rating = rating_fixture()
+      rating_id = Ecto.UUID.generate()
+
+      conn =
+        delete(conn, ~p"/api/v1/apps/#{rating.app_package}/ratings/#{rating_id}", %{
+          "delete_token" => "delete-token"
+        })
+
+      assert json_response(conn, 404) == %{
+               "errors" => %{"detail" => "Not Found"}
+             }
     end
   end
 
