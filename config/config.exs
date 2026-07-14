@@ -13,9 +13,11 @@ config :plexus,
 
 config :plexus, :generators, api_prefix: "/api/v1"
 
-config :plexus, :basic_auth,
+config :one_auth,
   username: "admin",
-  password: "admin"
+  password: "admin",
+  signing_secret: "ONE_AUTH_SIGNING_SECRET",
+  login_redirect_path: "/admin/apps"
 
 config :plexus, Plexus.Repo,
   migration_primary_key: [id: :uuid, type: :binary_id],

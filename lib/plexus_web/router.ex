@@ -8,6 +8,7 @@ defmodule PlexusWeb.Router do
     plug :put_root_layout, html: {PlexusWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug OneAuth.Plug.LoadSession
   end
 
   pipeline :api do
@@ -19,8 +20,8 @@ defmodule PlexusWeb.Router do
     plug PlexusWeb.APIAuthPlug
   end
 
-  pipeline :ensure_auth do
-    plug :auth
+  pipeline :require_auth do
+    plug OneAuth.Plug.RequireAuth
   end
 
   get "/sitemap.xml", PlexusWeb.SitemapController, :index
@@ -31,10 +32,13 @@ defmodule PlexusWeb.Router do
     live "/", PlexusWeb.HomeLive, :index
     live "/apps", PlexusWeb.AppLive.Index, :index
     get "/swaggerui", OpenApiSpex.Plug.SwaggerUI, path: "/api/openapi"
+
+    get "/login", PlexusWeb.SessionController, :new
+    post "/login", PlexusWeb.SessionController, :create
   end
 
   scope "/admin", PlexusWeb.Admin do
-    pipe_through [:browser, :ensure_auth]
+    pipe_through [:browser, :require_auth]
 
     live "/apps", AppLive.Index, :index
     live "/apps/new", AppLive.Index, :new
@@ -88,10 +92,5 @@ defmodule PlexusWeb.Router do
       live_dashboard "/dashboard", metrics: PlexusWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
-  end
-
-  defp auth(conn, _opts) do
-    [username: username, password: password] = Application.fetch_env!(:plexus, :basic_auth)
-    Plug.BasicAuth.basic_auth(conn, username: username, password: password)
   end
 end

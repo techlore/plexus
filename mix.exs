@@ -61,7 +61,8 @@ defmodule Plexus.MixProject do
       {:gen_smtp, "~> 1.2"},
       {:finch, "~> 0.13"},
       {:open_api_spex, "~> 3.20"},
-      {:ymlr, "~> 5.1"}
+      {:ymlr, "~> 5.1"},
+      {:one_auth, "~> 0.1"}
     ]
   end
 
