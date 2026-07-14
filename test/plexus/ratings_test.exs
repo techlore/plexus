@@ -4,7 +4,9 @@ defmodule Plexus.RatingsTest do
   import Plexus.AppsFixtures
   import Plexus.RatingsFixtures
 
+  alias Plexus.Apps
   alias Plexus.Ratings
+  alias Plexus.Schemas.App
   alias Plexus.Schemas.Rating
 
   @invalid_attrs %{
@@ -83,6 +85,54 @@ defmodule Plexus.RatingsTest do
 
     test "invalid data returns error changeset" do
       assert {:error, _reason} = Ratings.create_rating(@invalid_attrs)
+    end
+  end
+
+  describe "delete_rating/1" do
+    test "deletes the rating" do
+      rating = rating_fixture()
+
+      assert {:ok, %Rating{}} = Ratings.delete_rating(rating)
+      assert_raise Ecto.NoResultsError, fn -> Ratings.get_rating!(rating.id) end
+    end
+
+    test "deletes the app when it was the last rating for that app" do
+      app = app_fixture()
+      rating = rating_fixture(%{app_package: app.package})
+
+      assert {:ok, %Rating{}} = Ratings.delete_rating(rating)
+      assert {:error, :not_found} = Apps.fetch_app(app.package)
+    end
+
+    test "keeps the app when other ratings still exist for it" do
+      app = app_fixture()
+      rating = rating_fixture(%{app_package: app.package})
+      _other_rating = rating_fixture(%{app_package: app.package})
+
+      assert {:ok, %Rating{}} = Ratings.delete_rating(rating)
+      assert {:ok, %App{}} = Apps.fetch_app(app.package)
+    end
+  end
+
+  describe "delete_rating/2" do
+    test "deletes the rating with a valid delete_token" do
+      {rating, delete_token} = rating_fixture_with_delete_token()
+
+      assert {:ok, %Rating{}} = Ratings.delete_rating(rating, delete_token)
+    end
+
+    test "returns :unauthorized with an invalid delete_token" do
+      rating = rating_fixture()
+
+      assert {:error, :unauthorized} = Ratings.delete_rating(rating, "invalid-token")
+    end
+
+    test "deletes the app when it was the last rating for that app" do
+      app = app_fixture()
+      {rating, delete_token} = rating_fixture_with_delete_token(%{app_package: app.package})
+
+      assert {:ok, %Rating{}} = Ratings.delete_rating(rating, delete_token)
+      assert {:error, :not_found} = Apps.fetch_app(app.package)
     end
   end
 end

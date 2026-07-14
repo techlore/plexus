@@ -11,6 +11,8 @@ defmodule Plexus.Ratings do
   alias Plexus.Repo
   alias Plexus.Schemas.Rating
 
+  require Logger
+
   @doc """
   Fetches a page of Ratings.
 
@@ -97,13 +99,19 @@ defmodule Plexus.Ratings do
   @doc """
   Deletes a rating.
 
+  If this was the last rating for the app, the app is deleted too.
+
   use `delete_rating/1` when using in the admin dashboard.
   use `delete_rating/2` in the public API to ensure ownership.
   """
   @spec delete_rating(Rating.t()) :: {:ok, Rating.t()} | {:error, Ecto.Changeset.t()}
   def delete_rating(%Rating{} = rating) do
-    rating
-    |> Repo.delete()
+    Repo.transact(fn ->
+      with {:ok, rating} <- Repo.delete(rating) do
+        maybe_delete_app(rating.app_package)
+        {:ok, rating}
+      end
+    end)
     |> broadcast(:rating_deleted)
   end
 
@@ -117,6 +125,22 @@ defmodule Plexus.Ratings do
     else
       {:error, :unauthorized}
     end
+  end
+
+  defp maybe_delete_app(app_package) do
+    with 0 <- ratings_count_for_app(app_package),
+         {:ok, app} <- Apps.fetch_app(app_package),
+         {:error, changeset} <- Apps.delete_app(app) do
+      Logger.warning("Failed to delete orphaned app #{app_package}: #{inspect(changeset.errors)}")
+    end
+
+    :ok
+  end
+
+  defp ratings_count_for_app(app_package) do
+    Rating
+    |> where([r], r.app_package == ^app_package)
+    |> Repo.aggregate(:count)
   end
 
   @spec ratings_submitted_count :: pos_integer()
